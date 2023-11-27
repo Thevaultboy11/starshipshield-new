@@ -71,13 +71,15 @@ const key_features = [
     <p class="p1 my-4 mx-auto">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, cum!
     </p>
-    <div class="w-full bg-paper p-8 grid grid-cols-1 md:grid-cols-2">
-      <div class="w-full border-r-2 border-black">
+    <div class="w-full bg-paper py-8 px-4 grid grid-cols-1 md:grid-cols-2">
+      <div
+        class="w-full mb-8 pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-black"
+      >
         <h1 class="text-2xl font-semibold text-left tracking-tighter">
           You guessed it. <br /> We’re changing the game.
         </h1>
       </div>
-      <div class="pl-4">
+      <div class="text-left md:text-center md:pl-4">
         <p>
           Understanding the struggle of small companies regarding security, our
           founders committed themselves to a singular mission to make security
@@ -89,10 +91,10 @@ const key_features = [
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <h1 class="h2 text-center">Meet our team</h1>
-    <p class="w-1/2 text-center mx-auto my-4">
+    <p class="w-full md:w-1/2 text-center mx-auto my-4">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, cum!
     </p>
-    <div class="w-full p-8 grid grid-cols-1 md:grid-cols-3">
+    <div class="w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-y-8">
       {
         team_members.map((item, idx: any) => (
           <div class="flex flex-col gap-y-4 text-center">
@@ -151,7 +153,7 @@ const key_features = [
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <h1 class="h2 text-center">Why choose Us?</h1>
-    <p class="w-1/2 text-center mx-auto my-4">
+    <p class="w-full md:w-1/2 text-center mx-auto my-4">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, cum!
     </p>
     <div class="grid grid-cos-1 md:grid-cols-4 gap-8">

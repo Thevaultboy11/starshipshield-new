@@ -1,5 +1,37 @@
 import { getPermalink, getBlogPermalink, getAsset } from "./utils/permalinks";
-
+export const services_list = [
+  {
+    service_name: "Application test",
+    definition: `Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
+    minus maxime in corporis sapiente illum odit eaque voluptas.
+    Voluptas, nostrum!`,
+    href: "",
+    problem_list: [
+      {
+        tab: "Problem 1",
+        title: "About Content",
+        body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ipsa vitae dolor sed. Accusantium vero mollitia, accusamus similique temporibus veritatis?`,
+      },
+      {
+        tab: "Problem 2",
+        title: "About me",
+        body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ipsa vitae dolor sed. Accusantium vero mollitia, accusamus similique temporibus veritatis?`,
+      },
+    ],
+    solution_list: [
+      {
+        title: "Web Application Penetration Testing",
+        body: `We thoroughly assess your web application for potential security vulnerabilities.`,
+        href: "",
+      },
+      {
+        title: "Web Application Penetration Testing",
+        body: `We thoroughly assess your web application for potential security vulnerabilities.`,
+        href: "",
+      },
+    ],
+  },
+];
 export const headerData = {
   links: [
     {

@@ -1,0 +1,92 @@
+---
+import { SITE } from "~/config.mjs";
+import Layout from "~/layouts/PageLayout.astro";
+import Cta from "~/components/Cta.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Note from "~/components/widgets/Note.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Content from "~/components/widgets/Content.astro";
+import LatestPosts from "~/components/blog/LatestPosts.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import Calendly from "~/components/Calendly.astro";
+import CalendlyWeb from "../../../components/CalendlyWeb.astro";
+const meta = {
+  title: "Do you want amplified security? ",
+  description:
+    "Defining boundaries for a quality security assement is hard. We make it easy.",
+  dontUseTitleTemplate: true,
+};
+const reviews = [
+  {
+    title: `Security Launchpad`,
+    paragraph:
+      "See why our clients trust us to keep them future-ready for the next cyber attack.",
+    img_url: "/images/android_blog.png",
+    href: "products/security-launchpad",
+  },
+  {
+    title: `Webouncer`,
+    paragraph:
+      "See why our clients trust us to keep them future-ready for the next cyber attack.",
+    img_url: "/images/android_blog.png",
+    href: "/products/web-bouncer",
+  },
+  {
+    title: `Ptaas`,
+    paragraph:
+      "See why our clients trust us to keep them future-ready for the next cyber attack.",
+    img_url: "/images/android_blog.png",
+    href: "/products/ptaas",
+  },
+];
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <div
+    class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-8 xl:gap-0 lg:pt-16"
+  >
+    <h1 class="max-w-2xl mb-4 h1">Do you want amplified security?</h1>
+    <p class="max-w-2xl mb-6 p1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+      laudantium.
+    </p>
+  </div>
+  <div class="w-full max-w-5xl mx-auto">
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 my-8 p-8">
+      <div
+        class="info-secondary flex flex-col justify-center w-full max-w-xl px-4 py-16 rounded-md"
+      >
+        <h1 class="h3 text-secondary text-left">Meeting Objectives</h1>
+        <ul class="mt-8 text-left">
+          <li class="mb-2 md:mb-4 p3">
+            ✅ <span class="ml-2 md:ml-4 font-semibold"
+              >Find a custom tailored security solution for you high converting
+              site.</span
+            >
+          </li>
+          <li class="mb-2 md:mb-4 p3">
+            ✅ <span class="ml-2 md:ml-4 font-semibold"
+              >Demo of the application</span
+            >
+          </li>
+          <li class="mb-2 md:mb-4 p3">
+            ✅ <span class="ml-2 md:ml-4 font-semibold"
+              >Showing real-time benefits of the extension</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-md border border-1">
+        <CalendlyWeb />
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,24 +1,15 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
 import Icon from "astro-icon";
-const solution_list = [
-  {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "",
-  },
-  {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "",
-  },
-];
+import { services_list } from "../../data";
+import { trim } from "~/utils/utils";
+import slugify from "limax";
+
 export const getStaticPaths = async () => {
-  const posts = await getCollection("services");
-  const paths = posts.map((post) => {
+  const paths = services_list.map((post) => {
     return {
       params: {
-        slug: post.slug,
+        slug: slugify(post.service_name),
       },
       props: {
         post,
@@ -31,7 +22,8 @@ type Props = {
   post: CollectionEntry<"services">;
 };
 const { post } = Astro.props;
-const { Content } = await post.render();
+
+// const { Content } = await post.render();
 import Layout from "../../layouts/PageLayout.astro";
 import TabComponent from "~/components/CardTabs";
 const meta = {
@@ -39,21 +31,7 @@ const meta = {
   description: "The latest stories about Starship Shield.",
   dontUseTitleTemplate: true,
 };
-const data = [
-  {
-    icon: "tabler:clock",
-    title: "E-commerce",
-    paragraph:
-      "Reduce rework. Speed up reporting. Standardize vulnerabilities and how testing is performed.",
-  },
-  {
-    icon: "tabler:clock",
-    title: "Novi",
-    paragraph:
-      "Reduce rework. Speed up reporting. Standardize vulnerabilities and how testing is performed.",
-  },
-  // Add more objects as needed
-];
+const { service_name, href, definition, problem_list, solution_list } = post;
 ---
 
 <Layout meta={meta}>
@@ -88,7 +66,7 @@ const data = [
             Secured 3 000+ active users
           </p>
 
-          <h1 class="h1 text-white">Web application security</h1>
+          <h1 class="h1 text-white" set:text={service_name} />
         </div>
       </div>
     </div>
@@ -98,46 +76,28 @@ const data = [
       <div>
         <div class="flex flex-col pb-20">
           <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
-          <h1 class="h2 my-6">What is a Penetration test?</h1>
-          <div class="p1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
-            minus maxime in corporis sapiente illum odit eaque voluptas.
-            Voluptas, nostrum!
-          </div>
+          <h1 class="h2 my-6" set:text={`What is ${service_name}`} />
+          <div class="p1" set:text={definition} />
         </div>
       </div>
     </div>
     <div class="col-span-6 bg-red-200 rounded-md"></div>
   </div>
   <div class="mx-auto max-w-5xl p-4">
-    <TabComponent
-      tabData={[
+    <TabComponent tabData={problem_list} client:load />
+
+    <div class="mx-auto max-w-5xl p-4">
+      <h1 class="h2 mx-auto text-center my-8">What do you get?</h1>
+      <div class="mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8">
         {
-          tab: "Problem 1",
-          title: "About Content",
-          body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ipsa vitae dolor sed. Accusantium vero mollitia, accusamus similique temporibus veritatis?`,
-        },
-        {
-          tab: "Problem 2",
-          title: "About me",
-          body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ipsa vitae dolor sed. Accusantium vero mollitia, accusamus similique temporibus veritatis?`,
-        },
-      ]}
-      client:load
-    />
-  </div>
-  <div class="mx-auto max-w-5xl p-4">
-    <h1 class="h2 mx-auto text-center my-8">What do you get?</h1>
-    <div class="mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8">
-      {
-        solution_list.map(({ title, body }) => (
-          <div class="block w px-6 py-10 col-span-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-            <h5 set:text={title} class="mb-4 h3 font-thin text-primary" />
-            <p set:text={body} class="p1" />
-          </div>
-        ))
-      }
+          solution_list.map(({ title, body }) => (
+            <div class="block w px-6 py-10 col-span-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+              <h5 set:text={title} class="mb-4 h3 font-thin text-primary" />
+              <p set:text={body} class="p1" />
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
-  <!-- <a class="btn-primary btn-sm w-32 my-8" href="">Click me</a> -->
 </Layout>

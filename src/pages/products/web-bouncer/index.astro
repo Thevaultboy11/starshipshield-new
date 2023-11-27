@@ -77,7 +77,7 @@ const data = [
     <div class="bg-red-200 p-6 rounded-md"></div>
   </div>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12">
-    <div class="col-span-6 py-6 rounded-xl">
+    <div class="col-span-12 md:col-span-6 order-2 md:order-1 py-6 rounded-xl">
       <div>
         <div class="flex flex-col">
           <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
@@ -100,10 +100,13 @@ const data = [
         }
       </div>
     </div>
-    <div class="bg-primary w-full h-full col-span-6"></div>
+    <div
+      class="bg-primary w-full p-24 h-full col-span-12 md:col-span-6 order-1 md:order-2"
+    >
+    </div>
   </div>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12">
-    <div class="flex flex-col col-span-12 mb-4">
+    <div class="flex flex-col col-span-12 mb-4 order-2 md:order-1">
       <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
       <h1 class="h2 my-4">What makes Web Bouncer Special?</h1>
       <div class="p1">
@@ -111,8 +114,11 @@ const data = [
       </div>
       <div class="p1 text-primary">Stop hackers once and for all</div>
     </div>
-    <div class="bg-primary w-full h-full col-span-6"></div>
-    <div class="col-span-6 py-6 rounded-xl">
+    <div
+      class="bg-primary w-full h-full p-24 col-span-12 md:col-span-6 order-1 md:order-3"
+    >
+    </div>
+    <div class="col-span-12 md:col-span-6 py-6 rounded-xl order-3 md:order-2">
       <div>
         <div>
           <div>
@@ -159,7 +165,7 @@ const data = [
         class="gap-x-4 flex flex-row justify-start md:justify-center items-center"
       >
         <a
-          href="/contact-form/"
+          href="/contact-form/webbouncer"
           class="bg-white text-black rounded-lg py-3 px-4 md:py-4 md:px-8"
           >Contact sales</a
         >

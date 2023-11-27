@@ -52,7 +52,9 @@ export default function ProblemCarousel() {
                 </div>
               </div>
             </div>
-            <img className="w-full" src="images/android_blog1.png" />
+            <div className="hidden md:block">
+              <img className="w-full " src="images/android_blog1.png" />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

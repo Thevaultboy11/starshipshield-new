@@ -53,8 +53,6 @@ const resources = [
 ---
 
 <Layout {meta}>
-  <!-- Hero Widget ******************* -->
-
   <Hero
     callToAction={{ text: "See Countdown", href: "/learn-more" }}
     image={{
@@ -83,9 +81,9 @@ const resources = [
     <div class="grid w-full mx-auto max-w-5xl grid-cols-1 md:grid-cols-2">
       {
         reviews.map((item: any, idx: number) => (
-          <div class="w-96 my-16 rounded-md col-span-1 md:mx-auto">
+          <div class="w-96 my-16  col-span-1 md:mx-auto">
             <Picture
-              class="w-full h-64"
+              class="w-full h-64 rounded-t-md"
               src={item.img_url}
               widths={[1600, 800]}
               sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
@@ -164,16 +162,19 @@ const resources = [
     </div>
     {
       resources.map((item: any, idx: number) => (
-        <div class="bg-paper w-full rounded-md grid grid-cols-3 mb-12">
-          <Picture
-            class="w-full h-full rounded-tl-md"
-            src="/images/android_blog.png"
-            widths={[1600, 800]}
-            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-            aspectRatio="3:2"
-            alt="sa"
-          />
-          <div class="col-span-2 p-4">
+        <div class="bg-paper w-full rounded-md grid grid-cols-1 md:grid-cols-3 mb-12">
+          <div class="hidden md:block">
+            <Picture
+              class="w-full h-full  rounded-tl-md"
+              src="/images/android_blog.png"
+              widths={[1600, 800]}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+              aspectRatio="3:2"
+              alt="sa"
+            />
+          </div>
+
+          <div class="md:col-span-2 px-4 py-8">
             <p class="p1" set:text={item.paragraph} />
             <h1 class="h3 my-4" set:text={item.title} />
           </div>

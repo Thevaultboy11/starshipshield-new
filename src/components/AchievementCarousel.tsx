@@ -24,6 +24,7 @@ export default function AchievemenCarousel() {
     <>
       {" "}
       <Swiper
+        spaceBetween={30}
         direction={"vertical"}
         pagination={{
           clickable: true,
@@ -37,14 +38,15 @@ export default function AchievemenCarousel() {
         style={{ overflow: "hidden", height: "400px" }}
       >
         {AchievementList.map((item: any, idx: number) => (
-          <SwiperSlide key={idx} className="w-full h-auto ">
-            <div className="w-full h-auto  grid grid-cols-2 rounded-md">
-              <img className="col-span-1" src="images/android_blog1.png" />
-
+          <SwiperSlide key={idx} className="w-full h-auto">
+            <div className="w-full h-auto  grid grid-cols-1 md:grid-cols-2 rounded-md">
               <div className="bg-paper rounded-l-md h-full p-12 ">
                 <div className="flex flex-col items-left gap-y-2 text-left">
                   <h1 className="h3">{item.title}</h1>
                   <p className="my-8 p1">{item.paragraph}</p>
+                  <a href={item.href} className="text-primary">
+                    See more
+                  </a>
                 </div>
               </div>
             </div>
