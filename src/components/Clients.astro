@@ -1,0 +1,13 @@
+---
+component: true;
+---
+
+<script setup>
+  import { onMount } from 'astro';
+
+  onMount(async () => {
+    const script = document.getElementById('clients-left');
+
+    document.body.appendChild(script);
+  });
+</script>

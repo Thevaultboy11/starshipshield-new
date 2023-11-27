@@ -1,0 +1,80 @@
+---
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+
+interface CallToAction {
+  text: string;
+  href: string;
+  icon?: string;
+}
+
+export interface Props {
+  title?: string;
+  clients?: string;
+  subtitle?: string;
+  content?: string;
+  callToAction?: string | CallToAction;
+  callToAction2?: string | CallToAction;
+  image?: string | any; // TODO: find HTMLElementProps
+}
+
+const {
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
+  content = await Astro.slots.render("content"),
+  callToAction = await Astro.slots.render("callToAction"),
+  callToAction2 = await Astro.slots.render("callToAction2"),
+  clients = await Astro.slots.render("clients"),
+  image = await Astro.slots.render("image"),
+} = Astro.props;
+---
+
+<section class="bg-white">
+  <div
+    class="grid max-w-screen-xl px-4 pt-12 lg:pt-16 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12"
+  >
+    <div class="mr-auto place-self-center lg:col-span-7">
+      {title && <h1 class="max-w-2xl mb-4 h1" set:html={title} />}
+      {subtitle && <p class="max-w-2xl mb-6 p1" set:html={subtitle} />}
+      <div class="max-w-xs sm:max-w-md flex items-center justify-start gap-4">
+        {
+          callToAction && (
+            <div class="flex">
+              {typeof callToAction === "string" ? (
+                <Fragment set:html={callToAction} />
+              ) : (
+                <a
+                  class="btn-primary btn-md mt-4  inline-flex items-center justify-center "
+                  href={callToAction?.href}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {callToAction?.text}
+                  <svg
+                    class="w-5 h-5 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              )}
+            </div>
+          )
+        }
+      </div>
+    </div>
+    <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+      <img
+        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+        alt="mockup"
+      />
+    </div>
+    <div class="col-span-12"><Fragment set:html={clients} /></div>
+  </div>
+</section>

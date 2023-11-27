@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import { type CollectionEntry } from "astro:content";
+type Props = {
+  post: CollectionEntry<"services">;
+};
+const { post } = Astro.props;
+---
+
+<article>
+  <a href={`/services/${post.slug}`}>
+    <h1 set:text={post.title} />
+    <p class="text-black">{post.description}</p>
+  </a>
+</article>

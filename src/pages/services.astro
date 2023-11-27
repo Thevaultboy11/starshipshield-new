@@ -1,0 +1,10 @@
+---
+import { getCollection } from "astro:content";
+const services = await getCollection("services");
+import ServicesList from "../components/services/ServiceList.astro";
+---
+
+<div>
+  <!-- {services.map((service) =>)}a -->
+  <ServicesList posts={services} />
+</div>

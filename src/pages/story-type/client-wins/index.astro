@@ -1,0 +1,131 @@
+---
+import Layout from "../../../layouts/PageLayout.astro";
+import Header from "../../../components/widgets/Header.astro";
+import Hero from "../../../components/widgets/Hero.astro";
+import { headerData } from "../../../data";
+import CaseStudy from "../../../components/case-study";
+import { Picture } from "@astrojs/image/components";
+import Icon from "astro-icon";
+import Cta from "~/components/Cta.astro";
+const meta = {
+  title: "Client wins",
+  description: "The latest security wins for our clients.",
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <Fragment slot="header">
+    <Header {...headerData} showRssFeed showToggleTheme position="right" />
+  </Fragment>
+  <section
+    class="relative h-300 md:h-screen md:-mt-20 xl:-mt-20 bg-cover bg-center mb-16"
+    style="background-image: url('/images/conference.jpeg');  box-shadow: 0px 12px 10px 0px #6929c2;  "
+  >
+    <div
+      class="absolute w-full h-full inset-0 opacity-70"
+      style="background-image: linear-gradient(
+      0deg,
+      hsl(265deg 65% 46%) 0%,
+      hsl(265deg 65% 46%) 13%,
+      hsl(265deg 65% 46%) 25%,
+      hsl(260deg 100% 29%) 37%,
+      hsl(0deg 0% 0%) 50%,
+      hsl(339deg 0% 0%) 63%,
+      hsl(0deg 0% 0%) 75%,
+      hsl(339deg 0% 0%) 87%,
+      hsl(0deg 0% 0%) 100%
+    );
+    
+    "
+    >
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12">
+      <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+      <div class="py-4 md:py-8">
+        <div class="text-center max-w-screen-lg mx-auto">
+          <p class="info-title w-60 md:max-w-md mx-auto">
+            Secured 3 000+ active users
+          </p>
+          <h1
+            class="cover-title text-5xl md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+          >
+            Real companies, real security.
+          </h1>
+        </div>
+      </div>
+      <div
+        class="bg-paper rounded-xl md:rounded-full shadow-lg max-w-2xl p-2 mx-auto flex flex-col md:flex-row gap-x-2 gap-y-4 justify-center items-center"
+      >
+        <p class="text-2xl uppercase text-primary font-bold">Category</p>
+        <div class="flex gap-x-2">
+          <a
+            class="link-case text-xs md:text-base py-4 md:p-0 w-32"
+            href="/story-type/case-study">Case Studies</a
+          >
+          <a
+            class="link-case-active w-36 py-4 text-xs md:text-base"
+            href="/story-type/client-wins">Client Wins</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+    <div class="info-card secondary-shadow">
+      <Picture
+        class="mx-auto rounded-xl bg-gray-500"
+        width={600}
+        height={500}
+        widths={[400, 768]}
+        sizes="100vw, 432px"
+        aspectRatio="800:400"
+        alt="sa"
+        src={"/images/client_win/card-client-winss1.png"}
+      />
+      <p class="name-title text-secondary text-xl">Security Win</p>
+      <h1 class="text-3xl">
+        What truly set Starship Shield was its professional, thorough and unique
+        approach.
+      </h1>
+    </div>
+    <div class="info-card secondary-shadow">
+      <Picture
+        class="mx-auto rounded-xl bg-gray-500"
+        width={600}
+        height={500}
+        widths={[400, 768]}
+        sizes="100vw, 432px"
+        aspectRatio="800:400"
+        alt="sa"
+        src={"/images/client_win/card-client-winss2.png"}
+      />
+      <p class="name-title text-secondary text-xl">Security Win</p>
+      <h1 class="text-3xl">
+        Their exceptional, and through assessment have been valuable to our
+        company.
+      </h1>
+    </div>
+    <div class="info-card secondary-shadow">
+      <Picture
+        class="mx-auto rounded-xl bg-gray-500"
+        width={600}
+        height={500}
+        widths={[400, 768]}
+        sizes="100vw, 432px"
+        aspectRatio="800:400"
+        alt="sa"
+        src={"/images/client_win/card-client-winss3.png"}
+      />
+      <p class="name-title text-secondary text-xl">Employee determination</p>
+      <h1 class="text-3xl">
+        I am confident that Eman's dedication and drive will lead him to achieve
+        remarkable milestones in his career.
+      </h1>
+    </div>
+  </div>
+  <div class="w-full max-w-7xl p-4 mx-auto">
+    <Cta />
+  </div>
+</Layout>

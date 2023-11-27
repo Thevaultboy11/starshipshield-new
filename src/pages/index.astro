@@ -1,0 +1,195 @@
+---
+import { SITE } from "~/config.mjs";
+import Layout from "~/layouts/PageLayout.astro";
+import Cta from "~/components/Cta.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Note from "~/components/widgets/Note.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Content from "~/components/widgets/Content.astro";
+import LatestPosts from "~/components/blog/LatestPosts.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import { Picture } from "@astrojs/image/components";
+import ClientSlider from "~/components/widgets/ClientSlider.astro";
+import Icon from "astro-icon";
+import ProblemAstro from "../components/ProblemsCarousel";
+const meta = {
+  title: "Do you want amplified security? ",
+  description:
+    "Defining boundaries for a quality security assement is hard. We make it easy.",
+  dontUseTitleTemplate: true,
+};
+const reviews = [
+  {
+    title: `See why our clients trust us to keep them future-ready for the next cyber attack.`,
+    paragraph: "Case Studies",
+    img_url: "/images/android_blog.png",
+    href: "story-type/case-study",
+  },
+  {
+    title: `See why our clients trust us to keep them future-ready for the next cyber attack.`,
+    paragraph: "Client Win",
+    img_url: "/images/android_blog.png",
+    href: "story-type/client-wins",
+  },
+];
+const resources = [
+  {
+    title: `What is social engeering awarness`,
+    paragraph: "Resources",
+    img_url: "/images/android_blog.png",
+    href: "/resources/assesment-calculator",
+  },
+  {
+    title: `How to protect your SMB?`,
+    paragraph: "Resources",
+    img_url: "/images/android_blog.png",
+    href: "/resources/scope-paper",
+  },
+];
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    callToAction={{ text: "See Countdown", href: "/learn-more" }}
+    image={{
+      src: import("~/assets/images/hero.jpg"),
+      alt: "AstroWind Hero Image",
+    }}
+  >
+    <Fragment slot="title">
+      Do you want
+      <span class="text-accent highlight">amplified security?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <p class="max-w-lg">
+        Stay tuned for the 3 new security products, that are better, faster and
+        more value packed.
+      </p>
+    </Fragment>
+  </Hero>
+  <ClientSlider />
+
+  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <div class="h2 text-center w-full max-w-lg mx-auto">
+      See what our clients trust us as their one stop security solution.
+    </div>
+    <div class="grid w-full mx-auto max-w-5xl grid-cols-1 md:grid-cols-2">
+      {
+        reviews.map((item: any, idx: number) => (
+          <div class="w-96 my-16 rounded-md col-span-1 md:mx-auto">
+            <Picture
+              class="w-full h-64"
+              src={item.img_url}
+              widths={[1600, 800]}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+              aspectRatio="16:9"
+              alt="sa"
+            />
+            <div class="bg-paper p-4 flex flex-col gap-y-4 mb-auto">
+              <h1 class="h3" set:text={item.paragraph} />
+              <p class="p1 my-4" set:text={item.title} />
+
+              <div class="w-full">
+                <a href={item.href} class="btn-primary btn-sm">
+                  View more
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <div class="h2 w-full text-center mx-auto mb-8 tex">
+      What problems do we solve?
+    </div>
+    <ProblemAstro client:load />
+  </div>
+
+  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="col-span-1 px-4 mb-10 lg:mb-0">
+        <img
+          src="https://i.postimg.cc/9MW8G96J/pexels-the-coach-space-2977565.jpg"
+          alt=""
+          class="relative object-cover w-full h-full rounded"
+        />
+      </div>
+      <div class="bg-paper max-w rounded-md h-full p-8 py-24">
+        <div class="flex flex-col items-center gap-y-2 text-center">
+          <p
+            class="text-xl md:text-xl tracking-tight leading-10 font-semibold uppercase italic"
+          >
+            About Us
+          </p>
+          <h1 class="h2">Starship Shield</h1>
+          <p class="mt-8 p1">
+            Starship Shield is an agency founded for business owners to easily
+            amplify their security and retain customer satisfaction.
+          </p>
+        </div>
+
+        <p class="mt-8 text-center p1">
+          We’ve worked with <b>3+</b> companies with over <b>3000+ users</b>,
+          over a one-month period our clients retained customer satisfaction.
+        </p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 mt-16 w-full lg:max-w-2xl gap-y-4"
+        >
+          <div class="flex flex-col items-center justify-center">
+            <h1 class="text-6xl md:text-3xl font-extrabold text-primary">
+              10+
+            </h1>
+            <p class="text-primary text-lg">Companies</p>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <h1 class="text-6xl md:text-3xl font-extrabold text-primary">10</h1>
+            <p class="text-primary text-lg">Applications Tested</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <div class="h2 w-full max-w-lg text-center mx-auto mb-8">
+      Resources for you.
+    </div>
+    {
+      resources.map((item: any, idx: number) => (
+        <div class="bg-paper w-full rounded-md grid grid-cols-3 mb-12">
+          <Picture
+            class="w-full h-full rounded-tl-md"
+            src="/images/android_blog.png"
+            widths={[1600, 800]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+            aspectRatio="3:2"
+            alt="sa"
+          />
+          <div class="col-span-2 p-4">
+            <p class="p1" set:text={item.paragraph} />
+            <h1 class="h3 my-4" set:text={item.title} />
+          </div>
+          <a
+            href={item.href}
+            class="px-4 col-span-3 rounded-b-md h-12 bg-primary flex items-center"
+          >
+            <div class="text-white mr-auto ">Learn more</div>
+            <Icon
+              name="tabler:arrow-right"
+              class="w-3.5 h-3.5 inline-block text-white"
+            />
+          </a>
+        </div>
+      ))
+    }
+  </div>
+  <Cta />
+</Layout>

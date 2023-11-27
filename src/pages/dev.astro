@@ -1,0 +1,119 @@
+---
+import { SITE } from "~/config.mjs";
+import Layout from "~/layouts/PageLayout.astro";
+import Cta from "~/components/Cta.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Note from "~/components/widgets/Note.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Content from "~/components/widgets/Content.astro";
+import LatestPosts from "~/components/blog/LatestPosts.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import CompaniesCarousel from "../components/CompaniesCarousel";
+import AcordionComoponent from '../components/accordionComponent'
+const meta = {
+  title: "Do you want amplified security? ",
+  description:
+    "Defining boundaries for a quality security assement is hard. We make it easy.",
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+  <div class="py-40 px-8">
+    <button class="btn-secondary btn-lg">Large</button>
+    <button class="btn-secondary btn-md">Regular</button>
+    <button class="btn-secondary btn-sm">Small</button>
+    <div class="">
+      <div
+        class="paragraph text-4xl md:text-7xl font-bold tracking-none text-black"
+      >
+        Page Title
+      </div>
+      <div class="paragraph text-3xl md:text-5xl">Title</div>
+      <div class="paragraph text-xl md:text-3xl">Title 3</div>
+
+      <div class="text-sm md:text-base">Paragraph</div>
+    </div>
+
+  
+    <div class="w-full grid grid-cols-2 max-w-5xl">
+      <div class="w-96 my-16 rounded-md">
+        <Picture
+          class="w-full h-64"
+          src="/images/android_blog.png"
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="16:9"
+          alt="sa"
+        />
+        <div class="bg-paper p-4 flex flex-col gap-y-4 mb-auto">
+          <p class="text-base tracking-wide font-semibold">Case Studies</p>
+          <h1 class="text-base">
+            See why our clients trust us to keep them future-ready for the next
+            cyber attack.
+          </h1>
+          <div class="w-full">
+            <a href="/cta" class="btn-primary btn-sm">View more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="p-8">
+    <div class="bg-paper max-w-4xl rounded-md grid grid-cols-3">
+      <Picture
+        class="w-full h-full rounded-l-md"
+        src="/images/android_blog.png"
+        widths={[1600, 800]}
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+        aspectRatio="3:2"
+        alt="sa"
+      />
+      <div class="col-span-2 p-4">
+        <p class="">Materials</p>
+        <h1 class="paragraph text-xl my-4">
+          See why our clients trust us to keep them future-ready for the next
+          cyber attack.
+        </h1>
+      </div>
+      <a
+        href="/cta"
+        class="px-4 col-span-3 rounded-b-md h-12 bg-primary flex items-center"
+      >
+        <div class="text-white mr-auto">Learn more</div>
+        <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block text-white" />
+      </a>
+    </div>
+  </div>
+  <div class="p-8">
+    <div class="grid grid-cols-3"></div>
+  </div>
+  <div class="p-8">
+    <div class="w-full max-w-7xl p-8 grid grid-cols-3">
+      <div class="info-primary px-4 py-8 h-60 rounded-md">
+        <h1 class="paragraph text-xl">Lorem ipsum dolor sit.</h1>
+        <p class="mt-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+          consectetur quae quos provident sequi deleniti.
+        </p>
+        <div class="border-t mt-8 pt-2 border-primary">
+          <a href="/cta" class="text-primary font-bold"
+            >Learn about Lorem ipsum dolor sit.</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-8">
+    <AcordionComoponent client:load/>
+  </div>
+</Layout>
+

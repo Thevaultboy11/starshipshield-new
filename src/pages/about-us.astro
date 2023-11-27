@@ -1,0 +1,177 @@
+---
+import { SITE } from "~/config.mjs";
+import Layout from "~/layouts/PageLayout.astro";
+
+import Hero from "~/components/widgets/Hero.astro";
+import { Picture } from "@astrojs/image/components";
+import Cta from "~/components/Cta.astro";
+import Icon from "astro-icon";
+import AchievementCarousel from "../components/AchievementCarousel";
+const meta = {
+  title: "About us",
+  description: "The 3 core tenets about building digital castles",
+  dontUseTitleTemplate: true,
+};
+const team_members = [
+  {
+    name: "Eman Catic",
+    description: `Experienced penetration tester, 4 years bug bounty hunter, number one in Bosnia and Herzegovina on TryHackMe `,
+    img_url: "/images/android_blog.png",
+    linked_in_url: "/",
+  },
+  {
+    name: "Almir Dautbegovic",
+    description: `Passionate Tech Salesman, in the past React. js developer, in free time cyber security copywriter`,
+    img_url: "/images/android_blog.png",
+    linked_in_url: "/",
+  },
+  {
+    name: "Rijad Gadzo",
+    description: ` Security engineer specializing in IOT, 4 years DevSecOps engineer in numerous companies`,
+    img_url: "/images/android_blog.png",
+    linked_in_url: "/",
+  },
+];
+const last_memeber = [
+  {
+    name: "Džemal Dzananović",
+    description: `Mobile security expert, enjoys creating lead generation tools, enjoys meeting new people`,
+    img_url: "/images/android_blog.png",
+    linked_in_url: "/",
+  },
+];
+const key_features = [
+  {
+    img_url: "/images/graphic.svg",
+    title: "Retesting Included",
+    paragraph: `Starship Shield provides complimentary retesting of vulnerability patches to ensure,`,
+  },
+  {
+    img_url: "/images/graphic.svg",
+    title: "Speed",
+    paragraph: `We strive to deliver fast and quality products, no matter the size of your company.`,
+  },
+  {
+    img_url: "/images/graphic.svg",
+    title: "Included bonuses",
+    paragraph: `We always include and offer bonuses alongside our basic services for our clients`,
+  },
+  {
+    img_url: "/images/graphic.svg",
+    title: "You Come First",
+    paragraph: `Our aim is to assist you in safeguarding your company, and customer data,`,
+  },
+];
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+  <div class="w-full max-w-5xl text-center px-4 py-8 mx-auto mb-24">
+    <h1 class="h1">About us</h1>
+    <p class="p1 my-4 mx-auto">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, cum!
+    </p>
+    <div class="w-full bg-paper p-8 grid grid-cols-1 md:grid-cols-2">
+      <div class="w-full border-r-2 border-black">
+        <h1 class="text-2xl font-semibold text-left tracking-tighter">
+          You guessed it. <br /> We’re changing the game.
+        </h1>
+      </div>
+      <div class="pl-4">
+        <p>
+          Understanding the struggle of small companies regarding security, our
+          founders committed themselves to a singular mission to make security
+          easier and accessible to everyone. Out of this dedication StarShip
+          Shield has been born.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <h1 class="h2 text-center">Meet our team</h1>
+    <p class="w-1/2 text-center mx-auto my-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, cum!
+    </p>
+    <div class="w-full p-8 grid grid-cols-1 md:grid-cols-3">
+      {
+        team_members.map((item, idx: any) => (
+          <div class="flex flex-col gap-y-4 text-center">
+            <Picture
+              class="h-40 w-40 mx-auto rounded-full"
+              src={item.img_url}
+              widths={[1600, 800]}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+              aspectRatio="3:2"
+              alt="sa"
+            />
+
+            <h1 class="text-2xl" set:text={item.name} />
+            <p class="text-sm" set:text={item.description} />
+            <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
+              <Icon
+                pack="cib"
+                name="linkedin"
+                class="w-6 h-6 inline-block text-primary"
+              />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+    <div class="w-full p-8">
+      {
+        last_memeber.map((item, idx: any) => (
+          <div class="flex flex-col gap-y-4 text-center w-60 mx-auto">
+            <Picture
+              class="h-40 w-40 mx-auto rounded-full"
+              src={item.img_url}
+              widths={[1600, 800]}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+              aspectRatio="3:2"
+              alt="sa"
+            />
+
+            <h1 class="text-2xl" set:text={item.name} />
+            <p class="text-sm" set:text={item.description} />
+            <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
+              <Icon
+                pack="cib"
+                name="linkedin"
+                class="w-6 h-6 inline-block text-primary"
+              />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <div class="h2 w-full text-center mx-auto mb-8">Tournements we won</div>
+    <AchievementCarousel client:load />
+  </div>
+  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <h1 class="h2 text-center">Why choose Us?</h1>
+    <p class="w-1/2 text-center mx-auto my-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, cum!
+    </p>
+    <div class="grid grid-cos-1 md:grid-cols-4 gap-8">
+      {
+        key_features.map(({ img_url, title, paragraph }, idx: number) => (
+          <div class="flex flex-col gap-y-4 text-center" key={idx}>
+            <Picture
+              class="h-40 w-40 mx-auto select-none"
+              src={img_url}
+              widths={[1600, 800]}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+              aspectRatio="3:3"
+              alt="sa"
+            />
+            <h1 class="h3" set:text={title} />
+            <p class="p1" set:text={paragraph} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <Cta />
+</Layout>

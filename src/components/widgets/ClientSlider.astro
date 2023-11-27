@@ -1,0 +1,44 @@
+---
+import { Picture } from "@astrojs/image/components";
+---
+
+<div class="w-full bg-paper shadow-md mt-8 py-8">
+  <div class="max-w-5xl mx-auto">
+    <section class="customer-logos slider">
+      <div class="slide">
+        <img class="h-12" src="images/clients/1.svg" />
+      </div>
+      <div class="slide"><img class="h-12" src="images/clients/2.png" /></div>
+      <div class="slide"><img class="h-12" src="images/clients/3.png" /></div>
+      <div class="slide"><img class="h-12" src="images/clients/4.svg" /></div>
+    </section>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $(".customer-logos").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+      ],
+    });
+  });
+</script>

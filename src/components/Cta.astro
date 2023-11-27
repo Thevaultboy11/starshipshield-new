@@ -1,0 +1,46 @@
+---
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import { Picture } from "@astrojs/image/components";
+import ClientSlider from "~/components/widgets/ClientSlider.astro";
+import Icon from "astro-icon";
+import ProblemAstro from "../components/ProblemsCarousel";
+---
+
+<div class="w-full max-w-5xl p-4 mx-auto mb-24">
+  <div
+    class="bg-primary w-full rounded-md shadow-xl overflow-hidden md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-2 lg:gap-4"
+  >
+    <div
+      class="flex flex-col mb-4 text-white items-start pt-10 pb-12 px-6 sm:pt-16 sm:px-16 md:py-20 md:pr-0 lg:py-20 lg:pr-0 xl:px-20"
+    >
+      <h1 class="mb-4 h2 font-bold">
+        <span class="block">Ready to try it?</span>
+        <span class="block">Get started in less than a minute.</span>
+      </h1>
+      <p class="text-sm md:text-base">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit apparet statim,
+        quae sint id aliis narrare gestiant.
+      </p>
+      <div class="flex justify-cetner mt-8 gap-x-4 items-center">
+        <a href="/learn-more" class="btn-white btn-sm">View more</a>
+        <div class="flex justify-cetner items-center gap-x-1">
+          <div class="text-sm md:text-base">Look around</div>
+          <Icon name="tabler:arrow-right" class="w-3.5 h-3.5 inline-block" />
+        </div>
+      </div>
+    </div>
+    <div class="w-full relative">
+      <Picture
+        style="box-shadow: 14px 8px 30px 0px #ffff;"
+        class="translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 ltablet:translate-y-20 lg:translate-y-20"
+        src="/images/android_blog.png"
+        width={800}
+        height={800}
+        widths={[400, 768]}
+        sizes="100vw, 432px"
+        aspectRatio="300:300"
+        alt="sa"
+      />
+    </div>
+  </div>
+</div>

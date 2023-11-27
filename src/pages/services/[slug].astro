@@ -1,0 +1,143 @@
+---
+import { getCollection, CollectionEntry } from "astro:content";
+import Icon from "astro-icon";
+const solution_list = [
+  {
+    title: "Web Application Penetration Testing",
+    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
+    href: "",
+  },
+  {
+    title: "Web Application Penetration Testing",
+    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
+    href: "",
+  },
+];
+export const getStaticPaths = async () => {
+  const posts = await getCollection("services");
+  const paths = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+      props: {
+        post,
+      },
+    };
+  });
+  return paths;
+};
+type Props = {
+  post: CollectionEntry<"services">;
+};
+const { post } = Astro.props;
+const { Content } = await post.render();
+import Layout from "../../layouts/PageLayout.astro";
+import TabComponent from "~/components/CardTabs";
+const meta = {
+  title: "Case studies",
+  description: "The latest stories about Starship Shield.",
+  dontUseTitleTemplate: true,
+};
+const data = [
+  {
+    icon: "tabler:clock",
+    title: "E-commerce",
+    paragraph:
+      "Reduce rework. Speed up reporting. Standardize vulnerabilities and how testing is performed.",
+  },
+  {
+    icon: "tabler:clock",
+    title: "Novi",
+    paragraph:
+      "Reduce rework. Speed up reporting. Standardize vulnerabilities and how testing is performed.",
+  },
+  // Add more objects as needed
+];
+---
+
+<Layout meta={meta}>
+  <section
+    class="relative md:-mt-20 xl:-mt-20 bg-cover bg-center mb-16"
+    style="background-image: url('/images/android_blog3.png');  box-shadow: 0px 12px 10px 0px #6929c2;  "
+  >
+    <div
+      class="absolute w-full h-full inset-0 opacity-70"
+      style="background-image: linear-gradient(
+      0deg,
+      hsl(265deg 65% 46%) 0%,
+      hsl(265deg 65% 46%) 13%,
+      hsl(265deg 65% 46%) 25%,
+      hsl(260deg 100% 29%) 37%,
+      hsl(0deg 0% 0%) 50%,
+      hsl(339deg 0% 0%) 63%,
+      hsl(0deg 0% 0%) 75%,
+      hsl(339deg 0% 0%) 87%,
+      hsl(0deg 0% 0%) 100%
+    );
+
+    "
+    >
+    </div>
+
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-24">
+      <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+      <div class="py-4 md:py-8">
+        <div class="text-center max-w-screen-lg mx-auto">
+          <p class="p1 text-white w-60 md:max-w-md mx-auto">
+            Secured 3 000+ active users
+          </p>
+
+          <h1 class="h1 text-white">Web application security</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12">
+    <div class="col-span-6 py-6 rounded-xl">
+      <div>
+        <div class="flex flex-col pb-20">
+          <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
+          <h1 class="h2 my-6">What is a Penetration test?</h1>
+          <div class="p1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
+            minus maxime in corporis sapiente illum odit eaque voluptas.
+            Voluptas, nostrum!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-6 bg-red-200 rounded-md"></div>
+  </div>
+  <div class="mx-auto max-w-5xl p-4">
+    <TabComponent
+      tabData={[
+        {
+          tab: "Problem 1",
+          title: "About Content",
+          body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ipsa vitae dolor sed. Accusantium vero mollitia, accusamus similique temporibus veritatis?`,
+        },
+        {
+          tab: "Problem 2",
+          title: "About me",
+          body: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ipsa vitae dolor sed. Accusantium vero mollitia, accusamus similique temporibus veritatis?`,
+        },
+      ]}
+      client:load
+    />
+  </div>
+  <div class="mx-auto max-w-5xl p-4">
+    <h1 class="h2 mx-auto text-center my-8">What do you get?</h1>
+    <div class="mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8">
+      {
+        solution_list.map(({ title, body }) => (
+          <div class="block w px-6 py-10 col-span-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+            <h5 set:text={title} class="mb-4 h3 font-thin text-primary" />
+            <p set:text={body} class="p1" />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <!-- <a class="btn-primary btn-sm w-32 my-8" href="">Click me</a> -->
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/PageLayout.astro";
+import Header from "../../components/widgets/Header.astro";
+import Hero from "../../components/widgets/Hero.astro";
+import { headerData } from "../../data";
+import CaseStudy from "../../components/case-study";
+import { Picture } from "@astrojs/image/components";
+import { Link, useRoute } from "@astro/types";
+
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+---
+
+<Layout {meta}>
+  <Fragment slot="header">
+    <Header {...headerData} showRssFeed showToggleTheme position="right" />
+  </Fragment>
+
+  <section class="not-prose">
+    <Picture
+      style="box-shadow: 14px 8px 30px 0px #6929c4;"
+      class="w-full absolute inset-0 h-full pointer-events-none select-none rounded-xl bg-gray-500 shadow-lg"
+      width={400}
+      height={300}
+      widths={[400, 768]}
+      sizes="100vw, 432px"
+      aspectRatio="1600:900"
+      alt="sa"
+      src={"/images/conference.jpeg"}
+    />
+    <div
+      class="absolute w-full h-full inset-0 opacity-70"
+      style="background-image: linear-gradient(
+        0deg,
+        hsl(265deg 65% 46%) 0%,
+        hsl(265deg 65% 46%) 13%,
+        hsl(265deg 65% 46%) 25%,
+        hsl(260deg 100% 29%) 37%,
+        hsl(0deg 0% 0%) 50%,
+        hsl(339deg 0% 0%) 63%,
+        hsl(0deg 0% 0%) 75%,
+        hsl(339deg 0% 0%) 87%,
+        hsl(0deg 0% 0%) 100%
+      );
+      
+      "
+    >
+    </div>
+  </section>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+    <div class="py-4 md:py-8">
+      <div class="text-center max-w-screen-lg mx-auto">
+        <p class="info-title max-w-md mx-auto">Secured 3000+ Users</p>
+        <h1
+          class="cover-title text-5xl md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+        >
+          Real companies, real security.
+        </h1>
+      </div>
+    </div>
+    <div
+      class="bg-paper rounded-full shadow-lg max-w-2xl p-4 mx-auto flex gap-x-2 justify-center items-center"
+    >
+      <p class="text-2xl uppercase text-primary font-bold">Category</p>
+      <a class="link-case-active w-40">Case Studies</a>
+      <a class="link-case w-40">Client Wins</a>
+    </div>
+  </div>
+  <div class="mt-32"></div>
+</Layout>

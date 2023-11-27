@@ -1,0 +1,13 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Service from "./Service.astro";
+type Props = {
+  posts: CollectionEntry<"services">[];
+};
+const { posts } = Astro.props;
+
+---
+
+<div class="grid grid-col-1 w-full max-w-5xl mx-auto">
+  {posts.map((post) => <Service post={post} />)}
+</div>

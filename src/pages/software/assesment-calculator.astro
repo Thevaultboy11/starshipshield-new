@@ -1,0 +1,32 @@
+---
+import { SITE } from "~/config.mjs";
+import Layout from "~/layouts/PageLayout.astro";
+import { Picture } from "@astrojs/image/components";
+import CalculatorForm from "../../components/AssementCalculator";
+const meta = {
+  title: "Security assesment calculator",
+  description:
+    "Check the market price for security assesments using our calculator.",
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+    <div class="py-4 md:py-8">
+      <div class="text-center max-w-screen-lg mx-auto">
+        <h1
+          class="cover-title text-ibm-black text-5xl md:text-7xl font-bold leading-tighter tracking-tighter pafont-heading"
+        >
+          Security assement <span class="text-primary">price</span> calculator
+        </h1>
+      </div>
+    </div>
+    <div
+      class="max-w-5xl mx-auto relative bg-paper rounded-xl p-4 my-12 py-12 px-10"
+    >
+      <CalculatorForm client:load />
+    </div>
+  </div>
+</Layout>

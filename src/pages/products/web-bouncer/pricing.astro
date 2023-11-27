@@ -1,0 +1,135 @@
+---
+import ToggleComponent from "~/components/ToggleComponent.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import Pricing from "~/components/Pricing.astro";
+import PricingTable from "~/components/PricingTable.astro";
+import AcordionComponent from "../../../components/accordionComponent";
+const meta = {
+  title: "Do you want amplified security? ",
+  description:
+    "Defining boundaries for a quality security assement is hard. We make it easy.",
+  dontUseTitleTemplate: true,
+};
+/* eslint max-lines: 'off' */
+---
+
+<Layout meta={meta}>
+  <div class="w-full max-w-5xl px-4 pt-8 mx-auto py-8">
+    <h1 class="h1 text-center">Pricing</h1>
+    <p class="p1 my-4 mx-auto text-center">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, cum!
+    </p>
+    <Pricing
+      title="Our prices"
+      subtitle="Only pay for what you need"
+      prices={[
+        {
+          title: "basic",
+          subtitle: "Optimal choice for personal use",
+          price: 29,
+          period: "per month",
+          items: [
+            {
+              description: "Etiam in libero, et volutpat",
+            },
+            {
+              description: "Aenean ac nunc dolor tristique",
+            },
+            {
+              description: "Cras scelerisque accumsan lib",
+            },
+            {
+              description: "In hac habitasse",
+            },
+          ],
+          callToAction: {
+            target: "_blank",
+            text: "Get started",
+            href: "#",
+          },
+        },
+        {
+          title: "standard",
+          subtitle: "Optimal choice for small teams",
+          price: 69,
+          period: "Per Month",
+          items: [
+            {
+              description: "Proin vel laoreet",
+            },
+            {
+              description: "Ut efficitur habitasse egestas",
+            },
+            {
+              description: "Volutpat hac curabitur",
+            },
+            {
+              description: "Pellentesque blandit ut nibh",
+            },
+            {
+              description: "Donec fringilla sem",
+            },
+          ],
+          callToAction: {
+            target: "_blank",
+            text: "Get started",
+            href: "#",
+          },
+          hasRibbon: true,
+          ribbonTitle: "popular",
+        },
+        {
+          title: "premium",
+          subtitle: "Optimal choice for companies",
+          price: 199,
+          period: "Per Month",
+          items: [
+            {
+              description: "Curabitur suscipit risus",
+            },
+            {
+              description: "Aliquam habitasse malesuada",
+            },
+            {
+              description: "Suspendisse sit amet blandit",
+            },
+            {
+              description: "Suspendisse auctor blandit dui",
+            },
+          ],
+          callToAction: {
+            target: "_blank",
+            text: "Get started",
+            href: "#",
+          },
+        },
+      ]}
+    />
+  </div>
+  <div class="w-full max-w-5xl px-4 pt-8 mx-auto py-8">
+    <h1 class="h2 my-b text-center">Compare products</h1>
+    <PricingTable />
+  </div>
+  <div class="w-full max-w-5xl px-4 pt-8 mx-auto py-8">
+    <h1 class="h2 mb-4 text-center">Faq</h1>
+    <AcordionComponent
+      client:load
+      FaqList={[
+        {
+          question: "Is this going to be a waste of time?",
+          answer: ` Don't follow in the footsteps of companies like Code Spaces,
+      MyBizHomepage, and Nirvanix. They were once successful until they
+      went bankrupt due to data breaches. <br></br>Instead, strive to{" "}
+      <b>be better</b> and <b>be prepared</b>.`,
+        },
+        {
+          question: "Is this going to be a waste of time?",
+          answer: ` Don't follow in the footsteps of companies like Code Spaces,
+      MyBizHomepage, and Nirvanix. They were once successful until they
+      went bankrupt due to data breaches. <br></br>Instead, strive to{" "}
+      <b>be better</b> and <b>be prepared</b>.`,
+        },
+      ]}
+    />
+  </div>
+</Layout>

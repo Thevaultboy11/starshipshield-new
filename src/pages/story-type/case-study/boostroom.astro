@@ -1,0 +1,117 @@
+---
+import Layout from "../../../layouts/PageLayout.astro";
+import Header from "../../../components/widgets/Header.astro";
+import Hero from "../../../components/widgets/Hero.astro";
+import { headerData } from "../../../data";
+import CaseStudy from "../../../components/case-study";
+import Cta from "~/components/Cta.astro";
+
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+---
+
+<Layout {meta}>
+  <section
+    class="relative h-300 md:-mt-20 bg-cover bg-center mb-16 md:mb-32"
+    style=" box-shadow: 0px 12px 10px 0px #6929c2;  "
+  >
+    <div
+      class="absolute w-full h-full inset-0"
+      style="background-image: linear-gradient(
+      0deg,
+      hsl(265deg 65% 46%) 0%,
+      hsl(265deg 65% 46%) 13%,
+      hsl(265deg 65% 46%) 25%,
+      hsl(260deg 100% 29%) 37%,
+      hsl(0deg 0% 0%) 50%,
+      hsl(339deg 0% 0%) 63%,
+      hsl(0deg 0% 0%) 75%,
+      hsl(339deg 0% 0%) 87%,
+      hsl(0deg 0% 0%) 100%
+    );
+    
+    "
+    >
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12">
+      <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+      <div class="py-4 md:py-8">
+        <div class="text-center max-w-screen-lg mx-auto">
+          <p class="info-title w-60 md:max-w-md mx-auto">Alen Vlahovljak</p>
+          <h1
+            class="cover-title text-5xl md:text-6xl tracing-10 font-bold leading-tighter tracking-tighter mb-4 font-heading"
+          >
+            "Starship Shield has saved us from 2 major data breaches."
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="max-w-screen-xl mb-8 mx-auto p-4 md:p-0">
+    <iframe
+      width="1280"
+      height="720"
+      src="https://www.youtube.com/embed/QelSVeRmNUQ"
+      title="How Boostroom Evaded a Data Breach"
+      frameborder="0"
+      class="w-full mx-auto hidden md:block"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe
+      width="100%"
+      height="auto"
+      src="https://www.youtube.com/embed/QelSVeRmNUQ"
+      title="How Boostroom Evaded a Data Breach"
+      frameborder="0"
+      class="w-full mx-auto block md:hidden"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="w-full p-4">
+    <div
+      class="bg-paper rounded-xl p-4 md:px-12 md:p-8 mx-auto max-w-screen-xl"
+    >
+      <h1 class="text-3xl my-8 leading-10 mt-2 text-primary font-bold">
+        Alen Vlahovljak
+      </h1>
+      <p class="text-xl mb-7">
+        Meet BoostRoom, another satisfied customer of ours. They are a company
+        with a mission and vision to help gamers make money.
+      </p>
+      <p class="text-xl mb-7">
+        <strong>1000 active users</strong> are happily using their website.
+      </p>
+      <p class="text-xl mb-7">
+        <em>Alen Vlahovljak</em> - lead developer of a team with <strong
+          >5+ members</strong
+        > at Boostroom. The Boostroom application was not tested before. Alen was
+        confident with his team's knowledge and security measures put in place.
+      </p>
+      <p class="text-xl mb-7">
+        But just before publishing, the Starship Shield team has found critical
+        vulnerabilities and multiple exploitation points for <strong
+          >2 potential data breaches</strong
+        >.
+      </p>
+      <p class="text-xl mb-7">
+        Now the team is securely integrating new modules into the application
+        every day. The application is monitored by <strong
+          >1000+ security experts</strong
+        > every day.
+      </p>
+      <p class="text-xl mb-7">
+        With our Secret model, Boostroom maintains its competitive advantage and
+        customer satisfaction.
+      </p>
+      <p class="text-xl mb-7">
+        Our Secret model isn't an easy button, but it does allow a focus on
+        scaling and growing their business securely.
+      </p>
+    </div>
+  </div>
+  <div class="p-4">
+    <Cta />
+  </div>
+</Layout>
