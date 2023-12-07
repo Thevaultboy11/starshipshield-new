@@ -58,7 +58,7 @@ export const headerData = {
   ],
   actions: [
     {
-      text: "See Countdown",
+      text: "Get Started",
       href: "/learn-more",
       type: "primary",
     },

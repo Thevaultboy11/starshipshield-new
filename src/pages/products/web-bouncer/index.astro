@@ -12,15 +12,30 @@ const meta = {
 const data = [
   {
     icon: "tabler:clock",
-    title: "E-commerce",
+    title: "E-commerce Stores",
     paragraph:
-      "Reduce rework. Speed up reporting. Standardize vulnerabilities and how testing is performed.",
+      "If your main business income stream is e-commerce. Imagine how much money would you lose if the page was down during the peak hour.",
   },
   {
     icon: "tabler:clock",
-    title: "Novi",
+    title: "Highly visited daily webpages",
     paragraph:
-      "Reduce rework. Speed up reporting. Standardize vulnerabilities and how testing is performed.",
+      "If your business model is based on retaining and growing the number of visitors. Imagine what would happen to your fans if their data was stolen.",
+  },
+  // Add more objects as needed
+];
+
+const about_webbouncer = [
+  {
+    icon: "tabler:clock",
+    title: "1 Step",
+    paragraph: `Clones your front end and makes your original front end no longer accessible from the internet.`,
+  },
+  {
+    icon: "tabler:clock",
+    title: "2 Step",
+    paragraph:
+      "The clone looks for changes and validates and tamperproofs the website, making it impossible for XSS attacks.",
   },
   // Add more objects as needed
 ];
@@ -38,15 +53,15 @@ const data = [
         <span class="text-primary">high-conversion</span> site from cyber criminals?
       </h1>
       <p class="max-w-2xl mb-6 p1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-        voluptatum aspernatur itaque.
+        Protection for high-traffic websites that want protection from downtime
+        and any type of data theft.
       </p>
       <div
         class="bg-paper p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
       >
         <div class="flex flex-col items-start justify-start gap-y-2">
-          <h1 class="h3">1.60.0</h1>
-          <p class="p1">Relese notes</p>
+          <h1 class="h3">2.0.2</h1>
+          <p class="p1">Version</p>
         </div>
         <div class="flex flex-col items-start justify-start gap-y-2">
           <h1 class="h3">15</h1>
@@ -83,7 +98,7 @@ const data = [
           <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
           <h1 class="h2 my-4">For who is Webouncer?</h1>
           <div class="p1">
-            For people that rely on website traffic to convert leads.
+            Say goodbye to: XSS-attacks, DDOS-attacks and downtime
           </div>
           <div class="p1 text-primary">Stop hackers once and for all</div>
         </div>
@@ -109,10 +124,6 @@ const data = [
     <div class="flex flex-col col-span-12 mb-4 order-2 md:order-1">
       <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
       <h1 class="h2 my-4">What makes Web Bouncer Special?</h1>
-      <div class="p1">
-        For people that rely on website traffic to convert leads.
-      </div>
-      <div class="p1 text-primary">Stop hackers once and for all</div>
     </div>
     <div
       class="bg-primary w-full h-full p-24 col-span-12 md:col-span-6 order-1 md:order-3"
@@ -124,12 +135,12 @@ const data = [
           <div>
             <h1 class="font-bold h3 mb-2">Business</h1>
             <p class="p1">
-              Webouncer helps you monitor your testing, perform analysis and
-              track compliance.
+              Webouncer is immune to hacker attacks and takes 15 minutes to set
+              up. Here is how it works
             </p>
           </div>
           {
-            data.map(({ icon, title, paragraph }) => (
+            about_webbouncer.map(({ icon, title, paragraph }) => (
               <div class="flex w-full flex-col gap-y-3 mt-8">
                 <div class="flex items-center gap-x-2">
                   <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
@@ -148,8 +159,8 @@ const data = [
       Built for SmB owners, and Large corporations
     </h1>
     <p class="p1 max-w-3xl space-y-6 mt-4">
-      Whether you’re a pentester or a team scaling for success there is an
-      AttackForge <span class="font-semibold">tailored for you.</span>
+      Whether you’re a small company or a team scaling for success there is
+      premium security <span class="font-semibold">waiting for you.</span>
     </p>
   </div>
   <div class="mx-auto lg:max-w-5xl p-4">

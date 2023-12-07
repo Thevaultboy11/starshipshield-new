@@ -24,23 +24,21 @@ const meta = {
 };
 const reviews = [
   {
-    title: `Security Launchpad`,
-    paragraph:
-      "See why our clients trust us to keep them future-ready for the next cyber attack.",
-    img_url: "/images/android_blog.png",
-    href: "products/security-launchpad",
-  },
-  {
     title: `Webouncer`,
-    paragraph:
-      "See why our clients trust us to keep them future-ready for the next cyber attack.",
+    paragraph: `This product is for owners of high-traffic websites that want protection from downtime and any type of data theft.`,
     img_url: "/images/android_blog.png",
     href: "/products/web-bouncer",
   },
   {
+    title: `Security Launchpad`,
+    paragraph: `For companies that overlooked security and want to fix the problem. After taking the bundle, you'll be on your way to meeting security compliance.`,
+    img_url: "/images/android_blog.png",
+    href: "products/security-launchpad",
+  },
+
+  {
     title: `Ptaas`,
-    paragraph:
-      "See why our clients trust us to keep them future-ready for the next cyber attack.",
+    paragraph: `For software development companies  that want to stop trading  off Time to Market speed for quality security.`,
     img_url: "/images/android_blog.png",
     href: "/products/ptaas",
   },
@@ -53,11 +51,8 @@ const reviews = [
   <div
     class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16"
   >
-    <h1 class="max-w-2xl mb-4 h1">Do you want amplified security?</h1>
-    <p class="max-w-2xl mb-6 p1">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
-      laudantium.
-    </p>
+    <h1 class="max-w-2xl mb-4 h1">Your first step to outer-world security</h1>
+
     <div class="w-full">
       <Picture
         class="h-96 w-100 rounded-md bg-gray-400 mx-auto"
@@ -99,7 +94,7 @@ const reviews = [
 
             <div class="w-full">
               <a href={item.href} class="font-bold p1 text-primary">
-                View more
+                See Inside
               </a>
             </div>
           </div>

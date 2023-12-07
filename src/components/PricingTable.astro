@@ -1,5 +1,62 @@
 ---
 import Icon from "astro-icon";
+const data = [
+  {
+    name: "Dashboard",
+    value1: true,
+    value2: true,
+    value3: true,
+  },
+  {
+    name: "6 Month support",
+    value1: true,
+    value2: true,
+    value3: true,
+  },
+  {
+    name: "I-Agent",
+    value1: true,
+    value2: true,
+    value3: true,
+  },
+  {
+    name: "Source server included",
+    value1: false,
+    value2: true,
+    value3: true,
+  },
+  {
+    name: "Target server included",
+    value1: false,
+    value2: false,
+    value3: true,
+  },
+  {
+    name: "Certificate",
+    value1: false,
+    value2: true,
+    value3: true,
+  },
+  {
+    name: "Secured backend",
+    value1: false,
+    value2: false,
+    value3: true,
+  },
+  {
+    name: "GDPR compliant",
+    value1: false,
+    value2: false,
+    value3: true,
+  },
+  {
+    name: "Real-time monitoring",
+    value1: false,
+    value2: false,
+    value3: true,
+  },
+  { name: "Bonus Values", value1: false, value2: true, value3: true },
+];
 ---
 
 <div class="overflow-x-auto">
@@ -11,184 +68,62 @@ import Icon from "astro-icon";
           scope="col"
           class="p-4 text-base font-semibold tracking-wider text-right text-gray-900 dark:text-white"
         >
-          Freelancer
+          Starter
         </th>
         <th
           scope="col"
           class="p-4 text-base font-semibold tracking-wider text-right text-gray-900 dark:text-white"
         >
-          Company
+          Basic
         </th>
         <th
           scope="col"
           class="p-4 text-base font-semibold tracking-wider text-right text-gray-900 dark:text-white"
         >
-          Enterprise
+          Premium
         </th>
       </tr>
     </thead>
     <tbody class="bg-white dark:bg-gray-800">
-      <tr>
-        <td
-          class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400"
-        >
-          Seperate business/personal
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr class="bg-gray-50 dark:bg-gray-900">
-        <td
-          class="p-4 text-base font-normal text-gray-500 whitespace-nowrap dark:text-gray-400"
-        >
-          Estimate tax payments
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400"
-        >
-          Stock control
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr class="bg-gray-50 dark:bg-gray-900">
-        <td
-          class="p-4 text-base font-normal text-gray-500 whitespace-nowrap dark:text-gray-400"
-        >
-          Create invoices & estimates
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400"
-        >
-          Manage bills & payments
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr class="bg-gray-50 dark:bg-gray-900">
-        <td
-          class="p-4 text-base font-normal text-gray-500 whitespace-nowrap dark:text-gray-400"
-        >
-          Run payroll
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400"
-        >
-          Handle multiple currencies
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-
-      <tr>
-        <td
-          class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400"
-        >
-          Track deductible mileage
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr class="bg-gray-50 dark:bg-gray-900">
-        <td
-          class="p-4 text-base font-normal text-gray-500 whitespace-nowrap dark:text-gray-400"
-        >
-          Track employee time
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400"
-        >
-          Multi-device
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4">
-          <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
-        </td>
-        <td class="p-4 rounded-r-lg">
-          <Icon name="tabler:check" class="w-5 h-5 ml-auto text-green-400" />
-        </td>
-      </tr>
+      {
+        data.map((item, index) => (
+          <tr class={index % 2 === 0 ? "" : "bg-gray-50 dark:bg-gray-900"}>
+            <td class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400">
+              {item.name}
+            </td>
+            <td class="p-4">
+              {item.value1 ? (
+                <Icon
+                  name="tabler:check"
+                  class="w-5 h-5 ml-auto text-green-400"
+                />
+              ) : (
+                <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
+              )}
+            </td>
+            <td class="p-4">
+              {item.value2 ? (
+                <Icon
+                  name="tabler:check"
+                  class="w-5 h-5 ml-auto text-green-400"
+                />
+              ) : (
+                <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
+              )}
+            </td>
+            <td class="p-4 rounded-r-lg">
+              {item.value3 ? (
+                <Icon
+                  name="tabler:check"
+                  class="w-5 h-5 ml-auto text-green-400"
+                />
+              ) : (
+                <Icon name="tabler:x" class="w-5 h-5 ml-auto text-red-400" />
+              )}
+            </td>
+          </tr>
+        ))
+      }
     </tbody>
   </table>
 </div>

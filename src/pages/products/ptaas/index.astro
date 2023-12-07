@@ -1,0 +1,247 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import { Icon } from "astro-icon";
+import TestimonialCarousel from "../../../components/TestimonialCarousel";
+const meta = {
+  title: "Do you want amplified security? ",
+  description:
+    "Defining boundaries for a quality security assement is hard. We make it easy.",
+  dontUseTitleTemplate: true,
+};
+
+const data = [
+  {
+    icon: "tabler:clock",
+    title: "Product-Based Companies",
+    paragraph:
+      "For  firms that  focus on creating and selling their own software products. Where before security and speed was always a trade off.",
+  },
+  {
+    icon: "tabler:clock",
+    title: "Outsourcing Companies",
+    paragraph:
+      " For firms that provide software development services to other companies. Where often security can not fit the margin of developing the product.",
+  },
+];
+const before_features = [
+  "Penetration testing is typically performed once or twice a year.",
+  "Results are delivered as static reports.",
+  "There is no real communication with testers and developers established.",
+  "Penetration tests are often one-size-fits-all.",
+];
+const after_features = [
+  "Continuous testing and monitoring after every module are possible with PTaaS.",
+  "PTaaS platforms offer real-time results and dynamic reports",
+  "PTaaS provides remediation guidance for identified vulnerabilities,",
+  "PTaaS can be tailored to an organization’s specific needs.",
+];
+const ptaas_steps = [
+  {
+    title: `Sign-up in 2 mins`,
+    body: `Sign up for a Pentest from the website or make a purchase from the Starship Shield Dashboard.`,
+  },
+  {
+    title: `Map out Scope`,
+    body: `Map out the Pentest scope and just the essential  requirements such as login details, technology etc`,
+  },
+  {
+    title: `Start a Scan`,
+    body: `Start an automated or manual scan whenever you want. See vulnerabilities being reported in minutes.`,
+  },
+  {
+    title: `Fix issues with developers`,
+    body: `We'll report vulnerabilities with a risk rating in your dashboard. Collaborate with your developer in fixing them.`,
+  },
+  {
+    title: `We'll do a re-scan`,
+    body: `After the vulnerabilities are fixed, we'll do a re-scan to ensure everything is 100% secure`,
+  },
+  {
+    title: `Get your certificate of security`,
+    body: `Get a security certification from Starship Shield to build trust with your customers and partners`,
+  },
+];
+---
+
+<Layout meta={meta}>
+  <div
+    class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16"
+  >
+    <div class="md:col-span-3">
+      <h1 class="max-w-2xl mb-4 h1">
+        Stop Zero day <span class="text-primary">Vulnerabilities</span> once and
+        for all.
+      </h1>
+      <p class="max-w-2xl mb-6 p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        voluptatum aspernatur itaque.
+      </p>
+      <div
+        class="bg-paper p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
+      >
+        <div class="flex flex-col items-start justify-start gap-y-2">
+          <h1 class="h3">1.60.0</h1>
+          <p class="p1">Relese notes</p>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-y-2">
+          <h1 class="h3">15</h1>
+          <p class="p1">Clients saved</p>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-y-2">
+          <h1 class="h3">500</h1>
+          <p class="p1">Repelled DDOS</p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-y-2">
+          <a
+            href="/contact-form/"
+            class="w-full md:w-auto py-2 px-3 btn-primary">Contact sales</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="w-full hidden md:block md:col-span-2 bg-red-200"></div>
+  </div>
+  <div
+    class="grid grid-cols-2 md:grid-cols-6 px-4 gap-8 w-full max-w-5xl mx-auto"
+  >
+    <div class="bg-red-200 p-6 rounded-md"></div>
+    <div class="bg-red-200 p-6 rounded-md"></div>
+    <div class="bg-red-200 p-6 rounded-md"></div>
+    <div class="bg-red-200 p-6 rounded-md"></div>
+    <div class="bg-red-200 p-6 rounded-md"></div>
+    <div class="bg-red-200 p-6 rounded-md"></div>
+  </div>
+  <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12">
+    <div class="col-span-12 md:col-span-6 order-2 md:order-1 py-6 rounded-xl">
+      <div>
+        <div class="flex flex-col">
+          <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
+          <h1 class="h2 my-4">For who is Ptaas?</h1>
+          <div class="p1">
+            For software companies that want to integrate implement
+            practitioner-first security to their CI/CD.
+          </div>
+        </div>
+        {
+          data.map(({ icon, title, paragraph }) => (
+            <div class="flex w-full flex-col gap-y-3 mt-8">
+              <div class="flex items-center gap-x-2">
+                <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
+                <p class="p1 font-semibold" set:html={title} />
+              </div>
+              <p class="text-gray-400 p1" set:html={paragraph} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div
+      class="bg-primary w-full p-24 h-full col-span-12 md:col-span-6 order-1 md:order-2"
+    >
+    </div>
+  </div>
+  <div class="w-full max-w-5xl mx-auto p-4">
+    <h1 class="h2 text-center mb-8">What changed with Ptaas</h1>
+    <div
+      class="w-full space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0"
+    >
+      <!-- Pricing Card -->
+      <div
+        class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-paper rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+      >
+        <h3 class="mb-4 h3 font-semibold">Before</h3>
+        <p class="font-light p1 md:w-2/3 mx-auto">
+          Best option for personal use & for your next project.
+        </p>
+        <div class="flex justify-center items-baseline my-8">
+          <span class="mr-2 h1 font-extrabold">10 Days</span>
+          <span class="text-gray-500 dark:text-gray-400">/to start testing</span
+          >
+        </div>
+        <!-- List -->
+        <ul role="list" class="mb-8 space-y-4 text-left">
+          {
+            before_features.map((text: string) => (
+              <li class="flex justify-left items-center space-x-3">
+                <Icon name="tabler:x" class="w-5 h-5 text-red-400" />
+
+                <span set:text={text} />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <!-- Pricing Card -->
+      <div
+        class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-paper rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+      >
+        <h3 class="mb-4 h3 font-semibold">After</h3>
+        <p class="font-light p1 md:w-2/3 mx-auto">
+          Best option for personal use & for your next project.
+        </p>
+        <div class="flex justify-center items-baseline my-8">
+          <span class="mr-2 h1 font-extrabold">2 Days</span>
+          <span class="text-gray-500 dark:text-gray-400">/to start testing</span
+          >
+        </div>
+        <!-- List -->
+        <ul role="list" class="mb-8 space-y-4 text-left">
+          {
+            after_features.map((text: string) => (
+              <li class="flex justify-left items-center space-x-3">
+                <Icon name="tabler:check" class="w-5 h-5  text-green-400" />
+
+                <span set:text={text} />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="w-full max-w-5xl mx-auto p-4">
+    <div class="bg-paper p-8 rounded-md">
+      <h1 class="h2 text-center mb-8">
+        Build a strong security posture in 6 simple steps.
+      </h1>
+      <div class="grid grid-cols-12 w-full gap-8">
+        {
+          ptaas_steps.map(({ title, body }, idx: number) => (
+            <div class="block col-span-1 md:col-span-4 w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <div class="flex justify-start mb-2">
+                <div class="w-6 h-6 rounded-md flex justify-center items-center bg-primary text-white">
+                  <div set:text={idx + 1} />
+                </div>
+              </div>
+              <h5
+                class="mb-2 p1 font-bold tracking-tight text-gray-900 dark:text-white"
+                set:text={title}
+              />
+              <p class="p1 text-gray-700 dark:text-gray-400" set:text={body} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto lg:max-w-5xl p-4">
+    <div
+      class="mx-auto text-white lg:max-w-5xl grid grid-cols-1 md:grid-cols-2 px-8 md:px-32 py-12 rounded-md bg-primary"
+    >
+      <div class="flex flex-col w-full max-w-md">
+        <h1 class="mb-4 h2 font-bold">
+          Do you want to add Practiosner first security?
+        </h1>
+      </div>
+      <div
+        class="gap-x-4 flex flex-row justify-start md:justify-center items-center"
+      >
+        <a
+          href="/contact-form/ptaas"
+          class="bg-white text-black rounded-lg py-3 px-4 md:py-4 md:px-8"
+          >Contact sales</a
+        >
+      </div>
+    </div>
+  </div>
+</Layout>

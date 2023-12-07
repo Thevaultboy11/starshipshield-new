@@ -24,7 +24,7 @@ const meta = {
 };
 const reviews = [
   {
-    title: `See why our clients trust us to keep them future-ready for the next cyber attack.`,
+    title: `Explore the stories of how our clients were saved from cyber disasters.`,
     paragraph: "Case Studies",
     img_url: "/images/android_blog.png",
     href: "story-type/case-study",
@@ -54,21 +54,21 @@ const resources = [
 
 <Layout {meta}>
   <Hero
-    callToAction={{ text: "See Countdown", href: "/learn-more" }}
+    callToAction={{ text: "Get started", href: "/learn-more" }}
     image={{
       src: import("~/assets/images/hero.jpg"),
       alt: "AstroWind Hero Image",
     }}
   >
     <Fragment slot="title">
-      Do you want
-      <span class="text-accent highlight">amplified security?</span>
+      Your first step to
+      <span class="text-accent highlight">outer world</span> security
     </Fragment>
 
     <Fragment slot="subtitle">
       <p class="max-w-lg">
-        Stay tuned for the 3 new security products, that are better, faster and
-        more value packed.
+        No matter the size of your company or how much security has been
+        neglected in the past, we're able to help you.
       </p>
     </Fragment>
   </Hero>
@@ -76,7 +76,8 @@ const resources = [
 
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <div class="h2 text-center w-full max-w-lg mx-auto">
-      See what our clients trust us as their one stop security solution.
+      See why our clients trust us to keep them future-ready for a potential
+      cyber attack.
     </div>
     <div class="grid w-full mx-auto max-w-5xl grid-cols-1 md:grid-cols-2">
       {
@@ -107,7 +108,7 @@ const resources = [
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <div class="h2 w-full text-center mx-auto mb-8 tex">
-      What problems do we solve?
+      Do you have these security problems?
     </div>
     <ProblemAstro client:load />
   </div>
@@ -130,14 +131,14 @@ const resources = [
           </p>
           <h1 class="h2">Starship Shield</h1>
           <p class="mt-8 p1">
-            Starship Shield is an agency founded for business owners to easily
-            amplify their security and retain customer satisfaction.
+            Starship Shield was born with a singular mission to make security
+            easier and accessible to everyone.
           </p>
         </div>
 
         <p class="mt-8 text-center p1">
-          We’ve worked with <b>3+</b> companies with over <b>3000+ users</b>,
-          over a one-month period our clients retained customer satisfaction.
+          See our team behind Starship Shield that won <b>4</b> big cyber security
+          tournaments in the region.
         </p>
         <div
           class="grid grid-cols-1 md:grid-cols-2 mt-16 w-full lg:max-w-2xl gap-y-4"
@@ -158,7 +159,7 @@ const resources = [
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <div class="h2 w-full max-w-lg text-center mx-auto mb-8">
-      Resources for you.
+      Explore newest changes in the world of cyber security
     </div>
     {
       resources.map((item: any, idx: number) => (

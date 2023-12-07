@@ -5,17 +5,20 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Picture } from "@astrojs/image/components";
 const ProblemList = [
   {
-    title: "How to secure your high-conversion site from cyber criminals?",
+    title: `How to secure your high-conversion site from cyber criminals?`,
     paragraph: ` As an SMB, give yourself peace of mind and stop worrying about
-security. Webouncer clones your website and only exposes the
-secure clone to hackers.`,
+security. Webbouncer clones your website and hides sensitive user data making data theft on your site  impossible.
+`,
     href: "/dem-product",
   },
   {
-    title: "How to secure your high-conversion site from cyber criminals?",
-    paragraph: ` As an SMB, give yourself peace of mind and stop worrying about
-security. Webouncer clones your website and only exposes the
-secure clone to hackers.`,
+    title: `Do you want to fix all your Security Problems Ignored for Too Long?`,
+    paragraph: `Security Launchpad helps you see security from a high-level perspective. We ensure that essential factors are secured first, and then we assist you in achieving security compliance.`,
+    href: "/dem-product",
+  },
+  {
+    title: `How to ensure speed and security in developing your software products?`,
+    paragraph: `Software development companies often trade off Time to Market speed for quality security. Ptaas is a way to improve speed of manking and  the quality of your application security.`,
     href: "/dem-product",
   },
 ];
@@ -52,8 +55,14 @@ export default function ProblemCarousel() {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block">
-              <img className="w-full " src="images/android_blog1.png" />
+            <div className="col-span-1 bg-black hidden md:block">
+              <div className="h-full aspect-w-16 aspect-h-9">
+                <img
+                  className="object-cover object-center w-full h-full"
+                  src="images/android_blog1.png"
+                  alt="Your Image"
+                />
+              </div>
             </div>
           </SwiperSlide>
         ))}
