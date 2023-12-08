@@ -6,7 +6,7 @@ import Hero from "~/components/widgets/Hero.astro";
 import { Picture } from "@astrojs/image/components";
 import Icon from "astro-icon";
 import ProblemAstro from "../components/ProblemsCarousel";
-import ClientSlider from "~/components/widgets/ClientSlider.astro";
+import ClientSlider from "~/components/widgets/ClientSlider.tsx";
 const meta = {
   title: "Do you want amplified security? ",
   description:
@@ -75,7 +75,7 @@ const about_us = [
       </p>
     </Fragment>
   </Hero>
-  <ClientSlider />
+  <ClientSlider client:load />
 
   <div class="w-full max-w-5xl px-4 mx-auto mb-24">
     <div class="h2 text-center w-full max-w-lg mx-auto">

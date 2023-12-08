@@ -480,32 +480,3 @@ blockquote::before {
 .border-primary {
   border-color: #6929c2;
 }
-/*
-titlovi
-
-.info-secondary-title {
-  color: #0084b8;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  background-color: rgba(0, 149, 209, 0.34);
-  border-radius: 50em;
-  margin-bottom: 1.5em;
-  padding: 0.7em 1.3em;
-  font-weight: 500;
-  line-height: 1.3em;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-}
-.info-title {
-  color: #6929c2;
-  background-color: rgba(105, 41, 194, 0.34);
-
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  border-radius: 50em;
-  margin-bottom: 1.5em;
-  padding: 0.7em 1.3em;
-  font-weight: 500;
-  line-height: 1.3em;
-  font-family: 'Open Sans', sans-serif;
-} */
