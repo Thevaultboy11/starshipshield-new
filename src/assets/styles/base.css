@@ -25,6 +25,9 @@
 .p3 {
   @apply text-sm;
 }
+.info-title {
+  @apply text-3xl md:text-4xl tracking-tighter    font-semibold    text-black;
+}
 .paper {
   @apply bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg;
 }

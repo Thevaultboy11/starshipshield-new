@@ -6,6 +6,7 @@ import Hero from "~/components/widgets/Hero.astro";
 import { Picture } from "@astrojs/image/components";
 import Icon from "astro-icon";
 import ProblemAstro from "../components/ProblemsCarousel";
+import ClientSlider from "~/components/widgets/ClientSlider.astro";
 const meta = {
   title: "Do you want amplified security? ",
   description:
@@ -40,6 +41,18 @@ const resources = [
     href: "/resources/scope-paper",
   },
 ];
+const about_us = [
+  {
+    statistic: "140+",
+    title: "Coded Elements",
+    body: `From buttons, to inputs, navbars, alerts, tabels, cards or charts.`,
+  },
+  {
+    statistic: "140+",
+    title: "Coded Elements",
+    body: `From buttons, to inputs, navbars, alerts, tabels, cards or charts.`,
+  },
+];
 ---
 
 <Layout {meta}>
@@ -62,13 +75,13 @@ const resources = [
       </p>
     </Fragment>
   </Hero>
-  <!-- <ClientSlider /> -->
+  <ClientSlider />
 
-  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+  <div class="w-full max-w-5xl px-4 mx-auto mb-24">
     <div class="h2 text-center w-full max-w-lg mx-auto">
       What our clients say about us
     </div>
-    <div class="grid w-full mx-auto max-w-5xl grid-cols-1 md:grid-cols-2">
+    <div class="grid w-full mx-auto grid-cols-1 md:grid-cols-2">
       {
         reviews.map((item: any, idx: number) => (
           <div class="w-96 my-16  col-span-1 md:mx-auto">
@@ -96,15 +109,15 @@ const resources = [
     </div>
   </div>
 
-  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+  <div class="w-full max-w-5xl px-4 mx-auto mb-24">
     <div class="h2 text-center w-full max-w-lg mx-auto mb-8">
       Do you have these security problems?
     </div>
     <ProblemAstro client:load />
   </div>
-  <div class="h-full max-w-5xl mx-auto px-8 grid grid-cols-2">
+  <div class="h-full max-w-5xl mx-auto px-8 grid grid-cols-2 mb-24">
     <div class="col-span-1 py-12 bg-blue-200"></div>
-    <div class="col-span-1">
+    <div class="col-span-1 px-8">
       <div class="text-left mb-8">
         <p class="text-primary p1 font-semibold">
           Fully Coded Components based in Astro
@@ -119,86 +132,37 @@ const resources = [
       <div class="lg:flex relative">
         <div class="p-2 lg:p-0 mb-8">
           <div class="grid gap-y-16 gap-x-8 grid-cols-2 md:grid-cols-2 mb-8">
-            <div
-              class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none"
-            >
-              <h1
-                class="block antialiased tracking-normal font-semibold mb-4 text-5xl text-dark"
-              >
-                140+
-              </h1><h5 class="p1 font-semibold">Coded Elements</h5><p
-                class="block antialiased text-base font-light leading-relaxed text-gray-700"
-              >
-                From buttons, to inputs, navbars, alerts, tabels, cards or
-                charts.
-              </p>
-            </div>
+            {
+              about_us.map(({ title, body, statistic }, idx: number) => (
+                <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
+                  <h1
+                    class="block antialiased tracking-normal font-semibold mb-4 text-5xl text-dark"
+                    set:text={statistic}
+                  />
+                  <>
+                    <h5 class="p1 font-semibold" set:text={title} />
+
+                    <p
+                      class="block antialiased text-base font-light leading-relaxed text-gray-700"
+                      set:text={body}
+                    />
+                  </>
+                </div>
+              ))
+            }
           </div>
-          <a
-            href="https://www.creative-tim.com/product/astro-launch-ui-pro"
-            target="_blank"
+          <a href="/about-us"
             ><button class="btn-primary btn-md" type="button"
               >Meet the team</button
             ></a
           >
         </div>
       </div>
-      <!-- <Picture
-        class="w-full h-64 rounded-t-md"
-        src="/resources/assesment-calculator"
-        widths={[1600, 800]}
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-        aspectRatio="16:9"
-        alt="sa"
-      /> -->
     </div>
   </div>
-  <!-- <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <div class="col-span-1 px-4 mb-10 lg:mb-0">
-        <img
-          src="https://i.postimg.cc/9MW8G96J/pexels-the-coach-space-2977565.jpg"
-          alt=""
-          class="relative object-cover w-full h-full rounded"
-        />
-      </div>
-      <div class="bg-paper max-w rounded-md h-full p-8 py-24">
-        <div class="flex flex-col items-center gap-y-2 text-center">
-          <p
-            class="text-xl md:text-xl tracking-tight leading-10 font-semibold uppercase italic"
-          >
-            About Us
-          </p>
-          <h1 class="h2">Starship Shield</h1>
-          <p class="mt-8 p1">
-            Starship Shield was born with a singular mission to make security
-            easier and accessible to everyone.
-          </p>
-        </div>
 
-        <p class="mt-8 text-center p1">
-          See our team behind Starship Shield that won <b>4</b> big cyber security
-          tournaments in the region.
-        </p>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 mt-16 w-full lg:max-w-2xl gap-y-4"
-        >
-          <div class="flex flex-col items-center justify-center">
-            <h1 class="text-6xl md:text-3xl font-extrabold text-primary">
-              10+
-            </h1>
-            <p class="text-primary text-lg">Companies</p>
-          </div>
-          <div class="flex flex-col items-center justify-center">
-            <h1 class="text-6xl md:text-3xl font-extrabold text-primary">10</h1>
-            <p class="text-primary text-lg">Applications Tested</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <div class="h2 w-full max-w-lg text-center mx-auto mb-8">
+  <div class="w-full max-w-5xl px-4 mx-auto mb-24">
+    <div class="w-full max-w-lg text-center info-title mx-auto mb-8">
       Explore newest changes in the world of cyber security
     </div>
     {
@@ -216,8 +180,8 @@ const resources = [
           </div>
 
           <div class="md:col-span-2 px-4 py-8">
-            <p class="p1" set:text={item.paragraph} />
-            <h1 class="h3 my-4" set:text={item.title} />
+            <p class="p2" set:text={item.paragraph} />
+            <h1 class="p1 font-semibold my-4" set:text={item.title} />
           </div>
           <a
             href={item.href}
