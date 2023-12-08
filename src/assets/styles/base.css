@@ -3,16 +3,30 @@
 @tailwind utilities;
 
 .h1 {
-  @apply leading-none tracking-tight font-bold text-5xl;
+  @apply text-4xl font-semibold   tracking-tighter md:text-5xl xl:text-6xl text-black;
 }
+
 .h2 {
-  @apply leading-none tracking-tight font-bold text-3xl;
+  @apply text-4xl lg:text-5xl font-semibold lg:tracking-tight  text-black;
 }
+
 .h3 {
-  @apply font-semibold leading-none text-xl;
+  @apply font-semibold leading-tight text-xl md:text-2xl text-black;
 }
+
 .p1 {
-  @apply text-base tracking-tight leading-tight;
+  @apply text-lg leading-6;
+}
+
+.p2 {
+  @apply text-base;
+}
+
+.p3 {
+  @apply text-sm;
+}
+.paper {
+  @apply bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg;
 }
 .swiper {
   width: 100%;

@@ -5,15 +5,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: "#F4F4F4",
+        paper: "rgb(249,250,251)",
         ["ibm-black"]: "#525252",
         primary: "var(--aw-color-primary)",
         secondary: "#0095D1",
         accent: "var(--aw-color-accent)",
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        serif: ["Inter", ...defaultTheme.fontFamily.serif],
+        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        serif: ["Open Sans", ...defaultTheme.fontFamily.serif],
       },
       textColor: {
         default: "#525252", // Change the default text color
@@ -23,10 +23,10 @@ module.exports = {
         DEFAULT: {
           css: {
             "h1,h2,h3,h4,h5,h6": {
-              fontFamily: ["Inter", ...defaultTheme.fontFamily.sans],
+              fontFamily: ["Open Sans", ...defaultTheme.fontFamily.sans],
             },
             p: {
-              fontFamily: ["Inter", ...defaultTheme.fontFamily.sans],
+              fontFamily: ["Open Sans", ...defaultTheme.fontFamily.sans],
             },
           },
         },

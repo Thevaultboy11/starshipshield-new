@@ -31,37 +31,37 @@ export default function ProblemCarousel() {
         pagination={{
           clickable: true,
         }}
+        spaceBetween={200}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper"
+        className="mySwiper rounded-md"
         style={{ overflow: "hidden", height: "400px" }}
       >
         {ProblemList.map((item: any, idx: number) => (
-          <SwiperSlide
-            key={idx}
-            className="w-full h-96 grid grid-cols-2 rouunded-md"
-          >
-            <div className="bg-paper rounded-l-md h-full px-8 py-24 flex flex-col justify-center items-center">
-              <div className="flex flex-col items-left gap-y-2 text-left">
-                <h1 className="h3">{item.title}</h1>
-                <p className="my-8 p1">{item.paragraph}</p>
-                <div className="">
-                  <a className="btn-primary btn-md" href={item.href}>
-                    View
-                  </a>
+          <SwiperSlide key={idx} className="w-full h-96">
+            <div className="h-full w-full grid grid-cols-12">
+              <div className="paper col-span-12 md:col-span-8 rounded-l-md h-full p-8">
+                <div className="h-full  items-left gap-y-2 text-left">
+                  <h1 className="h3">{item.title}</h1>
+                  <p className="p2 my-4">{item.paragraph}</p>
+                  <div className="mt-8">
+                    <a className="btn-primary btn-md" href={item.href}>
+                      See inside
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-span-1 bg-black hidden md:block">
-              <div className="h-full aspect-w-16 aspect-h-9">
-                <img
-                  className="object-cover object-center w-full h-full"
-                  src="images/android_blog1.png"
-                  alt="Your Image"
-                />
+              <div className="col-span-4   hidden md:block">
+                <div className="h-full w-full  ">
+                  <img
+                    className="object-cover object-center w-full h-full"
+                    src="images/android_blog1.png"
+                    alt="Your Image"
+                  />
+                </div>
               </div>
             </div>
           </SwiperSlide>

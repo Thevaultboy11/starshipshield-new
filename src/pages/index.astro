@@ -3,17 +3,7 @@ import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
 import Cta from "~/components/Cta.astro";
 import Hero from "~/components/widgets/Hero.astro";
-import Note from "~/components/widgets/Note.astro";
-import Features from "~/components/widgets/Features.astro";
-import Features2 from "~/components/widgets/Features2.astro";
-import Steps from "~/components/widgets/Steps.astro";
-import Content from "~/components/widgets/Content.astro";
-import LatestPosts from "~/components/blog/LatestPosts.astro";
-import FAQs from "~/components/widgets/FAQs.astro";
-import Stats from "~/components/widgets/Stats.astro";
-import CallToAction from "~/components/widgets/CallToAction.astro";
 import { Picture } from "@astrojs/image/components";
-import ClientSlider from "~/components/widgets/ClientSlider.astro";
 import Icon from "astro-icon";
 import ProblemAstro from "../components/ProblemsCarousel";
 const meta = {
@@ -72,12 +62,11 @@ const resources = [
       </p>
     </Fragment>
   </Hero>
-  <ClientSlider />
+  <!-- <ClientSlider /> -->
 
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <div class="h2 text-center w-full max-w-lg mx-auto">
-      See why our clients trust us to keep them future-ready for a potential
-      cyber attack.
+      What our clients say about us
     </div>
     <div class="grid w-full mx-auto max-w-5xl grid-cols-1 md:grid-cols-2">
       {
@@ -91,12 +80,12 @@ const resources = [
               aspectRatio="16:9"
               alt="sa"
             />
-            <div class="bg-paper p-4 flex flex-col gap-y-4 mb-auto">
-              <h1 class="h3" set:text={item.paragraph} />
-              <p class="p1 my-4" set:text={item.title} />
+            <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4 paper">
+              <h1 class="h3 text-black" set:text={item.paragraph} />
+              <p class="p2 mb-4 -mt-2" set:text={item.title} />
 
               <div class="w-full">
-                <a href={item.href} class="btn-primary btn-sm">
+                <a href={item.href} class="btn-primary btn-md">
                   View more
                 </a>
               </div>
@@ -106,14 +95,65 @@ const resources = [
       }
     </div>
   </div>
+
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <div class="h2 w-full text-center mx-auto mb-8 tex">
+    <div class="h2 text-center w-full max-w-lg mx-auto mb-8">
       Do you have these security problems?
     </div>
     <ProblemAstro client:load />
   </div>
-
-  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+  <div class="h-full max-w-5xl mx-auto px-8 grid grid-cols-2">
+    <div class="col-span-1 py-12 bg-blue-200"></div>
+    <div class="col-span-1">
+      <div class="text-left mb-8">
+        <p class="text-primary p1 font-semibold">
+          Fully Coded Components based in Astro
+        </p>
+        <h2 class="h2 my-4">Astro LaunchUI Pro</h2>
+        <p class="p3">
+          All the sections and pages made with these elements will be fully
+          responsive and will look beautiful on all types of screens, including
+          phones, tables, or desktops.
+        </p>
+      </div>
+      <div class="lg:flex relative">
+        <div class="p-2 lg:p-0 mb-8">
+          <div class="grid gap-y-16 gap-x-8 grid-cols-2 md:grid-cols-2 mb-8">
+            <div
+              class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none"
+            >
+              <h1
+                class="block antialiased tracking-normal font-semibold mb-4 text-5xl text-dark"
+              >
+                140+
+              </h1><h5 class="p1 font-semibold">Coded Elements</h5><p
+                class="block antialiased text-base font-light leading-relaxed text-gray-700"
+              >
+                From buttons, to inputs, navbars, alerts, tabels, cards or
+                charts.
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://www.creative-tim.com/product/astro-launch-ui-pro"
+            target="_blank"
+            ><button class="btn-primary btn-md" type="button"
+              >Meet the team</button
+            ></a
+          >
+        </div>
+      </div>
+      <!-- <Picture
+        class="w-full h-64 rounded-t-md"
+        src="/resources/assesment-calculator"
+        widths={[1600, 800]}
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+        aspectRatio="16:9"
+        alt="sa"
+      /> -->
+    </div>
+  </div>
+  <!-- <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="col-span-1 px-4 mb-10 lg:mb-0">
         <img
@@ -156,7 +196,7 @@ const resources = [
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
     <div class="h2 w-full max-w-lg text-center mx-auto mb-8">
       Explore newest changes in the world of cyber security
