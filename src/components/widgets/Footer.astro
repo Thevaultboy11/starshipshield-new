@@ -1,5 +1,6 @@
 ---
 import { getHomePermalink } from "~/utils/permalinks";
+import Logo from "../Logo.astro";
 
 interface Link {
   text?: string;
@@ -64,7 +65,9 @@ const {
       {
         links.map(({ title, links }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
+            <div class="text-black font-medium mb-2 whitespace-nowrap">
+              {title}
+            </div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
                 {links.map(({ text, href, ariaLabel }) => (
