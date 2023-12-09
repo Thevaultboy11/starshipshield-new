@@ -67,7 +67,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: "Customer feedback",
+      title: "Customer Feedback",
       links: [
         { text: "Case studies", href: "/story-type/case-study" },
         { text: "Client wins", href: "/story-type/client-wins" },
@@ -102,9 +102,13 @@ export const footerData = {
   ],
   footNote: `
   <div class='flex justify-center items-center gap-x-4'>
-       <span class="w-20 h-8 md:w-20 md:h-8 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(/images/blacklogo.png)]"></span>
-       <p>Made by <a class="text-blue-600 hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
-     </div> 
+    <img
+      src="/images/blacklogo.png"
+      width="40"
+      height="40"
+    />  
+    <p>Made by <a class="text-blue-600 hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
+  </div> 
   `,
 };
 

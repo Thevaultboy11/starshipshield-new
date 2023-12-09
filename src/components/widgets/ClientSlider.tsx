@@ -5,25 +5,55 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Picture } from "@astrojs/image/components";
 const picture_list = [
   {
-    src: "/",
-    alt: ``,
+    src: "images/client_logo/boostroom.png",
+    alt: `Boostroom Logo`,
+    href: "https://boostroom.com/"
   },
   {
-    src: "/",
-    alt: ``,
+    src: "images/client_logo/ooxlimited.png",
+    alt: `OOX Limited Logo`,
+    href: "https://www.ooxcit.com/"
   },
   {
-    src: "/",
-    alt: ``,
+    src: "images/client_logo/appit.png",
+    alt: `App IT Logo`,
+    href: "https://appit.ba/"
   },
   {
-    src: "/",
-    alt: ``,
+    src: "images/client_logo/hive.png",
+    alt: `Hive Invoicing Logo`,
+    href: "https://www.hive.ba/"
   },
   {
-    src: "/",
-    alt: ``,
+    src: "images/client_logo/unija.png",
+    alt: `Unija Smart Accounting Logo`,
+    href: "https://unija.com/"
   },
+  {
+    src: "images/client_logo/origin.png",
+    alt: `Origin Logo`,
+    href: "https://origin.ba/"
+  },
+  {
+    src: "images/client_logo/doc.png",
+    alt: `Doc.ba Logo`,
+    href: "https://doc.ba/"
+  },
+  {
+    src: "images/client_logo/webouncer.png",
+    alt: `Web Bouncer Logo`,
+    href: "https://kralos.eu/webouncer/"
+  },
+  {
+    src: "images/client_logo/kralos.png",
+    alt: `Kralos Logo`,
+    href: "https://kralos.eu/"
+  },
+  {
+    src: "images/client_logo/patrola.png",
+    alt: `Patrola Logo`,
+    href: "https://patrola.ba/"
+  }
 ];
 
 export default function AchievemenCarousel() {
@@ -43,14 +73,14 @@ export default function AchievemenCarousel() {
           reverseDirection: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper border-y-2 py-4 border-paper border-12   relative"
+        className="mySwiper border-y-2 py-4 border-paper border-12 relative my-10"
         style={{ overflow: "hidden" }}
       >
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -right-px from-transparent to-80% to-white"></div>
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -left-px   from-20% from-white to-transparent"></div>
         {picture_list.map((item: any, idx: number) => (
           <SwiperSlide key={idx} className="w-full h-auto rounded-md">
-            <div className="bg-paper w-40 py-4">novo nesto</div>
+            <a href={item.href} ><img src={item.src} alt={item.alt} /></a> 
           </SwiperSlide>
         ))}
       </Swiper>
