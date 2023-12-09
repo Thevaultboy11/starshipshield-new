@@ -53,6 +53,11 @@ const picture_list = [
     src: "images/client_logo/patrola.png",
     alt: `Patrola Logo`,
     href: "https://patrola.ba/"
+  },
+  {
+    src: "images/client_logo/sklopiposao.png",
+    alt: `Sklopi Posao Logo`,
+    href: "https://sklopiposao.ba/"
   }
 ];
 
