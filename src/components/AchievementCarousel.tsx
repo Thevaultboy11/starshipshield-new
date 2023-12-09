@@ -45,10 +45,10 @@ export default function AchievemenCarousel() {
                 <div className="flex flex-col items-left gap-y-2 text-left">
                   <h1 className="h3">{item.title}</h1>
                   <p
-                    className="my-4 p1"
+                    className="my-4 p2"
                     dangerouslySetInnerHTML={{ __html: item.paragraph }}
                   ></p>
-                  <a href={item.href} className="text-primary">
+                  <a href={item.href} className="text-primary p1">
                     See more
                   </a>
                 </div>

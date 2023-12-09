@@ -27,7 +27,7 @@ const team_members = [
   },
   {
     name: "Rijad Gadzo",
-    description: ` Security engineer specializing in IOT, 4 years DevSecOps engineer in numerous companies`,
+    description: ` Security engineer specializing in IOT,  years DevSecOps engineer in numerous companies`,
     img_url: "/images/android_blog.png",
     linked_in_url: "/",
   },
@@ -72,15 +72,17 @@ const key_features = [
       Young and driven allays on the lookout for new ways of defending against
       hackers.
     </p>
-    <div class="w-full bg-paper py-8 px-4 grid grid-cols-1 md:grid-cols-2">
+    <div
+      class="w-full paper rounded-md py-8 px-4 grid grid-cols-1 md:grid-cols-2"
+    >
       <div
-        class="w-full mb-8 pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-black"
+        class="w-full flex items-center pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-black"
       >
-        <h1 class="text-2xl font-semibold text-left tracking-tighter">
+        <h1 class="h3 text-left">
           You guessed it. <br /> We’re changing the game.
         </h1>
       </div>
-      <div class="text-left md:text-center md:pl-4">
+      <div class="text-left p2 md:text-center md:pl-4">
         <p>
           Understanding the struggle of small companies regarding security, our
           founders committed themselves to a singular mission to make security
@@ -91,8 +93,8 @@ const key_features = [
     </div>
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <h1 class="h2 text-center">Meet our team</h1>
-    <p class="w-full md:w-1/2 text-center mx-auto my-4">
+    <h1 class="h2 text-center mb-4">Meet our team</h1>
+    <p class="p2 md:w-1/2 mx-auto">
       Always helping other people: the team behind Starship Shield.
     </p>
     <div class="w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-y-8">
@@ -108,8 +110,8 @@ const key_features = [
               alt="sa"
             />
 
-            <h1 class="text-2xl" set:text={item.name} />
-            <p class="text-sm" set:text={item.description} />
+            <h1 class="h3" set:text={item.name} />
+            <p class="p2" set:text={item.description} />
             <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
               <Icon
                 pack="cib"
@@ -134,8 +136,8 @@ const key_features = [
               alt="sa"
             />
 
-            <h1 class="text-2xl" set:text={item.name} />
-            <p class="text-sm" set:text={item.description} />
+            <h1 class="h3" set:text={item.name} />
+            <p class="p2" set:text={item.description} />
             <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
               <Icon
                 pack="cib"
@@ -149,7 +151,10 @@ const key_features = [
     </div>
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <div class="h2 w-full text-center mx-auto mb-8">Tournements we won</div>
+    <div class="h2 w-full mb-4 text-center mx-auto">Tournements we won</div>
+    <p class="p2 md:w-1/2 mx-auto mb-8">
+      Always helping other people: the team behind Starship Shield.
+    </p>
     <AchievementCarousel client:load />
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
@@ -168,7 +173,7 @@ const key_features = [
               alt="sa"
             />
             <h1 class="h3" set:text={title} />
-            <p class="p1" set:text={paragraph} />
+            <p class="p2" set:text={paragraph} />
           </div>
         ))
       }

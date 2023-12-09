@@ -49,10 +49,15 @@ const reviews = [
   <!-- Hero Widget ******************* -->
 
   <div
-    class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16"
+    class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 mb-24"
   >
-    <h1 class="max-w-2xl mb-4 h1">Your first step to outer-world security</h1>
-
+    <h1 class="max-w-2xl mb-6 h1">
+      Your first step to <br />outer-world security
+    </h1>
+    <p class="p1 mb-8 max-w-2xl">
+      Here at Flowbite we compare a wide range of destinations, flights and
+      hotels to conjure up cheap holidays for you to enjoy, time and time again.
+    </p>
     <div class="w-full">
       <Picture
         class="h-96 w-100 rounded-md bg-gray-400 mx-auto"
@@ -64,19 +69,19 @@ const reviews = [
       />
     </div>
   </div>
-  <div class="w-full max-w-5xl rounded-xl mx-auto px-4">
-    <h1 class="h2 mb-4 mx-auto text-center">What clients say about us</h1>
+  <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+    <h1 class="h2 mb-8 mx-auto text-center">What clients say about us</h1>
     <CtaCarousel client:load />
-  </div>
-  <div class="w-ful bg-paper py-12 rounded-xl my-16">
-    <div class="w-full px-8 mx-auto max-w-5xl">
-      <h1 class="h2 mb-4 mx-auto text-left">Products we offer</h1>
-      <div class="h-1 w-full rounded-full bg-black"></div>
-    </div>
   </div>
   <div
     class="grid w-full mx-auto max-w-5xl p-4 gap-8 grid-cols-1 md:grid-cols-3 mb-20"
   >
+    <div class="col-span-3">
+      <div class="w-full mx-auto max-w-5xl">
+        <h1 class="h2 mb-4 mx-auto text-left">Products we offer</h1>
+        <div class="h-1 w-full rounded-full bg-gray-300"></div>
+      </div>
+    </div>
     {
       reviews.map((item: any, idx: number) => (
         <div class=" col-span-1 md:mx-auto">

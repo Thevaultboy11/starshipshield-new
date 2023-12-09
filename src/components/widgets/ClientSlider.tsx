@@ -7,58 +7,58 @@ const picture_list = [
   {
     src: "images/client_logo/boostroom.png",
     alt: `Boostroom Logo`,
-    href: "https://boostroom.com/"
+    href: "https://boostroom.com/",
   },
   {
     src: "images/client_logo/ooxlimited.png",
     alt: `OOX Limited Logo`,
-    href: "https://www.ooxcit.com/"
+    href: "https://www.ooxcit.com/",
   },
   {
     src: "images/client_logo/appit.png",
     alt: `App IT Logo`,
-    href: "https://appit.ba/"
+    href: "https://appit.ba/",
   },
   {
     src: "images/client_logo/hive.png",
     alt: `Hive Invoicing Logo`,
-    href: "https://www.hive.ba/"
+    href: "https://www.hive.ba/",
   },
   {
     src: "images/client_logo/unija.png",
     alt: `Unija Smart Accounting Logo`,
-    href: "https://unija.com/"
+    href: "https://unija.com/",
   },
   {
     src: "images/client_logo/origin.png",
     alt: `Origin Logo`,
-    href: "https://origin.ba/"
+    href: "https://origin.ba/",
   },
   {
     src: "images/client_logo/doc.png",
     alt: `Doc.ba Logo`,
-    href: "https://doc.ba/"
+    href: "https://doc.ba/",
   },
   {
     src: "images/client_logo/webouncer.png",
     alt: `Web Bouncer Logo`,
-    href: "https://kralos.eu/webouncer/"
+    href: "https://kralos.eu/webouncer/",
   },
   {
     src: "images/client_logo/kralos.png",
     alt: `Kralos Logo`,
-    href: "https://kralos.eu/"
+    href: "https://kralos.eu/",
   },
   {
     src: "images/client_logo/patrola.png",
     alt: `Patrola Logo`,
-    href: "https://patrola.ba/"
+    href: "https://patrola.ba/",
   },
   {
     src: "images/client_logo/sklopiposao.png",
     alt: `Sklopi Posao Logo`,
-    href: "https://sklopiposao.ba/"
-  }
+    href: "https://sklopiposao.ba/",
+  },
 ];
 
 export default function AchievemenCarousel() {
@@ -84,8 +84,17 @@ export default function AchievemenCarousel() {
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -right-px from-transparent to-80% to-white"></div>
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -left-px   from-20% from-white to-transparent"></div>
         {picture_list.map((item: any, idx: number) => (
-          <SwiperSlide key={idx} className="w-full h-auto rounded-md">
-            <a href={item.href} ><img src={item.src} alt={item.alt} /></a> 
+          <SwiperSlide key={idx} className="w-full rounded-md">
+            <a href={item.href}>
+              <div className="w-full h-64 rounded-t-md overflow-hidden aspect-w-16 aspect-h-9">
+                <img
+                  src={item.src}
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                  alt={item.alt}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

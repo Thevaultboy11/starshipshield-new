@@ -30,6 +30,7 @@ export default function CtaCarousel() {
   return (
     <>
       <Swiper
+        className="rounded-md"
         modules={[Autoplay, Pagination, Navigation]}
         navigation={{
           nextEl: ".cta-swiper-button-next",
@@ -39,23 +40,22 @@ export default function CtaCarousel() {
         {testimonial_text.map(({ title, text, person, url, img_url }: any) => (
           <>
             <SwiperSlide>
-              <div className="w-full h-full grid grid-cols-1 md:grid-cols-5 gap-x-8 bg-paper rounded-md p-8">
+              <div className="w-full h-full grid grid-cols-1 md:grid-cols-5 gap-x-8 paper rounded-md p-8">
                 <img
                   src={img_url}
                   className="block w-full h-full object-cover rounded-3xl col-span-1 md:col-span-2 aspect-w-4 aspect-h-5"
                   alt="Android Blog"
                 />
                 <div className="col-span-1 md:col-span-3 text-left flex flex-col  p-4">
-                  {" "}
                   <blockquote></blockquote>
-                  <h1 className="h3 mt-16">{title}</h1>
-                  <div className="w-full lg:w-5/6 my-8 p1">{text}</div>
+                  <h1 className="h3 mt-20">{title}</h1>
+                  <div className="w-full lg:w-5/6 my-8 p2">{text}</div>
                   <div className="flex items-center gap-x-4 w-full lg:w-5/6">
-                    <p className="text-primary font-bold mr-auto p1">
+                    <p className="text-primary font-bold mr-auto p2">
                       {person}
                     </p>
                     <a
-                      className="btn-sm hover:text-primary p1 inline-flex items-center justify-center "
+                      className="btn-sm hover:text-primary p2 inline-flex items-center justify-center "
                       href={url}
                       target="_blank"
                       rel="noopener"
