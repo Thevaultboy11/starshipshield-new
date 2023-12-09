@@ -1,68 +1,120 @@
 ---
-publishDate: 2023-08-28T00:00:00Z
-title: 'How crucial is cybersecurity in 2023?'
-excerpt: "Tech giants are spending millions of dollars. Should you?"
-image: /images/blog/security-2023/security-status2.jpg
+publishDate: 2023-06-01T00:00:00Z
+title: Secure your Android application in three steps
+excerpt: Learn three essential steps to fortify your Android application against security threats.
+image: /images/android_blog3.png
 tags:
-  - 2023 Security
-  - Bit tech
-  - Ptaas
+  - android
+  - security
+  - development
 ---
 
-## The $81 Million Heist
+<div class="blog-tracing">
+  <h2 class="blog-tracing">Why Care About Security?</h2>
 
-Research and statistics show scary numbers on how much customer data gets leaked from companies. We will be surprised when we hear about the largest bank heist in history, the Bangladesh Bank breach, when they lost **$81 million!**
+  <p class="blog-tracing">
+    In today's digital age, developers face challenges from black-hat hackers. Enhance your app's security with these three effective tricks.
+  </p>
+</div>
 
-The scary fact is that they not only lost money due to the massive breach and how it was executed but also suffered damage to their reputation. They are no longer trusted, leading to potential future losses exceeding $81 million. Would you store your money in a breached bank?
+<div class="blog-tracing">
+  <h2 class="blog-tracing">Emulator Detection</h2>
 
-> Note: The hackers executed the attack using email attachments that exploited vulnerabilities in Microsoft Office.
+  <p class="blog-tracing">
+    What is an emulator? An emulator is a special program or device that copies the way one computer system works so that software designed for that system can run on a different one. Emulator detection is a security technique that helps figure out if a program is running on an emulator or a real device, which makes the system more secure and trustworthy.
+  </p>
 
-![Bank Security](/images/blog/security-2023/security-status.jpg)
+  <p class="blog-tracing">
+    Here is a tool that can help you implement this feature:
+  </p>
 
-## Teenagers Hacking Uber
+  <p class="blog-tracing">
+    <a class="blog-tracing" href="https://github.com/strazzere/anti-emulator/tree/master/slides" target="_blank">
+      Link
+    </a>
+  </p>
 
-Maybe that is not enough. But what about big companies like Uber when teenage hackers breached their data?
+  <center class="image-tracing">
+    <small>People should use your application as intended.</small>
+  </center>
+  
+  <center>
+    <img class="image-blog" src="/images/android_blog1.png" alt="alt text" />
+  </center>
+</div>
 
-The hacker did his reconnaissance, found a sysadmin’s phone number, and flooded the victim with MFA push requests in the middle of the night until the targeted Uber employee accepted them.
+<div class="blog-tracing">
+  <h2 class="blog-tracing">Root Detection</h2>
 
-The breach had financial implications for Uber. It not only incurred costs related to investigating and addressing the breach but also faced potential fines and legal settlements. Moreover, the drop in user engagement and tarnished reputation could have affected its business performance and valuation.
+  <p class="blog-tracing">
+    Root detection is crucial for app security, as rooted devices can bypass security measures and potentially compromise sensitive data. However, with the proliferation of root bypass methods, relying solely on one root detection check has become ineffective. To maintain the integrity of your app, it's essential to adopt a multi-layered approach that combines various root detection techniques.
+  </p>
 
-## What Do These Attacks Have in Common?
+  <p class="blog-tracing">There are 3 main tools you could use:</p>
 
-Now let us take a deep breath and go deep into these incidents. We will notice:
+  <ul class="blog-tracing">
+    <li class="blog-tracing">
+      <strong>Root Inspector</strong> - a powerful GitHub project that provides an easy-to-use interface for analyzing and inspecting root files in various operating systems.
+      <a class="blog-tracing" href="https://github.com/devadvance/rootinspector" target="_blank">
+        Link
+      </a>
+    </li>
+    <li class="blog-tracing">
+      <strong>Free rasp</strong> - a comprehensive GitHub project that offers a collection of libraries and tools for detecting and managing root access on Android devices. They have well-documented step-by-step instructions.
+      <a class="blog-tracing" href="https://github.com/talsec/Free-RASP-Android" target="_blank">
+        Link
+      </a>
+    </li>
+    <li class="blog-tracing">
+      <strong>Root Beer</strong> - a new tool used to secure your application in various ways against rooting. There are 9 checkups the tool uses to spot a rooted device.
+      <a class="blog-tracing" href="https://github.com/scottyab/rootbeer" target="_blank">
+        Link
+      </a>
+    </li>
+  </ul>
 
-In the bank data breach...
+  <center class="image-tracing">
+    <small>Only you can stop hackers.</small>
+  </center>
 
-- The network of the bank was not separated (if one network gets hacked, the rest will be).
-- Hackers can easily break it and redirect millions to their own private accounts.
-- Microsoft’s security bulletins had already addressed the risks of this vulnerability.
+  <center>
+    <img class="image-blog" src="/images/android_blog2.png" alt="alt text" />
+  </center>
+</div>
 
-In the Uber data breach...
+<div class="blog-tracing">
+  <h2 class="blog-tracing">Implementing Frida Detection</h2>
 
-- Lax governance on admin credentials and MFA management.
-- The original employee was vished—a type of targeted spear phishing.
+  <ul class="blog-tracing">
+    <li class="blog-tracing">
+      <strong>DetectFrida</strong> - a GitHub project that provides a method to identify and detect the usage of named pipes by the popular dynamic instrumentation framework, Frida.
+      <a class="blog-tracing" href="https://github.com/darvincisec/DetectFrida" target="_blank">
+        Link
+      </a>
+    </li>
+    <li class="blog-tracing">
+      <strong>Antifrida</strong> - a GitHub project that provides a collection of tools, techniques, and examples to help protect against and counteract the detection and analysis performed by Frida.
+      <a class="blog-tracing" href="https://github.com/muellerberndt/frida-detection" target="_blank">
+        Link
+      </a>
+    </li>
+  </ul>
 
-From vulnerable firewall technology and insecure software in use to social engineering, the right penetration testing solution could have discovered these risks proactively!
+  <center>
+    <img class="image-blog" src="/images/android_blog3.png" alt="alt text" />
+  </center>
+</div>
 
-> The modern security is effortless if done correctly.
+<div class="blog-tracing">
+  <p class="blog-tracing">
+    <strong>The easy way or the hard way? The choice is yours...</strong>
+  </p>
 
-![Security Solution](/images/blog/security-2023/security-status3.jpg)
+  <p class="blog-tracing">
+    You could try implementing and learning these vulnerabilities alone, struggle, and maybe not even know what vulnerabilities are present in your application. Or you could find a mentor (talk to people that have already are in the cybersecurity industry).
+  </p>
 
-## What is the Solution?
-
-Penetration testing can stop preventable breaches from taking down a major enterprise!
-
-PTaaS has emerged in recent years as a strong offensive security lifeline that can measurably reduce risks.
-
-PTaaS enables organizations to perform a penetration test daily, or even after each code change. You will facilitate more frequent testing across all environments.
-
-If you want to be registered for bug bounty programs.
-
-You will also have:
-
-- Early Feedback on Code Changes
-- Fast remediation support
-- Access to our security engineers
-- Detailed Reporting: Receive insights for informed decision-making.
-
-Currently, we at Starship Shield are providing a hybrid solution that takes the best out of PTaaS and "regular" security assessment to amplify business security. [Learn more](/learn-more).
+  <center>
+    <img class="image-blog" src="/images/android_blog4.png" alt="alt text" />
+  </center>
+</div>
