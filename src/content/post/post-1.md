@@ -1,12 +1,12 @@
 ---
 publishDate: 2023-08-28T00:00:00Z
-title: 'How crucial is cybersecurity in 2023?'
+title: "How crucial is cybersecurity in 2023?"
 excerpt: "Tech giants are spending millions of dollars. Should you?"
 image: /images/blog/security-2023/security-status2.jpg
 tags:
   - 2023 Security
   - Bit tech
-  - Ptaas
+  - PtaaS
 ---
 
 ## The $81 Million Heist

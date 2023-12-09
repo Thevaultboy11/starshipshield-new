@@ -18,7 +18,7 @@ security. Webbouncer clones your website and hides sensitive user data making da
   },
   {
     title: `How to ensure speed and security in developing your software products?`,
-    paragraph: `Software development companies often trade off Time to Market speed for quality security. Ptaas is a way to improve speed of manking and  the quality of your application security.`,
+    paragraph: `Software development companies often trade off Time to Market speed for quality security. PtaaS is a way to improve speed of manking and  the quality of your application security.`,
     href: "/dem-product",
   },
 ];
