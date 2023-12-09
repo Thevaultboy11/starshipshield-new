@@ -11,11 +11,33 @@ const meta = {
   description: "The latest security wins for our clients.",
   dontUseTitleTemplate: true,
 };
+const client_win = [
+  {
+    title: "Noteworthy technology acquisitions 2021",
+    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    img_url: "/images/android_blog.png",
+  },
+  {
+    title: "Noteworthy technology acquisitions 2021",
+    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    img_url: "/images/android_blog.png",
+  },
+  {
+    title: "Noteworthy technology acquisitions 2021",
+    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    img_url: "/images/android_blog.png",
+  },
+  {
+    title: "Noteworthy technology acquisitions 2021",
+    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    img_url: "/images/android_blog.png",
+  },
+];
 ---
 
 <Layout meta={meta}>
   <div
-    class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16"
+    class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16 border-b-4 border-paper"
   >
     <div class="md:col-span-3">
       <h1 class="max-w-2xl mb-4 h1">
@@ -43,4 +65,32 @@ const meta = {
     </div>
     <div class="w-full hidden md:block md:col-span-2 bg-red-200"></div>
   </div>
+  <div class="w-full max-w-5xl px-4 mx-auto mt-24">
+    <h1 class="h2 max-w-lg mx-auto text-center mb-4">Custom work</h1>
+    <p class="p1 max-w-lg mx-auto text-center mb-8">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae,
+      temporibus?
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-8">
+      {
+        client_win.map(({ title, body, img_url }, idx: number) => (
+          <div class="paper  p-5 rounded-md">
+            <Picture
+              class="w-full h-60  rounded-md"
+              src={img_url}
+              widths={[1600, 800]}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+              aspectRatio="16:9"
+              alt="sa"
+            />
+            <div class="">
+              <h5 class="my-4 h3 text-black" set:text={title} />
+              <p class="p2" set:text={body} />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <Cta />
 </Layout>

@@ -1,4 +1,66 @@
 import { getPermalink, getBlogPermalink, getAsset } from "./utils/permalinks";
+export const case_study_list = [
+  {
+    name: "boostroom",
+    hero: {
+      cta: `Flowbite is out! See what's new`,
+      title: `We invest in the world’s potential`,
+      body: `Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.`,
+    },
+    youtube: {
+      link: "https://www.youtube.com/embed/QelSVeRmNUQ",
+      title: "How Boostroom Evaded a Data Breach",
+    },
+    case_numbers: [
+      { number: "132K", label: "Downloads" },
+      { number: "24.8K", label: "Stars" },
+      { number: "10.3K", label: "Forks" },
+    ],
+    card: {
+      title: "Alen Vlahovljak",
+      body: `
+  <p class="p1 mb-7">
+    Meet BoostRoom, another satisfied customer of ours. They are a company
+    with a <strong>mission</strong> and vision to help gamers make money.
+  </p>
+  <p class="p1 mb-7">
+    Meet BoostRoom, another satisfied customer of ours. They are a company
+    with a <strong>mission</strong> and vision to help gamers make money.
+  </p>
+  `,
+    },
+  },
+  {
+    name: "oxcit",
+    hero: {
+      cta: `Flowbite is out! See what's new`,
+      title: `We invest in the world’s potential`,
+      body: `Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.`,
+    },
+    youtube: {
+      link: "https://www.youtube.com/embed/epqmN3S3aOQ?si=7hHxMGi-tzR_2-e-&start=5",
+      title: "How Boostroom Evaded a Data Breach",
+    },
+    case_numbers: [
+      { number: "132K", label: "Downloads" },
+      { number: "24.8K", label: "Stars" },
+      { number: "10.3K", label: "Forks" },
+    ],
+    card: {
+      title: "Luka Miljus",
+      body: `
+  <p class="p1 mb-7">
+    Meet BoostRoom, another satisfied customer of ours. They are a company
+    with a <strong>mission</strong> and vision to help gamers make money.
+  </p>
+  <p class="p1 mb-7">
+    Meet BoostRoom, another satisfied customer of ours. They are a company
+    with a <strong>mission</strong> and vision to help gamers make money.
+  </p>
+  `,
+    },
+  },
+];
 export const services_list = [
   {
     service_name: "Application test",

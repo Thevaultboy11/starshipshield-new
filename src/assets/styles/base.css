@@ -480,3 +480,13 @@ blockquote::before {
 .border-primary {
   border-color: #6929c2;
 }
+.title-card {
+  color: #6929c2;
+  background-color: rgba(105, 41, 194, 0.34);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  @apply w-fit rounded-md p-1;
+}

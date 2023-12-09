@@ -1,0 +1,117 @@
+---
+import Layout from "../../../layouts/PageLayout.astro";
+import Header from "../../../components/widgets/Header.astro";
+import Hero from "../../../components/widgets/Hero.astro";
+import CaseStudy from "../../../components/case-study";
+import Cta from "~/components/Cta.astro";
+import { getCollection, CollectionEntry } from "astro:content";
+import Icon from "astro-icon";
+import { case_study_list } from "../../../data";
+import { trim } from "~/utils/utils";
+import slugify from "limax";
+
+export const getStaticPaths = async () => {
+  const paths = case_study_list.map((case_study) => {
+    return {
+      params: {
+        slug: slugify(case_study.name),
+      },
+      props: {
+        case_study,
+      },
+    };
+  });
+  return paths;
+};
+type Props = {
+  case_study: CollectionEntry<"any">;
+};
+const { case_study } = Astro.props;
+
+// const { Content } = await case_study.render();
+const meta = {
+  title: "Case studies",
+  description: "The latest stories about Starship Shield.",
+  dontUseTitleTemplate: true,
+};
+const { name, hero, youtube, case_numbers, card } = case_study;
+---
+
+<Layout {meta}>
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="pt-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
+    >
+      <a
+        href="#"
+        class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+        role="alert"
+      >
+        <span
+          class="text-xs bg-primary-600 rounded-full text-primaryf px-4 py-1.5 mr-3"
+          >New</span
+        >
+        <span class="text-sm font-medium" set:text={hero.cta} />
+        <svg
+          class="ml-2 w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"></path></svg
+        >
+      </a>
+      <h1 class="mb-4 h1" set:text={hero.title} />
+      <p class="mb-8 p1 lg:text-xl sm:px-16 xl:px-48" set:text={hero.body} />
+    </div>
+  </section>
+
+  <div class="max-w-5xl rounded-md mb-12 mx-auto p-4">
+    <iframe
+      style="aspect-ratio: 16/9;"
+      src={youtube.link}
+      title={youtube.title}
+      frameborder="0"
+      class="w-full mx-auto rounded-md hidden md:block"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe
+      style="aspect-ratio: 16/9;"
+      src={youtube.link}
+      title={youtube.title}
+      frameborder="0"
+      class="w-full mx-auto block md:hidden rounded-md"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div
+    class="relative px-4 md:px-6 pb-12 md:pb-16 lg:pb-20 text-default max-w-6xl mx-auto"
+  >
+    <div class="flex flex-wrap justify-center -m-4 text-center">
+      {
+        case_numbers.map((item) => (
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center md:border-r md:last:border-none dark:md:border-slate-500">
+            <div class="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
+              {item.number}
+            </div>
+            <div class="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
+              {item.label}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="w-full max-w-5xl mx-auto rounded-md p-4">
+    <div class="paper p-4 md:px-12 md:p-8 mx-auto rounded-md">
+      <h1 class="h3 mb-8 leading-10 mt-2 text-primary font-bold">
+        <span class="text-primary" set:text={card.title} />
+      </h1>
+      <div class="" set:html={card.body} />
+    </div>
+  </div>
+
+  <Cta />
+</Layout>
