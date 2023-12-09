@@ -63,7 +63,7 @@ export const case_study_list = [
 ];
 export const services_list = [
   {
-    service_name: "Application test",
+    service_name: "penetration test",
     definition: `Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
     minus maxime in corporis sapiente illum odit eaque voluptas.
     Voluptas, nostrum!`,

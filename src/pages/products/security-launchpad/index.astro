@@ -4,7 +4,7 @@ import Layout from "../../../layouts/PageLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import { Fragment } from "astro/dist/runtime/server";
 const meta = {
-  title: "Do you want amplified security?",
+  title: "Do you want amplified security? ",
   description:
     "Defining boundaries for a quality security assement is hard. We make it easy.",
   dontUseTitleTemplate: true,
@@ -68,48 +68,63 @@ const bonus_list = [
 ];
 const data = [
   {
-    icon: "tabler:clock",
+    icon: "tabler:building",
     title: "Product-Based Companies",
     paragraph:
       "For  firms that  focus on creating and selling their own software products. Where before security and speed was always a trade off.",
   },
   {
-    icon: "tabler:clock",
+    icon: "tabler:users",
     title: "Outsourcing Companies",
     paragraph:
       " For firms that provide software development services to other companies. Where often security can not fit the margin of developing the product.",
   },
+  // Add more objects as needed
 ];
 ---
 
 <Layout {meta}>
-  <div
-    class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 mx-auto lg:gap-4 lg:py-16 mb-24"
-  >
-    <div class="md:col-span-3">
-      <h1 class="max-w-2xl mb-4 h1">
-        Security Launchpad <span class="text-primary">Bundle</span>
-      </h1>
-      <p class="max-w-2xl mb-6 p1">
-        Our bundle takes you from where you are now to where you can proudly say
-        your security is A-excellent.
-      </p>
-      <a href="/contact-form/" class="w-full md:w-auto py-2 px-3 btn-primary"
-        >Take first step</a
-      >
+  <section class="bg-white">
+    <div
+      class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 lg:py-16 lg:grid-cols-12"
+    >
+      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+        <img
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+          alt="mockup"
+        />
+      </div>
+      <div class="ml-auto place-self-center lg:col-span-7">
+        <h1 class="max-w-2xl mb-4 h1">
+          Security Launchpad <span class="text-primary">Bundle</span>
+        </h1>
+        <p class="max-w-2xl mb-6 p1">
+          Our bundle takes you from where you are now to where you can proudly
+          say your security is A-excellent.
+        </p>
+        <a
+          href="/contact-form/launchpad"
+          class="btn-md btn-primary py-2.5 w-full text-xs font-semibold shadow-none"
+        >
+          Take first step
+        </a>
+      </div>
     </div>
-    <div class="w-full hidden md:block md:col-span-2 bg-red-200"></div>
-  </div>
-
+  </section>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
-    <div class="col-span-12 md:col-span-6 order-2 md:order-1 py-6 rounded-xl">
+    <div class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl">
       <div>
         <div class="flex flex-col">
-          <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
-          <h1 class="h2 my-4">
-            For who is Security <span class="text-primary">Launchpad</span>
-          </h1>
-          <div class="p1">Lorem Ipsum</div>
+          <Icon
+            name="ri:space-ship-fill"
+            class="text-primary w-8 h-8 inline-block"
+          />
+          <h1 class="h2 my-4">For who is Security Launchpad?</h1>
+          <div class="p1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi,
+            aspernatur.
+          </div>
+          <div class="p1 text-primary">Stop hackers once and for all</div>
         </div>
         {
           data.map(({ icon, title, paragraph }) => (
@@ -125,28 +140,8 @@ const data = [
       </div>
     </div>
     <div
-      class="bg-primary w-full p-24 h-full col-span-12 md:col-span-6 order-1 md:order-2"
+      class="bg-primary rounded-md w-full p-24 h-full col-span-12 md:col-span-6 order-2 md:order-2"
     >
-    </div>
-  </div>
-
-  <div class="w-full max-w-5xl mx-auto p-4 mb-24">
-    <div class="p-8 rounded-md">
-      <h1 class="h2 text-center mb-8">What do you get with this bundle?</h1>
-      <div class="grid grid-cols-12 w-full gap-8">
-        {
-          after_list.map((text: string, idx: number) => (
-            <div class="block col-span-2 md:col-span-5 w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-              <div class="flex justify-start mb-2">
-                <div class="w-6 h-6 rounded-md flex justify-center items-center bg-primary text-white">
-                  <div set:text={idx + 1} />
-                </div>
-              </div>
-              <p class="p1 text-gray-700 dark:text-gray-400" set:text={text} />
-            </div>
-          ))
-        }
-      </div>
     </div>
   </div>
 
@@ -155,63 +150,39 @@ const data = [
     <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
       {
         services_list.map(({ title, body, href }) => (
-          /*div class="info-primary px-4 py-8 h-60 rounded-md">
+          <div class="info-primary px-4 py-4 h-68 rounded-md">
             <h1 set:text={title} class="h3 " />
-            <p set:text={body} class="p1 py-8" />
+            <p set:text={body} class="p2 py-4" />
 
-            <div class="border-t  pt-2 border-primary">
-              <a href={href} class="text-primary font-bold">
+            <div class="border-t pt-2 border-primary">
+              <a href={href} class="text-primary ">
                 Learn more
               </a>
-            </div>
-          </div>*/ <div class="px-4 py-8 h-60 rounded-md">
-            <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4 info-primary">
-              <h1 class="h3 text-black" set:text={title} />
-              <p class="p2 mb-4 -mt-2" set:text={body} />
-
-              <div class="w-full">
-                <a href={href} class="btn-primary btn-md">
-                  View more
-                </a>
-              </div>
             </div>
           </div>
         ))
       }
     </div>
   </div>
-
   <div class="px-4 w-full max-w-5xl mx-auto mb-24">
     <h1 class="h2 mx-auto text-center my-8">Bonuses you get</h1>
     <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
       {
         bonus_list.map(({ title, body, href }) => (
-          /*<div class="info-secondary px-4 py-8 h-60 rounded-md">
+          <div class="info-secondary px-4 py-4 h-68 rounded-md">
             <h1 set:text={title} class="h3 " />
-            <p set:text={body} class="p1 py-8" />
+            <p set:text={body} class="p2 py-4" />
 
-            <div class="border-t  pt-2 border-secondary">
-              <a href={href} class="text-secondary font-bold">
+            <div class="border-t pt-2 border-secondary">
+              <a href={href} class="text-secondary ">
                 Learn more
               </a>
-            </div>
-          </div>*/ <div class="px-4 py-8 h-60 rounded-md">
-            <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4 info-secondary">
-              <h1 class="h3 text-black" set:text={title} />
-              <p class="p2 mb-4 -mt-2" set:text={body} />
-
-              <div class="w-full">
-                <a href={href} class="btn-primary btn-md">
-                  View more
-                </a>
-              </div>
             </div>
           </div>
         ))
       }
     </div>
   </div>
-
   <div class="w-full max-w-5xl p-4 mx-auto mb-24">
     <div
       class="bg-primary w-full rounded-md shadow-xl overflow-hidden md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-2 lg:gap-4"
@@ -219,8 +190,8 @@ const data = [
       <div
         class="flex flex-col mb-4 text-white items-start pt-10 pb-12 px-6 sm:pt-16 sm:px-16 md:py-20 md:pr-0 lg:py-20 lg:pr-0 xl:px-20"
       >
-        <h1 class="mb-4 h2 font-bold">
-          <span class="block"
+        <h1 class="mb-4 h2">
+          <span class="block text-white"
             >Neglected security before and not sure where to begin?</span
           >
         </h1>
@@ -250,3 +221,66 @@ const data = [
     </div>
   </div>
 </Layout>
+
+<!-- <div class="px-4 w-full max-w-5xl mx-auto mb-24">
+  <h1 class="h2 mx-auto text-center mb-8">
+    What do you get with this service?
+  </h1>
+  <div class="w-full flex justify-center items-center gap-x-12">
+    <div class="paper max-w-sm p-4 h-96 rounded-md">
+      <div class="w-full"><p class="h3 text-left">Before</p></div>
+      <div class="w-full">
+        <ul role="list" class="space-y-5 my-7">
+          {
+            before_list.map((text: string) => (
+              <li class="flex items-center ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="rgb(220, 38, 38)"
+                  class="bi bi-x"
+                  viewBox="0 0 16 16"
+                >
+                  {" "}
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />{" "}
+                </svg>
+
+                <span
+                  set:text={text}
+                  class="font-normal p2 leading-tight ms-3"
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="paper h-96 max-w-sm rounded-md p-4">
+      <div class="w-full"><p class="h3 text-left">After</p></div>
+      <div class="w-full">
+        <ul role="list" class="space-y-5 my-7">
+          {
+            after_list.map((text: string) => (
+              <li class="flex items-center py-1">
+                <svg
+                  class="flex-shrink-0 w-4 h-4 text-primary"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                </svg>
+                <span
+                  set:text={text}
+                  class="font-normal p2 leading-tight ms-3"
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->

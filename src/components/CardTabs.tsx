@@ -22,7 +22,7 @@ const TabComponent = ({ tabData }) => {
               role="tab"
               aria-controls={`${tab}`}
               aria-selected={selectedTab === `${tab}`}
-              className="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500"
+              className="inline-block p-4 text-primary rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500"
               onClick={() => handleTabClick(`${tab}`)}
             >
               {tab}
@@ -42,7 +42,7 @@ const TabComponent = ({ tabData }) => {
                 aria-labelledby={`${tab}-tab`}
               >
                 <h2 className="mb-3 h3">{title}</h2>
-                <p className="mb-3 p1">{body}</p>
+                <p className="mb-3 p2">{body}</p>
               </div>
             );
           }
