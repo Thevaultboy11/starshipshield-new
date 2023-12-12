@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .h1 {
-  @apply text-4xl font-semibold   tracking-tighter md:text-5xl xl:text-6xl text-black;
+  @apply font-semibold  tracking-tighter text-4xl md:text-6xl;
 }
 
 .h2 {
-  @apply text-4xl lg:text-5xl font-semibold lg:tracking-tight  text-black;
+  @apply text-3xl md:text-4xl font-semibold lg:tracking-tight  text-black;
 }
 
 .h3 {
@@ -45,7 +45,6 @@
   padding: 10px;
 }
 
-/* Previous button */
 .cta-swiper-button-prev {
   color: #6929c2;
   border-radius: 50em;
@@ -101,7 +100,6 @@
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
-/* block quate */
 blockquote {
   position: relative;
   font-size: 1.5em;
@@ -330,25 +328,7 @@ blockquote::before {
     width: 100%;
   }
 }
-.list-tracing {
-  word-spacing: 0.5em;
-  @apply text-base font-semibold;
-}
-.blog-tracing {
-  font-family: "Open Sans", sans-serif;
-  word-spacing: normal;
-}
-.blog-tracing > p {
-  font-family: "Open Sans", sans-serif;
-  word-spacing: 0.2.7em;
-}
-.blog-tracing > li {
-  font-family: "Open Sans", sans-serif;
-  word-spacing: 0.2.7em;
-}
-.image-blog {
-  @apply max-w-full  md:max-w-3xl mx-auto  rounded-xl;
-}
+
 .image-tracing {
   word-spacing: 0.1em;
 }
@@ -379,7 +359,6 @@ blockquote::before {
 [data-aw-toggle-menu].expanded g > path:last-child {
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
-/* companies worked with courasel */
 .slick-slide {
   margin: 0px 20px;
 }

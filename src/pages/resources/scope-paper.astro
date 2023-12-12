@@ -3,6 +3,8 @@ import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
 import emailjs from "@emailjs/browser";
 import { Picture } from "@astrojs/image/components";
+import Icon from "astro-icon";
+import InfoTitle from "~/components/InfoTitle.astro";
 
 const meta = {
   title: "Scope white paper",
@@ -13,35 +15,27 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-4 md:py-8">
-      <div class="text-center max-w-screen-lg mx-auto">
-        <p class="info-title text-xs md:text-xl max-w-2xl mx-auto">
-          Need a high-quality security report?
-        </p>
-        <h1
-          class="cover-title text-ibm-black text-4xl md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
-        >
-          Three Steps to Make a Good Security Assessment<span
-            class="text-primary"
-          >
-            Scope</span
-          >
-        </h1>
-        <p
-          class="text-ibm-black text-base break-line text-center leading-tight max-w-lg mx-auto"
-        >
-          Get real information fast, create high-quality scope boundaries and
-          get started with your security assessment.
-        </p>
-      </div>
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="pt-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
+    >
+      <InfoTitle text="Find about the holiday xmas gifts" href="/learn-more" />
+      <h1
+        class="mb-4 h1 w-full mx-auto"
+        set:text={"Three Steps to Make a Good Security Assessment Scope"}
+      />
+      <p
+        class="mb-8 p1 lg:text-xl sm:px-16 xl:px-48 w-full mx-auto"
+        set:text={`  Get real information fast, create high-quality scope boundaries and
+        get started with your security assessment.`}
+      />
     </div>
-  </div>
+  </section>
+
   <!-- the modal-->
 
   <div
-    class="mt-32 relative gap-y-8 grid grid-cols-1 md:grid-cols-2 p-4 max-w-7xl"
+    class="mt-32 relative gap-y-8 grid grid-cols-1 md:grid-cols-2 p-4 max-w-5xl mx-auto"
   >
     <div class="flex justify-center items-center">
       <Picture
@@ -150,7 +144,7 @@ const meta = {
           <button
             id="Opt"
             type="submit"
-            class="shadow-none cta-button-lg mx-auto md:w-72 my-4"
+            class="shadow-none btn-md btn-primary mx-auto md:w-72 my-4"
             >Send Me The White Paper</button
           >
         </form>
@@ -167,13 +161,15 @@ const meta = {
     </div>
   </div>
   <div
-    class="mt-32 max-w-7xl mx-auto flex text-center flex-col justify-center items-center"
+    class="mt-32 max-w-5xl mx-auto flex text-center flex-col justify-center items-center"
   >
-    <p class="info-title max-w-md mx-auto">Security</p>
-    <h2 class="sub-title">What makes a good scope?</h2>
+    <p class="p1 text-primary">The latest about security</p>
+    <h2 class="h2">What makes a good scope?</h2>
   </div>
   <!-- one rule -->
-  <div class="grid h-200 grid-cols-1 md:grid-cols-3 gap-8 p-4">
+  <div
+    class="grid max-w-5xl mx-auto max-w h-200 grid-cols-1 md:grid-cols-2 gap-8 p-4 mb-24"
+  >
     <div class="p-4 md:py-8 md:px-16 bg-paper rounded-xl text-center">
       <Picture
         src={"/images/pdf-report/card-pdff1.png"}
@@ -185,10 +181,10 @@ const meta = {
         aspectRatio="300:300"
         alt="sa"
       />
-      <h3 class="text-xl font-bold leading-tight sm:text-2xl font-heading">
+      <h3 class="h3 py-4">
         <a class="transition ease-in duration-200">CLEAR OBJECTIVES & GOALS</a>
       </h3>
-      <p class="text-muted text-lg">
+      <p class="text-muted p2">
         A good scope contains exact objectives & goals that need to be met at
         the end of every security assessment.
       </p>
@@ -206,7 +202,7 @@ const meta = {
         aspectRatio="300:300"
         alt="sa"
       />
-      <h3 class="text-xl font-bold leading-tight sm:text-2xl font-heading">
+      <h3 class="text-xl py-4 font-bold leading-tight sm:text-2xl font-heading">
         <a class="transition ease-in duration-200 uppercase">
           The Attack Surface</a
         >
@@ -216,78 +212,14 @@ const meta = {
         could get into is a strong foundation to a scope.
       </p>
     </div>
-    <div
-      class="flex flex-col items-center justify-center p-4 md:p-8 md:px-16 bg-paper rounded-xl text-center"
-    >
-      <Picture
-        src={"/images/pdf-report/card-pdff3.png"}
-        class="rounded-xl"
-        width={300}
-        height={300}
-        widths={[400, 768]}
-        sizes="100vw, 432px"
-        aspectRatio="300:300"
-        alt="sa"
-      />
-      <h3 class="text-xl font-bold leading-tight sm:text-2xl font-heading">
-        <a class="transition ease-in duration-200"
-          >CHOOSING THE RIGHT APPROACH</a
-        >
-      </h3>
-      <p class="text-muted text-lg">
-        Tailored to your objectives & goals, you should pick a good approach.<br
-        />They can be white, gray or black box approaches.
-      </p>
-    </div>
+
     <div
       class="col-span-1 md:col-span-3 w-full flex justify-center items-center"
     >
-      <button class="cta-button-lg mx-auto md:w-72 mt-8" id="scrollToOptButton"
-        >Send Me The Paper</button
+      <button
+        class="btn-md btn-primary mx-auto md:w-72 mt-8"
+        id="scrollToOptButton">Send Me The Paper</button
       >
-    </div>
-  </div>
-  <div class="mt-32 w-full relative">
-    <div
-      class="w-full max-w-4xl md:mx-auto flex flex-col justify-center items-center gap-y-4 p-4"
-    >
-      <p class="info-title text-center max-w-md">What are you waiting for?</p>
-      <h2 class="sub-title text-center">Here is what you are getting...</h2>
-      <p
-        class="text-ibm-black text-base break-line text-center leading-tight max-w-lg mx-auto"
-      >
-        Experience how easy it is to make a good and high-quality scope.
-      </p>
-
-      <Picture
-        class="mx-auto rounded-xl border-1 border-ibm-black border"
-        width={600}
-        height={500}
-        widths={[400, 768]}
-        sizes="100vw, 432px"
-        aspectRatio="1600:900"
-        alt="sa"
-        src={"/images/pdf-report/card-pdf4.jpg"}
-      />
-      <div class="mb-8 max-w-lg">
-        <ul class="text-left">
-          <li class="mb-2 md:mb-4 text-base md:text-lg">
-            ✅ <span class="ml-2 md:ml-4">The Three Approaches.</span>
-          </li>
-          <li class="mb-2 md:mb-4 text-base md:text-lg">
-            ✅ <span class="ml-2 md:ml-4">Real World Examples.</span>
-          </li>
-          <li class="mb-2 md:mb-4 text-base md:text-lg">
-            ✅ <span class="ml-2 md:ml-4">Guide To Time Estimation.</span>
-          </li>
-        </ul>
-        <div class="w-full flex justify-center">
-          <button
-            class="cta-button-lg cursor-pointer mx-auto md:w-72 mt-8"
-            id="scrollToOptButton2">Send Me The Paper</button
-          >
-        </div>
-      </div>
     </div>
   </div>
 

@@ -521,7 +521,7 @@ function CalculatorForm() {
         )}
         <div className="w-full flex justify-center">
           <button
-            className="cta-button-lg  md:w-72 mt-12"
+            className="btn-primary btn-md  md:w-72 mt-12"
             onClick={() => {
               calculatePrice();
             }}

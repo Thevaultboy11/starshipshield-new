@@ -78,7 +78,7 @@ export default function AchievemenCarousel() {
           reverseDirection: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper border-y-2 py-4 border-paper border-12 relative my-10"
+        className="mySwiper border-y-2 py-4 border-paper border-12 relative my-10 h-10"
         style={{ overflow: "hidden" }}
       >
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -right-px from-transparent to-80% to-white"></div>
@@ -86,13 +86,8 @@ export default function AchievemenCarousel() {
         {picture_list.map((item: any, idx: number) => (
           <SwiperSlide key={idx} className="w-full rounded-md">
             <a href={item.href}>
-              <div className="w-full h-64 rounded-t-md overflow-hidden aspect-w-16 aspect-h-9">
-                <img
-                  src={item.src}
-                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-                  alt={item.alt}
-                  className="object-cover w-full h-full"
-                />
+              <div className="">
+                <img src={item.src} sizes="" alt={item.alt} className="" />
               </div>
             </a>
           </SwiperSlide>

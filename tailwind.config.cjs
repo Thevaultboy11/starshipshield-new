@@ -22,11 +22,9 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            "h1,h2,h3,h4,h5,h6": {
+            "h1, h2, h3, h4, h5, h6": {
               fontFamily: ["Open Sans", ...defaultTheme.fontFamily.sans],
-            },
-            p: {
-              fontFamily: ["Open Sans", ...defaultTheme.fontFamily.sans],
+              letterSpacing: "-0.05em", // or any desired value for tighter tracking
             },
           },
         },

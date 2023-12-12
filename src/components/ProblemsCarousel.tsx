@@ -43,10 +43,10 @@ export default function ProblemCarousel() {
         {ProblemList.map((item: any, idx: number) => (
           <SwiperSlide key={idx} className="w-full h-96">
             <div className="h-full w-full grid grid-cols-12">
-              <div className="paper col-span-12 md:col-span-8 rounded-l-md h-full p-8">
+              <div className="paper flex flex-col justify-center items-center col-span-12 md:col-span-8 rounded-l-md h-full p-8">
                 <div className="h-full  items-left gap-y-2 text-left">
                   <h1 className="h3">{item.title}</h1>
-                  <p className="p2 my-4">{item.paragraph}</p>
+                  <p className="p2  my-4">{item.paragraph}</p>
                   <div className="mt-8">
                     <a className="btn-primary btn-md" href={item.href}>
                       See inside

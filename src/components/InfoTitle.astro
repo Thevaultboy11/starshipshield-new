@@ -1,0 +1,20 @@
+---
+import Icon from "astro-icon";
+let { href = "#", text = "Label" } = Astro.props;
+---
+
+<a
+  href={href}
+  class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm hover:text-primary text-gray-700 bg-gray-100 rounded-full"
+  role="alert"
+>
+  <span
+    class="text-xs bg-primary-600 rounded-full text-primaryf px-4 py-1.5 mr-3"
+    >New</span
+  >
+  <span class="text-sm font-medium" set:text={text} />
+  <Icon
+    class="w-3.5 h-3.5 inline-block text-black"
+    name="tabler:chevron-right"
+  />
+</a>
