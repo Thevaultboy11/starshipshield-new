@@ -97,30 +97,36 @@ export const services_list = [
 export const headerData = {
   links: [
     {
-      text: "Resources",
-      href: "/resources",
-    },
-
-    {
       text: "About Us",
       href: "/about-us",
     },
     {
-      text: "Case Studies",
-      href: "/story-type/case-study",
+      text: "Success Stories",
+      href: "/story-type/client-story",
     },
     {
-      text: "Blog",
-      href: getBlogPermalink(),
+      text: "Resources",
+      href: "/resources",
+      links: [
+        { text: "Blog", href: getBlogPermalink() },
+        { text: "Define a Security Assessment Scope", href: "/resources" },
+        { text: "Security Assessment Pricing Calculator", href: "/resources" },
+      ],
     },
+
     {
-      text: "Our Method",
-      href: "/learn-more",
+      text: "Our Products",
+      href: "/resources",
+      links: [
+        { text: "Web bouncer", href: "/products/web-bouncer" },
+        { text: "Security Launchpad", href: "products/security-launchpad" },
+        { text: "Ptaas", href: "/products/ptaas" },
+      ],
     },
   ],
   actions: [
     {
-      text: "Get Started",
+      text: "Contact Us",
       href: "/learn-more",
       type: "primary",
     },

@@ -469,3 +469,29 @@ blockquote::before {
   line-height: 1rem;
   @apply w-fit rounded-md p-1;
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: hidden;
+  position: absolute;
+  transition: opacity 1s, visibility 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-content:after {
+  content: "";
+  transition-delay: 0.5s;
+}
+.dropdown:hover .dropdown-button {
+  @apply text-primary;
+}
