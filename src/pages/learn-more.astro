@@ -22,26 +22,20 @@ const meta = {
     "Defining boundaries for a quality security assement is hard. We make it easy.",
   dontUseTitleTemplate: true,
 };
-const reviews = [
+const data = [
   {
-    title: `Webouncer`,
-    paragraph: `This product is for owners of high-traffic websites that want protection from downtime and any type of data theft.`,
-    img_url: "/images/android_blog.png",
-    href: "/products/web-bouncer",
+    icon: "tabler:building",
+    title: "Product-Based Companies",
+    paragraph:
+      "For  firms that  focus on creating and selling their own software products. Where before security and speed was always a trade off.",
   },
   {
-    title: `Security Launchpad`,
-    paragraph: `For companies that overlooked security and want to fix the problem. After taking the bundle, you'll be on your way to meeting security compliance.`,
-    img_url: "/images/android_blog.png",
-    href: "products/security-launchpad",
+    icon: "tabler:users",
+    title: "Outsourcing Companies",
+    paragraph:
+      " For firms that provide software development services to other companies. Where often security can not fit the margin of developing the product.",
   },
-
-  {
-    title: `PtaaS`,
-    paragraph: `For software development companies  that want to stop trading  off Time to Market speed for quality security.`,
-    img_url: "/images/android_blog.png",
-    href: "/products/ptaas",
-  },
+  // Add more objects as needed
 ];
 ---
 
@@ -69,42 +63,49 @@ const reviews = [
       />
     </div>
   </div>
+  <div
+    class="w-full max-w-5xl rounded-xl mx-auto px-4 grid gap-x-8 grid-cols-12 mb-24"
+  >
+    <div class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl">
+      <div>
+        <div class="flex flex-col">
+          <Icon
+            name="ri:space-ship-fill"
+            class="text-primary w-8 h-8 inline-block"
+          />
+          <h1 class="h2 my-4">For who is Security Launchpad?</h1>
+          <div class="p1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi,
+            aspernatur.
+          </div>
+          <div class="p1 text-primary">Stop hackers once and for all</div>
+        </div>
+        {
+          data.map(({ icon, title, paragraph }) => (
+            <div class="flex w-full flex-col gap-y-3 mt-8">
+              <div class="flex items-center gap-x-2">
+                <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
+                <p class="p1 font-semibold" set:html={title} />
+              </div>
+              <p class="text-gray-400 p1" set:html={paragraph} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div
+      class="bg-primary rounded-md w-full p-24 h-full col-span-12 md:col-span-6 order-2 md:order-2"
+    >
+    </div>
+  </div>
   <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
     <h1 class="h2 mb-8 mx-auto text-center">What clients say about us</h1>
     <CtaCarousel client:load />
   </div>
-  <div
-    class="grid w-full mx-auto max-w-5xl p-4 gap-8 grid-cols-1 md:grid-cols-3 mb-20"
-  >
-    <div class="col-span-3">
-      <div class="w-full mx-auto max-w-5xl">
-        <h1 class="h2 mb-4 mx-auto text-left">Products we offer</h1>
-        <div class="h-1 w-full rounded-full bg-gray-300"></div>
-      </div>
+  <div class="max-w-5xl mx-auto rounded-md mb-24 border-2 border-black">
+    <div class="tidycal-embed" data-path="dzemaldzananovic/30-minute-meeting">
     </div>
-    {
-      reviews.map((item: any, idx: number) => (
-        <div class=" col-span-1 md:mx-auto">
-          <Picture
-            class="w-full h-64 rounded-md"
-            src={item.img_url}
-            widths={[1600, 800]}
-            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-            aspectRatio="16:9"
-            alt="sa"
-          />
-          <div class="py-4 flex flex-col gap-y-4 mb-auto">
-            <h1 class="h3" set:text={item.title} />
-            <p class="p1" set:text={item.paragraph} />
-
-            <div class="w-full">
-              <a href={item.href} class="font-bold p1 text-primary">
-                See Inside
-              </a>
-            </div>
-          </div>
-        </div>
-      ))
-    }
   </div>
 </Layout>
+
+<script src="https://assets.tidycal.com/js/embed.js" async></script>
