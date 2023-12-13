@@ -485,8 +485,8 @@ export const headerData = {
       href: "/resources",
       links: [
         { text: "Blog", href: getBlogPermalink() },
-        { text: "Define a Security Assessment Scope", href: "/resources" },
-        { text: "Security Assessment Pricing Calculator", href: "/resources" },
+        { text: "How To Make a Security Assessment Scope", href: "/resources/scope-maker" },
+        { text: "Security Assessment Pricing Calculator", href: "/resources/pricing-calculator" },
       ],
     },
 
@@ -494,9 +494,9 @@ export const headerData = {
       text: "Our Products",
       href: "/resources",
       links: [
-        { text: "Web bouncer", href: "/products/web-bouncer" },
+        { text: "Webouncer", href: "/products/web-bouncer" },
         { text: "Security Launchpad", href: "products/security-launchpad" },
-        { text: "Ptaas", href: "/products/ptaas" },
+        { text: "PTaaS", href: "/products/ptaas" },
       ],
     },
   ],
@@ -522,7 +522,7 @@ export const footerData = {
       links: [
         { text: "Starship Shield Blog", href: "/blog" },
         {
-          text: "How to make a good Security Assessment Scope",
+          text: "How To Make a Security Assessment Scope",
           href: "/resources/scope-paper",
         },
         {

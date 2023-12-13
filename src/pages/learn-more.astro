@@ -3,12 +3,6 @@ import Layout from "~/layouts/PageLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import CtaCarousel from "../components/CtaCarousel";
 
-const meta = {
-  title: "Our Services - Starship Shield",
-  description: "Explore our services for improving your securiy. We make defining boundaries easy and provide amplified security solutions.",
-  dontUseTitleTemplate: true,
-};
-
 const reviews = [
   {
     title: `Webouncer`,
@@ -35,7 +29,7 @@ const reviews = [
 ];
 ---
 
-<Layout {meta}>
+<Layout>
   <title>Starship Shield - Our Services</title>
   <meta name="description" content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."> 
   <article>

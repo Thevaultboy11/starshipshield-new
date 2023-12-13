@@ -3,12 +3,6 @@ import Layout from "../../../layouts/PageLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import Cta from "~/components/Cta.astro";
 
-const meta = {
-  title: "Client wins",
-  description: "The latest security wins for our clients.",
-  dontUseTitleTemplate: true,
-};
-
 const client_win = [
   {
     title: "Noteworthy technology acquisitions 2021",
@@ -33,7 +27,7 @@ const client_win = [
 ];
 ---
 
-<Layout meta={meta}>
+<Layout>
   <title>Starship Shield - Client Wins</title>
   <meta name="description" content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."> 
   <article>

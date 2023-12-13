@@ -1,5 +1,4 @@
 ---
-import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
 import Cta from "~/components/Cta.astro";
 import Hero from "~/components/widgets/Hero.astro";
@@ -8,16 +7,9 @@ import Icon from "astro-icon";
 import ProblemAstro from "../components/ProblemsCarousel";
 import ClientSlider from "~/components/widgets/ClientSlider.tsx";
 
-const meta = {
-  title: "Secure Yourself with Starship Shield",
-  description:
-    "Empowering businesses with comprehensive security assessments. Discover how we make defining and fortifying your digital boundaries easy.",
-  dontUseTitleTemplate: true,
-};
-
 const reviews = [
   {
-    title: `Explore the stories of how our clients were saved from cyber disasters.`,
+    title: `Explore stories of our clients and how they avoided major cyber disasters.`,
     paragraph: "Case Studies",
     img_url: "/images/android_blog.png",
     href: "story-type/case-study",
@@ -29,20 +21,22 @@ const reviews = [
     href: "story-type/client-wins",
   },
 ];
+
 const resources = [
   {
-    title: `What is social engeering awarness`,
+    title: `What Is Social Engineering Awareness?`,
     paragraph: "Resources",
     img_url: "/images/android_blog.png",
     href: "/resources/assesment-calculator",
   },
   {
-    title: `How to protect your SMB?`,
+    title: `How To Protect Your SMB?`,
     paragraph: "Resources",
     img_url: "/images/android_blog.png",
     href: "/resources/scope-paper",
   },
 ];
+
 const about_us = [
   {
     statistic: "140+",
@@ -57,12 +51,12 @@ const about_us = [
 ];
 ---
 
-<Layout {meta}>
+<Layout>
   <Hero
     callToAction={{ text: "Get Started", href: "/learn-more" }}
     image={{
       src: import("~/assets/images/hero.jpg"),
-      alt: "Starship Shield Logo",
+      alt: "Official Logo of Starship Shield",
     }}
   >
     <Fragment slot="title">
@@ -78,126 +72,128 @@ const about_us = [
     </Fragment>
   </Hero>
   <ClientSlider client:load />
+  <title>Starship Shield - Landing Page</title>
+  <article>
+    <div class="w-full max-w-5xl px-4 mx-auto mb-24">
+      <div class="h2 text-center w-full max-w-lg mx-auto">
+        What Our Clients Say About Us
+      </div>
+      <div class="grid w-full mx-auto grid-cols-1 md:grid-cols-2">
+        {
+          reviews.map((item: any, idx: number) => (
+            <div class="w-96 my-16  col-span-1 md:mx-auto">
+              <Picture
+                class="w-full h-64 rounded-t-md"
+                src={item.img_url}
+                widths={[1600, 800]}
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                aspectRatio="16:9"
+                alt="Picture showcasing client wins and case studies"
+              />
+              <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4 paper">
+                <h1 class="h3 text-black" set:text={item.paragraph} />
+                <p class="p2 mb-4 -mt-2" set:text={item.title} />
 
-  <div class="w-full max-w-5xl px-4 mx-auto mb-24">
-    <div class="h2 text-center w-full max-w-lg mx-auto">
-      What our clients say about us
-    </div>
-    <div class="grid w-full mx-auto grid-cols-1 md:grid-cols-2">
-      {
-        reviews.map((item: any, idx: number) => (
-          <div class="w-96 my-16  col-span-1 md:mx-auto">
-            <Picture
-              class="w-full h-64 rounded-t-md"
-              src={item.img_url}
-              widths={[1600, 800]}
-              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-              aspectRatio="16:9"
-              alt="sa"
-            />
-            <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4 paper">
-              <h1 class="h3 text-black" set:text={item.paragraph} />
-              <p class="p2 mb-4 -mt-2" set:text={item.title} />
-
-              <div class="w-full">
-                <a href={item.href} class="btn-primary btn-md">
-                  View more
-                </a>
+                <div class="w-full">
+                  <a href={item.href} class="btn-primary btn-md">
+                    View More
+                  </a>
+                </div>
               </div>
             </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="w-full max-w-5xl px-4 mx-auto mb-24">
+      <div class="h2 text-center w-full max-w-lg mx-auto mb-8">
+          Are You Facing These Security Challenges?
+      </div>
+      <ProblemAstro client:load />
+    </div>
+    <div class="h-full max-w-5xl mx-auto px-8 grid grid-cols-2 mb-24">
+      <div class="col-span-1 py-12 bg-blue-200"></div>
+      <div class="col-span-1 px-8">
+        <div class="text-left mb-8">
+          <p class="text-primary p1 font-semibold">
+            Fully Coded Components based in Astro
+          </p>
+          <h2 class="h2 my-4">Astro LaunchUI Pro</h2>
+          <p class="p3">
+            All the sections and pages made with these elements will be fully
+            responsive and will look beautiful on all types of screens, including
+            phones, tables, or desktops.
+          </p>
+        </div>
+        <div class="lg:flex relative">
+          <div class="p-2 lg:p-0 mb-8">
+            <div class="grid gap-y-16 gap-x-8 grid-cols-2 md:grid-cols-2 mb-8">
+              {
+                about_us.map(({ title, body, statistic }, idx: number) => (
+                  <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
+                    <h1
+                      class="block antialiased tracking-normal font-semibold mb-4 text-5xl text-dark"
+                      set:text={statistic}
+                    />
+                    <>
+                      <h5 class="p1 font-semibold" set:text={title} />
+
+                      <p
+                        class="block antialiased text-base font-light leading-relaxed text-gray-700"
+                        set:text={body}
+                      />
+                    </>
+                  </div>
+                ))
+              }
+            </div>
+            <a href="/about-us"
+              ><button class="btn-primary btn-md" type="button"
+                >Meet Our Team</button
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full max-w-5xl px-4 mx-auto mb-24">
+      <div class="w-full max-w-lg text-center info-title mx-auto mb-8">
+        Explore newest changes in the world of cyber security
+      </div>
+      {
+        resources.map((item: any, idx: number) => (
+          <div class="bg-paper w-full rounded-md grid grid-cols-1 md:grid-cols-3 mb-12">
+            <div class="hidden md:block">
+              <Picture
+                class="w-full h-full  rounded-tl-md"
+                src="/images/android_blog.png"
+                widths={[1600, 800]}
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                aspectRatio="3:2"
+                alt="sa"
+              />
+            </div>
+
+            <div class="md:col-span-2 px-4 py-6">
+              <p class="p3" set:text={item.paragraph} />
+              <h1 class="h3 font-semibold mt-2" set:text={item.title} />
+            </div>
+            <a
+              href={item.href}
+              class="px-4 col-span-3 rounded-b-md h-12 bg-primary flex items-center"
+            >
+              <div class="text-white mr-auto ">Learn More</div>
+              <Icon
+                name="tabler:arrow-right"
+                class="w-3.5 h-3.5 inline-block text-white"
+              />
+            </a>
           </div>
         ))
       }
     </div>
-  </div>
-
-  <div class="w-full max-w-5xl px-4 mx-auto mb-24">
-    <div class="h2 text-center w-full max-w-lg mx-auto mb-8">
-      Do you have these security problems?
-    </div>
-    <ProblemAstro client:load />
-  </div>
-  <div class="h-full max-w-5xl mx-auto px-8 grid grid-cols-2 mb-24">
-    <div class="col-span-1 py-12 bg-blue-200"></div>
-    <div class="col-span-1 px-8">
-      <div class="text-left mb-8">
-        <p class="text-primary p1 font-semibold">
-          Fully Coded Components based in Astro
-        </p>
-        <h2 class="h2 my-4">Astro LaunchUI Pro</h2>
-        <p class="p3">
-          All the sections and pages made with these elements will be fully
-          responsive and will look beautiful on all types of screens, including
-          phones, tables, or desktops.
-        </p>
-      </div>
-      <div class="lg:flex relative">
-        <div class="p-2 lg:p-0 mb-8">
-          <div class="grid gap-y-16 gap-x-8 grid-cols-2 md:grid-cols-2 mb-8">
-            {
-              about_us.map(({ title, body, statistic }, idx: number) => (
-                <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
-                  <h1
-                    class="block antialiased tracking-normal font-semibold mb-4 text-5xl text-dark"
-                    set:text={statistic}
-                  />
-                  <>
-                    <h5 class="p1 font-semibold" set:text={title} />
-
-                    <p
-                      class="block antialiased text-base font-light leading-relaxed text-gray-700"
-                      set:text={body}
-                    />
-                  </>
-                </div>
-              ))
-            }
-          </div>
-          <a href="/about-us"
-            ><button class="btn-primary btn-md" type="button"
-              >Meet the team</button
-            ></a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full max-w-5xl px-4 mx-auto mb-24">
-    <div class="w-full max-w-lg text-center info-title mx-auto mb-8">
-      Explore newest changes in the world of cyber security
-    </div>
-    {
-      resources.map((item: any, idx: number) => (
-        <div class="bg-paper w-full rounded-md grid grid-cols-1 md:grid-cols-3 mb-12">
-          <div class="hidden md:block">
-            <Picture
-              class="w-full h-full  rounded-tl-md"
-              src="/images/android_blog.png"
-              widths={[1600, 800]}
-              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-              aspectRatio="3:2"
-              alt="sa"
-            />
-          </div>
-
-          <div class="md:col-span-2 px-4 py-6">
-            <p class="p3" set:text={item.paragraph} />
-            <h1 class="h3 font-semibold mt-2" set:text={item.title} />
-          </div>
-          <a
-            href={item.href}
-            class="px-4 col-span-3 rounded-b-md h-12 bg-primary flex items-center"
-          >
-            <div class="text-white mr-auto ">Learn more</div>
-            <Icon
-              name="tabler:arrow-right"
-              class="w-3.5 h-3.5 inline-block text-white"
-            />
-          </a>
-        </div>
-      ))
-    }
-  </div>
-  <Cta />
+    <Cta />
+  </article>
 </Layout>

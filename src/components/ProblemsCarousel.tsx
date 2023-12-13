@@ -1,25 +1,22 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import { Picture } from "@astrojs/image/components";
+
 const ProblemList = [
   {
-    title: `How to secure your high-conversion site from cyber criminals?`,
-    paragraph: ` As an SMB, give yourself peace of mind and stop worrying about
-security. Webbouncer clones your website and hides sensitive user data making data theft on your site  impossible.
-`,
-    href: "/dem-product",
+    title: `Can't secure your high-conversion application from cyber attacks?`,
+    paragraph: `As a small or medium-sized business, secure your peace of mind by eliminating security concerns. Webouncer replicates your website and conceals sensitive user data, rendering data theft from your site an impossibility.`,
+    href: "/products/web-bouncer",
   },
   {
-    title: `Do you want to fix all your Security Problems Ignored for Too Long?`,
-    paragraph: `Security Launchpad helps you see security from a high-level perspective. We ensure that essential factors are secured first, and then we assist you in achieving security compliance.`,
-    href: "/dem-product",
+    title: `Your security has been neglected for too long and don't know where to start?`,
+    paragraph: `Security Launchpad helps you kick-start your software security no matter how long it has been neglected. We ensure that essential factors are secured and then we help you achieve security compliance.`,
+    href: "/products/security-launchpad",
   },
   {
-    title: `How to ensure speed and security in developing your software products?`,
-    paragraph: `Software development companies often trade off Time to Market speed for quality security. PtaaS is a way to improve speed of manking and  the quality of your application security.`,
-    href: "/dem-product",
+    title: `Don't know how to ensure security & speed in software development?`,
+    paragraph: `Software development companies often trade off 'Time to Market' speed for better security. PtaaS is a way to improve the quality of your application security whilst saving time and money.`,
+    href: "/products/ptaas",
   },
 ];
 export default function ProblemCarousel() {
@@ -49,7 +46,7 @@ export default function ProblemCarousel() {
                   <p className="p2  my-4">{item.paragraph}</p>
                   <div className="mt-8">
                     <a className="btn-primary btn-md" href={item.href}>
-                      See inside
+                      Learn More
                     </a>
                   </div>
                 </div>
@@ -59,7 +56,7 @@ export default function ProblemCarousel() {
                   <img
                     className="object-cover object-center w-full h-full"
                     src="images/android_blog1.png"
-                    alt="Your Image"
+                    alt="Image describing security problems"
                   />
                 </div>
               </div>
