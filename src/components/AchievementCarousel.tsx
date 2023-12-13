@@ -5,7 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 const AchievementList = [
   {
     title: "FIT Coding Challenge 2022",
-    paragraph: `FIT never had young contestants (under 18), Starship Shield team was almost banned from the tournament. Despite the 6-year age difference, our professional experience gave us the advantage. <br/> <br/> We completed the entire challenge in less than 2 hours. To summarize, Eman Ćatić and Džemal Džananović became the youngest winners ever at FIT Coding Challenge.`,
+    paragraph: `FIT never had under-18 contestants; Starship Shield team almost faced disqualification. With a 6-year age gap, our pro experience prevailed. <br>We aced the challenge in under 2 hours. <br><br>In summary, Eman Ćatić and Džemal Džananović are FIT Coding Challenge's youngest-ever winners.`,
     href: "/dem-product",
   },
   {
@@ -15,7 +15,7 @@ const AchievementList = [
   },
   {
     title: "Nsoft Nsecure Code CTF",
-    paragraph: `After we won at FIT, we gained a good reputation in Mostar. The Nsoft security team invited us to try our chances at their custom CTF machines and challenges. Unfortunately because of a traffic accident we came late 3 hours to the tournament. <br/> <br/> Again our professional experience gave us the advantage and in the nick of time, Eman Ćatić captured all of the flags and won.`,
+    paragraph: `Post-FIT victory, our reputation echoed in Mostar. Invited by Nsoft, we tackled their unique CTF challenges. <br> Despite a 3-hour delay from a traffic accident, our expertise shined through. <br><br>Eman Ćatić got access all flags just in time, securing another win.`,
     href: "/dem-product",
   },
 ];
