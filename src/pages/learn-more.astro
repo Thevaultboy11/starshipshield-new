@@ -1,25 +1,13 @@
 ---
-import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
-import Cta from "~/components/Cta.astro";
-import Hero from "~/components/widgets/Hero.astro";
-import Note from "~/components/widgets/Note.astro";
-import Features from "~/components/widgets/Features.astro";
-import Features2 from "~/components/widgets/Features2.astro";
-import Steps from "~/components/widgets/Steps.astro";
-import Content from "~/components/widgets/Content.astro";
-import LatestPosts from "~/components/blog/LatestPosts.astro";
-import FAQs from "~/components/widgets/FAQs.astro";
-import Stats from "~/components/widgets/Stats.astro";
-import CallToAction from "~/components/widgets/CallToAction.astro";
 import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
-import TestimonialCarousel from "../components/TestimonialCarousel";
 import CtaCarousel from "../components/CtaCarousel";
+import Icon from "astro-icon";
+import ContactForm from "../components/ContactUsForm";
 const meta = {
-  title: "Do you want amplified security? ",
+  title: "Our Services - Starship Shield",
   description:
-    "Defining boundaries for a quality security assement is hard. We make it easy.",
+    "Explore our services for improving your securiy. We make defining boundaries easy and provide amplified security solutions.",
   dontUseTitleTemplate: true,
 };
 const data = [
@@ -35,13 +23,35 @@ const data = [
     paragraph:
       " For firms that provide software development services to other companies. Where often security can not fit the margin of developing the product.",
   },
-  // Add more objects as needed
+];
+const ptaas_steps = [
+  {
+    title: `Severely minimize the risk of a cyber attack`,
+    body: `Sign up for a Pentest from the website or make a purchase from the Starship Shield Dashboard.`,
+  },
+  {
+    title: `Start by being compliant with GDPR standards`,
+    body: `Map out the Pentest scope and just the essential  requirements such as login details, technology etc`,
+  },
+  {
+    title: `Start working with enterprise companies`,
+    body: `Start an automated or manual scan whenever you want. See vulnerabilities being reported in minutes.`,
+  },
+  {
+    title: `Stop zero-day vulnerabilities on your website`,
+    body: `Start an automated or manual scan whenever you want. See vulnerabilities being reported in minutes.`,
+  },
+];
+const launchpad_services = [
+  "Application penetration test",
+  "Network penetration test",
+  "Social engeering education",
+  "Pysical penetration test",
+  "DevsecOps consultig",
 ];
 ---
 
 <Layout {meta}>
-  <!-- Hero Widget ******************* -->
-
   <div
     class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 mb-24"
   >
@@ -52,6 +62,16 @@ const data = [
       Here at Flowbite we compare a wide range of destinations, flights and
       hotels to conjure up cheap holidays for you to enjoy, time and time again.
     </p>
+    <div class="flex gap-x-4 mb-8">
+      <button class="btn-primary btn-md" id="scrollToOptButton"
+        >Contact us</button
+      >
+      <a
+        href="/"
+        class="text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 btn-md"
+        >Services Included</a
+      >
+    </div>
     <div class="w-full">
       <Picture
         class="h-96 w-100 rounded-md bg-gray-400 mx-auto"
@@ -99,13 +119,105 @@ const data = [
     </div>
   </div>
   <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
-    <h1 class="h2 mb-8 mx-auto text-center">What clients say about us</h1>
+    <h1 class="h2 pb-4 mx-auto text-center">What clients say about us</h1>
     <CtaCarousel client:load />
   </div>
-  <div class="max-w-5xl mx-auto rounded-md mb-24 border-2 border-black">
-    <div class="tidycal-embed" data-path="dzemaldzananovic/30-minute-meeting">
+  <div class="w-full max-w-5xl mx-auto p-4 mb-24">
+    <div class="paper p-8 rounded-md">
+      <h1 class="h3 text-center mb-8">After this bundle you will get</h1>
+      <div class="grid grid-cols-12 w-full gap-8">
+        {
+          ptaas_steps.map(({ title, body }, idx: number) => (
+            <div class="block col-span-1 md:col-span-6 w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <div class="flex justify-start mb-2">
+                <div class="w-6 h-6 rounded-md flex justify-center items-center bg-primary text-white">
+                  <div set:text={idx + 1} />
+                </div>
+              </div>
+              <h5
+                class="mb-2 p1 font-bold tracking-tight text-gray-900 dark:text-white"
+                set:text={title}
+              />
+              <p class="p1 text-gray-700 dark:text-gray-400" set:text={body} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+    <div class="w-full border-primary border-2 paper rounded-md pt-12">
+      <div class="w-full px-8">
+        <div class="flex gap-x-4">
+          <h1 class="h3 font-semibold">Security Launchpad</h1>
+          <div class="my-2 title-card">Save 80% of your money</div>
+        </div>
+        <h1 class="h3 md:font-normal">
+          Perfect for growing buisinesses that are looking to solve their
+          security problem
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+          {
+            launchpad_services.map((title, idx: number) => (
+              <ul class="flex items-center gap-x-2">
+                <Icon name="tabler:circle-check" class="w-6 h-6 text-primary" />
+                <span>{title}</span>
+              </ul>
+            ))
+          }
+
+          <ul class="col-span-2 p2">
+            <li>
+              <span class="font-bold uppercase">Plus</span> Speed up all of the testing
+              + remedy processes for <span class="font-bold uppercase">30%</span
+              > with our reporting platform
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full info-primary pb-12 pt-4 px-8">
+        <h1 class="h3">Satisfaction Guaranteed or Your Money Back</h1>
+        <p>
+          <span class="font-semibold">Lorem ipsum dolor</span>
+          sit amet consectetur, adipisicing elit. Officia, commodi!
+        </p>
+        <button class="btn-primary btn-md mt-4" id="scrollToOptButton2"
+          >Contact us</button
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+    <h1 class="h2 mb-4 text-center mx-auto">Contact Us</h1>
+    <p class="p1 mb-8 text-center max-w-3xl mx-auto">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae harum modi
+      deleniti nisi repudiandae qui ea quam consequatur quasi sapiente?
+    </p>
+    <div class="paper rounded-md w-full p-8">
+      <p class="h3 mb-4" id="opt-page">Step 1/2 (About your company)</p>
+      <ContactForm client:load />
     </div>
   </div>
 </Layout>
 
-<script src="https://assets.tidycal.com/js/embed.js" async></script>
+<script>
+  const scrollToOptButton = document.getElementById("scrollToOptButton");
+  const scrollToOptButton2 = document.getElementById("scrollToOptButton2");
+
+  const scrollToOptButton3 = document.getElementById("scrollToOptButton2");
+
+  const OptSection = document.getElementById("opt-page");
+  scrollToOptButton.addEventListener("click", function () {
+    // Scroll to the Opt section using smooth behavior
+    OptSection.scrollIntoView({ behavior: "smooth" });
+  });
+  scrollToOptButton2.addEventListener("click", function () {
+    // Scroll to the Opt section using smooth behavior
+    OptSection.scrollIntoView({ behavior: "smooth" });
+  });
+  scrollToOptButton3.addEventListener("click", function () {
+    // Scroll to the Opt section using smooth behavior
+    OptSection.scrollIntoView({ behavior: "smooth" });
+  });
+</script>

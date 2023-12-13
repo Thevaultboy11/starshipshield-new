@@ -1,9 +1,7 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import Icon from "astro-icon";
-import { Picture } from "@astrojs/image/components";
+
 const testimonial_text = [
   {
     title: "Lorem ipsum dolor sit amet.",
@@ -11,7 +9,7 @@ const testimonial_text = [
 Doloribus, animi quibusdam dolor repudiandae aperiam modi nisi.
 Quos labore eaque, in impedit officia, consequuntur iusto illo
 odit, facere expedita doloremque sed.`,
-    person: "Faruk Bavcic",
+    person: "Faruk Bavčić",
     img_url: "/images/android_blog.png",
     url: "/cta",
   },
@@ -21,7 +19,7 @@ odit, facere expedita doloremque sed.`,
 Doloribus, animi quibusdam dolor repudiandae aperiam modi nisi.
 Quos labore eaque, in impedit officia, consequuntur iusto illo
 odit, facere expedita doloremque sed.`,
-    person: "Faruk Bavcic",
+    person: "Faruk Bavčić",
     img_url: "/images/android_blog.png",
     url: "/cta",
   },
@@ -60,7 +58,7 @@ export default function CtaCarousel() {
                       target="_blank"
                       rel="noopener"
                     >
-                      Learn more
+                      `Learn more`
                       <svg
                         className="w-5 h-5 ml-2 -mr-1"
                         fill="currentColor"
