@@ -1,327 +1,316 @@
 ---
-import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
-import emailjs from "@emailjs/browser";
 import { Picture } from "@astrojs/image/components";
-import Icon from "astro-icon";
 import InfoTitle from "~/components/InfoTitle.astro";
-
-const meta = {
-  title: "Scope white paper",
-  description:
-    "Making a scope is the single best technique for improving your assessment results.",
-  dontUseTitleTemplate: true,
-};
 ---
 
-<Layout {meta}>
-  <section class="bg-white dark:bg-gray-900">
-    <div
-      class="pt-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
-    >
-      <InfoTitle text="Find about the holiday xmas gifts" href="/learn-more" />
-      <h1
-        class="mb-4 h1 w-full mx-auto"
-        set:text={"Three Steps to Make a Good Security Assessment Scope"}
-      />
-      <p
-        class="mb-8 p1 lg:text-xl sm:px-16 xl:px-48 w-full mx-auto"
-        set:text={`  Get real information fast, create high-quality scope boundaries and
-        get started with your security assessment.`}
-      />
-    </div>
-  </section>
-
-  <!-- the modal-->
-
-  <div
-    class="mt-32 relative gap-y-8 grid grid-cols-1 md:grid-cols-2 p-4 max-w-5xl mx-auto"
-  >
-    <div class="flex justify-center items-center">
-      <Picture
-        src={"/images/pdf-report/pdf-coverr.png"}
-        class="mx-auto md:rotate-6 col-span-4 rounded-xl"
-        width={600}
-        height={600}
-        widths={[400, 768]}
-        sizes="100vw, 432px"
-        aspectRatio="300:300"
-        alt="sa"
-      />
-    </div>
-    <div
-      class="bg-paper col-span-1 h-200 w-full md:w-max p-4 rounded-xl md:p-8 md:px-16"
-    >
-      <div
-        id="modal"
-        class="hidden fixed w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 md:max-w-2xl z-50"
+<Layout>
+  <title>Security Assessment Scope Whitepaper - Starship Shield</title>
+  <meta name="description" content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."> 
+  <article>
+    <section class="bg-white dark:bg-gray-900">
+      <section
+        class="pt-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
       >
-        <div
-          class="w-full relative p-4 h-full bg-white rounded-lg dark:bg-gray-700"
+        <InfoTitle text="Find about the holiday xmas gifts" href="/learn-more" />
+        <h1
+          class="mb-4 h1 w-full mx-auto"
+          set:text={"How to Make a Security Assessment Scope?"}
+        />
+        <p
+          class="mb-8 p1 lg:text-xl sm:px-16 xl:px-48 w-full mx-auto"
+          set:text={`Get valuable advice on creating high-quality scope boundaries before starting your security assessment.`}
+        />
+      </section>
+    </section>
+    
+    <section
+      class="mt-32 relative gap-y-8 grid grid-cols-1 md:grid-cols-2 p-4 max-w-5xl mx-auto"
+    >
+      <section class="flex justify-center items-center">
+        <Picture
+          src={"/images/pdf-report/pdf-coverr.png"}
+          class="mx-auto md:rotate-6 col-span-4 rounded-xl"
+          width={600}
+          height={600}
+          widths={[400, 768]}
+          sizes="100vw, 432px"
+          aspectRatio="300:300"
+          alt="Picture displaying the PDF cover of our whitepaper about making a good security assessment scope"
+        />
+      </section>
+      <section
+        class="bg-paper col-span-1 h-200 w-full md:w-max p-4 rounded-xl md:p-8 md:px-16"
+      >
+        <section
+          id="modal"
+          class="hidden fixed w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 md:max-w-2xl z-50"
         >
-          <div
-            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+          <section
+            class="w-full relative p-4 h-full bg-white rounded-lg dark:bg-gray-700"
           >
-            <h3
-              id="modal-title"
-              class="text-xl font-semibold text-gray-900 dark:text-white"
+            <section
+              class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
             >
-              White Paper Sent Successfully!
-            </h3>
-            <button
-              id="close_modal"
-              type="button"
-              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-hide="staticModal"
-            >
-              <svg
-                class="w-3 h-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 14"
+              <h3
+                id="modal-title"
+                class="text-xl font-semibold text-gray-900 dark:text-white"
               >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
-              </svg>
-              <span class="sr-only">How To Define a Scope?</span>
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="p-6 space-y-6">
-            <p
-              id="modal-content"
-              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                White Paper Sent Successfully!
+              </h3>
+              <button
+                id="close_modal"
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-hide="staticModal"
+              >
+                <svg
+                  class="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                </svg>
+                <span class="sr-only">How To Define a Scope?</span>
+              </button>
+            </section>
+            <!-- Modal body -->
+            <section class="p-6 space-y-6">
+              <p
+                id="modal-content"
+                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+              >
+                Our white paper is sent to your email! Check your spam folder if
+                it's not showing up.
+                <br />
+                <br class="mt-8" /> For any issues, contact us <a
+                  class="text-primary"
+                  href="mailto:info@starshipshield.com">info@starshipshield.com</a
+                >.
+              </p>
+            </section>
+            <!-- Modal footer -->
+          </section>
+        </section>
+        <section class="flex flex-col justify-center items-center w-full md:w-96">
+          <h1 class="sub-title text-center text-xl md:text-2xl">
+            Get Access Now
+          </h1>
+          <form class="flex w-full flex-col gap-y-2" id="contactForm">
+            <label for="name">Full Name</label>
+            <input
+              placeholder="John Doe"
+              class="rounded-full w-full p-2 md:p-4"
+              type="text"
+              id="name"
+              name="name"
+            />
+
+            <label for="email">Email Address</label>
+            <input
+              placeholder="example@business.com"
+              class="rounded-full w-full p-2 md:p-4"
+              type="email"
+              id="email"
+              name="email"
+            />
+
+            <label for="phone">Phone Number</label>
+            <input
+              class="rounded-full w-full p-2 md:p-4"
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="+123 42 432 123"
+            />
+
+            <button
+              id="Opt"
+              type="submit"
+              class="shadow-none btn-md btn-primary mx-auto md:w-72 my-4"
+              >Send Me The White Paper</button
             >
-              Our white paper is sent to your email! Check your spam folder if
-              it's not showing up.
-              <br />
-              <br class="mt-8" /> For any issues, contact us <a
-                class="text-primary"
-                href="mailto:info@starshipshield.com">info@starshipshield.com</a
-              >.
-            </p>
-          </div>
-          <!-- Modal footer -->
-        </div>
-      </div>
-      <div class="flex flex-col justify-center items-center w-full md:w-96">
-        <h1 class="sub-title text-center text-xl md:text-2xl">
-          GET OUR WHITE PAPER
-        </h1>
-        <form class="flex w-full flex-col gap-y-2" id="contactForm">
-          <label for="name">Full Name</label>
-          <input
-            placeholder="John Doe"
-            class="rounded-full w-full p-2 md:p-4"
-            type="text"
-            id="name"
-            name="name"
-          />
-
-          <label for="email">Email Address</label>
-          <input
-            placeholder="example@business.com"
-            class="rounded-full w-full p-2 md:p-4"
-            type="email"
-            id="email"
-            name="email"
-          />
-
-          <label for="phone">Phone Number</label>
-          <input
-            class="rounded-full w-full p-2 md:p-4"
-            type="text"
-            id="phone"
-            name="phone"
-            placeholder="+123 42 432 123"
-          />
-
-          <button
-            id="Opt"
-            type="submit"
-            class="shadow-none btn-md btn-primary mx-auto md:w-72 my-4"
-            >Send Me The White Paper</button
-          >
-        </form>
-        <p class="text-xl text-center text-paper">
-          P.S. Say goodbye to miscomunication with any cyber-sec team.
-        </p>
-        <p class="text-xs text-center">
-          YOUR INFORMATION IS 100% SAFE. WE NEVER SHARE YOUR INFORMATION WITH
-          ANYONE. BY CLICKING Send Me The White Paper I AGREE TO RECEIVE AUTO
-          AND PRE-MADE E-MAILS AT THE E-MAIL PROVIDED. I UNDERSTAND THAT MY
-          CONSENT IS NOT A CONDITION TO PURCHASE ANYTHING.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    class="mt-32 max-w-5xl mx-auto flex text-center flex-col justify-center items-center"
-  >
-    <p class="p1 text-primary">The latest about security</p>
-    <h2 class="h2">What makes a good scope?</h2>
-  </div>
-  <!-- one rule -->
-  <div
-    class="grid max-w-5xl mx-auto max-w h-200 grid-cols-1 md:grid-cols-2 gap-8 p-4 mb-24"
-  >
-    <div class="p-4 md:py-8 md:px-16 bg-paper rounded-xl text-center">
-      <Picture
-        src={"/images/pdf-report/card-pdff1.png"}
-        class="rounded-xl mx-auto"
-        width={300}
-        height={300}
-        widths={[400, 768]}
-        sizes="100vw, 432px"
-        aspectRatio="300:300"
-        alt="sa"
-      />
-      <h3 class="h3 py-4">
-        <a class="transition ease-in duration-200">CLEAR OBJECTIVES & GOALS</a>
-      </h3>
-      <p class="text-muted p2">
-        A good scope contains exact objectives & goals that need to be met at
-        the end of every security assessment.
-      </p>
-    </div>
-    <div
-      class="flex flex-col items-center justify-center p-4 md:p-8 md:px-16 bg-paper rounded-xl text-center"
+          </form>
+          <p class="text-xl text-center text-paper">
+            P.S. Say goodbye to miscomunication with any cyber-sec team.
+          </p>
+          <p class="text-xs text-center">
+            YOUR INFORMATION IS 100% SAFE. WE NEVER SHARE YOUR INFORMATION WITH
+            ANYONE. BY CLICKING "Send Me The White Paper" YOU AGREE TO RECEIVE AUTO
+            AND PRE-MADE E-MAILS AT THE E-MAIL PROVIDED. I UNDERSTAND THAT MY
+            CONSENT IS NOT A CONDITION TO PURCHASE ANYTHING.
+          </p>
+        </section>
+      </section>
+    </section>
+    <section
+      class="mt-32 max-w-5xl mx-auto flex text-center flex-col justify-center items-center"
     >
-      <Picture
-        src={"/images/pdf-report/card-pdff2.png"}
-        class="rounded-xl"
-        width={300}
-        height={300}
-        widths={[400, 768]}
-        sizes="100vw, 432px"
-        aspectRatio="300:300"
-        alt="sa"
-      />
-      <h3 class="text-xl py-4 font-bold leading-tight sm:text-2xl font-heading">
-        <a class="transition ease-in duration-200 uppercase">
-          The Attack Surface</a
-        >
-      </h3>
-      <p class="text-muted text-lg">
-        Having clear information about your attack surface and where bad actors
-        could get into is a strong foundation to a scope.
-      </p>
-    </div>
-
-    <div
-      class="col-span-1 md:col-span-3 w-full flex justify-center items-center"
+      <h2 class="h2">What Makes a Good Scope?</h2>
+    </section>
+    <!-- one rule -->
+    <section
+      class="grid max-w-5xl mx-auto max-w h-200 grid-cols-1 md:grid-cols-2 gap-8 p-4 mb-24"
     >
-      <button
-        class="btn-md btn-primary mx-auto md:w-72 mt-8"
-        id="scrollToOptButton">Send Me The Paper</button
+      <section class="p-4 md:py-8 md:px-16 bg-paper rounded-xl text-center">
+        <Picture
+          src={"/images/pdf-report/card-pdff1.png"}
+          class="rounded-xl mx-auto"
+          width={300}
+          height={300}
+          widths={[400, 768]}
+          sizes="100vw, 432px"
+          aspectRatio="300:300"
+          alt="A picture displaying clear objectives and goals for a good security assessment scope"
+        />
+        <h3 class="h3 py-4">
+          <a class="transition ease-in duration-200">CLEAR OBJECTIVES & GOALS</a>
+        </h3>
+        <p class="text-muted p2">
+          A good scope contains exact objectives and goals that need to be met at
+          the end of every security assessment.
+        </p>
+      </section>
+      <section
+        class="flex flex-col items-center justify-center p-4 md:p-8 md:px-16 bg-paper rounded-xl text-center"
       >
-    </div>
-  </div>
+        <Picture
+          src={"/images/pdf-report/card-pdff2.png"}
+          class="rounded-xl"
+          width={300}
+          height={300}
+          widths={[400, 768]}
+          sizes="100vw, 432px"
+          aspectRatio="300:300"
+          alt="A picture displaying an attack surface for a good security assessment scope"
+        />
+        <h3 class="text-xl py-4 font-bold leading-tight sm:text-2xl font-heading">
+          <a class="transition ease-in duration-200 uppercase">
+            Clear Attack Surface</a
+          >
+        </h3>
+        <p class="text-muted p2">
+          Providing clear information about your attack surface, what to & not to test is crucial for a good scope.
+        </p>
+      </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollToOptButton = document.getElementById("scrollToOptButton");
-      const scrollToOptButton2 = document.getElementById("scrollToOptButton2");
+      <section
+        class="col-span-1 md:col-span-3 w-full flex justify-center items-center"
+      >
+        <button
+          class="btn-md btn-primary mx-auto md:w-72 mt-8"
+          id="scrollToOptButton">Send Me The Whitepaper</button
+        >
+      </section>
+    </section>
 
-      const OptSection = document.getElementById("Opt");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToOptButton = document.getElementById("scrollToOptButton");
+        const scrollToOptButton2 = document.getElementById("scrollToOptButton2");
 
-      scrollToOptButton.addEventListener("click", function () {
-        // Calculate the target position of the Opt section
-        const targetPosition = OptSection.offsetTop;
+        const OptSection = document.getElementById("Opt");
 
-        // Scroll to the Opt section using smooth behavior
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
+        scrollToOptButton.addEventListener("click", function () {
+          // Calculate the target position of the Opt section
+          const targetPosition = OptSection.offsetTop;
+
+          // Scroll to the Opt section using smooth behavior
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        });
+        scrollToOptButton2.addEventListener("click", function () {
+          // Calculate the target position of the Opt section
+          const targetPosition = OptSection.offsetTop;
+
+          // Scroll to the Opt section using smooth behavior
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
         });
       });
-      scrollToOptButton2.addEventListener("click", function () {
-        // Calculate the target position of the Opt section
-        const targetPosition = OptSection.offsetTop;
+      //   sending the email modal-backdrop modal-content
+      const form = document.getElementById("contactForm");
+      const modal = document.getElementById("modal");
+      const close_modal = document.getElementById("close_modal");
+      const modal_backdrop = document.getElementById("modal-backdrop");
+      const modal_content = document.getElementById("modal-content");
+      const modal_title = document.getElementById("modal-title");
 
-        // Scroll to the Opt section using smooth behavior
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
+      close_modal.addEventListener("click", async (event) => {
+        modal.classList.toggle("hidden");
+        modal_backdrop.classList.add("hidden");
+        document.body.style.overflow = "";
       });
-    });
-    //   sending the email modal-backdrop modal-content
-    const form = document.getElementById("contactForm");
-    const modal = document.getElementById("modal");
-    const close_modal = document.getElementById("close_modal");
-    const modal_backdrop = document.getElementById("modal-backdrop");
-    const modal_content = document.getElementById("modal-content");
-    const modal_title = document.getElementById("modal-title");
+      function move_progress_bar() {
+        let width = 0;
 
-    close_modal.addEventListener("click", async (event) => {
-      modal.classList.toggle("hidden");
-      modal_backdrop.classList.add("hidden");
-      document.body.style.overflow = "";
-    });
-    function move_progress_bar() {
-      let width = 0;
-
-      var elem = document.getElementById("progress_bar");
-      var id = setInterval(frame, 20);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          width = 0;
-          elem.style.width = 0;
-        } else {
-          width++;
-          elem.style.width = width + "%";
+        var elem = document.getElementById("progress_bar");
+        var id = setInterval(frame, 20);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            width = 0;
+            elem.style.width = 0;
+          } else {
+            width++;
+            elem.style.width = width + "%";
+          }
         }
       }
-    }
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-      const nameInput = form.querySelector("#name").value;
-      const emailInput = form.querySelector("#email").value;
-      const phoneInput = form.querySelector("#phone").value;
-      const apiUrl = "https://back-end-sooty.vercel.app/api";
+        const nameInput = form.querySelector("#name").value;
+        const emailInput = form.querySelector("#email").value;
+        const phoneInput = form.querySelector("#phone").value;
+        const apiUrl = "https://back-end-sooty.vercel.app/api";
 
-      const data = {
-        fullName: nameInput,
-        email: emailInput,
-        phoneNumber: phoneInput,
-      };
-      move_progress_bar();
-      try {
-        const response = await fetch(`${apiUrl}/create-user`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        });
+        const data = {
+          fullName: nameInput,
+          email: emailInput,
+          phoneNumber: phoneInput,
+        };
+        move_progress_bar();
+        try {
+          const response = await fetch(`${apiUrl}/create-user`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
 
-        if (response.status === 200) {
-          modal.classList.toggle("hidden");
-          modal_backdrop.classList.remove("hidden");
-          document.body.style.overflow = "hidden";
-        } else {
-          console.log(response.status);
-          modal.classList.toggle("hidden");
-          modal_backdrop.classList.remove("hidden");
-          document.body.style.overflow = "hidden";
-          modal_title.innerHTML = `<p class='text-primary'>Oops!</p>`;
-          modal_content.innerHTML = `
-        Something went wrong while sending the white paper. Try reloading the site to fix the problem.<br/><br/>
-        If that does not help Please contact us at <a class='text-primary' href='mailto:info@starshipshield.com'>info@starshipshield.com</a>.
-      `;
+          if (response.status === 200) {
+            modal.classList.toggle("hidden");
+            modal_backdrop.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+          } else {
+            console.log(response.status);
+            modal.classList.toggle("hidden");
+            modal_backdrop.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+            modal_title.innerHTML = `<p class='text-primary'>Oops!</p>`;
+            modal_content.innerHTML = `
+          Something went wrong while sending the white paper. Try reloading the site to fix the problem.<br/><br/>
+          If that does not help Please contact us at <a class='text-primary' href='mailto:info@starshipshield.com'>info@starshipshield.com</a>.
+        `;
+          }
+        } catch (error) {
+          console.error("Error:", error);
         }
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    });
-  </script>
+      });
+    </script>
+  </article>
 </Layout>
