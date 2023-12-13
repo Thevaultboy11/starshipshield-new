@@ -486,8 +486,14 @@ export const headerData = {
       href: "/resources",
       links: [
         { text: "Blog", href: getBlogPermalink() },
-        { text: "Define a Security Assessment Scope", href: "/resources" },
-        { text: "Security Assessment Pricing Calculator", href: "/resources" },
+        {
+          text: "How To Make a Security Assessment Scope",
+          href: "/resources/scope-paper",
+        },
+        {
+          text: "Security Assessment Pricing Calculator",
+          href: "/resources/assesment-calculator",
+        },
       ],
     },
 
@@ -523,7 +529,7 @@ export const footerData = {
       links: [
         { text: "Starship Shield Blog", href: "/blog" },
         {
-          text: "How to make a good Security Assessment Scope",
+          text: "How To Make a Security Assessment Scope",
           href: "/resources/scope-paper",
         },
         {
