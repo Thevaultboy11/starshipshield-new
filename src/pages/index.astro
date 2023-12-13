@@ -7,7 +7,7 @@ import Icon from "astro-icon";
 import ProblemAstro from "../components/ProblemsCarousel";
 import ClientSlider from "~/components/widgets/ClientSlider.tsx";
 
-const reviews = [
+const reviews = [   
   {
     title: `Explore stories of our clients and how they avoided major cyber disasters.`,
     paragraph: "Case Studies",
@@ -39,15 +39,15 @@ const resources = [
 
 const about_us = [
   {
-    statistic: "140+",
-    title: "Coded Elements",
-    body: `From buttons, to inputs, navbars, alerts, tabels, cards or charts.`,
+    statistic: "5k+",
+    title: "Secured Users",
+    body: `Thousands of client application users are secured.`,
   },
   {
-    statistic: "140+",
-    title: "Coded Elements",
-    body: `From buttons, to inputs, navbars, alerts, tabels, cards or charts.`,
-  },
+    statistic: "10+",
+    title: "Secured Companies",
+    body: `We've worked with over 10 companies, securing their services & software.`,
+  }
 ];
 ---
 
@@ -117,13 +117,11 @@ const about_us = [
       <div class="col-span-1 px-8">
         <div class="text-left mb-8">
           <p class="text-primary p1 font-semibold">
-            Fully Coded Components based in Astro
+            Read the background story of our team
           </p>
-          <h2 class="h2 my-4">Astro LaunchUI Pro</h2>
+          <h2 class="h2 my-4">Starship Shield Team</h2>
           <p class="p3">
-            All the sections and pages made with these elements will be fully
-            responsive and will look beautiful on all types of screens, including
-            phones, tables, or desktops.
+            Our team consists of 4 enthusiastic security engineers all with unique stories that led them to creating Starship Shield.
           </p>
         </div>
         <div class="lg:flex relative">
@@ -148,11 +146,9 @@ const about_us = [
                 ))
               }
             </div>
-            <a href="/about-us"
-              ><button class="btn-primary btn-md" type="button"
-                >Meet Our Team</button
-              ></a
-            >
+            <a href="/about-us">
+              <button class="btn-primary btn-md" type="button">Meet Our Team</button>
+            </a>
           </div>
         </div>
       </div>
