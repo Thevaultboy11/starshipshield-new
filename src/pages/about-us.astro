@@ -7,29 +7,31 @@ import { Picture } from "@astrojs/image/components";
 import Cta from "~/components/Cta.astro";
 import Icon from "astro-icon";
 import AchievementCarousel from "../components/AchievementCarousel";
+
 const meta = {
-  title: "About us",
-  description: "The 3 core tenets about building digital castles",
+  title: "Discover Our Story - Starship Shield",
+  description: "Explore the three core tenets guiding us in the art of constructing secure and innovative digital fortresses at Starship Shield.",
   dontUseTitleTemplate: true,
 };
+
 const team_members = [
   {
-    name: "Eman Catic",
-    description: `Experienced penetration tester, 4 years bug bounty hunter, number one in Bosnia and Herzegovina on TryHackMe `,
+    name: "Eman Ćatić",
+    description: `Experienced penetration tester, bug bounty hunter for 4 years, TryHackMe no. 1 in Bosnia and Herzegovina. `,
     img_url: "/images/android_blog.png",
-    linked_in_url: "/",
+    linked_in_url: "https://www.linkedin.com/in/eman-catic/",
   },
   {
-    name: "Almir Dautbegovic",
-    description: `Passionate Tech Salesman, in the past React. js developer, in free time cyber security copywriter`,
+    name: "Almir Dautbegović",
+    description: `Passionate tech salesman & frontend developer, copywriting expert`,
     img_url: "/images/android_blog.png",
-    linked_in_url: "/",
+    linked_in_url: "https://www.linkedin.com/in/almir-starship-shield/",
   },
   {
-    name: "Rijad Gadzo",
-    description: ` Security engineer specializing in IOT,  years DevSecOps engineer in numerous companies`,
+    name: "Rijad Gadžo",
+    description: `Experienced DevSecOps engineer with 4 years of experience in numerous companies`,
     img_url: "/images/android_blog.png",
-    linked_in_url: "/",
+    linked_in_url: "https://www.linkedin.com/in/gadzo-rijad/",
   },
 ];
 const last_memeber = [
@@ -37,7 +39,7 @@ const last_memeber = [
     name: "Džemal Dzananović",
     description: `Mobile security expert, enjoys creating lead generation tools, enjoys meeting new people`,
     img_url: "/images/android_blog.png",
-    linked_in_url: "/",
+    linked_in_url: "https://www.linkedin.com/in/secure-startups/",
   },
 ];
 const key_features = [
@@ -48,18 +50,18 @@ const key_features = [
   },
   {
     img_url: "/images/graphic.svg",
-    title: "Speed",
-    paragraph: `We strive to deliver 3x faster and quality services, no matter the size of your company. `,
+    title: "Time Efficient",
+    paragraph: `We strive to deliver quality services 3x faster, no matter the size of your projects. `,
   },
   {
     img_url: "/images/graphic.svg",
-    title: "Included bonuses",
+    title: "Included Bonuses",
     paragraph: `We always include bonuses free of charge alongside our basic services for our clients.`,
   },
   {
     img_url: "/images/graphic.svg",
     title: "You Come First",
-    paragraph: `As a small company, our goal is to help safeguard yours, regardless of size.`,
+    paragraph: `As a small company, our goal is to help safeguard yours, regardless of your size.`,
   },
 ];
 ---
@@ -67,7 +69,7 @@ const key_features = [
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
   <div class="w-full max-w-5xl text-center px-4 py-8 mx-auto mb-24">
-    <h1 class="h1">About us</h1>
+    <h1 class="h1">About Us</h1>
     <p class="p1 my-4 mx-auto">
       Young and driven allays on the lookout for new ways of defending against
       hackers.
@@ -93,10 +95,8 @@ const key_features = [
     </div>
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <h1 class="h2 text-center mb-4">Meet our team</h1>
-    <p class="p2 md:w-1/2 mx-auto">
-      Always helping other people: the team behind Starship Shield.
-    </p>
+    <h1 class="h2 text-center mb-4">Meet Our Team</h1>
+
     <div class="w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-y-8">
       {
         team_members.map((item, idx: any) => (
@@ -151,14 +151,11 @@ const key_features = [
     </div>
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <div class="h2 w-full mb-4 text-center mx-auto">Tournements we won</div>
-    <p class="p2 md:w-1/2 mx-auto mb-8">
-      Always helping other people: the team behind Starship Shield.
-    </p>
+    <div class="h2 w-full mb-4 text-center mx-auto">Competitions We've Won</div>
     <AchievementCarousel client:load />
   </div>
   <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <h1 class="h2 mb-8 text-center">Why choose Us?</h1>
+    <h1 class="h2 mb-8 text-center">Why Choose Us?</h1>
 
     <div class="grid grid-cos-1 md:grid-cols-4 gap-8">
       {
@@ -170,7 +167,7 @@ const key_features = [
               widths={[1600, 800]}
               sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
               aspectRatio="3:3"
-              alt="sa"
+              alt="Picture of competition - Starship Shield"
             />
             <h1 class="h3" set:text={title} />
             <p class="p2" set:text={paragraph} />

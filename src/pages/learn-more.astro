@@ -16,31 +16,35 @@ import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import CtaCarousel from "../components/CtaCarousel";
+
 const meta = {
-  title: "Do you want amplified security? ",
-  description:
-    "Defining boundaries for a quality security assement is hard. We make it easy.",
+  title: "Amplified Security Services - Starship Shield",
+  description: "Explore our services for quality security assessments. We make defining boundaries easy and provide amplified security solutions.",
   dontUseTitleTemplate: true,
 };
+
 const reviews = [
   {
     title: `Webouncer`,
     paragraph: `This product is for owners of high-traffic websites that want protection from downtime and any type of data theft.`,
     img_url: "/images/android_blog.png",
     href: "/products/web-bouncer",
+    alt: "Image of our product Webouncer"
   },
   {
     title: `Security Launchpad`,
-    paragraph: `For companies that overlooked security and want to fix the problem. After taking the bundle, you'll be on your way to meeting security compliance.`,
+    paragraph: `For companies that overlooked security and want to fix the problem. After choosing the bundle, you'll be on your way to meeting security compliances.`,
     img_url: "/images/android_blog.png",
     href: "products/security-launchpad",
+    alt: "Stock image representing our service Security Launchpad"
   },
 
   {
-    title: `PtaaS`,
-    paragraph: `For software development companies  that want to stop trading  off Time to Market speed for quality security.`,
+    title: `PTaaS`,
+    paragraph: `For software development companies that want to stop trading off 'Time to Market' speed for quality security.`,
     img_url: "/images/android_blog.png",
     href: "/products/ptaas",
+    alt: "Stock image representing our service PTaaS"
   },
 ];
 ---

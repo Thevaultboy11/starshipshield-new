@@ -7,12 +7,14 @@ import { Picture } from "@astrojs/image/components";
 import Icon from "astro-icon";
 import ProblemAstro from "../components/ProblemsCarousel";
 import ClientSlider from "~/components/widgets/ClientSlider.tsx";
+
 const meta = {
-  title: "Do you want amplified security? ",
+  title: "Secure Yourself with Starship Shield",
   description:
-    "Defining boundaries for a quality security assement is hard. We make it easy.",
+    "Empowering businesses with comprehensive security assessments. Discover how we make defining and fortifying your digital boundaries easy.",
   dontUseTitleTemplate: true,
 };
+
 const reviews = [
   {
     title: `Explore the stories of how our clients were saved from cyber disasters.`,
@@ -57,10 +59,10 @@ const about_us = [
 
 <Layout {meta}>
   <Hero
-    callToAction={{ text: "Get started", href: "/learn-more" }}
+    callToAction={{ text: "Get Started", href: "/learn-more" }}
     image={{
       src: import("~/assets/images/hero.jpg"),
-      alt: "AstroWind Hero Image",
+      alt: "Starship Shield Logo",
     }}
   >
     <Fragment slot="title">
