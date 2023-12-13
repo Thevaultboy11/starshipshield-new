@@ -485,8 +485,8 @@ export const headerData = {
       href: "/resources",
       links: [
         { text: "Blog", href: getBlogPermalink() },
-        { text: "How To Make a Security Assessment Scope", href: "/resources/scope-maker" },
-        { text: "Security Assessment Pricing Calculator", href: "/resources/pricing-calculator" },
+        { text: "How To Make a Security Assessment Scope", href: "/resources/scope-paper" },
+        { text: "Security Assessment Pricing Calculator", href: "/resources/assesment-calculator" },
       ],
     },
 
