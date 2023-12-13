@@ -58,7 +58,7 @@ function CallPage() {
     <>
       <form onSubmit={(e) => onSubmit(e)} className="w-full">
         <label className="p1" htmlFor="name">
-          Name of your company
+          Company Name
         </label>
         <input
           onChange={(e) => changeFormData("name", e.target.value)}
@@ -114,7 +114,7 @@ function CallPage() {
           id="message"
           rows={4}
           className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Gdpr became mandatory in my country"
+          placeholder="I have a fin-tech software development company..."
         ></textarea>
 
         <div className="flex justify-center">
@@ -122,7 +122,7 @@ function CallPage() {
             type="submit"
             className="cursor-pointer btn-primary btn-lg w-full  mt-8"
           >
-            Schedule a time that fits you
+            Schedule a Time That Fits You
           </button>
         </div>
       </form>
