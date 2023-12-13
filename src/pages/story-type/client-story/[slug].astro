@@ -86,7 +86,7 @@ const { name, hero, youtube, case_numbers, card } = case_study;
   >
     <section class="flex flex-wrap justify-center -m-4 text-center">
       {
-        case_numbers.map((item) => (
+        case_study_list.map((item) => (
           <section class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center md:border-r md:last:border-none dark:md:border-slate-500">
             <section class="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
               {item.number}
@@ -107,5 +107,6 @@ const { name, hero, youtube, case_numbers, card } = case_study;
       <section class="" set:html={card.body} />
     </section>
   </section>
+
   <Cta />
 </Layout>
