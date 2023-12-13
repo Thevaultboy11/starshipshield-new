@@ -1,15 +1,12 @@
 ---
-import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
-
-import Hero from "~/components/widgets/Hero.astro";
 import { Picture } from "@astrojs/image/components";
 import Cta from "~/components/Cta.astro";
 import Icon from "astro-icon";
 import AchievementCarousel from "../components/AchievementCarousel";
 
 const meta = {
-  title: "Discover Our Story - Starship Shield",
+  title: "Discover Our Story",
   description: "Explore the three core tenets guiding us in the art of constructing secure and innovative digital fortresses at Starship Shield.",
   dontUseTitleTemplate: true,
 };
@@ -18,19 +15,19 @@ const team_members = [
   {
     name: "Eman Ćatić",
     description: `Experienced penetration tester, bug bounty hunter for 4 years, TryHackMe no. 1 in Bosnia and Herzegovina. `,
-    img_url: "/images/android_blog.png",
+    img_url: "/src/assets/images/eman.jpeg",
     linked_in_url: "https://www.linkedin.com/in/eman-catic/",
   },
   {
     name: "Almir Dautbegović",
     description: `Passionate tech salesman & frontend developer, copywriting expert`,
-    img_url: "/images/android_blog.png",
+    img_url: "/src/assets/images/almir.png",
     linked_in_url: "https://www.linkedin.com/in/almir-starship-shield/",
   },
   {
     name: "Rijad Gadžo",
     description: `Experienced DevSecOps engineer with 4 years of experience in numerous companies`,
-    img_url: "/images/android_blog.png",
+    img_url: "/src/assets/images/eman.jpeg",
     linked_in_url: "https://www.linkedin.com/in/gadzo-rijad/",
   },
 ];
@@ -38,7 +35,7 @@ const last_memeber = [
   {
     name: "Džemal Dzananović",
     description: `Mobile security expert, enjoys creating lead generation tools, enjoys meeting new people`,
-    img_url: "/images/android_blog.png",
+    img_url: "/src/assets/images/eman.jpeg",
     linked_in_url: "https://www.linkedin.com/in/secure-startups/",
   },
 ];
@@ -67,114 +64,114 @@ const key_features = [
 ---
 
 <Layout {meta}>
-  <!-- Hero Widget ******************* -->
-  <div class="w-full max-w-5xl text-center px-4 py-8 mx-auto mb-24">
-    <h1 class="h1">About Us</h1>
-    <p class="p1 my-4 mx-auto">
-      Young and driven allays on the lookout for new ways of defending against
-      hackers.
-    </p>
-    <div
-      class="w-full paper rounded-md py-8 px-4 grid grid-cols-1 md:grid-cols-2"
-    >
-      <div
-        class="w-full flex items-center pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-black"
-      >
-        <h1 class="h3 text-left">
-          You guessed it. <br /> We’re changing the game.
-        </h1>
-      </div>
-      <div class="text-left p2 md:text-center md:pl-4">
-        <p>
-          Understanding the struggle of small companies regarding security, our
-          founders committed themselves to a singular mission to make security
-          <b>easier</b> and <b>accessible</b> to everyone. Out of this dedication
-          StarShip Shield has been born.
+  <title>Starship Shield - About Us</title>
+  <meta name="description" content="Young and driven allies on the lookout for new ways of defending against hackers. Learn about Starship Shield's mission and meet the team.">
+  <article>
+    <section class="w-full max-w-5xl text-center px-4 py-8 mx-auto mb-24">
+      <header>
+        <h1 class="h1">About Us</h1>
+        <p class="p1 my-4 mx-auto">
+          Young and driven allies on the lookout for new ways of defending against hackers.<br>
+          Learn about Starship Shield's mission and meet the team.
         </p>
-      </div>
-    </div>
-  </div>
-  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <h1 class="h2 text-center mb-4">Meet Our Team</h1>
+      </header>
+      <section class="w-full paper rounded-md py-8 px-4 grid grid-cols-1 md:grid-cols-2">
+        <section class="w-full flex items-center pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-black">
+          <h1 class="h3 text-center">
+            You guessed it. <br /> We’re changing the game.
+          </h1>
+        </section>
+        <section class="text-left p2 md:text-center md:pl-4">
+          <p>
+            Recognizing the challenges faced by small companies in the realm of security, our founders embraced a mission to make security more accessible and user-friendly for everyone. <br>
+            This commitment gave birth to Starship Shield, a testament to our dedication in the field of cybersecurity.
+          </p>
+        </section>
+      </section>
+    </section>
+    <section class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    
+      <h1 class="h2 text-center mb-4">Meet Our Team</h1>
 
-    <div class="w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-y-8">
-      {
-        team_members.map((item, idx: any) => (
-          <div class="flex flex-col gap-y-4 text-center">
-            <Picture
-              class="h-40 w-40 mx-auto rounded-full"
-              src={item.img_url}
-              widths={[1600, 800]}
-              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-              aspectRatio="3:2"
-              alt="sa"
-            />
-
-            <h1 class="h3" set:text={item.name} />
-            <p class="p2" set:text={item.description} />
-            <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
-              <Icon
-                pack="cib"
-                name="linkedin"
-                class="w-6 h-6 inline-block text-primary"
+      <section class="w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-y-8">
+        {
+          team_members.map((item, idx: any) => (
+            <section class="flex flex-col gap-y-4 text-center">
+              <Picture
+                class="h-40 w-40 mx-auto rounded-full"
+                src={item.img_url}
+                widths={[1600, 800]}
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                aspectRatio="3:2"
+                alt="Profile pictures of Starship Shield members"
               />
-            </a>
-          </div>
-        ))
-      }
-    </div>
-    <div class="w-full p-8">
-      {
-        last_memeber.map((item, idx: any) => (
-          <div class="flex flex-col gap-y-4 text-center w-60 mx-auto">
-            <Picture
-              class="h-40 w-40 mx-auto rounded-full"
-              src={item.img_url}
-              widths={[1600, 800]}
-              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-              aspectRatio="3:2"
-              alt="sa"
-            />
 
-            <h1 class="h3" set:text={item.name} />
-            <p class="p2" set:text={item.description} />
-            <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
-              <Icon
-                pack="cib"
-                name="linkedin"
-                class="w-6 h-6 inline-block text-primary"
+              <h1 class="h3" set:text={item.name} />
+              <p class="p2" set:text={item.description} />
+              <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
+                <Icon
+                  pack="cib"
+                  name="linkedin"
+                  class="w-6 h-6 inline-block text-primary"
+                />
+              </a>
+            </section>
+          ))
+        }
+      </section>
+      <section class="w-full p-8">
+        {
+          last_memeber.map((item, idx: any) => (
+            <section class="flex flex-col gap-y-4 text-center w-60 mx-auto">
+              <Picture
+                class="h-40 w-40 mx-auto rounded-full"
+                src={item.img_url}
+                widths={[1600, 800]}
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                aspectRatio="3:2"
+                alt="Picture from competition Starship Shield team won"
               />
-            </a>
-          </div>
-        ))
-      }
-    </div>
-  </div>
-  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <div class="h2 w-full mb-4 text-center mx-auto">Competitions We've Won</div>
-    <AchievementCarousel client:load />
-  </div>
-  <div class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-    <h1 class="h2 mb-8 text-center">Why Choose Us?</h1>
 
-    <div class="grid grid-cos-1 md:grid-cols-4 gap-8">
-      {
-        key_features.map(({ img_url, title, paragraph }, idx: number) => (
-          <div class="flex flex-col gap-y-4 text-center" key={idx}>
-            <Picture
-              class="h-40 w-40 mx-auto select-none"
-              src={img_url}
-              widths={[1600, 800]}
-              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-              aspectRatio="3:3"
-              alt="Picture of competition - Starship Shield"
-            />
-            <h1 class="h3" set:text={title} />
-            <p class="p2" set:text={paragraph} />
-          </div>
-        ))
-      }
-    </div>
-  </div>
+              <h1 class="h3" set:text={item.name} />
+              <p class="p2" set:text={item.description} />
+              <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
+                <Icon
+                  pack="cib"
+                  name="linkedin"
+                  class="w-6 h-6 inline-block text-primary"
+                />
+              </a>
+            </section>
+          ))
+        }
+      </section>
+    </section>
+    <section class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+      <section class="h2 w-full mb-4 text-center mx-auto">Competitions We've Won</section>
+      <AchievementCarousel client:load />
+    </section>
+    <section class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+      <h1 class="h2 mb-8 text-center">Why Choose Us?</h1>
+
+      <section class="grid grid-cos-1 md:grid-cols-4 gap-8">
+        {
+          key_features.map(({ img_url, title, paragraph }, idx: number) => (
+            <section class="flex flex-col gap-y-4 text-center" key={idx}>
+              <Picture
+                class="h-40 w-40 mx-auto select-none"
+                src={img_url}
+                widths={[1600, 800]}
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                aspectRatio="3:3"
+                alt="Picture of competition - Starship Shield"
+              />
+              <h1 class="h3" set:text={title} />
+              <p class="p2" set:text={paragraph} />
+            </section>
+          ))
+        }
+      </section>
+    </section>
+  </article>
   <Cta />
 </Layout>

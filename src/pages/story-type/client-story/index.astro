@@ -1,123 +1,107 @@
 ---
 import Layout from "../../../layouts/PageLayout.astro";
-import Header from "../../../components/widgets/Header.astro";
-import Hero from "../../../components/widgets/Hero.astro";
-import { headerData } from "../../../data";
 import { Picture } from "@astrojs/image/components";
-import Icon from "astro-icon";
 import Cta from "~/components/Cta.astro";
+
 const meta = {
-  title: "Client wins",
-  description: "The latest security wins for our clients.",
+  title: "Client Wins",
+  description: "The latest security wins of our clients.",
   dontUseTitleTemplate: true,
 };
+
 const client_win = [
   {
-    title: "Noteworthy technology acquisitions 2021",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    title: "App IT - Faruk B.",
+    body: "Listen to Faruk Bavčič, the founder of a software development company App IT that got the chance to experience our services.",
     img_url: "/images/android_blog.png",
     case_study_url: "/",
+    test_type: "Web App Assessment"
   },
   {
-    title: "Noteworthy technology acquisitions 2021",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    title: "Boostroom - Alen V.",
+    body: "Hear from Alen Vlahovljak, the lead developer behind a gaming marketplace Boostroom and what their experience was with our services.",
     img_url: "/images/android_blog.png",
     case_study_url: "/",
+    test_type: "Web App Assessment"
   },
   {
-    title: "Noteworthy technology acquisitions 2021",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    title: "Origin - Nermin Ć.",
+    body: "This is what our client Nermin Ćatović has to say about his experience when our team tested his new and unique application Patrola.ba",
     img_url: "/images/android_blog.png",
     case_study_url: "/",
+    test_type: "Web App Assessment"
   },
   {
-    title: "Noteworthy technology acquisitions 2021",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    title: "OOX - Luka M.",
+    body: "A unique story coming from OOX and Luka Miljuš, a game development company that got first hand experience into our security testing of their game.",
     img_url: "/images/android_blog.png",
     case_study_url: "/",
-  },
-
-  {
-    title: "Noteworthy technology acquisitions 2021",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-    img_url: "/images/android_blog.png",
-    case_study_url: "/",
-  },
-  {
-    title: "Noteworthy technology acquisitions 2021",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-    img_url: "/images/android_blog.png",
-    case_study_url: "/",
-  },
+    test_type: "Mobile App Assessment"
+  }
 ];
 ---
 
 <Layout meta={meta}>
-  <div
-    class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16 border-b-4 border-paper"
-  >
-    <div class="md:col-span-3">
-      <h1 class="max-w-2xl mb-4 h1">
-        How to secure your <br />
-        <span class="text-primary">high-conversion</span> site from cyber criminals?
-      </h1>
-      <p class="max-w-2xl mb-6 p1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-        voluptatum aspernatur itaque.
-      </p>
-      <div
-        class="rounded-xl md:rounded-md max-w-2xl py-2 flex flex-col md:flex-row gap-x-2 gap-y-4 justify-start items-center"
-      >
-        <div class="flex gap-x-4">
-          <a
-            class="link-case-active text-xs md:text-base py-4 md:p-0 w-32"
-            href="/story-type/case-study">Case Studies</a
-          >
-          <a
-            class="link-case w-36 py-4 text-xs md:text-base"
-            href="/story-type/client-wins">Client Wins</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="w-full hidden md:block md:col-span-2 bg-red-200"></div>
-  </div>
-  <div class="w-full max-w-5xl px-4 mx-auto mt-24">
-    <h1 class="h2 max-w-lg mx-auto text-center mb-4">Case studies</h1>
-    <p class="p2 max-w-lg mx-auto text-center mb-8">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae,
-      temporibus?
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-x-8 gap-y-12">
-      {
-        client_win.map(
-          ({ title, body, img_url, case_study_url }, idx: number) => (
-            <div>
-              <Picture
-                class="w-full h-48  rounded-md"
-                src={img_url}
-                widths={[1600, 800]}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-                aspectRatio="16:9"
-                alt="sa"
-              />
-              <div class="my-2 title-card">Penetration test</div>
-              <div class="mb-4">
-                <h5 class="h3 mb-2 text-black" set:text={title} />
-                <p class="p2" set:text={body} />
-              </div>
-              <div class="flex gap-x-4 ">
-                <a href={case_study_url} class="btn-primary btn-sm">
-                  View more
-                </a>
-              </div>
-            </div>
+  <title>Starship Shield - Client Wins</title>
+  <meta name="description" content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."> 
+  <article>
+    <section class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16 border-b-4 border-paper">
+      <section class="md:col-span-3">
+        <h1 class="max-w-2xl mb-4 h1">
+          Don't listen to us, <br>hear what our clients have to say... 
+        </h1>
+        <p class="max-w-2xl mb-6 p1">
+          Our tailored solutions drive remarkable success for clients, streamlining processes, achieving cost savings, and showing our commitment to excellence that sets us apart.        </p>
+        <section
+          class="rounded-xl md:rounded-md max-w-2xl py-2 flex flex-col md:flex-row gap-x-2 gap-y-4 justify-start items-center"
+        >
+          <section class="flex gap-x-4">
+            <a
+              class="link-case-active text-xs md:text-base py-4 md:p-0 w-32"
+              href="/story-type/client-story">Case Studies</a
+            >
+            <a
+              class="link-case w-36 py-4 text-xs md:text-base"
+              href="/story-type/client-wins">Client Wins</a
+            >
+          </section>
+        </section>
+      </section>
+      <section class="w-full hidden md:block md:col-span-2 bg-red-200"></section>
+    </section>
+    <section class="w-full max-w-5xl px-4 mx-auto mt-24">
+      <h1 class="h2 max-w-lg mx-auto text-center mb-4">Case Studies</h1>
+      <section class="grid grid-cols-1 md:grid-cols-3 w-full gap-x-8 gap-y-12">
+        {
+          client_win.map(
+            ({ title, body, img_url, case_study_url, test_type }, idx: number) => (
+              <section>
+                <Picture
+                  class="w-full h-48  rounded-md"
+                  src={img_url}
+                  widths={[1600, 800]}
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                  aspectRatio="16:9"
+                  alt="Picture showcasing the thumbnail of testimonials of our clients"
+                />
+                <section class="my-2 title-card">{test_type}</section>
+                <section class="mb-4">
+                  <h5 class="h3 mb-2 text-black" set:text={title} />
+                  <p class="p2" set:text={body} />
+                </section>
+                <section class="flex gap-x-4 ">
+                  <a href={case_study_url} class="btn-primary btn-sm">
+                    View More
+                  </a>
+                </section>
+              </section>
+            )
           )
-        )
-      }
-    </div>
-  </div>
-  <Cta />
+        }
+      </section>
+    </section>
+   <Cta />
+  </article>
 </Layout>
 
 <!-- <Picture
@@ -128,7 +112,7 @@ sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
 aspectRatio="16:9"
 alt="sa"
 />
-<div class="">
+<section class="">
 <h5 class="my-4 h3 text-black" set:text={title} />
 <p class="p2" set:text={body} />
-</div> -->/*
+</section> -->/*

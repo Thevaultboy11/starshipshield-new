@@ -1,39 +1,25 @@
 ---
-import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
-import Cta from "~/components/Cta.astro";
-import Hero from "~/components/widgets/Hero.astro";
-import Note from "~/components/widgets/Note.astro";
-import Features from "~/components/widgets/Features.astro";
-import Features2 from "~/components/widgets/Features2.astro";
-import Steps from "~/components/widgets/Steps.astro";
-import Content from "~/components/widgets/Content.astro";
-import LatestPosts from "~/components/blog/LatestPosts.astro";
-import FAQs from "~/components/widgets/FAQs.astro";
-import Stats from "~/components/widgets/Stats.astro";
-import CallToAction from "~/components/widgets/CallToAction.astro";
 import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
-import TestimonialCarousel from "../components/TestimonialCarousel";
 import CtaCarousel from "../components/CtaCarousel";
 
 const meta = {
-  title: "Amplified Security Services - Starship Shield",
-  description: "Explore our services for quality security assessments. We make defining boundaries easy and provide amplified security solutions.",
+  title: "Our Services - Starship Shield",
+  description: "Explore our services for improving your securiy. We make defining boundaries easy and provide amplified security solutions.",
   dontUseTitleTemplate: true,
 };
 
 const reviews = [
   {
     title: `Webouncer`,
-    paragraph: `This product is for owners of high-traffic websites that want protection from downtime and any type of data theft.`,
+    paragraph: `This software is for owners of high traffic websites that want protection from downtime and any other type of cyber attacks.`,
     img_url: "/images/android_blog.png",
     href: "/products/web-bouncer",
     alt: "Image of our product Webouncer"
   },
   {
     title: `Security Launchpad`,
-    paragraph: `For companies that overlooked security and want to fix the problem. After choosing the bundle, you'll be on your way to meeting security compliances.`,
+    paragraph: `For companies that overlooked security and want to commit to greater security. Start your journey to enhanced protection!`,
     img_url: "/images/android_blog.png",
     href: "products/security-launchpad",
     alt: "Stock image representing our service Security Launchpad"
@@ -41,7 +27,7 @@ const reviews = [
 
   {
     title: `PTaaS`,
-    paragraph: `For software development companies that want to stop trading off 'Time to Market' speed for quality security.`,
+    paragraph: `For software development companies that want to say no to trading off 'Time to Market' speed for enhanced security and protection.`,
     img_url: "/images/android_blog.png",
     href: "/products/ptaas",
     alt: "Stock image representing our service PTaaS"
@@ -50,65 +36,63 @@ const reviews = [
 ---
 
 <Layout {meta}>
-  <!-- Hero Widget ******************* -->
-
-  <div
-    class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 mb-24"
-  >
-    <h1 class="max-w-2xl mb-6 h1">
-      Your first step to <br />outer-world security
-    </h1>
-    <p class="p1 mb-8 max-w-2xl">
-      Here at Flowbite we compare a wide range of destinations, flights and
-      hotels to conjure up cheap holidays for you to enjoy, time and time again.
-    </p>
-    <div class="w-full">
-      <Picture
-        class="h-96 w-100 rounded-md bg-gray-400 mx-auto"
-        src={"/images/product11.svg"}
-        widths={[1600, 800]}
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-        aspectRatio="16:9"
-        alt="sa"
-      />
-    </div>
-  </div>
-  <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
-    <h1 class="h2 mb-8 mx-auto text-center">What clients say about us</h1>
-    <CtaCarousel client:load />
-  </div>
-  <div
-    class="grid w-full mx-auto max-w-5xl p-4 gap-8 grid-cols-1 md:grid-cols-3 mb-20"
-  >
-    <div class="col-span-3">
-      <div class="w-full mx-auto max-w-5xl">
-        <h1 class="h2 mb-4 mx-auto text-left">Products we offer</h1>
-        <div class="h-1 w-full rounded-full bg-gray-300"></div>
+  <title>Starship Shield - Our Services</title>
+  <meta name="description" content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."> 
+  <article>
+    <section class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 mb-24">
+      <h1 class="max-w-2xl mb-6 h1">
+        Your first step to <br />outer world security
+      </h1>
+      <p class="p1 mb-8 max-w-2xl">
+        At Starship Shield, we redefine protection with a suite of services tailored to meet your digital fortification needs.</p>
+      <div class="w-full">
+        <Picture
+          class="h-96 w-100 rounded-md bg-gray-400 mx-auto"
+          src={"/images/product11.svg"}
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="16:9"
+          alt="A stock image representing our services"
+        />
       </div>
-    </div>
-    {
-      reviews.map((item: any, idx: number) => (
-        <div class=" col-span-1 md:mx-auto">
-          <Picture
-            class="w-full h-64 rounded-md"
-            src={item.img_url}
-            widths={[1600, 800]}
-            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-            aspectRatio="16:9"
-            alt="sa"
-          />
-          <div class="py-4 flex flex-col gap-y-4 mb-auto">
-            <h1 class="h3" set:text={item.title} />
-            <p class="p1" set:text={item.paragraph} />
+    </section>
+    <section class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+      <h1 class="h2 mb-8 mx-auto text-center">What Our Clients Say About Us</h1>
+      <CtaCarousel client:load />
+    </section>
+    <section
+      class="grid w-full mx-auto max-w-5xl p-4 gap-8 grid-cols-1 md:grid-cols-3 mb-20"
+    >
+      <section class="col-span-3">
+        <section class="w-full mx-auto max-w-5xl">
+          <h1 class="h2 mb-4 mx-auto text-center">What We Offer?</h1>
+          <section class="h-1 w-full rounded-full bg-gray-300"></section>
+        </section>
+      </section>
+      {
+        reviews.map((item: any, idx: number) => (
+          <section class=" col-span-1 md:mx-auto">
+            <Picture
+              class="w-full h-64 rounded-md"
+              src={item.img_url}
+              widths={[1600, 800]}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+              aspectRatio="16:9"
+              alt="Stock image representing one of our services"
+            />
+            <section class="py-4 flex flex-col gap-y-4 mb-auto">
+              <h1 class="h3" set:text={item.title} />
+              <p class="p1" set:text={item.paragraph} />
 
-            <div class="w-full">
-              <a href={item.href} class="font-bold p1 text-primary">
-                See Inside
-              </a>
-            </div>
-          </div>
-        </div>
-      ))
-    }
-  </div>
+              <section class="w-full">
+                <a href={item.href} class="font-bold p1 text-primary">
+                  See Inside
+                </a>
+              </section>
+            </section>
+          </section>
+        ))
+      }
+    </section>
+  </article>
 </Layout>
