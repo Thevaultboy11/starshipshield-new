@@ -7,12 +7,12 @@ import Icon from "astro-icon";
 import ProblemAstro from "../components/ProblemsCarousel";
 import ClientSlider from "~/components/widgets/ClientSlider.tsx";
 
-const reviews = [   
+const reviews = [
   {
     title: `Explore stories of our clients and how they avoided major cyber disasters.`,
-    paragraph: "Case Studies",
+    paragraph: "Success Stories",
     img_url: "/images/android_blog.png",
-    href: "story-type/case-study",
+    href: "story-type/client-stories",
   },
   {
     title: `See why our clients trust us to keep them future-ready for the next cyber attack.`,
@@ -47,27 +47,28 @@ const about_us = [
     statistic: "10+",
     title: "Secured Companies",
     body: `We've worked with over 10 companies, securing their services & software.`,
-  }
+  },
 ];
 ---
 
 <Layout>
   <Hero
-    callToAction={{ text: "Get Started", href: "/learn-more" }}
+    callToAction={{ text: "Contact us", href: "/learn-more" }}
     image={{
       src: import("~/assets/images/hero.jpg"),
       alt: "Official Logo of Starship Shield",
     }}
   >
     <Fragment slot="title">
-      Your first step to
-      <span class="text-accent highlight">outer world</span> security
+      Neglected
+      <span class="text-accent highlight">cyber security</span> before?
     </Fragment>
 
     <Fragment slot="subtitle">
       <p class="max-w-lg">
         No matter the size of your company or how much security has been
-        neglected in the past, we're able to help you.
+        neglected in the past, we will help you secure all possible attack
+        vectors.
       </p>
     </Fragment>
   </Hero>
@@ -88,7 +89,7 @@ const about_us = [
                 widths={[1600, 800]}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
                 aspectRatio="16:9"
-                alt="Picture showcasing client wins and case studies"
+                alt="Picture showcasing client wins and Success Stories"
               />
               <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4 paper">
                 <h1 class="h3 text-black" set:text={item.paragraph} />
@@ -108,7 +109,7 @@ const about_us = [
 
     <div class="w-full max-w-5xl px-4 mx-auto mb-24">
       <div class="h2 text-center w-full max-w-lg mx-auto mb-8">
-          Are You Facing These Security Challenges?
+        Are You Facing These Security Challenges?
       </div>
       <ProblemAstro client:load />
     </div>
@@ -121,7 +122,8 @@ const about_us = [
           </p>
           <h2 class="h2 my-4">Starship Shield Team</h2>
           <p class="p3">
-            Our team consists of 4 enthusiastic security engineers all with unique stories that led them to creating Starship Shield.
+            Our team consists of 4 enthusiastic security engineers all with
+            unique stories that led them to creating Starship Shield.
           </p>
         </div>
         <div class="lg:flex relative">
@@ -147,7 +149,9 @@ const about_us = [
               }
             </div>
             <a href="/about-us">
-              <button class="btn-primary btn-md" type="button">Meet Our Team</button>
+              <button class="btn-primary btn-md" type="button"
+                >Meet Our Team</button
+              >
             </a>
           </div>
         </div>

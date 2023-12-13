@@ -66,7 +66,7 @@ export default function AchievemenCarousel() {
     <>
       {" "}
       <Swiper
-        spaceBetween={50}
+        spaceBetween={30}
         direction={"horizontal"}
         speed={5000}
         loop={true}
@@ -78,16 +78,22 @@ export default function AchievemenCarousel() {
           reverseDirection: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper border-y-2 py-4 border-paper border-12 relative my-10 h-10"
+        className="mySwiper border-y-2  border-gray-200 border-12 relative my-10 h-10 mb-24"
         style={{ overflow: "hidden" }}
       >
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -right-px from-transparent to-80% to-white"></div>
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -left-px   from-20% from-white to-transparent"></div>
         {picture_list.map((item: any, idx: number) => (
-          <SwiperSlide key={idx} className="w-full rounded-md">
+          <SwiperSlide key={idx} className="w-60 rounded-md">
             <a href={item.href}>
               <div className="">
-                <img src={item.src} sizes="" alt={item.alt} className="" />
+                <img
+                  style={{ height: "135px !important" }}
+                  src={item.src}
+                  sizes=""
+                  alt={item.alt}
+                  className=""
+                />
               </div>
             </a>
           </SwiperSlide>

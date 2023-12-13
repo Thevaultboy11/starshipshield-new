@@ -479,7 +479,7 @@ export const headerData = {
     },
     {
       text: "Success Stories",
-      href: "/story-type/client-story",
+      href: "/story-type/client-stories",
     },
     {
       text: "Resources",
@@ -520,7 +520,7 @@ export const footerData = {
     {
       title: "Customer Feedback",
       links: [
-        { text: "Case Studies", href: "/story-type/case-study" },
+        { text: "Client Stories", href: "/story-type/client-stories" },
         { text: "Client Wins", href: "/story-type/client-wins" },
       ],
     },
@@ -569,7 +569,7 @@ export const footerData = {
 //       title: "Quick links",
 //       links: [
 //         { text: "About", href: "/about-us" },
-//         { text: "Case Studies", href: "/story-type/case-study" },
+//         { text: "Success Stories", href: "/story-type/case-study" },
 //         { text: "Blog", href: "/blog" },
 //         { text: "Join Mission", href: "/learn-more" },
 //       ],

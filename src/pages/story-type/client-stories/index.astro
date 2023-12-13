@@ -8,58 +8,66 @@ const client_win = [
     title: "App IT - Faruk B.",
     body: "Listen to Faruk Bavčič, the founder of a software development company App IT that got the chance to experience our services.",
     img_url: "/images/android_blog.png",
-    case_study_url: "/story-type/client-story/app-it",
-    test_type: "Web App Assessment"
+    case_study_url: "/story-type/client-stories/app-it",
+    test_type: "Web App Assessment",
   },
   {
     title: "Boostroom - Alen V.",
     body: "Hear from Alen Vlahovljak, the lead developer behind a gaming marketplace Boostroom and what their experience was with our services.",
     img_url: "/images/android_blog.png",
-    case_study_url: "/story-type/client-story/boostroom",
-    test_type: "Web App Assessment"
+    case_study_url: "/story-type/client-stories/boostroom",
+    test_type: "Web App Assessment",
   },
   {
     title: "Origin - Nermin Ć.",
     body: "This is what our client Nermin Ćatović has to say about his experience when our team tested his new and unique application Patrola.ba",
     img_url: "/images/android_blog.png",
-    case_study_url: "/story-type/client-story/origin",
-    test_type: "Web App Assessment"
+    case_study_url: "/story-type/client-stories/origin",
+    test_type: "Web App Assessment",
   },
   {
     title: "Sklopi Posao - Ernad B.",
     body: "The story of Sklopi Posao is an inspirative one, they made great software but didn't think of security, listen to Ernad and his thoughts on our services",
     img_url: "/images/android_blog.png",
-    case_study_url: "/story-type/client-story/sklopi-posao",
-    test_type: "Web App Assessment"
+    case_study_url: "/story-type/client-stories/sklopi-posao",
+    test_type: "Web App Assessment",
   },
   {
     title: "OOX - Luka M.",
     body: "A unique story coming from OOX and Luka Miljuš, a game development company that got first hand experience into our security testing of their game.",
     img_url: "/images/android_blog.png",
-    case_study_url: "/story-type/client-story/ooxcit",
-    test_type: "Mobile App Assessment"
-  }
+    case_study_url: "/story-type/client-stories/ooxcit",
+    test_type: "Mobile App Assessment",
+  },
 ];
 ---
 
 <Layout>
-  <title>Starship Shield - Case Studies</title>
-  <meta name="description" content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."> 
+  <title>Starship Shield - Success Stories</title>
+  <meta
+    name="description"
+    content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."
+  />
   <article>
-    <section class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16 border-b-4 border-paper">
+    <section
+      class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16 border-b-4 border-paper"
+    >
       <section class="md:col-span-3">
         <h1 class="max-w-2xl mb-4 h1">
-          Don't listen to us, <br>hear what our clients have to say... 
+          Don't listen to us, <br />hear what our clients have to say...
         </h1>
         <p class="max-w-2xl mb-6 p1">
-          Our tailored solutions drive remarkable success for clients, streamlining processes, achieving cost savings, and showing our commitment to excellence that sets us apart.        </p>
+          Our tailored solutions drive remarkable success for clients,
+          streamlining processes, achieving cost savings, and showing our
+          commitment to excellence that sets us apart.
+        </p>
         <section
           class="rounded-xl md:rounded-md max-w-2xl py-2 flex flex-col md:flex-row gap-x-2 gap-y-4 justify-start items-center"
         >
           <section class="flex gap-x-4">
             <a
-              class="link-case-active text-xs md:text-base py-4 md:p-0 w-32"
-              href="/story-type/client-story">Case Studies</a
+              class="link-case-active text-xs md:text-base py-4 md:p-0 w-40"
+              href="/story-type/client-stories">Success Stories</a
             >
             <a
               class="link-case w-36 py-4 text-xs md:text-base"
@@ -68,14 +76,18 @@ const client_win = [
           </section>
         </section>
       </section>
-      <section class="w-full hidden md:block md:col-span-2 bg-red-200"></section>
+      <section class="w-full hidden md:block md:col-span-2 bg-red-200">
+      </section>
     </section>
     <section class="w-full max-w-5xl px-4 mx-auto mt-24">
-      <h1 class="h2 max-w-lg mx-auto text-center mb-4">Case Studies</h1>
+      <h1 class="h2 max-w-lg mx-auto text-center mb-4">Success Stories</h1>
       <section class="grid grid-cols-1 md:grid-cols-3 w-full gap-x-8 gap-y-12">
         {
           client_win.map(
-            ({ title, body, img_url, case_study_url, test_type }, idx: number) => (
+            (
+              { title, body, img_url, case_study_url, test_type },
+              idx: number
+            ) => (
               <section>
                 <Picture
                   class="w-full h-48  rounded-md"
@@ -101,7 +113,7 @@ const client_win = [
         }
       </section>
     </section>
-   <Cta />
+    <Cta />
   </article>
 </Layout>
 
