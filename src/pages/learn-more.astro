@@ -4,43 +4,40 @@ import { Picture } from "@astrojs/image/components";
 import CtaCarousel from "../components/CtaCarousel";
 import Icon from "astro-icon";
 import ContactForm from "../components/ContactUsForm";
-const meta = {
-  title: "Our Services - Starship Shield",
-  description:
-    "Explore our services for improving your securiy. We make defining boundaries easy and provide amplified security solutions.",
-  dontUseTitleTemplate: true,
-};
+
 const data = [
   {
     icon: "tabler:building",
     title: "Product-Based Companies",
     paragraph:
-      "For  firms that  focus on creating and selling their own software products. Where before security and speed was always a trade off.",
+      "For companies that specialize in developing and selling their own software solutions to clients. A place where security was always a traded for speed.",
   },
   {
     icon: "tabler:users",
     title: "Outsourcing Companies",
     paragraph:
-      " For firms that provide software development services to other companies. Where often security can not fit the margin of developing the product.",
+      "For companies that provide software development services to other companies. A place where security doesn't always fit in the development process.",
   },
 ];
+
 const reviews = [
-  {
+{
     icon: "tabler:building",
     title: "Product-Based Companies",
     paragraph:
-      "For  firms that  focus on creating and selling their own software products. Where before security and speed was always a trade off.",
+      "For companies that specialize in developing and selling their own software solutions to clients. A place where security was always a traded for speed.",
   },
   {
     icon: "tabler:users",
     title: "Outsourcing Companies",
     paragraph:
-      " For firms that provide software development services to other companies. Where often security can not fit the margin of developing the product.",
+      "For companies that provide software development services to other companies. A place where security doesn't always fit in the development process.",
   },
 ];
+
 const ptaas_steps = [
   {
-    title: `Severely minimize the risk of a cyber attack`,
+    title: `Greatly minimize the risk of a cyber attack`,
     body: `Sign up for a Pentest from the website or make a purchase from the Starship Shield Dashboard.`,
   },
   {
@@ -57,162 +54,164 @@ const ptaas_steps = [
   },
 ];
 const launchpad_services = [
-  "Application penetration test",
-  "Network penetration test",
-  "Social engeering education",
-  "Pysical penetration test",
-  "DevsecOps consultig",
+  "Application Penetration Test",
+  "Network Penetration Test",
+  "Social Engineering Education",
+  "Physical Penetration Test",
+  "DevSecOps Consulting",
 ];
 ---
 
-<Layout {meta}>
-  <div
-    class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 mb-24"
-  >
-    <h1 class="max-w-2xl mb-6 h1">
-      Your first step to <br />outer-world security
-    </h1>
-    <p class="p1 mb-8 max-w-2xl">
-      Here at Flowbite we compare a wide range of destinations, flights and
-      hotels to conjure up cheap holidays for you to enjoy, time and time again.
-    </p>
-    <div class="flex gap-x-4 mb-8">
-      <button class="btn-primary btn-md" id="scrollToOptButton"
-        >Contact us</button
-      >
-      <a
-        href="/"
-        class="text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 btn-md"
-        >Services Included</a
-      >
-    </div>
-    <div class="w-full">
-      <Picture
-        class="h-96 w-100 rounded-md bg-gray-400 mx-auto"
-        src={"/images/product11.svg"}
-        widths={[1600, 800]}
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-        aspectRatio="16:9"
-        alt="sa"
-      />
-    </div>
-  </div>
-  <div
-    class="w-full max-w-5xl rounded-xl mx-auto px-4 grid gap-x-8 grid-cols-12 mb-24"
-  >
-    <div class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl">
-      <div>
-        <div class="flex flex-col">
-          <Icon
-            name="ri:space-ship-fill"
-            class="text-primary w-8 h-8 inline-block"
-          />
-          <h1 class="h2 my-4">For who is Security Launchpad?</h1>
-          <div class="p1">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi,
-            aspernatur.
-          </div>
-          <div class="p1 text-primary">Stop hackers once and for all</div>
-        </div>
-        {
-          data.map(({ icon, title, paragraph }) => (
-            <div class="flex w-full flex-col gap-y-3 mt-8">
-              <div class="flex items-center gap-x-2">
-                <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
-                <p class="p1 font-semibold" set:html={title} />
-              </div>
-              <p class="text-gray-400 p1" set:html={paragraph} />
-            </div>
-          ))
-        }
+<Layout>
+  <title>Our Services - Starship Shield</title>
+  <meta name="description" content="Explore our services for improving your securiy. We make defining boundaries easy and provide amplified security solutions.">
+  <article>
+    <div
+      class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 mb-24"
+    >
+      <h1 class="max-w-2xl mb-6 h1">
+        Your first step to <br />outer-world security
+      </h1>
+      <p class="p1 mb-8 max-w-2xl">
+        Here at Starship Shield we offer a wide range of security solutions tailored to your company needs while being cost and time efficient.
+      </p>
+      <div class="flex gap-x-4 mb-8">
+        <button class="btn-primary btn-md" id="scrollToOptButton"
+          >Contact Us</button
+        >
+        <a
+          href="/"
+          class="text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 btn-md"
+          >Our Services</a
+        >
+      </div>
+      <div class="w-full">
+        <Picture
+          class="h-96 w-100 rounded-md bg-gray-400 mx-auto"
+          src={"/images/product11.svg"}
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="16:9"
+          alt="sa"
+        />
       </div>
     </div>
     <div
-      class="bg-primary rounded-md w-full p-24 h-full col-span-12 md:col-span-6 order-2 md:order-2"
+      class="w-full max-w-5xl rounded-xl mx-auto px-4 grid gap-x-8 grid-cols-12 mb-24"
     >
-    </div>
-  </div>
-  <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
-    <h1 class="h2 pb-4 mx-auto text-center">What clients say about us</h1>
-    <CtaCarousel client:load />
-  </div>
-  <div class="w-full max-w-5xl mx-auto p-4 mb-24">
-    <div class="paper p-8 rounded-md">
-      <h1 class="h3 text-center mb-8">After this bundle you will get</h1>
-      <div class="grid grid-cols-12 w-full gap-8">
-        {
-          ptaas_steps.map(({ title, body }, idx: number) => (
-            <div class="block col-span-1 md:col-span-6 w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-              <div class="flex justify-start mb-2">
-                <div class="w-6 h-6 rounded-md flex justify-center items-center bg-primary text-white">
-                  <div set:text={idx + 1} />
-                </div>
-              </div>
-              <h5
-                class="mb-2 p1 font-bold tracking-tight text-gray-900 dark:text-white"
-                set:text={title}
-              />
-              <p class="p1 text-gray-700 dark:text-gray-400" set:text={body} />
+      <div class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl">
+        <div>
+          <div class="flex flex-col">
+            <Icon
+              name="ri:space-ship-fill"
+              class="text-primary w-8 h-8 inline-block"
+            />
+            <h1 class="h2 my-4">Who Needs The <br>Security Launchpad?</h1>
+            <div class="p1">
+              Security Launchpad is a unique service offered to companies that want to deliver software fast and retain quality and security.
             </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-  <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
-    <div class="w-full border-primary border-2 paper rounded-md pt-12">
-      <div class="w-full px-8">
-        <div class="flex gap-x-4">
-          <h1 class="h3 font-semibold">Security Launchpad</h1>
-          <div class="my-2 title-card">Save 80% of your money</div>
-        </div>
-        <h1 class="h3 md:font-normal">
-          Perfect for growing buisinesses that are looking to solve their
-          security problem
-        </h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+            <div class="p1 text-primary italic"><br>Your sign to stop hackers once and for all.</div>
+          </div>
           {
-            launchpad_services.map((title, idx: number) => (
-              <ul class="flex items-center gap-x-2">
-                <Icon name="tabler:circle-check" class="w-6 h-6 text-primary" />
-                <span>{title}</span>
-              </ul>
+            data.map(({ icon, title, paragraph }) => (
+              <div class="flex w-full flex-col gap-y-3 mt-8">
+                <div class="flex items-center gap-x-2">
+                  <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
+                  <p class="p1 font-semibold" set:html={title} />
+                </div>
+                <p class="text-gray-400 p1" set:html={paragraph} />
+              </div>
             ))
           }
-
-          <ul class="col-span-2 p2">
-            <li>
-              <span class="font-bold uppercase">Plus</span> Speed up all of the testing
-              + remedy processes for <span class="font-bold uppercase">30%</span
-              > with our reporting platform
-            </li>
-          </ul>
         </div>
       </div>
-      <div class="w-full info-primary pb-12 pt-4 px-8">
-        <h1 class="h3">Satisfaction Guaranteed or Your Money Back</h1>
-        <p>
-          <span class="font-semibold">Lorem ipsum dolor</span>
-          sit amet consectetur, adipisicing elit. Officia, commodi!
-        </p>
-        <button class="btn-primary btn-md mt-4" id="scrollToOptButton2"
-          >Contact us</button
-        >
+      <div
+        class="bg-primary rounded-md w-full p-24 h-full col-span-12 md:col-span-6 order-2 md:order-2"
+      >
       </div>
     </div>
-  </div>
-
-  <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
-    <h1 class="h2 mb-4 text-center mx-auto">Contact Us</h1>
-    <p class="p1 mb-8 text-center max-w-3xl mx-auto">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae harum modi
-      deleniti nisi repudiandae qui ea quam consequatur quasi sapiente?
-    </p>
-    <div class="paper rounded-md w-full p-8">
-      <p class="h3 mb-4" id="opt-page">Step 1/2 (About your company)</p>
-      <ContactForm client:load />
+    <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+      <h1 class="h2 pb-4 mx-auto text-center">What Clients Say About Us</h1>
+      <CtaCarousel client:load />
     </div>
-  </div>
+    <div class="w-full max-w-5xl mx-auto p-4 mb-24">
+      <div class="paper p-8 rounded-md">
+        <h1 class="h3 text-center mb-8">After this bundle you will:</h1>
+        <div class="grid grid-cols-12 w-full gap-8">
+          {
+            ptaas_steps.map(({ title, body }, idx: number) => (
+              <div class="block col-span-1 md:col-span-6 w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div class="flex justify-start mb-2">
+                  <div class="w-6 h-6 rounded-md flex justify-center items-center bg-primary text-white">
+                    <div set:text={idx + 1} />
+                  </div>
+                </div>
+                <h5
+                  class="mb-2 p1 font-bold tracking-tight text-gray-900 dark:text-white"
+                  set:text={title}
+                />
+                <p class="p1 text-gray-700 dark:text-gray-400" set:text={body} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+      <div class="w-full border-primary border-2 paper rounded-md pt-12">
+        <div class="w-full px-8">
+          <div class="flex gap-x-4">
+            <h1 class="h3 font-semibold">Security Launchpad</h1>
+            <div class="my-2 title-card">Save 80% of your money</div>
+          </div>
+          <h1 class="h3 md:font-normal">
+            Perfect for growing buisinesses that are looking to solve their
+            security problem
+          </h1>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+            {
+              launchpad_services.map((title, idx: number) => (
+                <ul class="flex items-center gap-x-2">
+                  <Icon name="tabler:circle-check" class="w-6 h-6 text-primary" />
+                  <span>{title}</span>
+                </ul>
+              ))
+            }
+
+            <ul class="col-span-2 p2">
+              <li>
+                <span class="font-bold uppercase">Plus</span> Speed up all of the testing
+                + remedy processes for <span class="font-bold uppercase">30%</span
+                > with our reporting platform
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full info-primary pb-12 pt-4 px-8">
+          <h1 class="h3">Satisfaction Guaranteed or Your Money Back</h1>
+          <p>
+            <span class="font-semibold">Lorem ipsum dolor</span>
+            sit amet consectetur, adipisicing elit. Officia, commodi!
+          </p>
+          <button class="btn-primary btn-md mt-4" id="scrollToOptButton2"
+            >Contact us</button
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+      <h1 class="h2 mb-4 text-center mx-auto">Contact Us</h1>
+      <p class="p1 mb-8 text-center max-w-3xl mx-auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae harum modi
+        deleniti nisi repudiandae qui ea quam consequatur quasi sapiente?
+      </p>
+      <div class="paper rounded-md w-full p-8">
+        <p class="h3 mb-4" id="opt-page">Step 1/2 (About your company)</p>
+        <ContactForm client:load />
+      </div>
+    </div>
+  </article>
 </Layout>
 
 <script>

@@ -4,26 +4,42 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const testimonial_text = [
   {
-    title: "Lorem ipsum dolor sit amet.",
-    text: ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Doloribus, animi quibusdam dolor repudiandae aperiam modi nisi.
-Quos labore eaque, in impedit officia, consequuntur iusto illo
-odit, facere expedita doloremque sed.`,
+    title: "App IT - Web Application Assessment",
+    text: `Starship Shield found many vulnerabilities in our software that could enable hackers to steal customer data. Thanks to them, such incidents never happened and our software is now bulletproof.`,
     person: "Faruk Bavčić",
     img_url: "/images/android_blog.png",
-    url: "/cta",
+    url: "/story-type/client-story/app-it",
   },
   {
-    title: "Lorem ipsum dolor sit amet.",
-    text: ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Doloribus, animi quibusdam dolor repudiandae aperiam modi nisi.
-Quos labore eaque, in impedit officia, consequuntur iusto illo
-odit, facere expedita doloremque sed.`,
-    person: "Faruk Bavčić",
+    title: "OOX - Mobile Application Assessment",
+    text: `Our Idle Hooligans had never been tested before. They identified vulnerabilities and assisted OOX and my team in implementing new security measures for our game.`,
+    person: "Luka Miljuš",
     img_url: "/images/android_blog.png",
-    url: "/cta",
+    url: "/story-type/client-story/ooxcit",
   },
+  {
+    title: "Boostroom - Web Application Assessment",
+    text: `Starship Shield helped us secure our gaming marketplace by finding many vulnerabilities & issues, then helping us patch them in time. Thanks to them, our customers are safe and their data is protected.`,
+    person: "Alen Vlahovljak",
+    img_url: "/images/android_blog.png",
+    url: "/story-type/client-story/boostroom",
+  },
+  {
+    title: "SklopiPosao - Web Application Assessment",
+    text: `We gave Starship Shield a chance at testing our application. They managed to find critical vulnerabilities leaving our customers at the mercy of hackers. Thanks to Starship Shield, we can now rest easy knowing our security is top-notch.`,
+    person: "Ernad Bećirović",
+    img_url: "/images/android_blog.png",
+    url: "/story-type/client-story/sklopi-posao",
+  },
+  {
+    title: "Origin - Web Application Assessment",
+    text: `Despite their youth, Starship Shield team was exceptionally professional and time efficient. Their dedication surprised us. At the end we've received high-quality security solutions and helped us implement them in our new application Patrola.ba.`,
+    person: "Nermin Ćatović",
+    img_url: "/images/android_blog.png",
+    url: "/story-type/client-story/origin",
+  }
 ];
+
 export default function CtaCarousel() {
   return (
     <>
@@ -58,7 +74,7 @@ export default function CtaCarousel() {
                       target="_blank"
                       rel="noopener"
                     >
-                      `Learn more`
+                      Read More
                       <svg
                         className="w-5 h-5 ml-2 -mr-1"
                         fill="currentColor"

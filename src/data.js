@@ -89,7 +89,7 @@ export const case_study_list = [
       </p>
 
       <p class="p1 mb-7">
-        Starship Shield found many vulnerabilities in our software that enable hackers to steal customer data. Thanks to Starship Shield, such incidents never happened and our software is now bulletproof. 
+      Starship Shield helped us secure our gaming marketplace by finding many vulnerabilities & issues, then helping us patch them in time. Thanks to them, our customers are safe and their data is protected. 
       </p>
 
       <p class="p1 mb-7">
@@ -127,11 +127,11 @@ export const case_study_list = [
       </p>
 
       <p class="p1 mb-7">
-        Idle Hooligans had never been tested before. Despite Luka's confidence in his team's knowledge, he gave us a chance. The <strong>Starship Shield</strong> team identified vulnerabilities and assisted OOX in implementing new security measures for their game.
+        Our Idle Hooligans had never been tested before. Despite my confidence in my team's knowledge, I gave Starship Shield a chance. They identified vulnerabilities and assisted OOX and my team in implementing new security measures for our game.
       </p>
 
       <p class="p1 mb-7">
-        Thanks to <strong>Starship Shield</strong>, OOX is now one step ahead of their competition, maintaining both their advantage and customer satisfaction. OOX can rest assured, knowing the security of their game is top-notch.
+        Thanks to Starship Shield, OOX is now one step ahead of their competition, maintaining both their advantage and customer satisfaction. We can rest easily, knowing the security of our game is top-notch.
       </p>
 `,
     },
@@ -501,9 +501,9 @@ export const headerData = {
       text: "Our Products",
       href: "/resources",
       links: [
-        { text: "Web bouncer", href: "/products/web-bouncer" },
+        { text: "Webouncer", href: "/products/web-bouncer" },
         { text: "Security Launchpad", href: "/products/security-launchpad" },
-        { text: "Ptaas", href: "/products/ptaas" },
+        { text: "PTaaS", href: "/products/ptaas" },
       ],
     },
   ],
@@ -520,8 +520,8 @@ export const footerData = {
     {
       title: "Customer Feedback",
       links: [
-        { text: "Case studies", href: "/story-type/case-study" },
-        { text: "Client wins", href: "/story-type/client-wins" },
+        { text: "Case Studies", href: "/story-type/case-study" },
+        { text: "Client Wins", href: "/story-type/client-wins" },
       ],
     },
     {
@@ -604,4 +604,4 @@ export const footerData = {
 //   footNote: `
 //     Starship Shield · All rights reserved.
 //   `,
-// };
+// }
