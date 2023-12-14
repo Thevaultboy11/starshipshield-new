@@ -53,15 +53,15 @@ const about_us = [
 
 <Layout>
   <Hero
-    callToAction={{ text: "Contact us", href: "/learn-more" }}
+    callToAction={{ text: "Start Now", href: "/learn-more" }}
     image={{
       src: import("~/assets/images/hero.jpg"),
       alt: "Official Logo of Starship Shield",
     }}
   >
     <Fragment slot="title">
-      Neglected
-      <span class="text-accent highlight">cyber security</span> before?
+      Are you still neglecting<br>
+      <span class="text-accent highlight">cyber security</span> ?
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -73,7 +73,8 @@ const about_us = [
     </Fragment>
   </Hero>
   <ClientSlider client:load />
-  <title>Starship Shield - Landing Page</title>
+  <title>Home</title>
+  <meta name="description" content="The main home page for the landing page of Starship Shield">
   <article>
     <div class="w-full max-w-5xl px-4 mx-auto mb-24">
       <div class="h2 text-center w-full max-w-lg mx-auto">
@@ -160,7 +161,7 @@ const about_us = [
 
     <div class="w-full max-w-5xl px-4 mx-auto mb-24">
       <div class="w-full max-w-lg text-center h2 mx-auto mb-8">
-        Ready to Significantly Improve Your Security?
+        Ready To Improve Your Security?
       </div>
       {
         resources.map((item: any, idx: number) => (
