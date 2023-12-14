@@ -36,17 +36,19 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="We publish content for improving your security"
-    >
-      Cyber Security Insights
-    </Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-    <!--
-      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
-      <PostTags tags={allTags}  title="Search by Tags:" />
-    -->
-  </section>
+  <title>Blog - Starship Shield</title>
+  <meta name="description" content="Explore our blog about the latest cyber security insights to help you improve your security on your own using the valuable information we provide.">
+  <article>
+    <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+      <Headline subtitle="We publish content for improving your security.">
+        Cyber Security Insights
+      </Headline>
+      <BlogList posts={page.data} />
+      <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+      <!--
+        <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
+        <PostTags tags={allTags}  title="Search by Tags:" />
+      -->
+    </section>
+  </article>
 </Layout>
