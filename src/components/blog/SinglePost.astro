@@ -3,10 +3,8 @@ import { Icon } from "astro-icon";
 import { Picture } from "@astrojs/image/components";
 import PostTags from "~/components/blog/Tags.astro";
 import SocialShare from "~/components/common/SocialShare.astro";
-
 import { getPermalink } from "~/utils/permalinks";
 import { getFormattedDate } from "~/utils/utils";
-
 import type { Post } from "~/types";
 
 export interface Props {
@@ -21,7 +19,7 @@ const { Content } = post;
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
   <article>
     <header class={post.image ? "p-4" : ""}>
-      <div
+      <section
         class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center"
       >
         <p>
@@ -48,7 +46,7 @@ const { Content } = post;
           }
           {post.readingTime && <> · {post.readingTime} min read</>}
         </p>
-      </div>
+      </section>
       <h1
         class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
       >
@@ -77,18 +75,18 @@ const { Content } = post;
             background={undefined}
           />
         ) : (
-          <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <div class="border-t dark:border-slate-700" />
-          </div>
+          <section class="max-w-3xl mx-auto px-4 sm:px-6">
+            <section class="border-t dark:border-slate-700" />
+          </section>
         )
       }
     </header>
-    <div
+    <section
       class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px]"
     >
       {Content ? <Content /> : <Fragment set:html={post.content || ""} />}
-    </div>
-    <div
+    </section>
+    <section
       class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row"
     >
       <PostTags tags={post.tags} class="mr-5 rtl:mr-0 rtl:ml-5" />
@@ -97,6 +95,6 @@ const { Content } = post;
         text={post.title}
         class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600"
       />
-    </div>
+    </section>
   </article>
 </section>

@@ -4,7 +4,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 const ProblemList = [
   {
-    title: `Can't secure your high-conversion application from cyber attacks?`,
+    title: `Can't secure you e-commerce business from cyber attacks and hackers?`,
     paragraph: `As a small or medium-sized business, secure your peace of mind by eliminating security concerns. Webouncer replicates your website and conceals sensitive user data, rendering data theft from your site an impossibility.`,
     href: "/products/web-bouncer",
   },
@@ -19,6 +19,7 @@ const ProblemList = [
     href: "/products/ptaas",
   },
 ];
+
 export default function ProblemCarousel() {
   return (
     <>
