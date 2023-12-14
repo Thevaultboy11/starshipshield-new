@@ -3,8 +3,7 @@ import Layout from "~/layouts/PageLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import CtaCarousel from "../components/CtaCarousel";
 import Icon from "astro-icon";
-import ContactForm from "../components/ContactUsForm";
-
+import { tidycal_links } from "../data";
 const data = [
   {
     icon: "tabler:building",
@@ -14,7 +13,7 @@ const data = [
   },
   {
     icon: "tabler:users",
-    title: "Service-Based Companies",
+    title: "Outsourcing Companies",
     paragraph:
       "For companies that provide software development services to other companies. A place where security doesn't always fit in the development process.",
   },
@@ -29,7 +28,7 @@ const reviews = [
   },
   {
     icon: "tabler:users",
-    title: "Service-Based Companies",
+    title: "Outsourcing Companies",
     paragraph:
       "For companies that provide software development services to other companies. A place where security doesn't always fit in the development process.",
   },
@@ -81,11 +80,12 @@ const launchpad_services = [
         tailored to your company needs while being cost and time efficient.
       </p>
       <div class="flex gap-x-4 mb-8">
-        <button class="btn-primary btn-md" id="scrollToOptButton"
-          >Contact Us</button
+        <a href={tidycal_links.security_launchpad} class="btn-primary btn-md"
+          >Contact Us</a
         >
+
         <a
-          href="/"
+          href="/products/security-launchpad"
           class="text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 btn-md"
           >Our Services</a
         >
@@ -171,7 +171,7 @@ const launchpad_services = [
     <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
       <div class="w-full border-primary border-2 paper rounded-md pt-12">
         <div class="w-full px-8">
-          <div class="flex flex-col md:flex-row gap-x-4">
+          <div class="flex flex-col md:flex-row gap-x-4" id="opt-page">
             <h1 class="h3 font-semibold">Security Launchpad</h1>
             <div class="my-2 title-card">Save 80% of your money</div>
           </div>
@@ -203,12 +203,13 @@ const launchpad_services = [
         </div>
         <div class="w-full info-primary pb-12 pt-4 px-8">
           <h1 class="h3">Money Back Guarantee If Not Satisfied</h1>
-          <p>
+          <p class="pb-4">
             In case you are disatisfied with our service, we guarantee to refund
             your money.
           </p>
-          <button class="btn-primary btn-md mt-4" id="scrollToOptButton2"
-            >Contact Us</button
+          <a
+            href={tidycal_links.security_launchpad}
+            class="btn-primary btn-md mt-4">Contact Us</a
           >
         </div>
       </div>

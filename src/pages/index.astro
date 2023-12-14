@@ -53,14 +53,14 @@ const about_us = [
 
 <Layout>
   <Hero
-    callToAction={{ text: "Start Now", href: "/learn-more" }}
+    callToAction={{ text: "Take first step", href: "/learn-more" }}
     image={{
       src: import("~/assets/images/hero.jpg"),
       alt: "Official Logo of Starship Shield",
     }}
   >
     <Fragment slot="title">
-      Are you still neglecting<br>
+      Are you still neglecting<br />
       <span class="text-accent highlight">cyber security</span> ?
     </Fragment>
 
@@ -74,7 +74,10 @@ const about_us = [
   </Hero>
   <ClientSlider client:load />
   <title>Home</title>
-  <meta name="description" content="The main home page for the landing page of Starship Shield">
+  <meta
+    name="description"
+    content="The main home page for the landing page of Starship Shield"
+  />
   <article>
     <div class="w-full max-w-5xl px-4 mx-auto mb-24">
       <div class="h2 text-center w-full max-w-lg mx-auto">

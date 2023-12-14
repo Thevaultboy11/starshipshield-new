@@ -1,6 +1,7 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 import { Icon } from "astro-icon";
+import { tidycal_links } from "../../../data";
 
 const data = [
   {
@@ -34,7 +35,10 @@ const about_webbouncer = [
 
 <Layout>
   <title>Webouncer</title>
-  <meta name="description" content="Learn more about our unique solution to high-conversion e-commerce websites, presenting Webouncer">
+  <meta
+    name="description"
+    content="Learn more about our unique solution to high-conversion e-commerce websites, presenting Webouncer"
+  />
   <div
     class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16"
   >
@@ -44,7 +48,8 @@ const about_webbouncer = [
         <span class="text-primary">e-commerce</span> store from cyber criminals?
       </h1>
       <p class="max-w-2xl mb-6 p1">
-        Webouncer is for high-traffic websites that want protection from downtime or any other cyber attack.
+        Webouncer is for high-traffic websites that want protection from
+        downtime or any other cyber attack.
       </p>
       <div
         class="bg-paper p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
@@ -63,8 +68,8 @@ const about_webbouncer = [
         </div>
         <div class="flex flex-col items-center justify-center gap-y-2">
           <a
-            href="/contact-form/"
-            class="w-full md:w-auto py-2 px-3 btn-primary">Start Now</a
+            href={tidycal_links.security_webouncer}
+            class="w-full md:w-auto py-2 px-3 btn-primary">Get free demo</a
           >
         </div>
       </div>
@@ -86,11 +91,15 @@ const about_webbouncer = [
       <div>
         <div class="flex flex-col">
           <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
-          <h1 class="h2 my-4">Who Needs <span class="text-primary">Webouncer</span> ?</h1>
+          <h1 class="h2 my-4">
+            Who Needs <span class="text-primary">Webouncer</span> ?
+          </h1>
           <div class="p1">
             Say goodbye to downtime and cyber attacks on you and your customers.
           </div>
-          <div class="p1 text-primary italic"><br>Stop hackers once and for all.</div>
+          <div class="p1 text-primary italic">
+            <br />Stop hackers once and for all.
+          </div>
         </div>
         {
           data.map(({ icon, title, paragraph }) => (
@@ -125,8 +134,11 @@ const about_webbouncer = [
           <div>
             <h1 class="font-bold h3 mb-2">Webouncer</h1>
             <p class="p1">
-              Makes your website immune to cyber attacks and it takes 10 minutes to set-up.<br><br>
-              <span class="text-primary font-semibold">Here is how it works:</span>
+              Makes your website immune to cyber attacks and it takes 10 minutes
+              to set-up.<br /><br />
+              <span class="text-primary font-semibold"
+                >Here is how it works:</span
+              >
             </p>
           </div>
           {
@@ -146,7 +158,9 @@ const about_webbouncer = [
   </div>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8">
     <h1 class="font-extrabold h2">
-      Built for <span class="text-primary">shop</span> and <span class="text-primary">high-visitor</span> website owners
+      Built for <span class="text-primary">shop</span> and <span
+        class="text-primary">high-visitor</span
+      > website owners
     </h1>
     <p class="p1 max-w-3xl space-y-6 mt-4">
       Whether you’re a small company or a team scaling for success there is
@@ -168,9 +182,9 @@ const about_webbouncer = [
         class="gap-x-4 flex flex-row justify-start md:justify-center items-center"
       >
         <a
-          href="/contact-form/webbouncer"
+          href={tidycal_links.security_webouncer}
           class="bg-white text-black rounded-lg py-3 px-4 md:py-4 md:px-8"
-          >Start Now</a
+          >Get free demo</a
         >
         <a
           href="/products/web-bouncer/pricing"
