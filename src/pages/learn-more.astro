@@ -175,14 +175,14 @@ const launchpad_services = [
             <h1 class="h3 font-semibold">Security Launchpad</h1>
             <div class="my-2 title-card">Save 80% of your money</div>
           </div>
-          <h1 class="h3" style="font-weight: normal;">
+          <h1 class="h3 font-normal" style="font-weight: normal;">
             Perfect for growing businesses that are looking to stop neglecting
             security
           </h1>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
             {
               launchpad_services.map((title, idx: number) => (
-                <ul class="flex flex-col md:flex-row col-span-1 justify-center md:items-center gap-x-2">
+                <ul class="flex items-center gap-x-2">
                   <Icon
                     name="tabler:circle-check"
                     class="w-6 h-6 text-primary"
@@ -192,7 +192,7 @@ const launchpad_services = [
               ))
             }
 
-            <ul class="col-span-2 p2">
+            <ul class="col-span-1 md:col-span-2 p2">
               <li>
                 <span class="font-bold uppercase">+</span> Speed up the testing &
                 remedy processes for <span class="font-bold uppercase">30%</span
@@ -214,7 +214,7 @@ const launchpad_services = [
       </div>
     </div>
 
-    <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
+    <!-- <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
       <h1 class="h2 mb-4 text-center mx-auto">Contact Us</h1>
       <p class="p1 mb-8 text-center max-w-3xl mx-auto">
         Get in touch with our team at Starship Shield and schedule a meeting!
@@ -223,7 +223,7 @@ const launchpad_services = [
         <p class="h3 mb-4" id="opt-page">Step 1/2 (About your company)</p>
         <ContactForm client:load />
       </div>
-    </div>
+    </div> -->
   </article>
 </Layout>
 
