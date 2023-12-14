@@ -6,18 +6,13 @@ import { Fragment } from "astro/dist/runtime/server";
 import { services_list } from "~/data";
 import slugify from "limax";
 
-const meta = {
-  title: "Do you want amplified security? ",
-  description:
-    "Defining boundaries for a quality security assement is hard. We make it easy.",
-  dontUseTitleTemplate: true,
-};
 const before_list = [
   `One security mistake can put your whole company at risk.`,
   `There's no process to find out where your security is the weakest.`,
   `You can't do business with big clients that demand you meet security compliances and regulations.`,
   `Without mandatory security rules, you are at risk of compliance & regulation fines.`,
 ];
+
 const after_list = [
   `You'll have a secure code template for creating your next product.`,
   `Our insights will help you identify and fix security issues effectively.`,
@@ -88,7 +83,7 @@ const data = [
 console.log(slugify(services_list[0].service_name));
 ---
 
-<Layout {meta}>
+<Layout>
   <section class="bg-white">
     <div
       class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 lg:py-16 lg:grid-cols-12"
@@ -124,7 +119,7 @@ console.log(slugify(services_list[0].service_name));
             name="ri:space-ship-fill"
             class="text-primary w-8 h-8 inline-block"
           />
-          <h1 class="h2 my-4">For who is Security Launchpad?</h1>
+          <h1 class="h2 my-4">Who Needs The Security Launchpad?</h1>
           <div class="p1">
             Security Launchpad is a unique service offered to companies that
             want to deliver software fast and retain quality and security.
