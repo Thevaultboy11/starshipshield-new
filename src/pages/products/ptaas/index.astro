@@ -7,55 +7,45 @@ const data = [
     icon: "tabler:clock",
     title: "Product-Based Companies",
     paragraph:
-      "For  firms that  focus on creating and selling their own software products. Where before security and speed was always a trade off.",
+      "For companies that focus on developing software solutions for their customers, where security is neglected for 'Time to Market' speed.",
   },
   {
     icon: "tabler:clock",
     title: "Outsourcing Companies",
     paragraph:
-      " For firms that provide software development services to other companies. Where often security can not fit the margin of developing the product.",
+      "For companies that provide software development services to others, where security doesn't always fit the margin of developing solutions.",
   },
 ];
 
 const before_features = [
-  "Penetration testing is typically performed once or twice a year.",
-  "Results are delivered as static reports.",
-  "There is no real communication with testers and developers established.",
-  "Penetration tests are often one-size-fits-all.",
+  "Penetration testing is performed once or twice a year",
+  "Results are delivered as static reports",
+  "Lack of communication between developers and testers"
 ];
 
 const after_features = [
-  "Continuous testing and monitoring after every module are possible with PTaaS.",
-  "PTaaS platforms offer real-time results and dynamic reports",
-  "PTaaS provides remediation guidance for identified vulnerabilities,",
-  "PTaaS can be tailored to an organization’s specific needs.",
+  "New features manually tested before deployment",
+  "Real-time progress-tracking and dynamic reports",
+  "Custom tailored guidance to fixing vulnerabilities"
 ];
 
 const ptaas_steps = [
   {
-    title: `Sign-up in 2 mins`,
+    title: `Sign-up in 2 minutes`,
     body: `Sign up for a Pentest from the website or make a purchase from the Starship Shield Dashboard.`,
   },
   {
-    title: `Map out Scope`,
-    body: `Map out the Pentest scope and just the essential  requirements such as login details, technology etc`,
+    title: `Create your scope`,
+    body: `Create a scope we will go by during our testing `,
   },
   {
-    title: `Start a Scan`,
-    body: `Start an automated or manual scan whenever you want. See vulnerabilities being reported in minutes.`,
-  },
-  {
-    title: `Fix issues with developers`,
+    title: `Fix the vulnerabilities`,
     body: `We'll report vulnerabilities with a risk rating in your dashboard. Collaborate with your developer in fixing them.`,
   },
   {
-    title: `We'll do a re-scan`,
+    title: `Retesting phase`,
     body: `After the vulnerabilities are fixed, we'll do a re-scan to ensure everything is 100% secure`,
-  },
-  {
-    title: `Get your certificate of security`,
-    body: `Get a security certification from Starship Shield to build trust with your customers and partners`,
-  },
+  }
 ];
 ---
 
@@ -72,8 +62,7 @@ const ptaas_steps = [
           for all.
         </h1>
         <p class="max-w-2xl mb-6 p1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          voluptatum aspernatur itaque.
+          Our Penetration Testing as a Service model helps you retain security while pushing new software at a faster tempo.
         </p>
         <div
           class="bg-paper p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
@@ -93,7 +82,7 @@ const ptaas_steps = [
           <div class="flex flex-col items-center justify-center gap-y-2">
             <a
               href="/contact-form/"
-              class="w-full md:w-auto py-2 px-3 btn-primary">Contact sales</a
+              class="w-full md:w-auto py-2 px-3 btn-primary">Start Now</a
             >
           </div>
         </div>
@@ -115,10 +104,9 @@ const ptaas_steps = [
         <div>
           <div class="flex flex-col">
             <Icon name="tabler:clock" class="text-primary w-8 h-8 inline-block" />
-            <h1 class="h2 my-4">For who is PtaaS?</h1>
+            <h1 class="h2 my-4">Who is PTaaS made for?</h1>
             <div class="p1">
-              For software companies that want to integrate implement
-              practitioner-first security to their CI/CD.
+              For software companies that want to stop trading <br>'Time to Market' speed for high quality security.
             </div>
           </div>
           {
@@ -140,17 +128,16 @@ const ptaas_steps = [
       </div>
     </div>
     <div class="w-full max-w-5xl mx-auto p-4 mb-12">
-      <h1 class="h2 text-center mb-8">What changed with PtaaS</h1>
+      <h1 class="h2 text-center mb-8">What changes with PTaaS ?</h1>
       <div
         class="w-full space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0"
       >
-        <!-- Pricing Card -->
         <div
           class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 paper rounded-lg"
         >
-          <h3 class="mb-4 h3 text-left font-semibold">Before</h3>
+          <h3 class="mb-4 h3 text-left font-semibold">BEFORE</h3>
           <p class="font-light p2 text-left">
-            Best option for personal use & for your next project.
+            This is your current experience with penetration testing
           </p>
           <div class="flex justify-center items-baseline my-8">
             <span class="mr-2 h2 font-extrabold">10 Days</span>
@@ -175,9 +162,9 @@ const ptaas_steps = [
         <div
           class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 paper rounded-lg"
         >
-          <h3 class="mb-4 h3 text-left font-semibold">After</h3>
+          <h3 class="mb-4 h3 text-left font-semibold">AFTER</h3>
           <p class="font-light p2 text-left">
-            Best option for personal use & for your next project.
+            This is what you could experience with PTaaS
           </p>
           <div class="flex justify-center items-baseline my-8">
             <span class="mr-2 h2 font-extrabold">2 Days</span>
@@ -203,7 +190,7 @@ const ptaas_steps = [
     <div class="w-full max-w-5xl mx-auto p-4">
       <div class="paper p-4 md:p-8 rounded-md">
         <h1 class="h3 text-center mb-8">
-          Build a strong security posture in 6 simple steps.
+          Create a strong security posture
         </h1>
         <div class="grid grid-cols-12 w-full gap-4 md:gap-8">
           {
@@ -232,7 +219,7 @@ const ptaas_steps = [
         <div class="flex flex-col w-full max-w-md">
           <h1 class="mb-4 h2 font-bold">
             <span class="text-white"
-              >Do you want to add Practiosner first security?</span
+              >Do you want to start practicioner-first security ?</span
             >
           </h1>
         </div>
@@ -242,7 +229,7 @@ const ptaas_steps = [
           <a
             href="/contact-form/ptaas"
             class="bg-white text-black rounded-lg py-3 px-4 md:py-4 md:px-8"
-            >Contact sales</a
+            >Start Now</a
           >
         </div>
       </div>
