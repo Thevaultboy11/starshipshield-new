@@ -82,7 +82,7 @@ const about_us = [
       <div class="grid w-full mx-auto grid-cols-1 md:grid-cols-2">
         {
           reviews.map((item: any, idx: number) => (
-            <div class="w-96 my-16  col-span-1 md:mx-auto">
+            <div class=" md:w-96 my-16  col-span-1 md:mx-auto">
               <Picture
                 class="w-full h-64 rounded-t-md"
                 src={item.img_url}
@@ -113,9 +113,9 @@ const about_us = [
       </div>
       <ProblemAstro client:load />
     </div>
-    <div class="h-full max-w-5xl mx-auto px-8 grid grid-cols-2 mb-24">
+    <div class="h-full max-w-5xl mx-auto px-8 grid md:grid-cols-2 mb-24">
       <div class="col-span-1 py-12 bg-blue-200"></div>
-      <div class="col-span-1 px-8">
+      <div class="col-span-1">
         <div class="text-left mb-8">
           <p class="text-primary p1 font-semibold">
             Read the background story of our team
@@ -128,7 +128,7 @@ const about_us = [
         </div>
         <div class="lg:flex relative">
           <div class="p-2 lg:p-0 mb-8">
-            <div class="grid gap-y-16 gap-x-8 grid-cols-2 md:grid-cols-2 mb-8">
+            <div class="grid gap-y-8 gap-x-8 grid-cols-1 md:grid-cols-2 mb-8">
               {
                 about_us.map(({ title, body, statistic }, idx: number) => (
                   <div class="relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none">
@@ -159,8 +159,8 @@ const about_us = [
     </div>
 
     <div class="w-full max-w-5xl px-4 mx-auto mb-24">
-      <div class="w-full max-w-lg text-center info-title mx-auto mb-8">
-        Explore Our Resources
+      <div class="w-full max-w-lg text-center h2 mx-auto mb-8">
+        Ready to Significantly Improve Your Security?
       </div>
       {
         resources.map((item: any, idx: number) => (

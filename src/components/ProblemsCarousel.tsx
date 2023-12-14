@@ -24,7 +24,7 @@ export default function ProblemCarousel() {
     <>
       {" "}
       <Swiper
-        direction={"vertical"}
+        direction={"horizontal"}
         pagination={{
           clickable: true,
         }}

@@ -42,7 +42,7 @@ const TabComponent = ({ tabData }) => {
                 aria-labelledby={`${tab}-tab`}
               >
                 <h2 className="mb-3 h3">{title}</h2>
-                <p className="mb-3 p2">{body}</p>
+                <p className="mb-3 p2 md:w-2/3">{body}</p>
               </div>
             );
           }

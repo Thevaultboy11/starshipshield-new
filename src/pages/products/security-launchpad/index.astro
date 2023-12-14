@@ -3,6 +3,9 @@ import Icon from "astro-icon";
 import Layout from "../../../layouts/PageLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import { Fragment } from "astro/dist/runtime/server";
+import { services_list } from "~/data";
+import slugify from "limax";
+
 const meta = {
   title: "Do you want amplified security? ",
   description:
@@ -22,46 +25,46 @@ const after_list = [
   `Setting up these security rules will eliminate the chances of breaking compliences.`,
 ];
 
-const services_list = [
+const services = [
   {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "/services/application-test",
+    title: "Web App Penetration Test",
+    body: `Assessing a web application for security weaknesses by simulating cyber-attacks, ensuring robust defense against real threats.`,
+    href: "/services/web-app-pentest",
   },
   {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "/services/application-test",
+    title: "Mobile App Penetration Test",
+    body: `Assessing a mobile app for security weaknesses by simulating cyber-attacks, ensuring robust defense against real threats.`,
+    href: "/services/mobile-app-pentest",
   },
   {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "/services/application-test",
+    title: "Internal Network Penetration Test",
+    body: `Assessing security vulnerabilities within your company network, ensuring robust defense against potential threats.`,
+    href: "/services/internal-network-pentest",
   },
   {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "/services/application-test",
+    title: "External Network Penetration Test",
+    body: `Assessing security vulnerabilities in your external-facing systems, ensuring robust defense against potential threats.`,
+    href: "/services/external-network-pentest",
   },
   {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "/services/application-test",
+    title: "Social Engineering & Education",
+    body: `Assessing vulnerabilities in your employee security, enhancing awareness and improving their defense against social engineering threats.`,
+    href: "/services/social-engineering-education",
   },
   {
-    title: "Web Application Penetration Testing",
-    body: `We thoroughly assess your web application for potential security vulnerabilities.`,
-    href: "/services/application-test",
+    title: "DevSecurityOps Consulting  ",
+    body: `Integrating security into your development process, ensuring proactive identification and mitigation of security vulnerabilities.`,
+    href: "/services/devsecops-consulting",
   },
 ];
 const bonus_list = [
   {
-    title: `BIA (Business Impact Analysis):`,
+    title: `Codebase Review`,
     body: `Process that assesses and evaluates the potential effects of disruptions to your business operations.`,
     href: "/services/application-test",
   },
   {
-    title: `BIA (Business Impact Analysis):`,
+    title: `Platform reporting`,
     body: `Process that assesses and evaluates the potential effects of disruptions to your business operations.`,
     href: "/services/application-test",
   },
@@ -81,6 +84,8 @@ const data = [
   },
   // Add more objects as needed
 ];
+
+console.log(slugify(services_list[0].service_name));
 ---
 
 <Layout {meta}>
@@ -121,8 +126,8 @@ const data = [
           />
           <h1 class="h2 my-4">For who is Security Launchpad?</h1>
           <div class="p1">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi,
-            aspernatur.
+            Security Launchpad is a unique service offered to companies that
+            want to deliver software fast and retain quality and security.
           </div>
           <div class="p1 text-primary">Stop hackers once and for all</div>
         </div>
@@ -149,7 +154,7 @@ const data = [
     <h1 class="h2 mx-auto text-center my-8">Services you get</h1>
     <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
       {
-        services_list.map(({ title, body, href }) => (
+        services.map(({ title, body, href }, idx: number) => (
           <div class="info-primary px-4 py-4 h-68 rounded-md">
             <h1 set:text={title} class="h3 " />
             <p set:text={body} class="p2 py-4" />

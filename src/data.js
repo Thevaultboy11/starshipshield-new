@@ -329,6 +329,69 @@ export const services_list = [
       },
     ],
   },
+
+  {
+    service_name: "DevSecOps Consulting",
+    slug_name: "devsecops consulting",
+    definition: `Integrating security into your development process, ensuring proactive identification and mitigation of security vulnerabilities.`,
+    href: "",
+    problem_list: [
+      {
+        tab: "CI/CD Security",
+        title: "CI/CD Security",
+        body: `Implementing automated security testing tools and integrating best security practices which secures your development process.`,
+      },
+      {
+        tab: "Pipeline Visibility",
+        title: "Pipeline Visibility",
+        body: `Enhances visibility into the CI/CD pipeline, enabling real-time monitoring and response to security issues.`,
+      },
+    ],
+    solution_list: [
+      {
+        title: "Secure CI/CD Integration",
+        body: `Establishes robust security measures within the CI/CD process, safeguarding code at every stage.`,
+        href: "",
+      },
+      {
+        title: "Preventing Vulnerabilities",
+        body: `Automated testing identifies and addresses vulnerabilities in the early stages of development.`,
+        href: "",
+      },
+    ],
+  },
+];
+export const bonus_list = [
+  {
+    service_name: "Source Code Review",
+    slug_name: "source code review",
+    definition: `Detailed examination of a web application's codebase to identify vulnerabilities, ensuring a secure and resilient software foundation.`,
+    href: "",
+    problem_list: [
+      {
+        tab: "Identifying Code Vulnerabilities",
+        title: "Identifying Code Vulnerabilities",
+        body: `Uncovering and mitigating security flaws in the application's source code, preventing potential exploits.`,
+      },
+      {
+        tab: "Preventing Code-based Exploits",
+        title: "Preventing Code-based Exploits",
+        body: `Identifying and fixing vulnerabilities that could be exploited by attackers through source code manipulation.`,
+      },
+    ],
+    solution_list: [
+      {
+        title: "Detailed Report",
+        body: `Detailed report on code vulnerabilities, risks, and recommended fixes, providing insights to strengthening your application security.`,
+        href: "",
+      },
+      {
+        title: "Proactive Vulnerability Mitigation",
+        body: `Guidance on fixing code vulnerabilities, ensuring a robust defense against potential threats through optimized source code.`,
+        href: "",
+      },
+    ],
+  },
   {
     service_name: "PTaaS",
     slug_name: "ptaas",
@@ -379,98 +442,7 @@ export const services_list = [
       },
     ],
   },
-  {
-    service_name: "DevSecOps Consulting",
-    slug_name: "devsecops consulting",
-    definition: `Integrating security into your development process, ensuring proactive identification and mitigation of security vulnerabilities.`,
-    href: "",
-    problem_list: [
-      {
-        tab: "CI/CD Security",
-        title: "CI/CD Security",
-        body: `Implementing automated security testing tools and integrating best security practices which secures your development process.`,
-      },
-      {
-        tab: "Pipeline Visibility",
-        title: "Pipeline Visibility",
-        body: `Enhances visibility into the CI/CD pipeline, enabling real-time monitoring and response to security issues.`,
-      },
-    ],
-    solution_list: [
-      {
-        title: "Secure CI/CD Integration",
-        body: `Establishes robust security measures within the CI/CD process, safeguarding code at every stage.`,
-        href: "",
-      },
-      {
-        title: "Preventing Vulnerabilities",
-        body: `Automated testing identifies and addresses vulnerabilities in the early stages of development.`,
-        href: "",
-      },
-    ],
-  },
-  {
-    service_name: "Source Code Review",
-    slug_name: "source code review",
-    definition: `Detailed examination of a web application's codebase to identify vulnerabilities, ensuring a secure and resilient software foundation.`,
-    href: "",
-    problem_list: [
-      {
-        tab: "Identifying Code Vulnerabilities",
-        title: "Identifying Code Vulnerabilities",
-        body: `Uncovering and mitigating security flaws in the application's source code, preventing potential exploits.`,
-      },
-      {
-        tab: "Preventing Code-based Exploits",
-        title: "Preventing Code-based Exploits",
-        body: `Identifying and fixing vulnerabilities that could be exploited by attackers through source code manipulation.`,
-      },
-    ],
-    solution_list: [
-      {
-        title: "Detailed Report",
-        body: `Detailed report on code vulnerabilities, risks, and recommended fixes, providing insights to strengthening your application security.`,
-        href: "",
-      },
-      {
-        title: "Proactive Vulnerability Mitigation",
-        body: `Guidance on fixing code vulnerabilities, ensuring a robust defense against potential threats through optimized source code.`,
-        href: "",
-      },
-    ],
-  },
-  {
-    service_name: "Webouncer",
-    slug_name: "webouncer",
-    definition: `A security firewall for online protection and cyber attack prevention. It monitors and controls web traffic to prevent malicious actions.`,
-    href: "",
-    problem_list: [
-      {
-        tab: "Unauthorized Access",
-        title: "Unauthorized Access",
-        body: `Blocks unauthorized users and bots, preventing potential data breaches and maintaining site integrity.`,
-      },
-      {
-        tab: "DDoS Attacks",
-        title: "DDoS Attacks",
-        body: `Identifies and mitigates DDoS attacks, ensuring website accessibility under heavy traffic.`,
-      },
-    ],
-    solution_list: [
-      {
-        title: "Real-Time Monitoring",
-        body: `Provides real-time monitoring of your website traffic and instant protection against real-world threats.`,
-        href: "",
-      },
-      {
-        title: "Detailed Security Reports",
-        body: `Provides detailed security reports, including identified threats, blocked attacks and potential vulnerabilities.`,
-        href: "",
-      },
-    ],
-  },
 ];
-
 export const headerData = {
   links: [
     {
@@ -518,7 +490,15 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: "Customer Feedback",
+      title: "Our Products",
+      links: [
+        { text: "Security Launchpad", href: "/products/security-launchpad" },
+        { text: "Webouncer", href: "/products/web-bouncer" },
+        { text: "PTaaS", href: "/products/ptaas" },
+      ],
+    },
+    {
+      title: "Client Feedback",
       links: [
         { text: "Client Stories", href: "/story-type/client-stories" },
         { text: "Client Wins", href: "/story-type/client-wins" },
@@ -527,7 +507,7 @@ export const footerData = {
     {
       title: "Resources",
       links: [
-        { text: "Starship Shield Blog", href: "/blog" },
+        { text: "Blog", href: getBlogPermalink() },
         {
           text: "How To Make a Security Assessment Scope",
           href: "/resources/scope-paper",
@@ -541,20 +521,13 @@ export const footerData = {
   ],
 
   socialLinks: [
-    { ariaLabel: "X", icon: "tabler:brand-x", href: "#" },
-    { ariaLabel: "Instagram", icon: "tabler:brand-instagram", href: "#" },
-    { ariaLabel: "Facebook", icon: "tabler:brand-facebook", href: "#" },
-    { ariaLabel: "RSS", icon: "tabler:rss", href: getAsset("/rss.xml") },
-    {
-      ariaLabel: "Github",
-      icon: "tabler:brand-github",
-      href: "https://github.com/onwidget/astrowind",
-    },
+    { ariaLabel: "LinkedIn", icon: "tabler:brand-linkedin", href: "#" },
+    { ariaLabel: "Youtube", icon: "tabler:brand-youtube", href: "#" },
   ],
   footNote: `
   <div class='flex justify-center items-center gap-x-4'>
     <img
-      src="/images/blacklogo.png"
+      src="/images/mainlogo.svg"
       width="40"
       height="40"
     />  
