@@ -1,80 +1,70 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 import { Icon } from "astro-icon";
-import TestimonialCarousel from "../../../components/TestimonialCarousel";
-const meta = {
-  title: "Do you want amplified security? ",
-  description:
-    "Defining boundaries for a quality security assement is hard. We make it easy.",
-  dontUseTitleTemplate: true,
-};
 
 const data = [
   {
     icon: "tabler:shopping-cart",
-    title: "E-commerce Stores",
+    title: "E-Commerce Stores",
     paragraph:
-      "If your main business income stream is e-commerce. Imagine how much money would you lose if the page was down during the peak hour.",
+      "As an owner of a e-commerce store, having downtime during peak hours would be detrimental to your conversions, this is where Webouncer comes into play.",
   },
   {
     icon: "tabler:users",
-    title: "Highly visited daily webpages",
+    title: "High-Visit Count Websites",
     paragraph:
-      "If your business model is based on retaining and growing the number of visitors. Imagine what would happen to your fans if their data was stolen.",
+      "If your business model is based on retaining and growing the number of visitors, a small cyber attack could put you out for weeks resulting in lost customers and money.",
   },
-  // Add more objects as needed
 ];
 
 const about_webbouncer = [
   {
-    icon: "tabler:umbrella",
-    title: "1 Step",
-    paragraph: `Clones your front end and makes your original front end no longer accessible from the internet.`,
+    icon: "tabler:shield",
+    title: "1st Step",
+    paragraph: `Your e-commerce store frontend is cloned and stored on a server, protecting it from cyber attacks and hackers`,
   },
   {
-    icon: "tabler:shield",
-    title: "2 Step",
+    icon: "tabler:umbrella",
+    title: "2nd Step",
     paragraph:
-      "The clone looks for changes and validates and tamperproofs the website, making it impossible for XSS attacks.",
+      "It validates any changes made to your website, comparing it to the original while preventing injection vulnerabilities.",
   },
-  // Add more objects as needed
 ];
 ---
 
-<Layout {meta}>
-  <!-- Hero Widget ******************* -->
-
+<Layout>
+  <title>Webouncer</title>
+  <meta name="description" content="Learn more about our unique solution to high-conversion e-commerce websites, presenting Webouncer">
   <div
     class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16"
   >
     <div class="md:col-span-3">
       <h1 class="max-w-2xl mb-4 h1">
         How to secure your <br />
-        <span class="text-primary">high-conversion</span> site from cyber criminals?
+        <span class="text-primary">e-commerce</span> store from cyber criminals?
       </h1>
       <p class="max-w-2xl mb-6 p1">
-        Protection for high-traffic websites that want protection from downtime
-        and any type of data theft.
+        Webouncer is for high-traffic websites that want protection from downtime or any other cyber attack.
       </p>
       <div
         class="bg-paper p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
       >
         <div class="flex flex-col items-start justify-start gap-y-2">
-          <h1 class="h3">2.0.2</h1>
-          <p class="p1">Version</p>
+          <h1 class="h3">10+</h1>
+          <p class="p1">Secured Clients</p>
         </div>
         <div class="flex flex-col items-start justify-start gap-y-2">
-          <h1 class="h3">15</h1>
-          <p class="p1">Clients saved</p>
+          <h1 class="h3">5k+</h1>
+          <p class="p1">Secured Users</p>
         </div>
         <div class="flex flex-col items-start justify-start gap-y-2">
-          <h1 class="h3">500</h1>
-          <p class="p1">Repelled DDOS</p>
+          <h1 class="h3">100+</h1>
+          <p class="p1">Repelled Attacks</p>
         </div>
         <div class="flex flex-col items-center justify-center gap-y-2">
           <a
             href="/contact-form/"
-            class="w-full md:w-auto py-2 px-3 btn-primary">Contact sales</a
+            class="w-full md:w-auto py-2 px-3 btn-primary">Start Now</a
           >
         </div>
       </div>
@@ -96,11 +86,11 @@ const about_webbouncer = [
       <div>
         <div class="flex flex-col">
           <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
-          <h1 class="h2 my-4">For who is Webouncer?</h1>
+          <h1 class="h2 my-4">Who Needs <span class="text-primary">Webouncer</span> ?</h1>
           <div class="p1">
-            Say goodbye to: XSS-attacks, DDOS-attacks and downtime
+            Say goodbye to downtime and cyber attacks on you and your customers.
           </div>
-          <div class="p1 text-primary">Stop hackers once and for all</div>
+          <div class="p1 text-primary italic"><br>Stop hackers once and for all.</div>
         </div>
         {
           data.map(({ icon, title, paragraph }) => (
@@ -123,7 +113,7 @@ const about_webbouncer = [
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
     <div class="flex flex-col col-span-12 mb-4 order-1 md:order-1">
       <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
-      <h1 class="h2 my-4">What makes Web Bouncer Special?</h1>
+      <h1 class="h2 my-4">What Makes It Special?</h1>
     </div>
     <div
       class="bg-primary w-full h-full p-24 col-span-12 md:col-span-6 order- md:order-3"
@@ -133,10 +123,10 @@ const about_webbouncer = [
       <div>
         <div>
           <div>
-            <h1 class="font-bold h3 mb-2">Business</h1>
+            <h1 class="font-bold h3 mb-2">Webouncer</h1>
             <p class="p1">
-              Webouncer is immune to hacker attacks and takes 15 minutes to set
-              up. Here is how it works
+              Makes your website immune to cyber attacks and it takes 10 minutes to set-up.<br><br>
+              <span class="text-primary font-semibold">Here is how it works:</span>
             </p>
           </div>
           {
@@ -156,7 +146,7 @@ const about_webbouncer = [
   </div>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8">
     <h1 class="font-extrabold h2">
-      Built for SmB owners, and Large corporations
+      Built for <span class="text-primary">shop</span> and <span class="text-primary">high-visitor</span> website owners
     </h1>
     <p class="p1 max-w-3xl space-y-6 mt-4">
       Whether you’re a small company or a team scaling for success there is
@@ -170,7 +160,7 @@ const about_webbouncer = [
       <div class="flex flex-col w-full max-w-md">
         <h1 class="mb-4 h2 font-bold">
           <span class="text-white">
-            Do you want to secure your <br />E-commerce?
+            Do you want to secure your <br />E-Commerce shop?
           </span>
         </h1>
       </div>
@@ -180,13 +170,13 @@ const about_webbouncer = [
         <a
           href="/contact-form/webbouncer"
           class="bg-white text-black rounded-lg py-3 px-4 md:py-4 md:px-8"
-          >Contact sales</a
+          >Start Now</a
         >
         <a
           href="/products/web-bouncer/pricing"
           class="bg-transparent border-2 border-white text-white rounded-lg py-3 px-4 md:py-4 md:px-8 max-w-fit flex gap-x-2 items-center"
         >
-          <p>See pricing</p>
+          <p>Pricing Plans</p>
           <Icon name="tabler:arrow-right" class="w-3.5 h-3.5 inline-block" />
         </a>
       </div>
