@@ -1,4 +1,9 @@
 import { getPermalink, getBlogPermalink, getAsset } from "./utils/permalinks";
+export const tidycal_links = {
+  security_webouncer: "https://tidycal.com/starshipshield/webouncer",
+  security_launchpad: "https://tidycal.com/starshipshield/security-launchpad",
+  ptaas: "https://tidycal.com/starshipshield/ptaas",
+};
 export const case_study_list = [
   {
     name: "origin",
@@ -481,7 +486,7 @@ export const headerData = {
   ],
   actions: [
     {
-      text: "Contact Us",
+      text: "Take first step",
       href: "/learn-more",
       type: "primary",
     },
