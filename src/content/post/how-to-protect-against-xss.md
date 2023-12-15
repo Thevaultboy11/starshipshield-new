@@ -9,6 +9,8 @@ tags:
   - Input Sanitization
 ---
 
+<meta name="description" content="Learn how to protect your web application from XSS attacks through input sanitization. Understand the nature of XSS and the importance of sanitization.">
+
 <h1 style="font-family: 'Roboto', sans-serif;">How To Protect Against XSS?</h1>
 
 <h2 style="font-family: 'Roboto', sans-serif;">Introduction</h1>
