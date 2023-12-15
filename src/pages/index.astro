@@ -60,15 +60,15 @@ const about_us = [
     }}
   >
     <Fragment slot="title">
-      Are you still neglecting<br />
-      <span class="text-accent highlight">cyber security</span> ?
+      What is your first step to
+      <span class="text-accent highlight">outer world</span> security?
     </Fragment>
 
     <Fragment slot="subtitle">
       <p class="max-w-lg">
-        No matter the size of your company or how much security has been
-        neglected in the past, we will help you secure all possible attack
-        vectors.
+        The beginning of the cybersecurity journey is tough, but we make it
+        easy. Regardless of past cyber security neglect, we help you secure all
+        your vulnerable points
       </p>
     </Fragment>
   </Hero>
@@ -162,42 +162,43 @@ const about_us = [
       </div>
     </div>
 
-    <div class="w-full max-w-5xl px-4 mx-auto mb-24">
-      <div class="w-full max-w-lg text-center h2 mx-auto mb-8">
-        Ready To Improve Your Security?
-      </div>
-      {
-        resources.map((item: any, idx: number) => (
-          <div class="bg-paper w-full rounded-md grid grid-cols-1 md:grid-cols-3 mb-12">
-            <div class="hidden md:block">
-              <Picture
-                class="w-full h-full  rounded-tl-md"
-                src="/images/android_blog.png"
-                widths={[1600, 800]}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-                aspectRatio="3:2"
-                alt="Image describing one of our services"
-              />
-            </div>
-
-            <div class="md:col-span-2 px-4 py-6">
-              <p class="p3" set:text={item.paragraph} />
-              <h1 class="h3 font-semibold mt-2" set:text={item.title} />
-            </div>
-            <a
-              href={item.href}
-              class="px-4 col-span-3 rounded-b-md h-12 bg-primary flex items-center"
-            >
-              <div class="text-white mr-auto ">Learn More</div>
-              <Icon
-                name="tabler:arrow-right"
-                class="w-3.5 h-3.5 inline-block text-white"
-              />
-            </a>
-          </div>
-        ))
-      }
-    </div>
     <Cta />
   </article>
 </Layout>
+
+<!-- <div class="w-full max-w-5xl px-4 mx-auto mb-24">
+  <div class="w-full max-w-lg text-center h2 mx-auto mb-8">
+    Ready To Improve Your Security?
+  </div>
+  {
+    resources.map((item: any, idx: number) => (
+      <div class="bg-paper w-full rounded-md grid grid-cols-1 md:grid-cols-3 mb-12">
+        <div class="hidden md:block">
+          <Picture
+            class="w-full h-full  rounded-tl-md"
+            src="/images/android_blog.png"
+            widths={[1600, 800]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+            aspectRatio="3:2"
+            alt="Image describing one of our services"
+          />
+        </div>
+
+        <div class="md:col-span-2 px-4 py-6">
+          <p class="p3" set:text={item.paragraph} />
+          <h1 class="h3 font-semibold mt-2" set:text={item.title} />
+        </div>
+        <a
+          href={item.href}
+          class="px-4 col-span-3 rounded-b-md h-12 bg-primary flex items-center"
+        >
+          <div class="text-white mr-auto ">Learn More</div>
+          <Icon
+            name="tabler:arrow-right"
+            class="w-3.5 h-3.5 inline-block text-white"
+          />
+        </a>
+      </div>
+    ))
+  }
+</div> -->

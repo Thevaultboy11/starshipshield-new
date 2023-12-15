@@ -10,13 +10,7 @@ const testimonial_text = [
     img_url: "/images/android_blog.png",
     url: "/story-type/client-story/app-it",
   },
-  {
-    title: "OOX - Mobile Application Assessment",
-    text: `Our Idle Hooligans had never been tested before. They identified vulnerabilities and assisted OOX and my team in implementing new security measures for our game.`,
-    person: "Luka Miljuš",
-    img_url: "/images/android_blog.png",
-    url: "/story-type/client-story/ooxcit",
-  },
+
   {
     title: "Boostroom - Web Application Assessment",
     text: `Starship Shield helped us secure our gaming marketplace by finding many vulnerabilities & issues, then helping us patch them in time. Thanks to them, our customers are safe and their data is protected.`,
@@ -37,7 +31,7 @@ const testimonial_text = [
     person: "Nermin Ćatović",
     img_url: "/images/android_blog.png",
     url: "/story-type/client-story/origin",
-  }
+  },
 ];
 
 export default function CtaCarousel() {

@@ -10,7 +10,7 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
-      title: `I was skeptical, but my doubts had faded away quickly...`,
+      title: `??`,
       body: `At Origin, our dedicated team excels in agile project services, including software development and delivery.`,
     },
     youtube: {
@@ -22,15 +22,19 @@ export const case_study_list = [
       title: "Nermin Ćatović",
       body: `
       <p class="p1 mb-7">
-        Meet <strong>Nermin Ćatović</strong>, Founder of <strong>Origin</strong>, a satisfied customer. When the <strong>Starship Shield</strong> team addressed security concerns on our website, we were initially skeptical but chose to collaborate.
+      I got referred to Starship Shield via my good friend Faruk Bavčić. Their whole story reminded me of myself when I was starting my business. I wanted to try their services and help the team in some business lessons I learned throughout the years.
       </p> 
       <p class="p1 mb-7">
-        Despite their youth, the team was exceptionally professional and efficient. Their dedication surprised us. They were polite, available <strong>24/7</strong>, and delivered high-quality solutions promptly.
+      Thanks to Starship Shield's services, they helped my company evade multiple account takeovers on our administrator accounts and access to other data of accounts. 
       </p>
       <p class="p1 mb-7">
-        Even though <strong>Starship Shield</strong> is relatively new, their commitment impressed both me and the <strong>Origin</strong> team. 
-        <br><br>I highly recommend <strong>Starship Shield</strong>; thanks to them, our users can safely use <strong>Patrola</strong> without worrying about data safety.
-      </p>`,
+      After the comprehensive security assessment, they identified vulnerabilities but also equipped us with the knowledge to promptly address the vulnerabilities using the resources they provided.
+      </p>
+      <p class="p1 mb-7">
+        I recommend Starship Shield's services because of  their accessibility and commitment to delivering high-quality solutions with their services & bonuses.
+      </p>
+
+      `,
     },
   },
   {
@@ -38,7 +42,7 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
-      title: `I thought my application was secure, but I was wrong...`,
+      title: `??`,
       body: `Sklopi Posao is a new innovative application that helps people apply for and list job positions`,
     },
     youtube: {
@@ -50,25 +54,19 @@ export const case_study_list = [
       title: "Ernad Bećirović",
       body: `
       <p class="p1 mb-7">
-      Meet Ernad Bećirović founder & CEO of Sklopi Posao, another satisfied customer of ours. 
-      Sklopi Posao is founded with a mission to help people find jobs and list job positions.     
+        Sklopi Posao and Starship Shield have an anecdote on how we came in contact. The Starship Shield team used our application for finding projects and while using our application they’ve noticed that the application has security mispractices and could be exploited.
       </p>
 
       <p class="p1 mb-7">
-        Starship Shield found many vulnerabilities in our software that enable hackers to steal customer data. Thanks to Starship Shield, such incidents never happened and our software is now bulletproof. 
+        We settled on doing a penetration test of our application. During the test, the Starship Shield team got a complete admin account takeover and other vulnerabilities.
       </p>
 
       <p class="p1 mb-7">
-      At first I was shocked because of their passion and commitment to work, considering their age. 
-
-      Despite their age they provided professional reports and security solutions. 
-      They were available 24/7 and always ready for my questions or inconveniences.
+        As a startup ourselves we’ve rushed security and were really worried about how we could fix these vulnerabilities. With the help of their materials, including custom tailored videos we can maintain and ensure the safety of our users.
       </p>
 
       <p class="p1 mb-7">
-      Therefore, I highly recommend Starship Shield’s services
-
-      They are fast, reliable and really dedicated to their work, which is the most important thing in business.
+        I would like to wish Starship Shield good luck in their new business endeavors because of their innovative approach and the helpfulness they showed while working on our project.
       </p>`,
     },
   },
@@ -77,8 +75,8 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
-      title: `I thought my application was secure, but I was wrong...`,
-      body: `Sklopi Posao is a new innovative application that helps people apply for and list job positions`,
+      title: `??`,
+      body: `??`,
     },
     youtube: {
       link: "https://www.youtube.com/embed/QelSVeRmNUQ",
@@ -89,19 +87,15 @@ export const case_study_list = [
       title: "Alen Vlahovljak",
       body: `
       <p class="p1 mb-7">
-      Meet Alen Vlahovljak lead developer at Boostroom, another satisfied customer of ours. 
-      Boostroom is a unique solution to gaming marketplaces giving the opportunity to gamers to make money doing what they love.     
+      I heard about Starship Shield when the team was still forming. They offered to do a penetration test for us. I was skeptical but wanted to test the overall knowledge of my developers.    
       </p>
 
       <p class="p1 mb-7">
-      Starship Shield helped us secure our gaming marketplace by finding many vulnerabilities & issues, then helping us patch them in time. Thanks to them, our customers are safe and their data is protected. 
+      After the penetration test, we found out that our biggest issue was the authorization which caused numerous security vulnerabilities.
       </p>
 
       <p class="p1 mb-7">
-      At first I was shocked because of their passion and commitment to work, considering their age. 
-
-      Despite their age they provided professional reports and security solutions. 
-      They were available 24/7 and always ready for my questions or inconveniences.
+      In the end, they helped us optimize our API for security while improving our performance. After the security roadmap, they helped us create an application that is miles more resilient to potential cyber-attacks.
       </p>
 
       <p class="p1 mb-7">
@@ -116,8 +110,8 @@ export const case_study_list = [
     hero: {
       service_link: `/services/mobile-app-pentest`,
       cta: `Mobile Application Assessment`,
-      title: `I trusted them and it all payed off...`,
-      body: `OOX is a game development company responsible for making tycoon games such as “Idle Hooligans” `,
+      title: `??`,
+      body: `?? `,
     },
     youtube: {
       link: "https://www.youtube.com/embed/epqmN3S3aOQ",
@@ -128,16 +122,20 @@ export const case_study_list = [
       title: "Luka Miljuš",
       body: `
       <p class="p1 mb-7">
-        Meet <strong>OOX</strong>, another satisfied customer of ours. They are a game development company that created "Idle Hooligans," a tycoon game with thousands of active users.
+        We found out about Starship Shield via Linkedin. We were intrigued when they sent us a message that our game “Idle Hooligans” was insecure.
       </p>
 
       <p class="p1 mb-7">
-        Our Idle Hooligans had never been tested before. Despite my confidence in my team's knowledge, I gave Starship Shield a chance. They identified vulnerabilities and assisted OOX and my team in implementing new security measures for our game.
+      The Starship Shield team suggested that we do a mobile penetration test so we can check the current security measures we’ve put in place. Despite the confidence I had in my team development skills, I gave Starship Shield a chance.      </p>
+
+      <p class="p1 mb-7">
+      After the penetration test, they helped us fix some game-breaking vulnerabilities that an attacker could exploit to cheat in the game and pirate the source code.
       </p>
 
       <p class="p1 mb-7">
-        Thanks to Starship Shield, OOX is now one step ahead of their competition, maintaining both their advantage and customer satisfaction. We can rest easily, knowing the security of our game is top-notch.
+      Thanks to Starship Shield, OOX is now one step ahead of our competition, maintaining both confidentiality and customer satisfaction. We can rest easily, knowing the security of our game is top-notch.
       </p>
+
 `,
     },
   },
@@ -146,8 +144,8 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration test`,
       cta: `Web Application Assessment`,
-      title: `Safe software solutions with App IT `,
-      body: `Here at App IT we focus on creating software that optimizes business processes.`,
+      title: `??`,
+      body: `??.`,
     },
     youtube: {
       link: "https://www.youtube.com/embed/e2lxRFiawCY",
@@ -159,25 +157,18 @@ export const case_study_list = [
       title: "Faruk Bavčić",
       body: `
       <p class="p1 mb-7">
-      Meet Faruk Bavčić founder & CEO of App IT, another satisfied customer of ours. 
-      App IT is founded with a mission to create software that optimizes business processes.    
+      Despite their age, they showed dedication to their work and surprised both me and the AppIT team.     
       </p>
 
       <p class="p1 mb-7">
-      Starship Shield found many vulnerabilities in our software that enable hackers to steal customer data. Thanks to Starship Shield, such incidents never happened and our software is now bulletproof. 
+      Thanks to Starship Shield, we were able to prevent multiple account takeovers, securing our customer data. After the penetration test, they showed us a clear path for moving forward and demonstrated how to quickly address all vulnerabilities with the resources provided to us. Using their help we designed a secure code template so that our software is secure from the first day.      </p>
+
+      <p class="p1 mb-7">
+        I highly recommend Starship Shield's services. They were always available, ready to deliver fast and high-quality solutions to our security problems.
       </p>
 
       <p class="p1 mb-7">
-      At first I was shocked because of their passion and commitment to work, considering their age. 
-
-      Despite their age they provided professional reports and security solutions. 
-      They were available 24/7 and always ready for our questions or inconveniences.
-      </p>
-
-      <p class="p1 mb-7">
-      Therefore, I highly recommend Starship Shield’s services
-
-      They are fast, reliable and really dedicated to their work, which is the most important thing in business.
+        If you are a software engineering company in need of penetration testing services, they are the right people for the job.
       </p>
 `,
     },

@@ -2,6 +2,7 @@
 import Layout from "~/layouts/PageLayout.astro";
 import { Icon } from "astro-icon";
 import { tidycal_links } from "../../../data";
+import { Picture } from "@astrojs/image/components";
 
 const data = [
   {
@@ -31,6 +32,7 @@ const about_webbouncer = [
       "It validates any changes made to your website, comparing it to the original while preventing injection vulnerabilities.",
   },
 ];
+const web_icons = new Array(6).fill(0);
 ---
 
 <Layout>
@@ -79,12 +81,18 @@ const about_webbouncer = [
   <div
     class="grid grid-cols-2 md:grid-cols-6 px-4 gap-8 w-full max-w-5xl mx-auto mb-24"
   >
-    <div class="bg-red-200 p-6 rounded-md"></div>
-    <div class="bg-red-200 p-6 rounded-md"></div>
-    <div class="bg-red-200 p-6 rounded-md"></div>
-    <div class="bg-red-200 p-6 rounded-md"></div>
-    <div class="bg-red-200 p-6 rounded-md"></div>
-    <div class="bg-red-200 p-6 rounded-md"></div>
+    {
+      web_icons.map((item, idx: number) => (
+        <Picture
+          class="w-full rounded-t-md"
+          src={`/images/partners/kralos/clients_logo/${idx + 1}.png`}
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="16:9"
+          alt="Picture showcasing client wins and Success Stories"
+        />
+      ))
+    }
   </div>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
     <div class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl">
