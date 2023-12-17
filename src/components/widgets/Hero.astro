@@ -58,9 +58,13 @@ const {
       </div>
     </div>
     <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-      <img
-        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-        alt="mockup"
+      <Picture
+        class="w-full h-full rounded-md"
+        src={"images/products/security-launchpad/hero1.png"}
+        widths={[1600, 800]}
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+        aspectRatio="16:9"
+        alt="Picture showcasing client wins and Success Stories"
       />
     </div>
     <div class="col-span-12"><Fragment set:html={clients} /></div>
