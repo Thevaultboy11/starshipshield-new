@@ -10,8 +10,8 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
-      title: `??`,
-      body: `At Origin, our dedicated team excels in agile project services, including software development and delivery.`,
+      title: `Here's a story about how we secured a local startup`,
+      body: `Patrola is a startup helping citizens take part in cleaning and taking care of their city.`,
     },
     youtube: {
       link: "https://www.youtube.com/embed/QelSVeRmNUQ",
@@ -42,7 +42,7 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
-      title: `??`,
+      title: `Listen to how our team secured Sklopi Posao`,
       body: `Sklopi Posao is a new innovative application that helps people apply for and list job positions`,
     },
     youtube: {
@@ -75,8 +75,8 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
-      title: `??`,
-      body: `??`,
+      title: `A journey of how we secured the app of our first client`,
+      body: `Boostroom is a gaming marketplace made to help gamers earn money while gaming`,
     },
     youtube: {
       link: "https://www.youtube.com/embed/QelSVeRmNUQ",
@@ -110,8 +110,8 @@ export const case_study_list = [
     hero: {
       service_link: `/services/mobile-app-pentest`,
       cta: `Mobile Application Assessment`,
-      title: `??`,
-      body: `?? `,
+      title: `Our first assessment of a mobile game went like this`,
+      body: `Idle Hooligans is a popular tycoon game made by a team from Serbia`,
     },
     youtube: {
       link: "https://www.youtube.com/embed/epqmN3S3aOQ",
@@ -144,8 +144,8 @@ export const case_study_list = [
     hero: {
       service_link: `/services/web-app-penetration test`,
       cta: `Web Application Assessment`,
-      title: `??`,
-      body: `??.`,
+      title: `Here's how we secured a local company from head to toe`,
+      body: `App IT was a company in need of security improvement from the ground up and Starship Shield delivered that`,
     },
     youtube: {
       link: "https://www.youtube.com/embed/e2lxRFiawCY",
