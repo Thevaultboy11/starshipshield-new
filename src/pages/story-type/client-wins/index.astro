@@ -6,47 +6,47 @@ import Cta from "~/components/Cta.astro";
 const client_win = [
   {
     title: "Unija Challenge, Sarajevo - 1st Place",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    body: "This is the picture of our team winning the first place in a local competition, Unija Challenge 2023.",
     img_url: "/images/client_win/card-client-winss4.png",
   },
   {
     title: "Nsoft Nsecure Code CTF - 1st Place",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    body: "A moment of pure happiness, our team's lead security engineer won Nsoft's Nsecure CTF in Mostar.",
     img_url: "/images/client_win/card-client-winss5.png",
   },
   {
     title: "Unija Challenge, Ljubljana - 2nd Place",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    body: "A great moment for our team, we've placed 2nd in Slovenia, Ljubljana at Unija Challenge 2023.",
     img_url: "/images/client_win/card-client-winss6.png",
   },
   {
     title: "Partnership with Webouncer by Kralos",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    body: "Our first partnership, we've partnered up with a team of people from Germany that made Webouncer.",
     img_url: "/images/client_win/card-client-winss7.png",
   },
   {
     title: "Endorsement by Alen Vlahovljak",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    body: "A lengthy endrosement from one of our clients, Alen Vlahovljak.",
     img_url: "/images/client_win/card-client-winss1.png",
   },
   {
     title: "Endorsement by Luka Miljuš",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    body: "Words of praise by Luka Miljuš, our beloved client we've worked when we first started.",
     img_url: "/images/client_win/card-client-winss2.png",
   },
   {
     title: "Endorsement by Merjem Kapo",
-    body: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    body: "A lovely endorsement by a coworker of our team's security engineer, Eman Ćatić.",
     img_url: "/images/client_win/card-client-winss3.png",
   }
 ];
 ---
 
 <Layout>
-  <title>Client Wins</title>
+  <title>Client Wins | Starship Shield</title>  
   <meta
     name="description"
-    content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."
+    content="Explore Starship Shield's grand achievements and recent wins in solving the security puzzle piece by piece."
   />
   <article>
     <section
@@ -90,7 +90,7 @@ const client_win = [
                 widths={[1600, 800]}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
                 aspectRatio="16:9"
-                alt="sa"
+                alt={`Client Win - ${title}`}
               />
               <section class="">
                 <h5 class="my-4 h3 text-black" set:text={title} />
