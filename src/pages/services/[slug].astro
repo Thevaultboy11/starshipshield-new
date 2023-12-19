@@ -34,44 +34,48 @@ const { service_name, href, definition, problem_list, solution_list } = post;
 ---
 
 <Layout meta={meta}>
-  <section class="bg-white dark:bg-gray-900">
-    <section
-      class="grid max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
-    >
-      <section class="mr-auto place-self-center lg:col-span-7">
-        <h1 set:text={`What is ${service_name}`} class="max-w-2xl mb-4 h1" />
+  <title>Services | Starship Shield</title>
+  <meta name="description" content="A list of services we offer at Starship Shield">
+  <article>
+    <section class="bg-white dark:bg-gray-900">
+      <section
+        class="grid max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+      >
+        <section class="mr-auto place-self-center lg:col-span-7">
+          <h1 set:text={`What is ${service_name}`} class="max-w-2xl mb-4 h1" />
 
-        <p class="max-w-2xl mb-6 p2" set:text={definition} />
-      </section>
-      <section class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-          alt="Stock image of a phone - Starship Shield"
-        />
+          <p class="max-w-2xl mb-6 p2" set:text={definition} />
+        </section>
+        <section class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+            alt="Stock image of a phone"
+          />
+        </section>
       </section>
     </section>
-  </section>
 
-  <section class="mx-auto max-w-5xl p-4 mb-12">
-    <h1 class="h2 mx-auto text-center mb-4">What Problem Does It Solve?</h1>
-    <p class="p2 text-center mb-8 max-w-lg mx-auto">
-      Cyber criminals target the most vulnerable point first. It's crucial to
-      protect against all possible ways they could attack
-    </p>
-    <TabComponent tabData={problem_list} client:load />
-  </section>
-  <section class="mx-auto max-w-5xl px-4 mb-24">
-    <h1 class="h2 mx-auto text-center my-8">What Do You Get?</h1>
-
-    <section class="mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8">
-      {
-        solution_list.map(({ title, body }) => (
-          <section class="block w px-6 py-10 col-span-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-            <h5 set:text={title} class="mb-4 h3 font-thin text-primary" />
-            <p set:text={body} class="p1" />
-          </section>
-        ))
-      }
+    <section class="mx-auto max-w-5xl p-4 mb-12">
+      <h1 class="h2 mx-auto text-center mb-4">What Problem Does It Solve?</h1>
+      <p class="p2 text-center mb-8 max-w-lg mx-auto">
+        Cyber criminals target the most vulnerable point first. It's crucial to
+        protect against all possible ways they could attack
+      </p>
+      <TabComponent tabData={problem_list} client:load />
     </section>
-  </section>
+    <section class="mx-auto max-w-5xl px-4 mb-24">
+      <h1 class="h2 mx-auto text-center my-8">What Do You Get?</h1>
+
+      <section class="mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8">
+        {
+          solution_list.map(({ title, body }) => (
+            <section class="block w px-6 py-10 col-span-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+              <h5 set:text={title} class="mb-4 h3 font-thin text-primary" />
+              <p set:text={body} class="p1" />
+            </section>
+          ))
+        }
+      </section>
+    </section>
+  </article>
 </Layout>
