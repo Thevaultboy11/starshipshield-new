@@ -6,10 +6,13 @@ import PricingTable from "~/components/PricingTable.astro";
 
 <Layout>
   <title>Webouncer Pricing | Starship Shield</title>
-  <meta name="description" content="Take a look at our pricing model for our unique product & solution Webouncer.">
+  <meta
+    name="description"
+    content="Take a look at our pricing model for our unique product & solution Webouncer."
+  />
   <article>
     <section class="w-full max-w-5xl px-4 pt-8 mx-auto py-8">
-      <h1 class="h1 text-center">Pricing Plans</h1>
+      <h1 class="h2 text-center mb-8">Pricing Plans</h1>
       <Pricing
         title="Our prices"
         subtitle="Only pay for what you need"
@@ -28,12 +31,12 @@ import PricingTable from "~/components/PricingTable.astro";
               },
               {
                 description: "i-Agent",
-              }
+              },
             ],
             callToAction: {
               target: "_blank",
-              text: "Buy Now",
-              href: "#",
+              text: "Get Free Demo",
+              href: "https://tidycal.com/starshipshield/webouncer",
             },
           },
           {
@@ -60,8 +63,8 @@ import PricingTable from "~/components/PricingTable.astro";
             ],
             callToAction: {
               target: "_blank",
-              text: "Buy Now",
-              href: "#",
+              text: "Get Free Demo",
+              href: "https://tidycal.com/starshipshield/webouncer",
             },
             hasRibbon: true,
             ribbonTitle: "popular",
@@ -89,18 +92,18 @@ import PricingTable from "~/components/PricingTable.astro";
               },
               {
                 description: "And Much More...",
-              }
+              },
             ],
             callToAction: {
               target: "_blank",
-              text: "Buy Now",
-              href: "#",
+              text: "Get Free Demo",
+              href: "https://tidycal.com/starshipshield/webouncer",
             },
           },
         ]}
       />
     </section>
-    <section class="w-full max-w-5xl px-4 pt-8 mx-auto py-8">
+    <section class="w-full max-w-5xl px-4 pt-8 mx-auto py-8 mb-24">
       <h1 class="h2 my-b text-center">Compare Plans</h1>
 
       <PricingTable />

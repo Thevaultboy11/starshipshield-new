@@ -70,10 +70,31 @@ const launchpad_services = [
   />
   <article>
     <div
-      class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 mb-24"
+      class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-12 mb-12"
     >
+      <a
+        href="/products/security-launchpad"
+        class="inline-flex justify-between items-center py-2 px-4 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+        role="alert"
+      >
+        <span
+          class="text-sm font-medium"
+          set:text={"More about services included"}
+        />
+        <svg
+          class="ml-2 w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"></path></svg
+        >
+      </a>
       <h1 class="max-w-2xl mb-6 h1">
-        Your first step to <br />outer-world security
+        Your first step to <br />
+        <span class="text-primary">outer-world</span> security
       </h1>
       <p class="p1 mb-8 max-w-2xl">
         We prioritize securing your critical digital assets based on your
@@ -84,22 +105,6 @@ const launchpad_services = [
         <a href={tidycal_links.security_launchpad} class="btn-primary btn-md"
           >Contact Us</a
         >
-
-        <a
-          href="/products/security-launchpad"
-          class="text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 btn-md"
-          >Our Services</a
-        >
-      </div>
-      <div class="w-full">
-        <Picture
-          class="h-96 rounded-md mx-auto"
-          src={"/images/products/security-launchpad/hero2.png"}
-          widths={[1600, 800]}
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-          aspectRatio="16:9"
-          alt="sa"
-        />
       </div>
     </div>
     <div
@@ -138,8 +143,8 @@ const launchpad_services = [
         class="rounded-md w-full h-full md:pt-12 col-span-12 md:col-span-6 order-2 md:order-2"
       >
         <Picture
-          class="w-full rounded-md border border-primary"
-          src={"/images/products/ptaas/problem2.png"}
+          class="w-full rounded-md"
+          src={"images/products/security-launchpad/hero.svg"}
           widths={[1600, 800]}
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
           aspectRatio="3:3"
@@ -158,11 +163,6 @@ const launchpad_services = [
           {
             ptaas_steps.map(({ title, body }, idx: number) => (
               <div class="col-span-12  md:col-span-6  w-full p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <div class="flex justify-start mb-2">
-                  <div class="w-6 h-6 rounded-md flex justify-center items-center bg-primary text-white">
-                    <div set:text={idx + 1} />
-                  </div>
-                </div>
                 <h5
                   class="mb-2 p1 font-bold tracking-tight text-gray-900 dark:text-white"
                   set:text={title}
@@ -182,9 +182,9 @@ const launchpad_services = [
         <div class="w-full px-8">
           <div class="flex flex-col md:flex-row gap-x-4" id="opt-page">
             <h1 class="h3 font-semibold">Security Launchpad</h1>
-            <div class="my-2 title-card">Save 80% of your money</div>
+            <div class="my-2 title-card">80% on all of our services</div>
           </div>
-          <h1 class="h3 font-normal" style="font-weight: normal;">
+          <h1 class="p2 font-normal" style="font-weight: normal;">
             Perfect for growing businesses that are looking to stop neglecting
             security
           </h1>
@@ -202,9 +202,12 @@ const launchpad_services = [
             }
 
             <ul class="col-span-1 md:col-span-2 p2">
-              <li>
-                <span class="font-bold uppercase">+</span> Speed up the testing &
-                remedy processes for <span class="font-bold uppercase">30%</span
+              <li class="flex items-center gap-x-2">
+                <Icon
+                  name="tabler:circle-check"
+                  class="w-6 h-6 text-primary"
+                />Speed up the testing & remedy processes for <span
+                  class="font-bold uppercase">30%</span
                 > with our penetration test platform
               </li>
             </ul>
@@ -212,9 +215,9 @@ const launchpad_services = [
         </div>
         <div class="w-full info-primary pb-12 pt-4 px-8">
           <h1 class="h3">Money Back Guarantee If Not Satisfied</h1>
-          <p class="pb-4">
-            In case you are disatisfied with our service, we guarantee to refund
-            your money.
+          <p class="py-4">
+            Your satisfaction is our priority. If you are not with our services
+            we will refund all of your money.
           </p>
           <a
             href={tidycal_links.security_launchpad}

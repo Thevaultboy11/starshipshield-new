@@ -180,6 +180,7 @@ export const services_list = [
     slug_name: "web app pentest",
     definition: `Assessing a web application for security weaknesses by simulating cyber-attacks, ensuring robust defense against real threats.`,
     href: "",
+    img_url: "/images/services/1.svg",
     problem_list: [
       {
         tab: "Identifying Vulnerabilities",
@@ -210,6 +211,7 @@ export const services_list = [
     slug_name: "mobile app pentest",
     definition: `Assessing a mobile app for security weaknesses by simulating cyber-attacks, ensuring robust defense against real threats.`,
     href: "",
+    img_url: "/images/services/2.svg",
     problem_list: [
       {
         tab: "Identifying Vulnerabilities",
@@ -240,6 +242,7 @@ export const services_list = [
     slug_name: "internal network pentest",
     definition: `Assessing security vulnerabilities within your company network, ensuring robust defense against potential threats.`,
     href: "",
+    img_url: "/images/services/3.svg",
     problem_list: [
       {
         tab: "Identifying Vulnerabilities",
@@ -270,6 +273,7 @@ export const services_list = [
     slug_name: "external network pentest",
     definition: `Assessing security vulnerabilities in your external-facing systems, ensuring robust defense against potential threats.`,
     href: "",
+    img_url: "/images/services/4.svg",
     problem_list: [
       {
         tab: "Identifying Vulnerabilities",
@@ -300,6 +304,7 @@ export const services_list = [
     slug_name: "social engineering education",
     definition: `Assessing vulnerabilities in your employee security, enhancing awareness and improving their defense against social engineering threats.    `,
     href: "",
+    img_url: "/images/services/5.svg",
     problem_list: [
       {
         tab: "Physical Security Gaps",
@@ -331,6 +336,7 @@ export const services_list = [
     slug_name: "devsecops consulting",
     definition: `Integrating security into your development process, ensuring proactive identification and mitigation of security vulnerabilities.`,
     href: "",
+    img_url: "/images/services/6.svg",
     problem_list: [
       {
         tab: "CI/CD Security",
@@ -356,13 +362,12 @@ export const services_list = [
       },
     ],
   },
-];
-export const bonus_list = [
   {
     service_name: "Source Code Review",
     slug_name: "source code review",
     definition: `Detailed examination of a web application's codebase to identify vulnerabilities, ensuring a secure and resilient software foundation.`,
     href: "",
+    img_url: "/images/bonus/1.svg",
     problem_list: [
       {
         tab: "Identifying Code Vulnerabilities",
@@ -393,6 +398,91 @@ export const bonus_list = [
     slug_name: "ptaas",
     definition: `PTaaS (Penetration Testing as a Service) continuously tests your software, proactively identifying and fixing security vulnerabilities for a robust defense.`,
     href: "",
+    img_url: "/images/bonus/2.svg",
+    problem_list: [
+      {
+        tab: "Continuous Vulnerability Identification",
+        title: "Continuous Vulnerability Identification",
+        body: `Ongoing assessments, identifying and addressing software vulnerabilities in real-time.`,
+      },
+      {
+        tab: "Dynamic Threat Adaptation",
+        title: "Dynamic Threat Adaptation",
+        body: `Keeps pace with evolving threats, providing continuous protection against emerging risks.`,
+      },
+      {
+        tab: "Saving Time",
+        title: "Saving Time",
+        body: `Streamlines the testing process, saving time by eliminating the need for manual penetration test initiation and scheduling.`,
+      },
+      {
+        tab: "Cost Efficiency",
+        title: "Cost Efficiency",
+        body: `Cut costs by opting for continuous testing with PTaaS, avoiding the expense of an in-house team and enabling monthly payments.`,
+      },
+    ],
+    solution_list: [
+      {
+        title: "Detailed Report",
+        body: `The report outlines security vulnerabilities, risks, and recommended improvements, guiding you to creating secure software.`,
+        href: "",
+      },
+      {
+        title: "Tailored Recommendations",
+        body: `Guide your team to implement effective measures for resilient and secure software, ensuring robust defense.`,
+        href: "",
+      },
+      {
+        title: "Continuous Protection",
+        body: `Ongoing assessments with regular updates, maintaining an up-to-date understanding of the security posture.`,
+        href: "",
+      },
+      {
+        title: "Constant Communication",
+        body: `Developers can contact us for 24/7 assistance, we will provide regular updates on the penetration testing progress.`,
+        href: "",
+      },
+    ],
+  },
+];
+export const bonus_list = [
+  {
+    service_name: "Source Code Review",
+    slug_name: "source code review",
+    definition: `Detailed examination of a web application's codebase to identify vulnerabilities, ensuring a secure and resilient software foundation.`,
+    href: "",
+    img_url: "/images/services/1.svg",
+    problem_list: [
+      {
+        tab: "Identifying Code Vulnerabilities",
+        title: "Identifying Code Vulnerabilities",
+        body: `Uncovering and mitigating security flaws in the application's source code, preventing potential exploits.`,
+      },
+      {
+        tab: "Preventing Code-based Exploits",
+        title: "Preventing Code-based Exploits",
+        body: `Identifying and fixing vulnerabilities that could be exploited by attackers through source code manipulation.`,
+      },
+    ],
+    solution_list: [
+      {
+        title: "Detailed Report",
+        body: `Detailed report on code vulnerabilities, risks, and recommended fixes, providing insights to strengthening your application security.`,
+        href: "",
+      },
+      {
+        title: "Proactive Vulnerability Mitigation",
+        body: `Guidance on fixing code vulnerabilities, ensuring a robust defense against potential threats through optimized source code.`,
+        href: "",
+      },
+    ],
+  },
+  {
+    service_name: "PTaaS",
+    slug_name: "ptaas",
+    definition: `PTaaS (Penetration Testing as a Service) continuously tests your software, proactively identifying and fixing security vulnerabilities for a robust defense.`,
+    href: "",
+    img_url: "/images/services/1.svg",
     problem_list: [
       {
         tab: "Continuous Vulnerability Identification",

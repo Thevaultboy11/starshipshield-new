@@ -30,12 +30,16 @@ const meta = {
   dontUseTitleTemplate: true,
 };
 
-const { service_name, href, definition, problem_list, solution_list } = post;
+const { service_name, href, definition, problem_list, solution_list, img_url } =
+  post;
 ---
 
 <Layout meta={meta}>
   <title>Services | Starship Shield</title>
-  <meta name="description" content="A list of services we offer at Starship Shield">
+  <meta
+    name="description"
+    content="A list of services we offer at Starship Shield"
+  />
   <article>
     <section class="bg-white dark:bg-gray-900">
       <section
@@ -47,10 +51,7 @@ const { service_name, href, definition, problem_list, solution_list } = post;
           <p class="max-w-2xl mb-6 p2" set:text={definition} />
         </section>
         <section class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-            alt="Stock image of a phone"
-          />
+          <img src={img_url} alt="Stock image of a phone" />
         </section>
       </section>
     </section>

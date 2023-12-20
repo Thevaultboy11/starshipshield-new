@@ -16,7 +16,7 @@ const reviews = [
   {
     title: `See why our clients trust us to keep them future-ready for the next cyber attack.`,
     paragraph: "Client Wins",
-    img_url: "/images/client_win/hero1.png",
+    img_url: "/images/client_win/hero3.png",
     href: "story-type/client-wins",
   },
 ];
@@ -48,6 +48,7 @@ const about_us = [
     body: `We've worked with over 10 companies, securing their services & software.`,
   },
 ];
+const client_profiles = new Array(6).fill(0);
 ---
 
 <Layout>
@@ -65,7 +66,9 @@ const about_us = [
 
     <Fragment slot="subtitle">
       <p class="max-w-lg">
-        The start of the cybersecurity journey is tough, but we make it easy. Regardless of past cyber security neglect, we help you secure all your vulnerable points
+        The start of the cybersecurity journey is tough, but we make it easy.
+        Regardless of past cyber security neglect, we help you secure all your
+        vulnerable points
       </p>
     </Fragment>
   </Hero>
@@ -81,30 +84,59 @@ const about_us = [
         What Our Clients Say About Us
       </div>
       <div class="grid w-full mx-auto grid-cols-1 md:grid-cols-2">
-        {
-          reviews.map((item: any, idx: number) => (
-            <div class=" md:w-96 my-16  col-span-1 md:mx-auto">
-              <Picture
-                class="w-full rounded-t-md"
-                src={item.img_url}
-                widths={[1600, 800]}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-                aspectRatio="16:9"
-                alt="Picture showcasing client wins and Success Stories"
-              />
-              <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4 paper">
-                <h1 class="h3 text-black" set:text={item.paragraph} />
-                <p class="p2 mb-4 -mt-2" set:text={item.title} />
+        <div class="md:w-96 my-16 col-span-1 md:mx-auto paper rounded-md">
+          <Picture
+            class="w-full rounded-t-md"
+            src={"/images/success-story/hero.png"}
+            widths={[1600, 800]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+            aspectRatio="16:9"
+            alt="Picture showcasing client wins and Success Stories"
+          />
+          <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4">
+            <h1 class="h3 text-black">Success Stories</h1>
+            <p class="p2 mb-4 -mt-2">
+              Explore stories of our clients and how they avoided major cyber
+              disasters.
+            </p>
 
-                <div class="w-full">
-                  <a href={item.href} class="btn-primary btn-md">
-                    View More
-                  </a>
-                </div>
-              </div>
+            <div class="w-full">
+              <a href="/story-type/client-stories" class="btn-primary btn-md">
+                View More</a
+              >
             </div>
-          ))
-        }
+          </div>
+        </div>
+        <div class="md:w-96 my-16 col-span-1 md:mx-auto paper rounded-md">
+          <div class="h-60 w-full grid grid-cols-3 gap-8">
+            {
+              client_profiles.map((i, idx: number) => (
+                <Picture
+                  class="w-full rounded-t-md"
+                  src={`/images/client_profile/${idx + 1}.png`}
+                  widths={[1600, 800]}
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                  aspectRatio="3:3"
+                  alt="Picture showcasing client wins and Success Stories"
+                />
+              ))
+            }
+          </div>
+
+          <div class="rounded-b-md p-4 pb-8 flex flex-col gap-y-4">
+            <h1 class="h3 text-black">Client wins</h1>
+            <p class="p2 mb-4 -mt-2">
+              See why our clients trust us to keep them future-ready for the
+              next cyber attack.
+            </p>
+
+            <div class="w-full">
+              <a href="/story-type/client-wins" class="btn-primary btn-md">
+                View More</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -115,13 +147,13 @@ const about_us = [
       <ProblemAstro client:load />
     </div>
     <div class="h-full max-w-5xl mx-auto px-8 gap-8 grid md:grid-cols-2 mb-24">
-      <div class="col-span-1 md:pt-12">
+      <div class="col-span-1">
         <Picture
-          class="w-full h-72 md:my-auto rounded-md"
-          src="/images/about/hero2.png"
+          class="w-full h-full md:my-auto rounded-md"
+          src="/images/about/hero3.png"
           widths={[1600, 800]}
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-          aspectRatio="16:9"
+          aspectRatio="3:3"
           alt="Image describing one of our services"
         />
       </div>

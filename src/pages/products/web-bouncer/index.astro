@@ -44,47 +44,39 @@ const web_icons = new Array(6).fill(0);
   <div
     class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16"
   >
-    <div class="md:col-span-3">
-      <h1 class="max-w-2xl mb-4 h1">
-        How to secure your <br />
-        <span class="text-primary">e-commerce</span> store from cyber criminals?
-      </h1>
-      <p class="max-w-2xl mb-6 p1">
-        Webouncer is for high-traffic websites that want protection from
-        downtime or any other cyber attack.
-      </p>
-      <div
-        class="bg-paper p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
-      >
-        <div class="flex flex-col items-start justify-start gap-y-2">
-          <h1 class="h3">10+</h1>
-          <p class="p1">Secured Clients</p>
-        </div>
-        <div class="flex flex-col items-start justify-start gap-y-2">
-          <h1 class="h3">5k+</h1>
-          <p class="p1">Secured Users</p>
-        </div>
-        <div class="flex flex-col items-start justify-start gap-y-2">
-          <h1 class="h3">100+</h1>
-          <p class="p1">Repelled Attacks</p>
-        </div>
-        <div class="flex flex-col items-center justify-center gap-y-2">
-          <a
-            href={tidycal_links.security_webouncer}
-            class="w-full md:w-auto py-2 px-3 btn-primary">Get free demo</a
-          >
+    <div class="md:col-span-5 md:text-center">
+      <div class="w-full">
+        <h1 class="w-full mb-4 h1">
+          How to secure your <br />
+          <span class="text-primary">e-commerce</span> store from cyber criminals?
+        </h1>
+        <p class="max-w-2xl mx-auto my-8 p1">
+          Webouncer is for high-traffic websites that want protection from
+          downtime or any other cyber attack.
+        </p>
+        <div
+          class="paper mx-auto max-w-2xl p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
+        >
+          <div class="flex flex-col items-start justify-start gap-y-2">
+            <h1 class="h3">10+</h1>
+            <p class="p1">Secured Clients</p>
+          </div>
+          <div class="flex flex-col items-start justify-start gap-y-2">
+            <h1 class="h3">5k+</h1>
+            <p class="p1">Secured Users</p>
+          </div>
+          <div class="flex flex-col items-start justify-start gap-y-2">
+            <h1 class="h3">100+</h1>
+            <p class="p1">Repelled Attacks</p>
+          </div>
+          <div class="flex flex-col items-center justify-center gap-y-2">
+            <a
+              href={tidycal_links.security_webouncer}
+              class="w-full md:w-auto py-2 px-3 btn-primary">Get free demo</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-    <div class="w-full hidden md:block md:col-span-2">
-      <Picture
-        class="w-full h-full rounded-md"
-        src="/images/products/webouncer/hero.png"
-        widths={[1600, 800]}
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-        aspectRatio="1:1"
-        alt="Image describing one of our services"
-      />
     </div>
   </div>
   <div
@@ -132,11 +124,11 @@ const web_icons = new Array(6).fill(0);
       </div>
     </div>
     <div
-      class="rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2"
+      class="rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2 md:pt-8"
     >
       <Picture
-        class="w-full h-full rounded-md border border-black"
-        src="/images/products/webouncer/problem.png"
+        class="w-full h-full rounded-md"
+        src="/images/products/webouncer/problem.svg"
         widths={[1600, 800]}
         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
         aspectRatio="3:3"
@@ -151,8 +143,8 @@ const web_icons = new Array(6).fill(0);
     </div>
     <div class="w-full h-full col-span-12 md:col-span-6 order- md:order-3">
       <Picture
-        class="w-full h-full rounded-md border border-black"
-        src="/images/products/webouncer/solution.png"
+        class="w-full h-full rounded-md"
+        src="/images/products/webouncer/hero.svg"
         widths={[1600, 800]}
         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
         aspectRatio="1:1"

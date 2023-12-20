@@ -54,12 +54,12 @@ const bonus_list = [
   {
     title: `Source Code Review`,
     body: `Process that assesses and evaluates the potential effects of disruptions to your business operations.`,
-    href: "/services/application-test",
+    href: "/services/source-code-review",
   },
   {
     title: `Custom Platform`,
     body: `Our custom platform helps you to monitor the testing process in real-time and track vulnerabilities we find immediately.`,
-    href: "/services/application-test",
+    href: "/services/ptaas",
   },
 ];
 const data = [
@@ -87,82 +87,76 @@ const data = [
   <article>
     <section class="bg-white">
       <div
-        class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 lg:py-16 lg:grid-cols-12"
+        class="max-w-screen-xl md:text-center px-4 py-8 mx-auto lg:gap-8 lg:py-16"
       >
-        <div class="ml-auto place-self-center lg:col-span-7">
-          <h1 class="max-w-2xl mb-4 h1">
-            Security Launchpad <span class="text-primary">Bundle</span>
-          </h1>
-          <p class="max-w-2xl mb-6 p1">
-            Our bundle guides you from your current state of security to a point
-            where you can confidently say your security is at its peak.
-          </p>
-          <a
-            href="/learn-more"
-            class="btn-md btn-primary py-2.5 w-full text-xs font-semibold shadow-none"
-          >
-           Take Your First Step
-          </a>
+        <h1 class="max-w-3xl mx-auto mb-4 h1">
+          Security Launchpad <span class="text-primary">Bundle</span>
+        </h1>
+        <p class="max-w-3xl mx-auto mb-6 p1 my-8">
+          Our bundle guides you from your current state of security to a point
+          where you can confidently say your security is at its peak.
+        </p>
+        <a
+          href="/learn-more"
+          class="btn-md btn-primary py-2.5 w-full text-xs font-semibold shadow-none"
+        >
+          Take Your First Step
+        </a>
+      </div>
+      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex"></div>
+      <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
+        <div
+          class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl"
+        >
+          <div>
+            <div class="flex flex-col">
+              <Icon
+                name="ri:space-ship-fill"
+                class="text-primary w-8 h-8 inline-block"
+              />
+              <h1 class="h2 my-4">
+                Who Needs The<br /><span class="text-primary"
+                  >Security Launchpad</span
+                >?
+              </h1>
+              <div class="p1">
+                Security Launchpad is a service offered to companies that want
+                to deliver software fast while retaining security.
+              </div>
+              <div class="p1 text-primary italic">
+                <br />Stop hackers once and for all.
+              </div>
+            </div>
+            {
+              data.map(({ icon, title, paragraph }) => (
+                <div class="flex w-full flex-col gap-y-3 mt-8">
+                  <div class="flex items-center gap-x-2">
+                    <Icon
+                      name={icon}
+                      class="text-primary w-8 h-8 inline-block"
+                    />
+                    <p class="p1 font-semibold" set:html={title} />
+                  </div>
+                  <p class="text-gray-400 p1" set:html={paragraph} />
+                </div>
+              ))
+            }
+          </div>
         </div>
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+        <div
+          class="rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2"
+        >
           <Picture
-            class="w-full h-full rounded-md"
-            src={"images/products/security-launchpad/hero1.png"}
+            class="w-full rounded-md"
+            src={"images/products/security-launchpad/hero.svg"}
             widths={[1600, 800]}
             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-            aspectRatio="16:9"
+            aspectRatio="3:3"
             alt="Picture showcasing client wins and Success Stories"
           />
         </div>
       </div>
     </section>
-    <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
-      <div class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl">
-        <div>
-          <div class="flex flex-col">
-            <Icon
-              name="ri:space-ship-fill"
-              class="text-primary w-8 h-8 inline-block"
-            />
-            <h1 class="h2 my-4">
-              Who Needs The<br /><span class="text-primary"
-                >Security Launchpad</span
-              >?
-            </h1>
-            <div class="p1">
-              Security Launchpad is a service offered to companies that want to
-              deliver software fast while retaining security.
-            </div>
-            <div class="p1 text-primary italic">
-              <br />Stop hackers once and for all.
-            </div>
-          </div>
-          {
-            data.map(({ icon, title, paragraph }) => (
-              <div class="flex w-full flex-col gap-y-3 mt-8">
-                <div class="flex items-center gap-x-2">
-                  <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
-                  <p class="p1 font-semibold" set:html={title} />
-                </div>
-                <p class="text-gray-400 p1" set:html={paragraph} />
-              </div>
-            ))
-          }
-        </div>
-      </div>
-      <div
-        class="bg-primary rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2"
-      >
-        <Picture
-          class="w-full h-full rounded-md"
-          src={"images/products/security-launchpad/problem2.png"}
-          widths={[1600, 800]}
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-          aspectRatio="3:3"
-          alt="Picture showcasing client wins and Success Stories"
-        />
-      </div>
-    </div>
 
     <div class="px-4 w-full max-w-5xl mx-auto mb-24">
       <h1 class="h2 mx-auto text-center my-8">Services you get</h1>
@@ -224,9 +218,8 @@ const data = [
         </div>
         <div class="w-full relative">
           <Picture
-            style="box-shadow: 14px 8px 30px 0px #ffff;"
-            class="translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 ltablet:translate-y-20 lg:translate-y-20"
-            src="/images/products/security-launchpad/hero2.png"
+            class="translate-x-6 translate-y-6 rounded-md object-cover object-left-top lg:translate-x-4 lg:translate-y-4"
+            src="/images/cta.svg"
             width={800}
             height={800}
             widths={[400, 768]}
