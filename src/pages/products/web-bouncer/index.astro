@@ -76,7 +76,16 @@ const web_icons = new Array(6).fill(0);
         </div>
       </div>
     </div>
-    <div class="w-full hidden md:block md:col-span-2 bg-red-200"></div>
+    <div class="w-full hidden md:block md:col-span-2">
+      <Picture
+        class="w-full h-full rounded-md"
+        src="/images/products/webouncer/hero.png"
+        widths={[1600, 800]}
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+        aspectRatio="1:1"
+        alt="Image describing one of our services"
+      />
+    </div>
   </div>
   <div
     class="grid grid-cols-2 md:grid-cols-6 px-4 gap-8 w-full max-w-5xl mx-auto mb-24"
@@ -95,7 +104,7 @@ const web_icons = new Array(6).fill(0);
     }
   </div>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
-    <div class="col-span-12 md:col-span-6 order-1 md:order-1 py-6 rounded-xl">
+    <div class="col-span-12 md:col-span-6 order-1 md:order-1 pt-6 rounded-xl">
       <div>
         <div class="flex flex-col">
           <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
@@ -123,8 +132,16 @@ const web_icons = new Array(6).fill(0);
       </div>
     </div>
     <div
-      class="bg-primary rounded-md w-full p-24 h-full col-span-12 md:col-span-6 order-2 md:order-2"
+      class="rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2"
     >
+      <Picture
+        class="w-full h-full rounded-md border border-black"
+        src="/images/products/webouncer/problem.png"
+        widths={[1600, 800]}
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+        aspectRatio="3:3"
+        alt="Image describing one of our services"
+      />
     </div>
   </div>
   <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
@@ -132,11 +149,17 @@ const web_icons = new Array(6).fill(0);
       <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
       <h1 class="h2 my-4">What Makes It Special?</h1>
     </div>
-    <div
-      class="bg-primary w-full h-full p-24 col-span-12 md:col-span-6 order- md:order-3"
-    >
+    <div class="w-full h-full col-span-12 md:col-span-6 order- md:order-3">
+      <Picture
+        class="w-full h-full rounded-md border border-black"
+        src="/images/products/webouncer/solution.png"
+        widths={[1600, 800]}
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+        aspectRatio="1:1"
+        alt="Image describing one of our services"
+      />
     </div>
-    <div class="col-span-12 md:col-span-6 py-6 rounded-xl order-3 md:order-2">
+    <div class="col-span-12 md:col-span-6 pt-6 rounded-xl order-3 md:order-2">
       <div>
         <div>
           <div>

@@ -10,13 +10,13 @@ const reviews = [
   {
     title: `Explore stories of our clients and how they avoided major cyber disasters.`,
     paragraph: "Success Stories",
-    img_url: "/images/android_blog.png",
+    img_url: "/images/success-story/hero.png",
     href: "story-type/client-stories",
   },
   {
     title: `See why our clients trust us to keep them future-ready for the next cyber attack.`,
     paragraph: "Client Wins",
-    img_url: "/images/android_blog.png",
+    img_url: "/images/client_win/hero1.png",
     href: "story-type/client-wins",
   },
 ];
@@ -25,7 +25,7 @@ const resources = [
   {
     title: `Security Assessment Price Calculator`,
     paragraph: "Resources",
-    img_url: "/images/android_blog.png",
+    img_url: "/images//hero.png",
     href: "/resources/assesment-calculator",
   },
   {
@@ -85,7 +85,7 @@ const about_us = [
           reviews.map((item: any, idx: number) => (
             <div class=" md:w-96 my-16  col-span-1 md:mx-auto">
               <Picture
-                class="w-full h-64 rounded-t-md"
+                class="w-full rounded-t-md"
                 src={item.img_url}
                 widths={[1600, 800]}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
@@ -114,8 +114,17 @@ const about_us = [
       </div>
       <ProblemAstro client:load />
     </div>
-    <div class="h-full max-w-5xl mx-auto px-8 grid md:grid-cols-2 mb-24">
-      <div class="col-span-1 py-12 bg-blue-200"></div>
+    <div class="h-full max-w-5xl mx-auto px-8 gap-8 grid md:grid-cols-2 mb-24">
+      <div class="col-span-1 md:pt-12">
+        <Picture
+          class="w-full h-72 md:my-auto rounded-md"
+          src="/images/about/hero2.png"
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="16:9"
+          alt="Image describing one of our services"
+        />
+      </div>
       <div class="col-span-1">
         <div class="text-left mb-8">
           <p class="text-primary p1 font-semibold">

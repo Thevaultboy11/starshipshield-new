@@ -7,7 +7,7 @@ const testimonial_text = [
     title: "App IT - Web Application Assessment",
     text: `Starship Shield found many vulnerabilities in our software that could enable hackers to steal customer data. Thanks to them, such incidents never happened and our software is now bulletproof.`,
     person: "Faruk Bavčić",
-    img_url: "/images/android_blog.png",
+    img_url: "/images/client-profile/profile1.png",
     url: "/story-type/client-story/app-it",
   },
 
@@ -15,21 +15,21 @@ const testimonial_text = [
     title: "Boostroom - Web Application Assessment",
     text: `Starship Shield helped us secure our gaming marketplace by finding many vulnerabilities & issues, then helping us patch them in time. Thanks to them, our customers are safe and their data is protected.`,
     person: "Alen Vlahovljak",
-    img_url: "/images/android_blog.png",
+    img_url: "/images/client-profile/profile2.png",
     url: "/story-type/client-story/boostroom",
   },
   {
     title: "SklopiPosao - Web Application Assessment",
     text: `We gave Starship Shield a chance at testing our application. They managed to find critical vulnerabilities leaving our customers at the mercy of hackers. Thanks to Starship Shield, we can now rest easy knowing our security is top-notch.`,
     person: "Ernad Bećirović",
-    img_url: "/images/android_blog.png",
+    img_url: "/images/client-profile/profile3.png",
     url: "/story-type/client-story/sklopi-posao",
   },
   {
     title: "Origin - Web Application Assessment",
     text: `Despite their youth, Starship Shield team was exceptionally professional and time efficient. Their dedication surprised us. At the end we've received high-quality security solutions and helped us implement them in our new application Patrola.ba.`,
     person: "Nermin Ćatović",
-    img_url: "/images/android_blog.png",
+    img_url: "/images/client-profile/profile4.png",
     url: "/story-type/client-story/origin",
   },
 ];

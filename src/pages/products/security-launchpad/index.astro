@@ -89,12 +89,6 @@ const data = [
       <div
         class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 lg:py-16 lg:grid-cols-12"
       >
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-            alt="mockup"
-          />
-        </div>
         <div class="ml-auto place-self-center lg:col-span-7">
           <h1 class="max-w-2xl mb-4 h1">
             Security Launchpad <span class="text-primary">Bundle</span>
@@ -109,6 +103,16 @@ const data = [
           >
            Take Your First Step
           </a>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <Picture
+            class="w-full h-full rounded-md"
+            src={"images/products/security-launchpad/hero1.png"}
+            widths={[1600, 800]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+            aspectRatio="16:9"
+            alt="Picture showcasing client wins and Success Stories"
+          />
         </div>
       </div>
     </section>
@@ -147,8 +151,16 @@ const data = [
         </div>
       </div>
       <div
-        class="bg-primary rounded-md w-full p-24 h-full col-span-12 md:col-span-6 order-2 md:order-2"
+        class="bg-primary rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2"
       >
+        <Picture
+          class="w-full h-full rounded-md"
+          src={"images/products/security-launchpad/problem2.png"}
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="3:3"
+          alt="Picture showcasing client wins and Success Stories"
+        />
       </div>
     </div>
 
@@ -214,7 +226,7 @@ const data = [
           <Picture
             style="box-shadow: 14px 8px 30px 0px #ffff;"
             class="translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 ltablet:translate-y-20 lg:translate-y-20"
-            src="/images/android_blog.png"
+            src="/images/products/security-launchpad/hero2.png"
             width={800}
             height={800}
             widths={[400, 768]}
