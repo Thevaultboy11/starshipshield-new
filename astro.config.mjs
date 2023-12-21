@@ -34,6 +34,10 @@ export default defineConfig({
     remarkPlugins: [readingTimeRemarkPlugin],
   },
 
+  build: {
+    compressHTML: false,
+  },
+
   integrations: [
     react(),
     tailwind({
