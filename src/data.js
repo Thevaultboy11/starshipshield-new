@@ -7,7 +7,9 @@ export const tidycal_links = {
 export const case_study_list = [
   {
     name: "origin",
+    video: false,
     hero: {
+      cta_link: "/services/web-app-pentest",
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
       title: `Here's a story about how we secured a local startup`,
@@ -17,7 +19,10 @@ export const case_study_list = [
       link: "https://www.youtube.com/embed/QelSVeRmNUQ",
       title: "How Boostroom Evaded a Data Breach",
     },
-
+    img: {
+      link: "/images/success-story/testimonials/1.png",
+      alt: "",
+    },
     card: {
       title: "Nermin Ćatović",
       body: `
@@ -39,7 +44,9 @@ export const case_study_list = [
   },
   {
     name: "sklopi posao",
+    video: false,
     hero: {
+      cta_link: "/services/web-app-pentest",
       service_link: `/services/web-app-penetration-test`,
       cta: `Web Application Assessment`,
       title: `Listen to how our team secured Sklopi Posao`,
@@ -49,7 +56,10 @@ export const case_study_list = [
       link: "https://www.youtube.com/embed/QelSVeRmNUQ",
       title: "How Boostroom Evaded a Data Breach",
     },
-
+    img: {
+      link: "/images/success-story/testimonials/2.png",
+      alt: "",
+    },
     card: {
       title: "Ernad Bećirović",
       body: `
@@ -72,9 +82,11 @@ export const case_study_list = [
   },
   {
     name: "boostroom",
+    video: true,
     hero: {
+      cta_link: "/products/security-launchpad",
       service_link: `/services/web-app-penetration-test`,
-      cta: `Web Application Assessment`,
+      cta: `Security Launchpad`,
       title: `A journey of how we secured the app of our first client`,
       body: `Boostroom is a gaming marketplace made to help gamers earn money while gaming`,
     },
@@ -82,7 +94,6 @@ export const case_study_list = [
       link: "https://www.youtube.com/embed/QelSVeRmNUQ",
       title: "How Boostroom Evaded a Data Breach",
     },
-
     card: {
       title: "Alen Vlahovljak",
       body: `
@@ -107,7 +118,9 @@ export const case_study_list = [
   },
   {
     name: "ooxcit",
+    video: true,
     hero: {
+      cta_link: "/services/mobile-app-pentest",
       service_link: `/services/mobile-app-pentest`,
       cta: `Mobile Application Assessment`,
       title: `Our first assessment of a mobile game went like this`,
@@ -141,9 +154,11 @@ export const case_study_list = [
   },
   {
     name: "app it",
+    video: true,
     hero: {
+      cta_link: "/products/security-launchpad",
       service_link: `/services/web-app-penetration test`,
-      cta: `Web Application Assessment`,
+      cta: `Security Launchpad`,
       title: `Here's how we secured a local company from head to toe`,
       body: `App IT was a company in need of security improvement from the ground up and Starship Shield delivered that`,
     },
@@ -542,17 +557,7 @@ export const headerData = {
     {
       text: "Resources",
       href: "/resources",
-      links: [
-        { text: "Blog", href: getBlogPermalink() },
-        {
-          text: "How To Make a Security Assessment Scope",
-          href: "/resources/scope-paper",
-        },
-        {
-          text: "Security Assessment Pricing Calculator",
-          href: "/resources/assesment-calculator",
-        },
-      ],
+      links: [{ text: "Blog", href: getBlogPermalink() }],
     },
 
     {

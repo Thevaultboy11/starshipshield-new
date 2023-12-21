@@ -6,7 +6,7 @@ function TypeAssessment({ onChangePriceVariables, k }) {
       <h1 className="block mb-4 text-base my-4">
         What Approach To Security Assessment You Need?
       </h1>
-      <ul className="items-center grid grid-cols-1 md:grid-cols-4 w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+      <ul className="items-center grid grid-cols-1 md:grid-cols-4 w-full text-sm font-medium text-black bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
           <div className="flex items-center pl-3">
             <input
@@ -20,7 +20,7 @@ function TypeAssessment({ onChangePriceVariables, k }) {
             />
             <label
               htmlFor="white-box"
-              className="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              className="w-full py-3 ml-2 text-sm font-medium text-black dark:text-gray-300"
             >
               White Box
             </label>
@@ -39,7 +39,7 @@ function TypeAssessment({ onChangePriceVariables, k }) {
             />
             <label
               htmlFor="gray-box"
-              className="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              className="w-full py-3 ml-2 text-sm font-medium text-black dark:text-gray-300"
             >
               Gray Box
             </label>
@@ -58,7 +58,7 @@ function TypeAssessment({ onChangePriceVariables, k }) {
             />
             <label
               htmlFor="black-box"
-              className="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              className="w-full py-3 ml-2 text-sm font-medium text-black dark:text-gray-300"
             >
               Black Box
             </label>

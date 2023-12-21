@@ -84,7 +84,7 @@ export default function AchievemenCarousel() {
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -right-px from-transparent to-80% to-white"></div>
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -left-px   from-20% from-white to-transparent"></div>
         {picture_list.map((item: any, idx: number) => (
-          <SwiperSlide key={idx} className="w-60 rounded-md">
+          <SwiperSlide key={idx} className="w-40 rounded-md">
             <a href={item.href}>
               <div className="">
                 <img

@@ -10,7 +10,7 @@ const TabComponent = ({ tabData }) => {
   return (
     <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <ul
-        className="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800"
+        className="flex flex-wrap text-sm font-medium text-center  border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:  dark:bg-gray-800"
         id="defaultTab"
         role="tablist"
       >

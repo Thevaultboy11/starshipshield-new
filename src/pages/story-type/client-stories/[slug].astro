@@ -4,6 +4,7 @@ import Cta from "~/components/Cta.astro";
 import { CollectionEntry } from "astro:content";
 import { case_study_list } from "../../../data";
 import slugify from "limax";
+import { Picture } from "@astrojs/image/components";
 
 export const getStaticPaths = async () => {
   const paths = case_study_list.map((case_study) => {
@@ -30,7 +31,7 @@ const meta = {
   description: "Latest stories from our clients about us, Starship Shield.",
   dontUseTitleTemplate: true,
 };
-const { name, hero, youtube, case_numbers, card } = case_study;
+const { name, hero, youtube, case_numbers, card, img, video } = case_study;
 ---
 
 <Layout {meta}>
@@ -39,8 +40,8 @@ const { name, hero, youtube, case_numbers, card } = case_study;
       class="pt-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
     >
       <a
-        href="#"
-        class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+        href={hero.cta_link}
+        class="inline-flex cursor-pointer justify-between items-center py-1 px-1 pr-4 mb-7 text-sm bg-gray-100 rounded-full"
         role="alert"
       >
         <span
@@ -63,25 +64,46 @@ const { name, hero, youtube, case_numbers, card } = case_study;
       <p class="mb-8 p1 lg:text-xl sm:px-16 xl:px-48" set:text={hero.body} />
     </section>
   </section>
-
-  <section class="max-w-5xl rounded-md mb-12 mx-auto p-4">
-    <iframe
-      style="aspect-ratio: 16/9;"
-      src={youtube.link}
-      title={youtube.title}
-      frameborder="0"
-      class="w-full mx-auto rounded-md hidden md:block"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-    <iframe
-      style="aspect-ratio: 16/9;"
-      src={youtube.link}
-      title={youtube.title}
-      frameborder="0"
-      class="w-full mx-auto block md:hidden rounded-md"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </section>
+  {
+    video ? (
+      <section class="max-w-5xl rounded-md mb-12 mx-auto p-4">
+        <iframe
+          style="aspect-ratio: 16/9;"
+          src={youtube.link}
+          title={youtube.title}
+          frameborder="0"
+          class="w-full mx-auto rounded-md hidden md:block"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        />
+        <iframe
+          style="aspect-ratio: 16/9;"
+          src={youtube.link}
+          title={youtube.title}
+          frameborder="0"
+          class="w-full mx-auto block md:hidden rounded-md"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        />
+      </section>
+    ) : (
+      <div class="max-w-5xl rounded-md mb-12 mx-auto p-4">
+        <div class="    rounded-md">
+          <Picture
+            class="mx-auto rounded-md border border-primary"
+            src={img.link}
+            width={800}
+            height={800}
+            widths={[400, 768]}
+            sizes="100vw, 432px"
+            aspectRatio="1600:900"
+            alt="sa"
+          />
+        </div>
+      </div>
+    )
+  }
+  <!-- -->
   <section
     class="relative px-4 md:px-6 pb-12 md:pb-16 lg:pb-20 text-default max-w-6xl mx-auto"
   >

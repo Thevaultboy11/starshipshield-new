@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 export interface Props {
   text: string;
@@ -7,18 +7,32 @@ export interface Props {
   class?: string;
 }
 
-const { text, url, class: className = 'inline-block' } = Astro.props;
+const { text, url, class: className = "inline-block" } = Astro.props;
 ---
 
 <div class={className}>
-  <span class="align-super font-bold text-gray-400">Share:</span>
-  <button class="ml-2" title="Twitter Share" data-aw-social-share="twitter" data-aw-url={url} data-aw-text={text}
-    ><Icon name="ri:twitter-fill" class="w-6 h-6 text-gray-400 hover:text-ibm-black" />
+  <span class="align-super font-bold">Share:</span>
+  <button
+    class="ml-2"
+    title="Twitter Share"
+    data-aw-social-share="twitter"
+    data-aw-url={url}
+    data-aw-text={text}
+    ><Icon name="ri:twitter-fill" class="w-6 h-6 hover:text-ibm-black" />
   </button>
-  <button class="ml-2" title="Facebook Share" data-aw-social-share="facebook" data-aw-url={url}
-    ><Icon name="ri:facebook-box-fill" class="w-6 h-6 text-gray-400 hover:text-ibm-black" />
+  <button
+    class="ml-2"
+    title="Facebook Share"
+    data-aw-social-share="facebook"
+    data-aw-url={url}
+    ><Icon name="ri:facebook-box-fill" class="w-6 h-6 hover:text-ibm-black" />
   </button>
-  <button class="ml-2" title="Linkedin Share" data-aw-social-share="linkedin" data-aw-url={url} data-aw-text={text}
-    ><Icon name="ri:linkedin-box-fill" class="w-6 h-6 text-gray-400 hover:text-ibm-black" />
+  <button
+    class="ml-2"
+    title="Linkedin Share"
+    data-aw-social-share="linkedin"
+    data-aw-url={url}
+    data-aw-text={text}
+    ><Icon name="ri:linkedin-box-fill" class="w-6 h-6 hover:text-ibm-black" />
   </button>
 </div>

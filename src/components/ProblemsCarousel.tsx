@@ -32,6 +32,7 @@ export default function ProblemCarousel() {
         pagination={{
           clickable: true,
         }}
+        loop={true}
         spaceBetween={200}
         autoplay={{
           delay: 5000,

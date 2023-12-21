@@ -6,13 +6,19 @@ import InfoTitle from "~/components/InfoTitle.astro";
 
 <Layout>
   <title>Security Assessment Scope Whitepaper | Starship Shield</title>
-  <meta name="description" content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."> 
+  <meta
+    name="description"
+    content="Discover advanced security solutions with Starship Shield. From robust boundary definition to tailored protection strategies, we're committed to securing your digital assets."
+  />
   <article>
     <section class="bg-white dark:bg-gray-900">
       <section
         class="pt-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
       >
-        <InfoTitle text="Discover our new product" href="/products/web-bouncer" />
+        <InfoTitle
+          text="Discover our new product"
+          href="/products/web-bouncer"
+        />
         <h1
           class="mb-4 h1 w-full mx-auto"
           set:text={"How To Make a Security Assessment Scope?"}
@@ -23,7 +29,7 @@ import InfoTitle from "~/components/InfoTitle.astro";
         />
       </section>
     </section>
-    
+
     <section
       class="mt-32 relative gap-y-8 grid grid-cols-1 md:grid-cols-2 p-4 max-w-5xl mx-auto"
     >
@@ -61,7 +67,7 @@ import InfoTitle from "~/components/InfoTitle.astro";
               <button
                 id="close_modal"
                 type="button"
-                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                class="bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                 data-modal-hide="staticModal"
               >
                 <svg
@@ -85,21 +91,24 @@ import InfoTitle from "~/components/InfoTitle.astro";
             <section class="p-6 space-y-6">
               <p
                 id="modal-content"
-                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                class="text-base leading-relaxed text-gray-500 dark:"
               >
                 Our white paper is sent to your email! Check your spam folder if
                 it's not showing up.
                 <br />
                 <br class="mt-8" /> For any issues, contact us <a
                   class="text-primary"
-                  href="mailto:info@starshipshield.com">info@starshipshield.com</a
+                  href="mailto:info@starshipshield.com"
+                  >info@starshipshield.com</a
                 >.
               </p>
             </section>
             <!-- Modal footer -->
           </section>
         </section>
-        <section class="flex flex-col justify-center items-center w-full md:w-96">
+        <section
+          class="flex flex-col justify-center items-center w-full md:w-96"
+        >
           <h1 class="sub-title text-center text-xl md:text-2xl">
             Get Access Now
           </h1>
@@ -143,9 +152,9 @@ import InfoTitle from "~/components/InfoTitle.astro";
           </p>
           <p class="text-xs text-center">
             YOUR INFORMATION IS 100% SAFE. WE NEVER SHARE YOUR INFORMATION WITH
-            ANYONE. BY CLICKING "Send Me The White Paper" YOU AGREE TO RECEIVE AUTO
-            AND PRE-MADE E-MAILS AT THE E-MAIL PROVIDED. I UNDERSTAND THAT MY
-            CONSENT IS NOT A CONDITION TO PURCHASE ANYTHING.
+            ANYONE. BY CLICKING "Send Me The White Paper" YOU AGREE TO RECEIVE
+            AUTO AND PRE-MADE E-MAILS AT THE E-MAIL PROVIDED. I UNDERSTAND THAT
+            MY CONSENT IS NOT A CONDITION TO PURCHASE ANYTHING.
           </p>
         </section>
       </section>
@@ -171,11 +180,12 @@ import InfoTitle from "~/components/InfoTitle.astro";
           alt="A picture displaying clear objectives and goals for a good security assessment scope"
         />
         <h3 class="h3 py-4">
-          <a class="transition ease-in duration-200">CLEAR OBJECTIVES & GOALS</a>
+          <a class="transition ease-in duration-200">CLEAR OBJECTIVES & GOALS</a
+          >
         </h3>
         <p class="text-muted p2">
-          A good scope contains exact objectives and goals that need to be met at
-          the end of every security assessment.
+          A good scope contains exact objectives and goals that need to be met
+          at the end of every security assessment.
         </p>
       </section>
       <section
@@ -191,13 +201,16 @@ import InfoTitle from "~/components/InfoTitle.astro";
           aspectRatio="300:300"
           alt="A picture displaying an attack surface for a good security assessment scope"
         />
-        <h3 class="text-xl py-4 font-bold leading-tight sm:text-2xl font-heading">
+        <h3
+          class="text-xl py-4 font-bold leading-tight sm:text-2xl font-heading"
+        >
           <a class="transition ease-in duration-200 uppercase">
             Clear Attack Surface</a
           >
         </h3>
         <p class="text-muted p2">
-          Providing clear information about your attack surface, what to & not to test is crucial for a good scope.
+          Providing clear information about your attack surface, what to & not
+          to test is crucial for a good scope.
         </p>
       </section>
 
@@ -214,7 +227,8 @@ import InfoTitle from "~/components/InfoTitle.astro";
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const scrollToOptButton = document.getElementById("scrollToOptButton");
-        const scrollToOptButton2 = document.getElementById("scrollToOptButton2");
+        const scrollToOptButton2 =
+          document.getElementById("scrollToOptButton2");
 
         const OptSection = document.getElementById("Opt");
 

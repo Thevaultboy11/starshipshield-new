@@ -92,7 +92,7 @@ const launchpad_services = [
             clip-rule="evenodd"></path></svg
         >
       </a>
-      <h1 class="max-w-2xl mb-6 h1">
+      <h1 class="max-w-2xl mb-6 h1 text-black">
         Your first step to <br />
         <span class="text-primary">outer-world</span> security
       </h1>
@@ -133,7 +133,7 @@ const launchpad_services = [
                   <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
                   <p class="p1 font-semibold" set:html={title} />
                 </div>
-                <p class="text-gray-400 p1" set:html={paragraph} />
+                <p class="  p1" set:html={paragraph} />
               </div>
             ))
           }
@@ -167,10 +167,7 @@ const launchpad_services = [
                   class="mb-2 p1 font-bold tracking-tight text-gray-900 dark:text-white"
                   set:text={title}
                 />
-                <p
-                  class="p1 text-gray-700 dark:text-gray-400"
-                  set:text={body}
-                />
+                <p class="p1 text-gray-700 dark: " set:text={body} />
               </div>
             ))
           }
@@ -226,17 +223,6 @@ const launchpad_services = [
         </div>
       </div>
     </div>
-
-    <!-- <div class="w-full max-w-5xl rounded-xl mx-auto px-4 mb-24">
-      <h1 class="h2 mb-4 text-center mx-auto">Contact Us</h1>
-      <p class="p1 mb-8 text-center max-w-3xl mx-auto">
-        Get in touch with our team at Starship Shield and schedule a meeting!
-      </p>
-      <div class="paper rounded-md w-full p-8">
-        <p class="h3 mb-4" id="opt-page">Step 1/2 (About your company)</p>
-        <ContactForm client:load />
-      </div>
-    </div> -->
   </article>
 </Layout>
 
