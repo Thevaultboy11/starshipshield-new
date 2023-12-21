@@ -1,20 +1,6 @@
 ---
-import { SITE } from "~/config.mjs";
 import Layout from "~/layouts/PageLayout.astro";
-import Cta from "~/components/Cta.astro";
-import Hero from "~/components/widgets/Hero.astro";
-import Note from "~/components/widgets/Note.astro";
-import Features from "~/components/widgets/Features.astro";
-import Features2 from "~/components/widgets/Features2.astro";
-import Steps from "~/components/widgets/Steps.astro";
-import Content from "~/components/widgets/Content.astro";
-import LatestPosts from "~/components/blog/LatestPosts.astro";
-import FAQs from "~/components/widgets/FAQs.astro";
-import Stats from "~/components/widgets/Stats.astro";
-import CallToAction from "~/components/widgets/CallToAction.astro";
-import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
-import Calendly from "~/components/Calendly.astro";
+
 import CalendlyWeb from "../../../components/CalendlyWeb.astro";
 const meta = {
   title: "Do you want amplified security? ",
@@ -50,7 +36,7 @@ const reviews = [
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
 
-  <div
+  <section
     class="flex flex-col justify-center items-center text-center gap-y-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-8 xl:gap-0 lg:pt-16"
   >
     <h1 class="max-w-2xl mb-4 h1">Do you want amplified security?</h1>
@@ -58,10 +44,10 @@ const reviews = [
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
       laudantium.
     </p>
-  </div>
-  <div class="w-full max-w-5xl mx-auto">
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 my-8 p-8">
-      <div
+  </section>
+  <section class="w-full max-w-5xl mx-auto">
+    <section class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 my-8 p-8">
+      <section
         class="info-secondary flex flex-col justify-center w-full max-w-xl px-4 py-16 rounded-md"
       >
         <h1 class="h3 text-secondary text-left">Meeting Objectives</h1>
@@ -83,10 +69,10 @@ const reviews = [
             >
           </li>
         </ul>
-      </div>
-      <div class="rounded-md border border-1">
+      </section>
+      <section class="rounded-md border border-1">
         <CalendlyWeb />
-      </div>
-    </div>
-  </div>
+      </section>
+    </section>
+  </section>
 </Layout>
