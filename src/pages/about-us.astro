@@ -59,35 +59,30 @@ const key_features = [
     content="Young and driven allies on the lookout for new ways of defending against hackers. Learn about Starship Shield's mission and meet the team."
   />
   <article>
-    <section class="w-full max-w-5xl text-center px-4 py-8 mx-auto mb-24">
+    <section class="w-full max-w-5xl text-center px-4 pt-8 mx-auto mb-24">
       <header>
-        <h1 class="h1 text-black">About Us</h1>
-        <p class="p1 text-black my-6 mx-auto">
-          Young and driven allies on the lookout for new ways of defending
-          against hackers.<br />
-          Learn about Starship Shield's mission and meet the team.
-        </p>
+        <h1 class="h1 text-black my-6">About Us</h1>
       </header>
       <section
         class="w-full paper rounded-md py-8 px-4 grid grid-cols-1 md:grid-cols-2"
       >
         <section
-          class="w-full flex items-center pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-black"
+          class="w-full flex items-center pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-main"
         >
           <h1 class="p1 mx-auto md:text-left">
             You guessed it. <br /> We’re changing the security game.
           </h1>
         </section>
         <section class="text-left p2 md:text-center md:pl-4">
-          <p>
-            Recognizing the challenges faced by small companies in the realm of
-            security, our founders embraced a mission to make security more
-            accessible and user-friendly for everyone.
+          <p class="p1">
+            Young and driven allies on the lookout for new ways of defending
+            against hackers. Learn about Starship Shield's mission and meet the
+            team.
           </p>
         </section>
       </section>
     </section>
-    <section class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <section class="w-full max-w-5xl px-4 mx-auto mb-12">
       <h1 class="h2 text-center mb-4">Meet Our Team</h1>
 
       <section
@@ -121,7 +116,7 @@ const key_features = [
           ))
         }
       </section>
-      <section class="w-full p-8">
+      <section class="w-full pt-8">
         {
           last_memeber.map((item, idx: any) => (
             <section class="flex flex-col gap-y-4 text-center w-60 mx-auto">
@@ -154,7 +149,7 @@ const key_features = [
       </section>
       <AchievementCarousel client:load />
     </section>
-    <section class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
+    <section class="w-full max-w-5xl px-4 mx-auto mb-24">
       <h1 class="h2 mb-8 text-center">Why Choose Us?</h1>
 
       <section class="grid grid-cos-1 md:grid-cols-3 gap-8">

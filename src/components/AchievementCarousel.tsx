@@ -53,7 +53,7 @@ export default function AchievemenCarousel() {
                   ></p>
                   <a
                     href={item.href}
-                    className="text-primary p1 cursor-pointer"
+                    className="text-primary hover:underline  cursor-pointer p2"
                   >
                     See More
                   </a>

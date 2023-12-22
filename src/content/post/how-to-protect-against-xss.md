@@ -11,10 +11,9 @@ tags:
 
 <meta name="description" content="Learn how to protect your web application from XSS attacks through input sanitization. Understand the nature of XSS and the importance of sanitization.">
 
-<h1 style="font-family: 'Roboto', sans-serif;">How To Protect Against XSS?</h1>
+<h1 style="font-family: 'Roboto';">How To Protect Against XSS?</h1>
 
 <h2 style="font-family: 'Roboto', sans-serif;">Introduction</h1>
-
 
 <p style="font-family: 'Roboto', sans-serif;">
 In the world of web development, security is paramount. One of the most common security vulnerabilities that web applications face today is Cross-Site Scripting (XSS). XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser-side script, to a different end user.
@@ -36,14 +35,14 @@ In the world of web development, security is paramount. One of the most common s
 To protect against XSS attacks, it's crucial to sanitize user input. <br>Here's a simple example in JavaScript:
 </p>
 
-
 ```javascript
 function sanitizeInput(text) {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(text));
-    return div.innerHTML;
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(text));
+  return div.innerHTML;
 }
 ```
+
 <p style="font-family: 'Roboto', sans-serif;">
 This function creates a new text node containing the user input, which automatically escapes any HTML tags. The sanitized text is then returned.
 </p>

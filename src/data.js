@@ -598,22 +598,26 @@ export const footerData = {
     {
       title: "Resources",
       links: [
+        {
+          text: "About us",
+          href: "/about-us",
+        },
         { text: "Blog", href: getBlogPermalink() },
-        {
-          text: "How To Make a Security Assessment Scope",
-          href: "/resources/scope-paper",
-        },
-        {
-          text: "Security Assessment Price Calculator",
-          href: "/resources/assesment-calculator",
-        },
       ],
     },
   ],
 
   socialLinks: [
-    { ariaLabel: "LinkedIn", icon: "tabler:brand-linkedin", href: "#" },
-    { ariaLabel: "Youtube", icon: "tabler:brand-youtube", href: "#" },
+    {
+      ariaLabel: "LinkedIn",
+      icon: "tabler:brand-linkedin",
+      href: "https://www.linkedin.com/company/97843633/",
+    },
+    {
+      ariaLabel: "Youtube",
+      icon: "tabler:brand-youtube",
+      href: "https://www.youtube.com/@starshipshield",
+    },
   ],
   footNote: `
   <div class='flex justify-center items-center gap-x-4'>

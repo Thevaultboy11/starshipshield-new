@@ -105,19 +105,24 @@ const client_profiles = new Array(6).fill(0);
           </div>
         </div>
         <div class="md:w-96 my-16 col-span-1 md:mx-auto paper rounded-md">
-          <div class="h-60 w-full grid grid-cols-3 gap-x-2 client-profile">
+          <div class="h-60 w-full grid grid-cols-3">
             {
               client_profiles.map((i, idx: number) => (
-                <Picture
-                  class:list={`h-24 w-full ${
-                    idx === 0 ? "rounded-tl-md" : ""
-                  }  ${idx === 2 ? "rounded-tr-md" : ""}`}
-                  src={`/images/client_profile/${idx + 1}.png`}
-                  widths={[1600, 800]}
-                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-                  aspectRatio="3:3"
-                  alt="Picture showcasing client wins and Success Stories"
-                />
+                <div class="">
+                  <Picture
+                    class:list={`h-24 w-24 
+                      ${idx === 0 ? "rounded-tl-md" : ""}
+                      ${idx === 2 ? "rounded-tr-md" : ""}
+                      ${idx === 1 || idx === 4 ? "mx-auto" : ""}  
+                      ${idx === 2 || idx === 5 ? "ml-auto" : ""}
+`}
+                    src={`/images/client_profile/${idx + 1}.png`}
+                    widths={[1600, 800]}
+                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                    aspectRatio="3:3"
+                    alt="Picture showcasing client wins and Success Stories"
+                  />
+                </div>
               ))
             }
           </div>
@@ -139,7 +144,7 @@ const client_profiles = new Array(6).fill(0);
       </div>
     </div>
 
-    <div class="w-full max-w-5xl px-4 mx-auto mb-24">
+    <div class="w-full max-w-5xl px-4 mx-auto mb-36">
       <div class="h2 text-center w-full max-w-lg mx-auto mb-8">
         Are You Facing These Security Challenges?
       </div>
@@ -148,15 +153,33 @@ const client_profiles = new Array(6).fill(0);
     <div class="h-full max-w-5xl mx-auto px-8 gap-8 grid md:grid-cols-2 mb-24">
       <div class="col-span-1">
         <Picture
-          class="w-full h-full md:my-auto rounded-md"
-          src="/images/about/hero4.png"
+          class="w-full h-60 rounded-md mb-4"
+          src="/images/about/hero/1.png"
           widths={[1600, 800]}
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-          aspectRatio="3:3"
+          aspectRatio="16:9"
           alt="Image describing one of our services"
         />
+        <div class="grid grid-cols-2 gap-x-4 h-40">
+          <Picture
+            class="w-full h-full rounded-md"
+            src="/images/about/hero/2.png"
+            widths={[1600, 800]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+            aspectRatio="3:3"
+            alt="Image describing one of our services"
+          />
+          <Picture
+            class="w-full h-full rounded-md"
+            src="/images/about/hero/3.png"
+            widths={[1600, 800]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+            aspectRatio="3:3"
+            alt="Image describing one of our services"
+          />
+        </div>
       </div>
-      <div class="col-span-1">
+      <div class="col-span-1 md:py-12">
         <div class="text-left mb-8">
           <p class="text-primary p1 font-semibold">
             Read the background story of our team
@@ -201,9 +224,8 @@ const client_profiles = new Array(6).fill(0);
 
     <Cta />
   </article>
-</Layout>
 
-<!-- <div class="w-full max-w-5xl px-4 mx-auto mb-24">
+  <!-- <div class="w-full max-w-5xl px-4 mx-auto mb-24">
   <div class="w-full max-w-lg text-center h2 mx-auto mb-8">
     Ready To Improve Your Security?
   </div>
@@ -239,3 +261,4 @@ const client_profiles = new Array(6).fill(0);
     ))
   }
 </div> -->
+</Layout>

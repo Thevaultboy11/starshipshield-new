@@ -21,55 +21,41 @@ const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, "post") : "";
 ---
 
 <article
-  class={`w-full  md:max-w-none max-h-max h-full grid gap-4 md:gap-8 p-8 md:p-8 bg-paper  rounded-xl  ${
+  class={`w-full  md:max-w-none max-h-max h-full p-4 md:p-8 paper  rounded-md  ${
     image ? "" : ""
   }`}
 >
   {
     image && (
-      <a class="relative block group" href={link ?? "javascript:void(0)"}>
-        <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-72  overflow-hidden bg-gray-400   rounded shadow-lg">
-          {image && (
-            <Picture
-              src={image}
-              class="absolute inset-0 object-cover w-full h-full mb-6 rounded shadow-lg bg-gray-400  "
-              widths={[400, 900]}
-              sizes="(max-width: 900px) 400px, 900px"
-              alt={post.title}
-              aspectRatio="16:9"
-              loading="lazy"
-              decoding="async"
-            />
-          )}
-        </div>
+      <a class="block group mb-4" href={link ?? "javascript:void(0)"}>
+        {image && (
+          <Picture
+            src={image}
+            class="w-full h-60 rounded-md "
+            widths={[400, 900]}
+            sizes="(max-width: 900px) 400px, 900px"
+            alt={post.title}
+            aspectRatio="4:3"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
       </a>
     )
   }
   <div class="">
     <header>
-      <div class="mb-1">
-        <span class="text-sm">
-          <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block" />
-          <time class="name-title" datetime={String(post.publishDate)}
-            >{getFormattedDate(post.publishDate)}</time
-          >
-          {
-            post.category && (
-              <>
-                {" "}
-                ·{" "}
-                <a
-                  class="capitalize hover:underline"
-                  href={getPermalink(post.category, "category")}
-                >
-                  {post.category.replaceAll("-", " ")}
-                </a>
-              </>
-            )
-          }
+      <div class="mb-4">
+        <span class="p2 h-8">
+          <div class="flex gap-x-2 items-center">
+            <Icon name="tabler:clock" class="w-5 h-5 inline-block" />
+            <time class="name-title" datetime={String(post.publishDate)}
+              >{getFormattedDate(post.publishDate)}</time
+            >
+          </div>
         </span>
       </div>
-      <h2 class="text-xl md:text-3xl leading-10 font-bold font-heading">
+      <h2 class="h3 h-16 mb-4">
         {
           link ? (
             <a
@@ -85,11 +71,7 @@ const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, "post") : "";
       </h2>
     </header>
 
-    {
-      post.excerpt && (
-        <p class="flex-grow text-muted   text-xl ">{post.excerpt}</p>
-      )
-    }
+    {post.excerpt && <p class="h-24 p2">{post.excerpt}</p>}
     <footer class="mt-5">
       <PostTags tags={post.tags} />
     </footer>

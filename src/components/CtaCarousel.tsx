@@ -8,7 +8,7 @@ const testimonial_text = [
     text: `Starship Shield found many vulnerabilities in our software that could enable hackers to steal customer data. Thanks to them, such incidents never happened and our software is now bulletproof.`,
     person: "Faruk Bavčić",
     img_url: "/images/client-profile/profile1.png",
-    url: "/story-type/client-story/app-it",
+    url: "/story-type/client-stories/app-it",
   },
 
   {
@@ -16,21 +16,21 @@ const testimonial_text = [
     text: `Starship Shield helped us secure our gaming marketplace by finding many vulnerabilities & issues, then helping us patch them in time. Thanks to them, our customers are safe and their data is protected.`,
     person: "Alen Vlahovljak",
     img_url: "/images/client-profile/profile2.png",
-    url: "/story-type/client-story/boostroom",
+    url: "/story-type/client-stories/boostroom",
   },
   {
     title: "SklopiPosao - Web Application Assessment",
     text: `We gave Starship Shield a chance at testing our application. They managed to find critical vulnerabilities leaving our customers at the mercy of hackers. Thanks to Starship Shield, we can now rest easy knowing our security is top-notch.`,
     person: "Ernad Bećirović",
     img_url: "/images/client-profile/profile3.png",
-    url: "/story-type/client-story/sklopi-posao",
+    url: "/story-type/client-stories/sklopi-posao",
   },
   {
     title: "Origin - Web Application Assessment",
     text: `Despite their youth, Starship Shield team was exceptionally professional and time efficient. Their dedication surprised us. At the end we've received high-quality security solutions and helped us implement them in our new application Patrola.ba.`,
     person: "Nermin Ćatović",
     img_url: "/images/client-profile/profile4.png",
-    url: "/story-type/client-story/origin",
+    url: "/story-type/client-stories/origin",
   },
 ];
 
@@ -40,6 +40,7 @@ export default function CtaCarousel() {
       <Swiper
         className="rounded-md"
         modules={[Autoplay, Pagination, Navigation]}
+        loop={true}
         navigation={{
           nextEl: ".cta-swiper-button-next",
           prevEl: ".cta-swiper-button-prev",
@@ -55,17 +56,16 @@ export default function CtaCarousel() {
                   alt="Android Blog"
                 />
                 <div className="col-span-1 md:col-span-3 text-left flex flex-col  p-4">
-                  <blockquote></blockquote>
-                  <h1 className="h3 mt-20">{title}</h1>
+                  <h1 className="h3 mt-12">{title}</h1>
                   <div className="w-full lg:w-5/6 my-8 p2">{text}</div>
                   <div className="flex items-center gap-x-4 w-full lg:w-5/6">
                     <p className="text-primary font-bold mr-auto p2">
                       {person}
                     </p>
                     <a
-                      className="btn-sm hover:text-primary p2 inline-flex items-center justify-center "
+                      className="btn-sm hover:text-primary p2 inline-flex items-center justify-center hover:underline"
                       href={url}
-                      target="_blank"
+                      target="_self"
                       rel="noopener"
                     >
                       Read More
