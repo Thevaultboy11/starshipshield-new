@@ -1,17 +1,17 @@
 ---
 publishDate: 2023-12-17T00:00:00Z
-title: "6 Ways to Create a Secure Development Lifecycle"
+title: "How to Create a Secure Dev Lifecycle?"
 excerpt: "A comprehensive guide on creating a secure development lifecycle using the best security practices."
 image: /images/blog/security-2023/blog.jpg
 tags:
-  - Software Development
+  - Development
   - Security
-  - Best Practices
+  - Lifecycle
 ---
 
 <meta name="description" content="Learn how to create a secure development lifecycle with a list of valuable best-security practices. Understand the nature of making your software development process secure and protected.">
 
-<h1 style="font-family: 'Roboto', sans-serif;">6 Ways to Create a Secure Development Lifecycle</h1>
+<h1 style="font-family: 'Roboto', sans-serif;">How to Create a Secure Development Lifecycle?</h1>
 
 <h2 style="font-family: 'Roboto', sans-serif;">Introduction</h2>
 
