@@ -70,7 +70,7 @@ export default function AchievemenCarousel() {
         direction={"horizontal"}
         speed={5000}
         loop={true}
-        slidesPerView={3}
+        slidesPerView={5}
         autoplay={{
           delay: 0,
           pauseOnMouseEnter: true,
@@ -84,11 +84,15 @@ export default function AchievemenCarousel() {
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -right-px from-transparent to-80% to-white"></div>
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -left-px   from-20% from-white to-transparent"></div>
         {picture_list.map((item: any, idx: number) => (
-          <SwiperSlide key={idx} className="w-40 rounded-md">
+          <SwiperSlide
+            key={idx}
+            className="w-40 rounded-md"
+            style={{ maxHeight: "135px" }}
+          >
             <a href={item.href}>
-              <div className="">
+              <div className=" ">
                 <img
-                  style={{ height: "135px !important" }}
+                  style={{ maxHeight: "135px", width: "auto" }}
                   src={item.src}
                   sizes=""
                   alt={item.alt}
