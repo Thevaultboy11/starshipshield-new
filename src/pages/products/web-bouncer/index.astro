@@ -41,182 +41,184 @@ const web_icons = new Array(6).fill(0);
     name="description"
     content="Learn more about our unique solution to high-conversion e-commerce websites, presenting Webouncer"
   />
-  <div
-    class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16"
-  >
-    <div class="md:col-span-5 md:text-center">
-      <div class="w-full">
-        <h1 class="w-full mb-4 h1 text-black">
-          How to secure your <br />
-          <span class="text-primary">e-commerce</span> store from cyber criminals?
-        </h1>
-        <p class="max-w-2xl mx-auto my-8 p1">
-          Webouncer is for high-traffic websites that want protection from
-          downtime or any other cyber attack.
-        </p>
-        <div
-          class="paper mx-auto max-w-2xl p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
-        >
-          <div class="flex flex-col items-start justify-start gap-y-2">
-            <h1 class="h3">10+</h1>
-            <p class="p1">Secured Clients</p>
-          </div>
-          <div class="flex flex-col items-start justify-start gap-y-2">
-            <h1 class="h3">5k+</h1>
-            <p class="p1">Secured Users</p>
-          </div>
-          <div class="flex flex-col items-start justify-start gap-y-2">
-            <h1 class="h3">100+</h1>
-            <p class="p1">Repelled Attacks</p>
-          </div>
-          <div class="flex flex-col items-center justify-center gap-y-2">
-            <a
-              href={tidycal_links.security_webouncer}
-              class="w-full md:w-auto py-2 px-3 btn-primary">Get free demo</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="grid grid-cols-2 md:grid-cols-6 px-4 gap-8 w-full max-w-5xl mx-auto mb-24"
-  >
-    {
-      web_icons.map((item, idx: number) => (
-        <Picture
-          class="w-full rounded-t-md"
-          src={`/images/partners/kralos/clients_logo/${idx + 1}.png`}
-          widths={[1600, 800]}
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-          aspectRatio="16:9"
-          alt="Picture showcasing client wins and Success Stories"
-        />
-      ))
-    }
-  </div>
-  <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
-    <div class="col-span-12 md:col-span-6 order-1 md:order-1 pt-6 rounded-xl">
-      <div>
-        <div class="flex flex-col">
-          <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
-          <h1 class="h2 my-4">
-            Who Needs <span class="text-primary">Webouncer</span> ?
-          </h1>
-          <div class="p1">
-            Say goodbye to downtime and cyber attacks on you and your customers.
-          </div>
-          <div class="p1 text-primary italic">
-            <br />Stop hackers once and for all.
-          </div>
-        </div>
-        {
-          data.map(({ icon, title, paragraph }) => (
-            <div class="flex w-full flex-col gap-y-3 mt-8">
-              <div class="flex items-center gap-x-2">
-                <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
-                <p class="p1 font-semibold" set:html={title} />
-              </div>
-              <p class="  p1" set:html={paragraph} />
-            </div>
-          ))
-        }
-      </div>
-    </div>
-    <div
-      class="rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2 md:pt-8"
+  <article>
+    <section
+      class="grid grid-cols-1 md:grid-cols-5 gap-x-8 max-w-5xl px-4 pt-8 mx-auto lg:gap-4 lg:py-16"
     >
-      <Picture
-        class="w-full h-full rounded-md"
-        src="/images/products/webouncer/problem.svg"
-        widths={[1600, 800]}
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-        aspectRatio="3:3"
-        alt="Image describing one of our services"
-      />
-    </div>
-  </div>
-  <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
-    <div class="flex flex-col col-span-12 mb-4 order-1 md:order-1">
-      <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
-      <h1 class="h2 my-4">What Makes It Special?</h1>
-    </div>
-    <div class="w-full h-full col-span-12 md:col-span-6 order- md:order-3">
-      <Picture
-        class="w-full h-full rounded-md"
-        src="/images/products/webouncer/hero.svg"
-        widths={[1600, 800]}
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-        aspectRatio="1:1"
-        alt="Image describing one of our services"
-      />
-    </div>
-    <div class="col-span-12 md:col-span-6 pt-6 rounded-xl order-3 md:order-2">
-      <div>
-        <div>
-          <div>
-            <h1 class="font-bold h3 mb-2">Webouncer</h1>
-            <p class="p1">
-              Makes your website immune to cyber attacks and it takes 10 minutes
-              to set-up.<br /><br />
-              <span class="text-primary font-semibold"
-                >Here is how it works:</span
+      <section class="md:col-span-5 md:text-center">
+        <section class="w-full">
+          <h1 class="w-full mb-4 h1 text-black">
+            How to secure your <br />
+            <span class="text-primary">e-commerce</span> store from cyber criminals?
+          </h1>
+          <p class="max-w-2xl mx-auto my-8 p1">
+            Webouncer is for high-traffic websites that want protection from
+            downtime or any other cyber attack.
+          </p>
+          <section
+            class="paper mx-auto max-w-2xl p-4 rounded-md w-full grid grid-cols-1 md:grid-cols-4 gap-y-4"
+          >
+            <section class="flex flex-col items-start justify-start gap-y-2">
+              <h1 class="h3">10+</h1>
+              <p class="p1">Secured Clients</p>
+            </section>
+            <section class="flex flex-col items-start justify-start gap-y-2">
+              <h1 class="h3">5k+</h1>
+              <p class="p1">Secured Users</p>
+            </section>
+            <section class="flex flex-col items-start justify-start gap-y-2">
+              <h1 class="h3">100+</h1>
+              <p class="p1">Repelled Attacks</p>
+            </section>
+            <section class="flex flex-col items-center justify-center gap-y-2">
+              <a
+                href={tidycal_links.security_webouncer}
+                class="w-full md:w-auto py-2 px-3 btn-primary">Get Free Demo</a
               >
-            </p>
-          </div>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section
+      class="grid grid-cols-2 md:grid-cols-6 px-4 gap-8 w-full max-w-5xl mx-auto mb-24"
+    >
+      {
+        web_icons.map((item, idx: number) => (
+          <Picture
+            class="w-full rounded-t-md"
+            src={`/images/partners/kralos/clients_logo/${idx + 1}.png`}
+            widths={[1600, 800]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+            aspectRatio="16:9"
+            alt="Picture showcasing client wins and Success Stories"
+          />
+        ))
+      }
+    </section>
+    <section class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
+      <section class="col-span-12 md:col-span-6 order-1 md:order-1 pt-6 rounded-xl">
+        <section>
+          <section class="flex flex-col">
+            <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
+            <h1 class="h2 my-4">
+              Who Needs <span class="text-primary">Webouncer</span> ?
+            </h1>
+            <section class="p1">
+              Say goodbye to downtime and cyber attacks on you and your customers.
+            </section>
+            <section class="p1 text-primary italic">
+              <br />Stop hackers once and for all.
+            </section>
+          </section>
           {
-            about_webbouncer.map(({ icon, title, paragraph }) => (
-              <div class="flex w-full flex-col gap-y-3 mt-8">
-                <div class="flex items-center gap-x-2">
+            data.map(({ icon, title, paragraph }) => (
+              <section class="flex w-full flex-col gap-y-3 mt-8">
+                <section class="flex items-center gap-x-2">
                   <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
                   <p class="p1 font-semibold" set:html={title} />
-                </div>
-                <p class=" p1  " set:html={paragraph} />
-              </div>
+                </section>
+                <p class="  p1" set:html={paragraph} />
+              </section>
             ))
           }
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mx-auto lg:max-w-5xl p-4 grid gap-x-8">
-    <h1 class="font-extrabold h2">
-      Built for <span class="text-primary">shop</span> and <span
-        class="text-primary">high-visitor</span
-      > website owners
-    </h1>
-    <p class="p1 max-w-3xl space-y-6 mt-4">
-      Whether you’re a small company or a team scaling for success there is
-      premium security <span class="font-semibold">waiting for you.</span>
-    </p>
-  </div>
-  <div class="mx-auto lg:max-w-5xl p-4">
-    <div
-      class="mx-auto text-white lg:max-w-5xl grid grid-cols-1 md:grid-cols-2 px-8 md:px-32 py-12 rounded-md bg-primary mb-24"
-    >
-      <div class="flex flex-col w-full max-w-md">
-        <h1 class="mb-4 h2 font-bold">
-          <span class="text-white">
-            Do you want to secure your <br />E-Commerce shop?
-          </span>
-        </h1>
-      </div>
-      <div
-        class="gap-x-4 flex flex-row justify-start md:justify-center items-center"
+        </section>
+      </section>
+      <section
+        class="rounded-md w-full h-full col-span-12 md:col-span-6 order-2 md:order-2 md:pt-8"
       >
-        <a
-          href={tidycal_links.security_webouncer}
-          class="bg-white text-black rounded-lg py-3 px-4 md:py-4 md:px-8"
-          >Get free demo</a
+        <Picture
+          class="w-full h-full rounded-md"
+          src="/images/products/webouncer/problem.svg"
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="3:3"
+          alt="Image describing one of our services"
+        />
+      </section>
+    </section>
+    <section class="mx-auto lg:max-w-5xl p-4 grid gap-x-8 grid-cols-12 mb-24">
+      <section class="flex flex-col col-span-12 mb-4 order-1 md:order-1">
+        <Icon name="tabler:world" class="text-primary w-8 h-8 inline-block" />
+        <h1 class="h2 my-4">What Makes It Special?</h1>
+      </section>
+      <section class="w-full h-full col-span-12 md:col-span-6 order- md:order-3">
+        <Picture
+          class="w-full h-full rounded-md"
+          src="/images/products/webouncer/hero.svg"
+          widths={[1600, 800]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+          aspectRatio="1:1"
+          alt="Image describing one of our services"
+        />
+      </section>
+      <section class="col-span-12 md:col-span-6 pt-6 rounded-xl order-3 md:order-2">
+        <section>
+          <section>
+            <section>
+              <h1 class="font-bold h3 mb-2">Webouncer</h1>
+              <p class="p1">
+                Makes your website immune to cyber attacks and it takes 10 minutes
+                to set-up.<br /><br />
+                <span class="text-primary font-semibold"
+                  >Here is how it works:</span
+                >
+              </p>
+            </section>
+            {
+              about_webbouncer.map(({ icon, title, paragraph }) => (
+                <section class="flex w-full flex-col gap-y-3 mt-8">
+                  <section class="flex items-center gap-x-2">
+                    <Icon name={icon} class="text-primary w-8 h-8 inline-block" />
+                    <p class="p1 font-semibold" set:html={title} />
+                  </section>
+                  <p class=" p1  " set:html={paragraph} />
+                </section>
+              ))
+            }
+          </section>
+        </section>
+      </section>
+    </section>
+    <section class="mx-auto lg:max-w-5xl p-4 grid gap-x-8">
+      <h1 class="font-extrabold h2">
+        Built for <span class="text-primary">shop</span> and <span
+          class="text-primary">high-visitor</span
+        > website owners
+      </h1>
+      <p class="p1 max-w-3xl space-y-6 mt-4">
+        Whether you’re a small company or a team scaling for success there is
+        premium security <span class="font-semibold">waiting for you.</span>
+      </p>
+    </section>
+    <section class="mx-auto lg:max-w-5xl p-4">
+      <section
+        class="mx-auto text-white lg:max-w-5xl grid grid-cols-1 md:grid-cols-2 px-8 md:px-32 py-12 rounded-md bg-primary mb-24"
+      >
+        <section class="flex flex-col w-full max-w-md">
+          <h1 class="mb-4 h2 font-bold">
+            <span class="text-white">
+              Do you want to secure your <br />E-Commerce shop?
+            </span>
+          </h1>
+        </section>
+        <section
+          class="gap-x-4 flex flex-row justify-start md:justify-center items-center"
         >
-        <a
-          href="/products/web-bouncer/pricing"
-          class="bg-transparent border-2 border-white text-white rounded-lg py-3 px-4 md:py-4 md:px-8 max-w-fit flex gap-x-2 items-center"
-        >
-          <p>Pricing Plans</p>
-          <Icon name="tabler:arrow-right" class="w-3.5 h-3.5 inline-block" />
-        </a>
-      </div>
-    </div>
-  </div>
+          <a
+            href={tidycal_links.security_webouncer}
+            class="bg-white text-black rounded-lg py-3 px-4 md:py-4 md:px-8"
+            >Get Free Demo</a
+          >
+          <a
+            href="/products/web-bouncer/pricing"
+            class="bg-transparent border-2 border-white text-white rounded-lg py-3 px-4 md:py-4 md:px-8 max-w-fit flex gap-x-2 items-center"
+          >
+            <p>Pricing Plans</p>
+            <Icon name="tabler:arrow-right" class="w-3.5 h-3.5 inline-block" />
+          </a>
+        </section>
+      </section>
+    </section>
+  </article>
 </Layout>
