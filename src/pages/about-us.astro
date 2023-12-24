@@ -53,7 +53,7 @@ const key_features = [
 ---
 
 <Layout>
-  <title>About Us | Starship Shield - Defenders Against Hackers</title>
+  <title>About Us | Starship Shield</title>
   <meta name="description" content="Learn about Starship Shield's mission, meet the team, and discover why we're changing the security game. Defenders against hackers with a young and driven team.">
   <meta name="keywords" content="Starship Shield, cybersecurity, team, mission, security game, hackers, defenders, about us">
   <meta name="robots" content="index, follow">
@@ -127,9 +127,9 @@ const key_features = [
         <section
           class="w-full flex items-center pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-main"
         >
-          <h1 class="p1 mx-auto md:text-left">
+          <h2 class="p1 mx-auto md:text-left">
             You guessed it. <br /> We’re changing the security game.
-          </h1>
+          </h2>
         </section>
         <section class="text-left p2 md:text-center md:pl-4">
           <p class="p1">
@@ -141,7 +141,7 @@ const key_features = [
       </section>
     </section>
     <section class="w-full max-w-5xl px-4 mx-auto mb-12">
-      <h1 class="h2 text-center mb-4">Meet Our Team</h1>
+      <h2 class="h2 text-center mb-4">Meet Our Team</h2>
 
       <section
         class="w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8"
@@ -158,7 +158,7 @@ const key_features = [
                 alt="Profile pictures of Starship Shield members"
               />
 
-              <h1 class="h3" set:text={item.name} />
+              <h2 class="h3" set:text={item.name} />
               <p
                 class="p2 w-2/3 md:w-full mx-auto"
                 set:text={item.description}
@@ -187,7 +187,7 @@ const key_features = [
                 alt="Picture from competition Starship Shield team won"
               />
 
-              <h1 class="h3" set:text={item.name} />
+              <h2 class="h3" set:text={item.name} />
               <p class="p2" set:text={item.description} />
               <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
                 <Icon
@@ -208,7 +208,7 @@ const key_features = [
       <AchievementCarousel client:load />
     </section>
     <section class="w-full max-w-5xl px-4 mx-auto mb-24">
-      <h1 class="h2 mb-8 text-center">Why Choose Us?</h1>
+      <h2 class="h2 mb-8 text-center">Why Choose Us?</h2>
 
       <section class="grid grid-cos-1 md:grid-cols-3 gap-8">
         {
@@ -222,7 +222,7 @@ const key_features = [
                 aspectRatio="3:3"
                 alt="Picture of competition - Starship Shield"
               />
-              <h1 class="h3" set:text={title} />
+              <h2 class="h3" set:text={title} />
               <p class="p2 w-2/3 md:w-full mx-auto" set:text={paragraph} />
             </section>
           ))
