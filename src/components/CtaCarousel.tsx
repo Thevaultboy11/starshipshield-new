@@ -50,10 +50,10 @@ export default function CtaCarousel() {
           <>
             <SwiperSlide>
               <div className="w-full h-full grid grid-cols-1 md:grid-cols-5 gap-x-8 paper rounded-md p-8">
-                <a href={url}>
+                <a className="col-span-1 md:col-span-2  rounded-3xl" href={url}>
                   <img
                     src={img_url}
-                    className="block w-full h-full object-cover rounded-3xl col-span-1 md:col-span-2 aspect-w-4 aspect-h-5"
+                    className="block w-full h-full object-cover  rounded-3xl  aspect-w-4 aspect-h-5"
                     alt="Android Blog"
                   />
                 </a>

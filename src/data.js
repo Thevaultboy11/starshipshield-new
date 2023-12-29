@@ -20,7 +20,7 @@ export const case_study_list = [
       title: "How Boostroom Evaded a Data Breach",
     },
     img: {
-      link: "/images/success-story/testimonials/1.png",
+      link: "/images/success-story/testimonials/3.png",
       alt: "",
     },
     card: {
