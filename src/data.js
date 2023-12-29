@@ -564,9 +564,9 @@ export const headerData = {
       text: "Our Products",
       href: "/resources",
       links: [
-        { text: "Webouncer", href: "/products/web-bouncer" },
         { text: "Security Launchpad", href: "/products/security-launchpad" },
         { text: "PTaaS", href: "/products/ptaas" },
+        { text: "Webouncer", href: "/products/web-bouncer" },
       ],
     },
   ],
@@ -626,7 +626,7 @@ export const footerData = {
       width="40"
       height="40"
     />  
-    <p>Made by <a class="text-blue-600 hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
+    <p>Made by <a class="text-primary hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
   </div> 
   `,
 };
@@ -659,7 +659,7 @@ export const footerData = {
 //   footNote: `
 //   <div class='flex justify-center items-center gap-x-4'>
 //     <span class="w-20 h-8 md:w-20 md:h-8 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(/images/blacklogo.png)]"></span>
-//     <p>Made by <a class="text-blue-600 hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
+//     <p>Made by <a class="text-primary hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
 //   </div>
 //    `,
 // };

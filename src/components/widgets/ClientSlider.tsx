@@ -66,7 +66,7 @@ export default function AchievemenCarousel() {
     <>
       {" "}
       <Swiper
-        spaceBetween={30}
+        spaceBetween={120}
         direction={"horizontal"}
         speed={5000}
         loop={true}
@@ -78,8 +78,14 @@ export default function AchievemenCarousel() {
           reverseDirection: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper border-y-2  border-gray-200 border-12 relative my-10 h-10 mb-24"
+        className="mySwiper border-y-2   border-gray-200 border-12 relative my-10  mb-24"
         style={{ overflow: "hidden" }}
+        breakpoints={{
+          // when window width is >= 320px
+          768: {
+            spaceBetween: 30,
+          },
+        }}
       >
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -right-px from-transparent to-80% to-white"></div>
         <div className="bg-gradient-to-r absolute h-full top-0 w-[20%] z-10 -left-px   from-20% from-white to-transparent"></div>
@@ -92,7 +98,11 @@ export default function AchievemenCarousel() {
             <a href={item.href}>
               <div className=" ">
                 <img
-                  style={{ maxHeight: "135px", width: "auto" }}
+                  style={{
+                    minHeight: "70px",
+                    maxHeight: "135px",
+                    width: "auto",
+                  }}
                   src={item.src}
                   sizes=""
                   alt={item.alt}

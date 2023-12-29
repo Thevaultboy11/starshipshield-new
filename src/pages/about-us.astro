@@ -59,38 +59,30 @@ const key_features = [
     content="Young and driven allies on the lookout for new ways of defending against hackers. Learn about Starship Shield's mission and meet the team."
   />
   <article>
-    <section class="w-full max-w-5xl text-center px-4 pt-8 mx-auto mb-24">
+    <section class="w-full max-w-5xl md:text-center px-4 pt-8 mx-auto mb-24">
       <header>
         <h1 class="h1 text-black my-6">About Us</h1>
       </header>
-      <section
-        class="w-full paper rounded-md py-8 px-4 grid grid-cols-1 md:grid-cols-2"
-      >
-        <section
-          class="w-full flex items-center pb-4 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-main"
-        >
-          <h1 class="p1 mx-auto md:text-left">
-            You guessed it. <br /> We’re changing the security game.
-          </h1>
-        </section>
-        <section class="text-left p2 md:text-center md:pl-4">
+      <section class="w-full paper rounded-md py-8 px-4">
+        <section class="text-left p2 md:text-center">
           <p class="p1">
-            Young and driven allies on the lookout for new ways of defending
-            against hackers. Learn about Starship Shield's mission and meet the
-            team.
+            <span class="text-primary">Young</span> and <span
+              class="text-primary">driven</span
+            > allies on the lookout for new ways of defending against hackers. Learn
+            about Starship Shield's mission and meet the team.
           </p>
         </section>
       </section>
     </section>
     <section class="w-full max-w-5xl px-4 mx-auto mb-12">
-      <h1 class="h2 text-center mb-4">Meet Our Team</h1>
+      <h1 class="h2 md:text-center mb-4">Meet Our Team</h1>
 
       <section
-        class="w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8"
+        class="w-full py-8 grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8"
       >
         {
           team_members.map((item, idx: any) => (
-            <section class="flex flex-col gap-y-4 text-center">
+            <section class="flex flex-col gap-y-4 md:text-center">
               <Picture
                 class="h-40 w-40 mx-auto rounded-full"
                 src={item.img_url}
@@ -102,10 +94,10 @@ const key_features = [
 
               <h1 class="h3" set:text={item.name} />
               <p
-                class="p2 w-2/3 md:w-full mx-auto"
+                class="p2 w-5/ md:w-full mx-auto"
                 set:text={item.description}
               />
-              <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
+              <a href={item.linked_in_url} class="flex gap-x-4 md:mx-auto">
                 <Icon
                   pack="cib"
                   name="linkedin"
@@ -119,19 +111,19 @@ const key_features = [
       <section class="w-full pt-8">
         {
           last_memeber.map((item, idx: any) => (
-            <section class="flex flex-col gap-y-4 text-center w-60 mx-auto">
+            <section class="flex flex-col gap-y-4 md:w-60 md:mx-auto md:text-center">
               <Picture
                 class="h-40 w-40 mx-auto rounded-full"
                 src={item.img_url}
                 widths={[1600, 800]}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
                 aspectRatio="3:3"
-                alt="Picture from competition Starship Shield team won"
+                alt="Profile pictures of Starship Shield members"
               />
 
               <h1 class="h3" set:text={item.name} />
-              <p class="p2" set:text={item.description} />
-              <a href={item.linked_in_url} class="flex gap-x-4 mx-auto">
+              <p class="p2  md:w-full mx-auto" set:text={item.description} />
+              <a href={item.linked_in_url} class="flex gap-x-4 md:mx-auto">
                 <Icon
                   pack="cib"
                   name="linkedin"
@@ -144,18 +136,18 @@ const key_features = [
       </section>
     </section>
     <section class="w-full max-w-5xl px-4 py-8 mx-auto mb-24">
-      <section class="h2 w-full mb-4 text-center mx-auto">
+      <section class="h2 w-full mb-4 md:text-center mx-auto">
         Competitions We've Won
       </section>
       <AchievementCarousel client:load />
     </section>
     <section class="w-full max-w-5xl px-4 mx-auto mb-24">
-      <h1 class="h2 mb-8 text-center">Why Choose Us?</h1>
+      <h1 class="h2 mb-8 md:text-center">Why Choose Us?</h1>
 
       <section class="grid grid-cos-1 md:grid-cols-3 gap-8">
         {
           key_features.map(({ img_url, title, paragraph }, idx: number) => (
-            <section class="flex flex-col gap-y-4 text-center" key={idx}>
+            <section class="flex flex-col gap-y-4 md:text-center" key={idx}>
               <Picture
                 class="h-40 w-40 mx-auto select-none"
                 src={img_url}
@@ -165,7 +157,7 @@ const key_features = [
                 alt="Picture of competition - Starship Shield"
               />
               <h1 class="h3" set:text={title} />
-              <p class="p2 w-2/3 md:w-full mx-auto" set:text={paragraph} />
+              <p class="p2 w-5/ md:w-full mx-auto" set:text={paragraph} />
             </section>
           ))
         }

@@ -54,7 +54,7 @@ const client_win = [
     >
       <section class="mx-auto md:col-span-5 md:text-center">
         <h1 class="max-w-2xl mb-4 h1 text-black">
-          Listen to what our <span class="text-primary px-2">clients</span> have
+          Listen to what our <span class="text-primary md:px-2">clients</span> have
           to say about us...
           <br />
         </h1>
@@ -79,15 +79,19 @@ const client_win = [
       </section>
     </section>
     <section class="w-full max-w-5xl px-4 mx-auto mt-24">
-      <h1 class="h2 max-w-lg mx-auto text-center mb-4">Success Stories</h1>
-      <section class="grid grid-cols-1 md:grid-cols-3 w-full gap-x-8 gap-y-12">
+      <h1 class="h2 max-w-lg mx-auto md:text-center mb-6 md:mb-4">
+        Success Stories
+      </h1>
+      <section
+        class="grid grid-cols-1 md:grid-cols-3 w-full gap-x-8 gap-y-16 md:gap-y-12"
+      >
         {
           client_win.map(
             (
               { title, body, img_url, case_study_url, test_type },
               idx: number
             ) => (
-              <section>
+              <a class="" href={case_study_url}>
                 <Picture
                   class="w-full rounded-md"
                   src={img_url}
@@ -102,11 +106,9 @@ const client_win = [
                   <p class="p2" set:text={body} />
                 </section>
                 <section class="flex gap-x-4 ">
-                  <a href={case_study_url} class="btn-primary btn-sm">
-                    View More
-                  </a>
+                  <button class="btn-primary btn-sm">View More</button>
                 </section>
-              </section>
+              </a>
             )
           )
         }

@@ -1,6 +1,6 @@
 ---
 publishDate: 2023-12-14T00:00:00Z
-title: "How To Protect Against XSS?"
+title: "How To Protect Against XSS attacks?"
 excerpt: "A comprehensive guide on understanding and mitigating XSS vulnerabilities through input sanitization."
 image: /images/blog/security-2023/blog2.png
 tags:

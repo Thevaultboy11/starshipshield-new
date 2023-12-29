@@ -43,7 +43,7 @@ export default function ProblemCarousel() {
         style={{ overflow: "hidden", height: "400px" }}
       >
         {ProblemList.map((item: any, idx: number) => (
-          <SwiperSlide key={idx} className="w-full h-96">
+          <SwiperSlide key={idx} className="w-full h-auto rounded-md">
             <div className="h-full w-full paper grid grid-cols-12">
               <div className=" flex flex-col justify-center items-center col-span-12 md:col-span-6 rounded-l-md h-full p-8">
                 <div className="h-full  items-left gap-y-2 text-left">

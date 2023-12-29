@@ -3,20 +3,7 @@ import Icon from "astro-icon";
 import Layout from "../../../layouts/PageLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import { Fragment } from "astro/dist/runtime/server";
-
-const before_list = [
-  `One security mistake can put your whole company at risk.`,
-  `There's no process to find out where your security is the weakest.`,
-  `You can't do business with big clients that demand you meet security compliances and regulations.`,
-  `Without mandatory security rules, you are at risk of compliance & regulation fines.`,
-];
-
-const after_list = [
-  `You'll have a secure code template for creating your next product.`,
-  `Our insights will help you identify and fix security issues effectively.`,
-  `After using this bundle, you'll be compliant, allowing you to work with high-paying clients.`,
-  `Setting up these security rules will eliminate the chances of breaking compliences.`,
-];
+import Cta from "~/components/Cta.astro";
 
 const services = [
   {
@@ -64,16 +51,16 @@ const bonus_list = [
 ];
 const data = [
   {
-    icon: "tabler:building",
-    title: "Service-Based Companies",
+    icon: "tabler:device-tablet",
+    title: "Platform Reporting",
     paragraph:
-      "For companies that provide software development services to others, where security doesn't always fit the margin of developing solutions.",
+      "Our single platform handles all penetration tests, ensuring a faster process, quicker reports, and efficient remedy procedures.",
   },
   {
     icon: "tabler:users",
-    title: "Product-Based Companies",
+    title: "You, yes you the client come first",
     paragraph:
-      "For companies that focus on developing software solutions for their customers, where security is neglected for 'Time to Market' speed.",
+      "For effective security, attention to detail is essential. We maintain an equal commitment to every client and give our maximum for the best results.",
   },
 ];
 ---
@@ -114,17 +101,13 @@ const data = [
                 name="ri:space-ship-fill"
                 class="text-primary w-8 h-8 inline-block"
               />
-              <h1 class="h2 my-4">
-                Who Needs The<br /><span class="text-primary"
-                  >Security Launchpad</span
-                >?
-              </h1>
+              <h1 class="h2 my-4">What Makes Our Services Special?</h1>
               <div class="p1">
-                Security Launchpad is a service offered to companies that want
-                to deliver software fast while retaining security.
+                With the world of penetration testing changing every year, so do
+                our services.
               </div>
               <div class="p1 text-primary italic">
-                <br />Stop hackers once and for all.
+                <br />Build security foundations with Security Launchpad.
               </div>
             </div>
             {
@@ -148,7 +131,7 @@ const data = [
         >
           <Picture
             class="w-full rounded-md"
-            src="/images/products/security-launchpad/hero.svg"
+            src="/images/products/security-launchpad/hero2.svg"
             widths={[1600, 800]}
             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
             aspectRatio="3:3"
@@ -159,7 +142,7 @@ const data = [
     </section>
 
     <div class="px-4 w-full max-w-5xl mx-auto mb-24">
-      <h1 class="h2 mx-auto text-center my-8">Services you get</h1>
+      <h1 class="h2 mx-auto md:text-center my-8">Services you get</h1>
       <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
         {
           services.map(({ title, body, href }, idx: number) => (
@@ -181,7 +164,7 @@ const data = [
       </div>
     </div>
     <div class="px-4 w-full max-w-5xl mx-auto mb-24">
-      <h1 class="h2 mx-auto text-center my-8">Bonuses You Get</h1>
+      <h1 class="h2 mx-auto md:text-center my-8">Bonuses You Get</h1>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         {
           bonus_list.map(({ title, body, href }) => (
@@ -202,44 +185,8 @@ const data = [
         }
       </div>
     </div>
-    <div class="w-full max-w-5xl p-4 mx-auto mb-24">
-      <div
-        class="bg-primary w-full rounded-md shadow-xl overflow-hidden md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-2 lg:gap-4"
-      >
-        <div
-          class="flex flex-col mb-4 text-white items-start pt-10 pb-12 px-6 sm:pt-16 sm:px-16 md:py-20 md:pr-0 lg:py-20 lg:pr-0 xl:px-20"
-        >
-          <h1 class="mb-4 h2">
-            <span class="block text-white"
-              >Ready to implement better security? Take your first step.</span
-            >
-          </h1>
-          <p class="text-sm md:text-base py-4">
-            We help founders like you prioritize key security issues first.
-            After our services, you'll have a strong security posture.
-          </p>
-          <div class="flex justify-cetner mt-8 gap-x-4 items-center">
-            <a
-              href="/learn-more"
-              class="btn-white btn-sm duration-200 hover:-translate-y-2"
-              >Take first step</a
-            >
-          </div>
-        </div>
-        <div class="w-full relative">
-          <Picture
-            class="translate-x-6 translate-y-6 rounded-md object-cover object-left-top lg:translate-x-4 lg:translate-y-4"
-            src="/images/cta.svg"
-            width={800}
-            height={800}
-            widths={[400, 768]}
-            sizes="100vw, 432px"
-            aspectRatio="300:300"
-            alt="sa"
-          />
-        </div>
-      </div>
-    </div>
+
+    <Cta />
   </article>
 </Layout>
 

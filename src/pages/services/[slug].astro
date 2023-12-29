@@ -50,22 +50,24 @@ const { service_name, href, definition, problem_list, solution_list, img_url } =
 
           <p class="max-w-2xl mb-6 p2" set:text={definition} />
         </section>
-        <section class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+        <section class="lg:mt-0 lg:col-span-5 lg:flex">
           <img src={img_url} alt="Stock image of a phone" />
         </section>
       </section>
     </section>
 
     <section class="mx-auto max-w-5xl p-4 mb-12">
-      <h1 class="h2 mx-auto text-center mb-4">What Problem Does It Solve?</h1>
-      <p class="p2 text-center mb-8 max-w-lg mx-auto">
+      <h1 class="h2 mx-auto md:text-center mb-4">
+        What Problem Does It Solve?
+      </h1>
+      <p class="p2 md:text-center mb-8 max-w-lg mx-auto">
         Cyber criminals target the most vulnerable point first. It's crucial to
         protect against all possible ways they could attack
       </p>
       <TabComponent tabData={problem_list} client:load />
     </section>
     <section class="mx-auto max-w-5xl px-4 mb-24">
-      <h1 class="h2 mx-auto text-center my-8">What Do You Get?</h1>
+      <h1 class="h2 mx-auto md:text-center my-8">What Do You Get?</h1>
 
       <section class="mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8">
         {

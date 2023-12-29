@@ -5,7 +5,7 @@ const {
 } = Astro.props;
 ---
 
-<header class="mb-8 md:mb-16 text-center max-w-3xl mx-auto">
+<header class="mb-8 md:mb-16 md:text-center max-w-3xl mx-auto">
   <h1 class="max-w-5xl text-black h1" set:html={title} />
   {subtitle && <div class="mt-2 md:mt-3 mx-auto p1" set:html={subtitle} />}
 </header>

@@ -167,13 +167,13 @@ const {
               <li class={links?.length ? "dropdown" : ""}>
                 {links?.length ? (
                   <>
-                    <a class="mb-4" href={href} set:text={text} />
+                    <div class="mb-2" set:text={text} />
                     {/* Dropdown menu for mobile */}
                     <ul class="dropdown-menu md:backdrop-blur-md rounded md:absolute bg-transparent pl-4 md:pl-0 md:hidden font-medium md:min-w-[200px]">
                       {links.map(({ text: text2, href: href2 }) => (
                         <li>
                           <a
-                            class="first:rounded-t last:rounded-b   py-2 px-5 block whitespace-no-wrap"
+                            class="first:rounded-t last:rounded-b    py-2 px-5 block whitespace-no-wrap"
                             href={href2}
                           >
                             {text2}

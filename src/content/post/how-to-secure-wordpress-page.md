@@ -1,6 +1,6 @@
 ---
 publishDate: 2023-12-14T00:00:00Z
-title: "How To Secure Your WordPress?"
+title: "How To Secure Your WordPress Site?"
 excerpt: "A comprehensive guide on securing your WordPress page using the best security practices."
 image: /images/blog/security-2023/blog3.png
 tags:
