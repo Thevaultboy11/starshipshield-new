@@ -11,7 +11,7 @@ tags:
 
 <meta name="description" content="Learn how to protect your web application from XSS attacks through input sanitization. Understand the nature of XSS and the importance of sanitization.">
 
-<h1 style="font-family: 'Roboto';">How To Protect Against XSS?</h1>
+<h1 style="font-family: 'Roboto', sans-serif;">How To Protect Against XSS?</h1>
 
 <h2 style="font-family: 'Roboto', sans-serif;">Introduction</h1>
 
@@ -56,6 +56,4 @@ In conclusion, sanitizing user input is a critical step in protecting your web a
 <p style="font-family: 'Roboto', sans-serif;">
 Remember, in the world of web development, security should never be an afterthought!
 
-</p><p style="font-family: 'Roboto', sans-serif;">
-Please note that this is a simplified explanation, and real-world applications might require more complex solutions. Always stay updated with the latest security practices and libraries.
 </p>

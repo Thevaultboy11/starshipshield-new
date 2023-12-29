@@ -54,10 +54,68 @@ const key_features = [
 
 <Layout>
   <title>About Us | Starship Shield</title>
-  <meta
-    name="description"
-    content="Young and driven allies on the lookout for new ways of defending against hackers. Learn about Starship Shield's mission and meet the team."
-  />
+  <meta name="description" content="Learn about Starship Shield's mission, meet the team, and discover why we're changing the security game. Defenders against hackers with a young and driven team.">
+  <meta name="keywords" content="Starship Shield, cybersecurity, team, mission, security game, hackers, defenders, about us">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.starshipshield.com/about-us">
+
+  <link rel="icon" href="/favicon.ico">
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Starship Shield",
+      "url": "https://www.starshipshield.com",
+      "logo": "https://www.starshipshield.com/images/mainlogo.svg",
+      "description": "Defenders against hackers with a young and driven team",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+387603571117",
+        "contactType": "customer support"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Eman Ćatić",
+      "jobTitle": "Penetration Tester",
+      "url": "https://www.linkedin.com/in/eman-catic/",
+      "image": "https://www.starshipshield.com/images/about/profile1.png",
+      "description": "Skilled security engineer with 4+ years of experience in penetration testing, bug bounties, and CTF competitions."
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Almir Dautbegović",
+      "jobTitle": "Tech Salesman",
+      "url": "https://www.linkedin.com/in/almir-starship-shield/",
+      "image": "https://www.starshipshield.com/images/about/profile2.png",
+      "description": "Passionate tech salesman, skilled copywriter crafting clear text to help non-tech folks grasp security issues."
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Rijad Gadžo",
+      "jobTitle": "Penetration Tester",
+      "url": "https://www.linkedin.com/in/gadzo-rijad/",
+      "image": "https://www.starshipshield.com/images/about/profilee3.png",
+      "description": "Experienced DevSecOps engineer with a background in penetration testing in numerous companies around the world."
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Džemal Džananović",
+      "jobTitle": "Founder & Mobile Security Engineer",
+      "url": "https://www.linkedin.com/in/secure-startups/",
+      "image": "https://www.starshipshield.com/images/about/profile4.png",
+      "description": "Skilled mobile security engineer that will help you integrate the best security solutions to your application codebase."
+    }
+  </script>
+
   <article>
     <section class="w-full max-w-5xl md:text-center px-4 pt-8 mx-auto mb-24">
       <header>
@@ -92,7 +150,7 @@ const key_features = [
                 alt="Profile pictures of Starship Shield members"
               />
 
-              <h1 class="h3" set:text={item.name} />
+              <h2 class="h3" set:text={item.name} />
               <p
                 class="p2 w-5/ md:w-full mx-auto"
                 set:text={item.description}
