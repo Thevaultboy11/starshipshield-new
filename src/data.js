@@ -293,7 +293,7 @@ export const services_list = [
       {
         tab: "Identifying Vulnerabilities",
         title: "Identifying Vulnerabilities",
-        body: `Penetration testing identifies and addresses weaknesses within the internal network, preventing potential exploits.`,
+        body: `Penetration testing identifies and addresses weaknesses on the outside (external) of the network, preventing potential exploits.`,
       },
       {
         tab: "Third Party Security",
