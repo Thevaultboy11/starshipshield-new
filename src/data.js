@@ -27,16 +27,16 @@ export const case_study_list = [
       title: "Nermin Ćatović",
       body: `
       <p class="p1 mb-7">
-      I got referred to Starship Shield via my good friend Faruk Bavčić. Their whole story reminded me of myself when I was starting my business. I wanted to try their services and help the team in some business lessons I learned throughout the years.
+      I got referred to Omni Security via my good friend Faruk Bavčić. Their whole story reminded me of myself when I was starting my business. I wanted to try their services and help the team in some business lessons I learned throughout the years.
       </p> 
       <p class="p1 mb-7">
-      Thanks to Starship Shield's services, they helped my company evade multiple account takeovers on our administrator accounts and access to other data of accounts. 
+      Thanks to Omni Security's services, they helped my company evade multiple account takeovers on our administrator accounts and access to other data of accounts. 
       </p>
       <p class="p1 mb-7">
       After the comprehensive security assessment, they identified vulnerabilities but also equipped us with the knowledge to promptly address the vulnerabilities using the resources they provided.
       </p>
       <p class="p1 mb-7">
-        I recommend Starship Shield's services because of  their accessibility and commitment to delivering high-quality solutions with their services & bonuses.
+        I recommend Omni Security's services because of  their accessibility and commitment to delivering high-quality solutions with their services & bonuses.
       </p>
 
       `,
@@ -64,11 +64,11 @@ export const case_study_list = [
       title: "Ernad Bećirović",
       body: `
       <p class="p1 mb-7">
-        Sklopi Posao and Starship Shield have an anecdote on how we came in contact. The Starship Shield team used our application for finding projects and while using our application they’ve noticed that the application has security mispractices and could be exploited.
+        Sklopi Posao and Omni Security have an anecdote on how we came in contact. The Omni Security team used our application for finding projects and while using our application they’ve noticed that the application has security mispractices and could be exploited.
       </p>
 
       <p class="p1 mb-7">
-        We settled on doing a penetration test of our application. During the test, the Starship Shield team got a complete admin account takeover and other vulnerabilities.
+        We settled on doing a penetration test of our application. During the test, the Omni Security team got a complete admin account takeover and other vulnerabilities.
       </p>
 
       <p class="p1 mb-7">
@@ -76,7 +76,7 @@ export const case_study_list = [
       </p>
 
       <p class="p1 mb-7">
-        I would like to wish Starship Shield good luck in their new business endeavors because of their innovative approach and the helpfulness they showed while working on our project.
+        I would like to wish Omni Security good luck in their new business endeavors because of their innovative approach and the helpfulness they showed while working on our project.
       </p>`,
     },
   },
@@ -98,7 +98,7 @@ export const case_study_list = [
       title: "Alen Vlahovljak",
       body: `
       <p class="p1 mb-7">
-      I heard about Starship Shield when the team was still forming. They offered to do a penetration test for us. I was skeptical but wanted to test the overall knowledge of my developers.    
+      I heard about Omni Security when the team was still forming. They offered to do a penetration test for us. I was skeptical but wanted to test the overall knowledge of my developers.    
       </p>
 
       <p class="p1 mb-7">
@@ -110,7 +110,7 @@ export const case_study_list = [
       </p>
 
       <p class="p1 mb-7">
-      Therefore, I highly recommend Starship Shield’s services
+      Therefore, I highly recommend Omni Security’s services
 
       They are fast, reliable and really dedicated to their work, which is the most important thing in business.
       </p>`,
@@ -135,18 +135,18 @@ export const case_study_list = [
       title: "Luka Miljuš",
       body: `
       <p class="p1 mb-7">
-        We found out about Starship Shield via Linkedin. We were intrigued when they sent us a message that our game “Idle Hooligans” was insecure.
+        We found out about Omni Security via Linkedin. We were intrigued when they sent us a message that our game “Idle Hooligans” was insecure.
       </p>
 
       <p class="p1 mb-7">
-      The Starship Shield team suggested that we do a mobile penetration test so we can check the current security measures we’ve put in place. Despite the confidence I had in my team development skills, I gave Starship Shield a chance.      </p>
+      The Omni Security team suggested that we do a mobile penetration test so we can check the current security measures we’ve put in place. Despite the confidence I had in my team development skills, I gave Omni Security a chance.      </p>
 
       <p class="p1 mb-7">
       After the penetration test, they helped us fix some game-breaking vulnerabilities that an attacker could exploit to cheat in the game and pirate the source code.
       </p>
 
       <p class="p1 mb-7">
-      Thanks to Starship Shield, OOX is now one step ahead of our competition, maintaining both confidentiality and customer satisfaction. We can rest easily, knowing the security of our game is top-notch.
+      Thanks to Omni Security, OOX is now one step ahead of our competition, maintaining both confidentiality and customer satisfaction. We can rest easily, knowing the security of our game is top-notch.
       </p>
 
 `,
@@ -160,12 +160,12 @@ export const case_study_list = [
       service_link: `/services/web-app-penetration test`,
       cta: `Security Launchpad`,
       title: `Here's how we secured a local company from head to toe`,
-      body: `App IT was a company in need of security improvement from the ground up and Starship Shield delivered that`,
+      body: `App IT was a company in need of security improvement from the ground up and Omni Security delivered that`,
     },
     youtube: {
       link: "https://www.youtube.com/embed/e2lxRFiawCY",
       title:
-        "Our software had security holes, but thanks to Starship Shield Team those holes are fully covered",
+        "Our software had security holes, but thanks to Omni Security Team those holes are fully covered",
     },
 
     card: {
@@ -176,10 +176,10 @@ export const case_study_list = [
       </p>
 
       <p class="p1 mb-7">
-      Thanks to Starship Shield, we were able to prevent multiple account takeovers, securing our customer data. After the penetration test, they showed us a clear path for moving forward and demonstrated how to quickly address all vulnerabilities with the resources provided to us. Using their help we designed a secure code template so that our software is secure from the first day.      </p>
+      Thanks to Omni Security, we were able to prevent multiple account takeovers, securing our customer data. After the penetration test, they showed us a clear path for moving forward and demonstrated how to quickly address all vulnerabilities with the resources provided to us. Using their help we designed a secure code template so that our software is secure from the first day.      </p>
 
       <p class="p1 mb-7">
-        I highly recommend Starship Shield's services. They were always available, ready to deliver fast and high-quality solutions to our security problems.
+        I highly recommend Omni Security's services. They were always available, ready to deliver fast and high-quality solutions to our security problems.
       </p>
 
       <p class="p1 mb-7">
@@ -626,7 +626,7 @@ export const footerData = {
       width="40"
       height="40"
     />  
-    <p>Made by <a class="text-primary hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
+    <p>Made by <a class="text-primary hover:underline  " href="https://starshipshield.com/"> Omni Security</a> · All rights reserved.</p>
   </div> 
   `,
 };
@@ -659,7 +659,7 @@ export const footerData = {
 //   footNote: `
 //   <div class='flex justify-center items-center gap-x-4'>
 //     <span class="w-20 h-8 md:w-20 md:h-8 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(/images/blacklogo.png)]"></span>
-//     <p>Made by <a class="text-primary hover:underline  " href="https://starshipshield.com/"> Starship Shield</a> · All rights reserved.</p>
+//     <p>Made by <a class="text-primary hover:underline  " href="https://starshipshield.com/"> Omni Security</a> · All rights reserved.</p>
 //   </div>
 //    `,
 // };
@@ -670,6 +670,6 @@ export const footerData = {
 //     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
 //   ],
 //   footNote: `
-//     Starship Shield · All rights reserved.
+//     Omni Security · All rights reserved.
 //   `,
 // }

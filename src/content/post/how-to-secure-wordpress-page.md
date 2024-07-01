@@ -9,7 +9,7 @@ tags:
   - Best Practices
 ---
 
-<title>How To Secure WordPress? | Starship Shield</title>
+<title>How To Secure WordPress? | Omni Security</title>
 <meta name="description" content="Learn how to protect your wordpress  page with a list of valuable best-security practices. Understand the nature of making a wordpress page secure and protected.">
 
 <h1 style="font-family: 'Roboto', sans-serif;">How To Secure Your WordPress?</h1>

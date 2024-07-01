@@ -5,7 +5,7 @@ const CONFIG = {
   basePathname: "/",
   trailingSlash: false,
 
-  title: "Starship Shield",
+  title: "Omni Security",
   description:
     "🚀 Empowering cyber security solutions by young minds. Claim your free security assessment. Limited availability.",
   defaultImage: defaultImage,

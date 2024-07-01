@@ -53,31 +53,36 @@ const client_profiles = new Array(6).fill(0);
 
 <Layout>
   <Hero
-    callToAction={{ text: "Take Your First Step", href: "/learn-more" }}
     image={{
       src: import("~/assets/images/hero.jpg"),
-      alt: "Official Logo of Starship Shield",
+      alt: "Official Logo of Omni Security",
     }}
   >
     <Fragment slot="title">
-      What's your first step to
-      <span class="text-accent highlight">outer world</span> security?
+      Making cybersecurity <span class="text-accent highlight">simple</span> to follow
+      and <span class="text-accent highlight">easy</span> to understand.
     </Fragment>
 
     <Fragment slot="subtitle">
       <p class="max-w-lg">
-        The start of the cybersecurity journey is tough, but we make it easy.
-        Regardless of past cyber security neglect, we help you secure all your
-        vulnerable points
+        OmniSecurity, formerly knowns as StarshipShield, is now developing a
+        suite of products to help you tackle cybersecurity challenges. Our new
+        website is under construction and will be unveiled before September.
       </p>
     </Fragment>
   </Hero>
   <ClientSlider client:load />
-  <title>Home | Starship Shield</title>
-  <meta name="description" content="The main home page of Starship Shield" />
+  <div
+    class="w-full max-w-2xl mx-auto px-12 py-24 rounded-md paper text-center mb-24"
+  >
+    <h1 class="text-black h3 mb-4">New Offer Will Launch In</h1>
+    <p class="p1 text-primary text-center" id="demo"></p>
+  </div>
+  <title>Home | Omni Security</title>
+  <meta name="description" content="The main home page of Omni Security" />
   <link rel="icon" href="/favicon2.svg" />
 
-  <article>
+  <!-- <article>
     <div class="w-full max-w-5xl px-4 mx-auto mb-24">
       <div class="h2 md:text-center w-full max-w-lg mx-auto">
         What Our Clients Say About Us
@@ -188,10 +193,10 @@ const client_profiles = new Array(6).fill(0);
           <p class="text-primary p1 font-semibold">
             Read the background story of our team
           </p>
-          <h2 class="h2 my-4">Starship Shield Team</h2>
+          <h2 class="h2 my-4">Omni Security Team</h2>
           <p class="p3">
             Our team consists of 4 enthusiastic security engineers all with
-            unique stories that led them to creating Starship Shield.
+            unique stories that led them to creating Omni Security.
           </p>
         </div>
         <div class="lg:flex relative">
@@ -227,7 +232,7 @@ const client_profiles = new Array(6).fill(0);
     </div>
 
     <Cta />
-  </article>
+  </article> -->
 
   <!-- <div class="w-full max-w-5xl px-4 mx-auto mb-24">
   <div class="w-full max-w-lg text-center h2 mx-auto mb-8">
@@ -266,3 +271,35 @@ const client_profiles = new Array(6).fill(0);
   }
 </div> -->
 </Layout>
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Sep 1, 2024 00:00:00").getTime();
+
+  // Update the count down every 1 second
+  var countdownfunction = setInterval(function () {
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in an element with id="demo"
+    document.getElementById("demo").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(countdownfunction);
+      document.getElementById("demo").innerHTML =
+        "The new site has been launched! It will take 1 business day to launch.";
+    }
+  }, 1000);
+</script>

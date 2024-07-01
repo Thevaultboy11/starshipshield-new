@@ -5,7 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 const AchievementList = [
   {
     title: "Unija Challenge 2023",
-    paragraph: `This was the first introduction of cyber security categories at Unija Challenge. Starship Shield faced the challenge of retesting Unija's applications after a security assessment was done by another company. <br/> <br/>Ultimately, we've found security issues and emerged as the competition winners.`,
+    paragraph: `This was the first introduction of cyber security categories at Unija Challenge. Omni Security faced the challenge of retesting Unija's applications after a security assessment was done by another company. <br/> <br/>Ultimately, we've found security issues and emerged as the competition winners.`,
     href: "https://www.linkedin.com/posts/secure-startups_unijachallenge-unijachallenge2023-activity-7137371743525986304-BO0J?utm_source=share&utm_medium=member_desktop", // replace with the actual URL
     src: "/images/about/competition2.png",
   },
@@ -17,7 +17,7 @@ const AchievementList = [
   },
   {
     title: "FIT Coding Challenge 2022",
-    paragraph: `FIT never had under-18 contestants; Starship Shield team almost faced disqualification. With a 6-year age gap, our pro experience prevailed. <br>We aced the challenge in under 2 hours. <br><br>In summary, Eman Ćatić and Džemal Džananović are FIT Coding Challenge's youngest-ever winners.`,
+    paragraph: `FIT never had under-18 contestants; Omni Security team almost faced disqualification. With a 6-year age gap, our pro experience prevailed. <br>We aced the challenge in under 2 hours. <br><br>In summary, Eman Ćatić and Džemal Džananović are FIT Coding Challenge's youngest-ever winners.`,
     href: "https://www.linkedin.com/posts/secure-startups_fitcodingchallenge-goodcompany-goodjob-activity-7070492879281864705-zH0r?utm_source=share&utm_medium=member_desktop", // replace with the actual URL
     src: "/images/about/competition1.png",
   },
@@ -64,7 +64,7 @@ export default function AchievemenCarousel() {
                   <img
                     className="object-cover object-center w-full h-full"
                     src={item.src}
-                    alt="Picture of competition where Starship Shield competed"
+                    alt="Picture of competition where Omni Security competed"
                   />
                 </section>
               </section>
